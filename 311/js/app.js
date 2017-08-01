@@ -220,12 +220,20 @@ nyc.sr.App.prototype = {
 		return where;
 	},
 	updateCdLayer: function(data){
-		var buckets = this.buckets.build(data, this.cdSrc);
+		var me = this, buckets = this.buckets.build(data, this.cdSrc);
+		$.each(me.cdSrc.getFeatures(), function(){
+			this.set('sr_count', undefined);
+		});
+		$.each(data, function(){
+			var cd = me.cdSrc.getFeatureById(this.id);
+			cd.set('sr_count', this.sr_count);
+		});
 		this.style.buckets = buckets.buckets;
-		this.legend.html(this.cdLeg.html('Service Requests by<br>Community District', buckets.breaks));
-		$(this.mapRadio.inputs[1]).prop('disabled', buckets.total > 50000).checkboxradio('refresh');
-		this.srLyr.setVisible(false);
-		this.cdLyr.setVisible(true);
+		me.cdLyr.dispatchEvent('change');
+		me.legend.html(me.cdLeg.html('Service Requests by<br>Community District', buckets.breaks));
+		$(me.mapRadio.inputs[1]).prop('disabled', buckets.total > 50000).checkboxradio('refresh');
+		me.srLyr.setVisible(false);
+		me.cdLyr.setVisible(true);
 	},
 	updateSrLayer: function(data){
 		var me = this;
