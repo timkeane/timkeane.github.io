@@ -141,26 +141,26 @@ table.leg-point.sr-leg td.leg-bin img {
 	border-radius: 50%;
 }
 table.leg-point.sr-leg td.leg-bin-0 img {
-	width: 2px;
-	height: 2px;
+	width: 4px;
+	height: 4px;
 	border: 1px solid rgba(166,54,3,.04);
 	background-color: rgba(254,237,222,.4);
 }
 table.leg-point.sr-leg td.leg-bin-1 img {
-	width: 4px;
-	height: 4px;
+	width: 8px;
+	height: 8px;
 	border: 1px solid rgba(166,54,3,.16);
 	background-color: rgba(253,190,133,.4);
 }
 table.leg-point.sr-leg td.leg-bin-2 img {
-	width: 8px;
-	height: 8px;
+	width: 14px;
+	height: 14px;
 	border: 1px solid rgba(166,54,3,.36);
 	background-color: rgba(253,141,60,.4);
 }
 table.leg-point.sr-leg td.leg-bin-3 img {
-	width: 16px;
-	height: 16px;
+	width: 20px;
+	height: 20px;
 	border: 1px solid rgba(166,54,3,.64);
 	background-color: rgba(230,85,13,.4);
 }

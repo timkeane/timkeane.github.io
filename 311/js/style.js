@@ -8,7 +8,7 @@ nyc.sr.Style = function(){
 
 nyc.sr.Style.prototype = {
 	COLORS: ['rgba(254,237,222,.4)', 'rgba(253,190,133,.4)', 'rgba(253,141,60,.4)', 'rgba(230,85,13,.4)', 'rgba(166,54,3,.4)'],
-	SIZES: [1, 2, 4, 8, 16],
+	SIZES: [2, 4, 7, 10, 16],
 	nullStyle: new ol.style.Style({}),
 	buckets: null,
 	cdStyles: null,
