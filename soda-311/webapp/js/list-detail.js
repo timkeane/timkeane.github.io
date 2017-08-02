@@ -108,6 +108,8 @@ nyc.sr.ListDetail.prototype = {
 
 nyc.inherits(nyc.sr.ListDetail, nyc.ReplaceTokens);
 
+nyc.sr.ListDetail.LIST_DETAIL_HTML = '<div class="list-detail" data-role="collapsible-set"><div class="list" data-role="collapsible" data-collapsed="false"><h3><span class="title"></span></h3><p></p></div><div class="detail" data-role="collapsible"><h3><span class="title">Detail</span></h3><p></p></div></div>';
+
 nyc.sr.ListDetail.CD_LIST_HTML = '<table class="cd-info"><thead><tr><th>Count</th><th>Type</th></tr></thead><tbody></tbody></table>';
 
 nyc.sr.ListDetail.CD_TR_HTML = '<tr><td>${sr_count}</td><td><a>${complaint_type}</a></td></tr>';
@@ -122,6 +124,4 @@ nyc.sr.ListDetail.SR_DETAIL_MORE = {
 	resolution_description: '<div><b>resolution:</b><br>${resolution_description}</div>'
 };
 
-
-nyc.sr.ListDetail.LIST_DETAIL_HTML = '<div class="list-detail" data-role="collapsible-set"><div class="list" data-role="collapsible" data-collapsed="false"><h3><span class="title"></span></h3><p></p></div><div class="detail" data-role="collapsible"><h3><span class="title">Detail</span></h3><p></p></div></div>';
 
