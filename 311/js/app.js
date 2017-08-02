@@ -3,6 +3,7 @@ nyc.sr = nyc.sr || {};
 nyc.sr.App = function(options){
 	this.map = options.map;
 	this.view = this.map.getView();
+	this.view.setMinZoom(9);
 	this.whereNotMappable = options.whereNotMappable;
 	this.cdChoices = [];
 	options.cdDecorations.choices = this.cdChoices;
@@ -27,6 +28,7 @@ nyc.sr.App = function(options){
 	
 	this.mapRadio.on('change', $.proxy(this.changeMapType, this));
 	this.sodaTextarea.container.find('textarea').click($.proxy(this.copyUrl, this));
+	$('#record-count a.toggle').click($.proxy(this.toggle, this));
 	
 	this.map.on('click', $.proxy(this.mapClick, this));
 	
@@ -58,6 +60,28 @@ nyc.sr.App.prototype = {
 	buckets: null,
 	listDetail: null,
 	mapType: 'cd',
+	toggle: function(){
+		var pDiv = $('#panel'), w = $(window).width();
+		$('#record-count a.toggle').toggleClass('panel');
+		pDiv.animate({
+			width: pDiv.width() == w ? 0 : '100%'
+		},{
+			start: function(){
+				pDiv.fadeIn();
+			},
+			complete: function(){
+				pDiv[pDiv.width() == w ? 'show' : 'fadeOut']();
+			}
+		});
+
+		var mDiv = $('#map'), updateSize = $.proxy(this.map.updateSize, this.map); 
+		mDiv.animate({
+			width: mDiv.width() == w ? 0 : '100%'
+		},{
+			step: updateSize,
+			complete: updateSize
+		});
+	},
 	initLegends: function(){
 		this.cdLeg = new nyc.BinLegend(
 			'cd-leg',

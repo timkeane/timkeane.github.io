@@ -38,7 +38,7 @@ h1 img {
 }
 #panel {
     position: fixed;
-	width: 310px;
+	width: 320px;
 	top: 45px;
 	right: 0;
 	bottom: 0;	
@@ -46,9 +46,11 @@ h1 img {
 	box-shadow: 5px 10px 20px 5px rgba(0,0,0,.2);
 	padding: 0;
 	background-color: white;
-	padding: 5px;
 	overflow-x: hidden;
 	overflow-y: auto;
+}
+#panel>div {
+	margin: 5px;
 }
 #record-count {
 	position: fixed;
@@ -65,11 +67,23 @@ h1 img {
 #record-count a {
 	float: right;
 	margin-left: 5px;
-	opacity: .5;
 	cursor: pointer;
 }
-#record-count a img {
+#record-count a {
+	width: 40px;
 	height: 40px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#record-count a.github {
+	opacity: .5;
+	background-size: 40px;
+	background-image: url(../img/git.svg);
+}
+#record-count a.toggle {
+	background-size: 30px;
+	background-image: url(../img/map.svg);
+	display: none;
 }
 #record-count a:hover {
 	opacity: 1;
@@ -241,4 +255,18 @@ table.leg-point.sr-leg td.leg-bin-4 img {
 }
 .detail .sr .more {
 	display: none;
+}
+@media only screen and (max-width : 465px) {
+	#panel {
+		width: 100%;
+	}
+	#record-count a.github {
+		display: none;
+	}
+	#record-count a.toggle {
+		display: block;
+	}	
+	#record-count a.toggle.panel {
+		background-image: url(../img/panel.png);
+	}	
 }
