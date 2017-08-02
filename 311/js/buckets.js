@@ -42,7 +42,7 @@ nyc.sr.Buckets.prototype = {
 			buckets.push([buckets[i - 1][1], buckets[i - 1][1] + fifth]);
 			breaks.push(buckets[i - 1][1] + fifth);
 		}
-		buckets.push([max - fifth, max]);
+		buckets.push([breaks[breaks.length - 1], max]);
 		breaks.push(max);
 		return {buckets: buckets, breaks: breaks, total: total};
 	}
