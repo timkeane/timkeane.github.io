@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+ 	
+ 	<title>NYC 311 Service Request Map</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.2.0/ol.css">
+	<link rel="stylesheet" href="https://maps.nyc.gov/nyc-lib/v0.3.2-SNAPSHOT/css/nyc-ol-lib.css">
+	<link rel="stylesheet" href="css/soda.css"> 
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.15/proj4.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.2.0/ol.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+	<script src="https://maps.nyc.gov/nyc-lib/v0.3.2-SNAPSHOT/js/nyc-ol-lib.js"></script>
+</head>
+<body>
+	<h1>
+		<img src="img/nyc.svg" alt="NYC 311 Service Request Map" onclick='document.location.reload();'>
+		311
+	</h1>
+	<h2 id="record-count">
+		<a class="github" href="https://github.com/timkeane/soda-311" title="Fork me on github"></a>
+		<a class="toggle"></a>
+		<span>0</span><br>
+		Service Requests
+	</h2>
+	<div id="map"></div>
+	<div id="panel">
+		<div id="list-detail"></div>
+		<div id="map-type"></div>
+		<div id="legend"><div class="legend"></div></div>
+		<div id="date-ranges">
+			<div class="fields">
+				<div class="field">
+					<label for="created-date-min">From</label>
+					<input id="created-date-min" type="date">
+				</div>
+				<div class="field">
+					<label for="created-date-min">To</label>
+					<input id="created-date-max" type="date">
+				</div>
+			</div>
+		</div>
+		<div id="soda-url">
+			<div class="tip"><div>Copied to Clipboard</div></div>
+			<textarea></textarea>
+		</div>
+	</div>
+	<div id="loading"></div>
+	<script src="js/cd.js"></script>
+	<script src="js/style.js"></script>
+	<script src="js/buckets.js"></script>
+	<script src="js/soda.js"></script>
+	<script src="js/list-detail.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/init.js"></script>
+</body>
+</html>
