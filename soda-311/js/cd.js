@@ -1,6 +1,5 @@
 nyc.cd = {
 	feature: {
-		BOROCODES: {MANHATTAN: 1, BRONX: 2, BROOKLYN: 3, QUEENS: 4, STATEN: 5},
 		BOROS: ['Manhattan', 'Bronx', 'Brooklyn', 'Queens', 'Staten Island'],
 		extendFeature: function(){
 			var val = this.getValue();

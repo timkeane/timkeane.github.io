@@ -34,11 +34,11 @@ h1 img {
 	top: 45px;
 }
 #map {
-	width: calc(100% - 320px);
+	width: calc(100% - 375px);
 }
 #panel {
     position: fixed;
-	width: 320px;
+	width: 375px;
 	top: 45px;
 	right: 0;
 	bottom: 0;	
@@ -128,7 +128,7 @@ h1 img {
 }
 
 div.legend {
-	min-height: 175px;
+	min-height: 172px;
 }
 div.legend caption {
 	font-weight: bold;
@@ -199,6 +199,7 @@ table.leg-point.sr-leg td.leg-bin-4 img {
 	text-transform: capitalize;
 }
 .cd-info {
+	width: 100%;
 	border-collapse: collapse;
 }
 .cd-info thead tr {
@@ -257,7 +258,7 @@ table.leg-point.sr-leg td.leg-bin-4 img {
 	display: none;
 }
 @media only screen and (max-width : 465px) {
-	#panel {
+	#panel, #map {
 		width: 100%;
 	}
 	#record-count a.github {

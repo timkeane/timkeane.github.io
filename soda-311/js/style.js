@@ -38,6 +38,19 @@ nyc.sr.Style.prototype = {
 	buckets: null,
 	cdStyles: null,
 	srStyles: null,
+	highlightStyle: function(feature, resolution){
+		var stroke = new ol.style.Stroke({color: '#ffff00', width: 3});
+		if (feature.getGeometry().getType() == 'Point'){
+			var style = this.srStyle(feature, resolution);
+			return new ol.style.Style({
+				image: new ol.style.Circle({
+					radius: style.getImage().getRadius(),
+					stroke: stroke
+				})
+			});
+		}
+		return new ol.style.Style({stroke: stroke});
+	},
 	srStyle: function(feature, resolution){
 		var z = nyc.ol.TILE_GRID.getZForResolution(resolution);
 		return this.getStyle(this.srStyles, feature.get('sr_count'), z);
@@ -70,7 +83,6 @@ nyc.sr.Style.prototype = {
 							color: color
 						}),
 						stroke: new ol.style.Stroke({
-//							color: 'rgba(166,54,3,' + (((i + 1) / 5) * ((i + 1) / 5)) + ')',
 							color: 'rgba(166,54,3,' + me.OPACITIES[z] + ')',
 							width: 1
 						})

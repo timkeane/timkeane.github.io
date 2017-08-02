@@ -22,6 +22,13 @@ nyc.sr.App = function(options){
 	
 	this.defaultDates();
 
+	this.highlightSrc = new ol.source.Vector({});
+	this.map.addLayer(new ol.layer.Vector({
+		source: this.highlightSrc, 
+		style: $.proxy(this.style.highlightStyle, this.style),
+		zIndex: 1000
+	}));
+	
 	this.srLyr = new ol.layer.Vector({style: $.proxy(this.style.srStyle, this.style)});
 	this.map.addLayer(this.srLyr);
 	new nyc.ol.FeatureTip(this.map, [{layer: this.srLyr, labelFunction: this.tip}]);
@@ -32,6 +39,12 @@ nyc.sr.App = function(options){
 	
 	this.map.on('click', $.proxy(this.mapClick, this));
 	
+	$(window).resize(function(){
+		if ($('#panel').width() != $(window).width()) {
+			$('#panel').show();
+		}
+	});
+	
 	this.initLegends();
 	this.runFirstQuery();
 };
@@ -40,6 +53,7 @@ nyc.sr.App.prototype = {
 	map: null,
 	view: null,
 	cdChoices: null,
+	highlightSrc: null,
 	cdSrc: null,
 	cdLyr: null,
 	srLyr: null,
@@ -61,26 +75,11 @@ nyc.sr.App.prototype = {
 	listDetail: null,
 	mapType: 'cd',
 	toggle: function(){
-		var pDiv = $('#panel'), w = $(window).width();
-		$('#record-count a.toggle').toggleClass('panel');
-		pDiv.animate({
-			width: pDiv.width() == w ? 0 : '100%'
-		},{
-			start: function(){
-				pDiv.fadeIn();
-			},
-			complete: function(){
-				pDiv[pDiv.width() == w ? 'show' : 'fadeOut']();
-			}
-		});
-
-		var mDiv = $('#map'), updateSize = $.proxy(this.map.updateSize, this.map); 
-		mDiv.animate({
-			width: mDiv.width() == w ? 0 : '100%'
-		},{
-			step: updateSize,
-			complete: updateSize
-		});
+		var pw = $('#panel').width(), ww = $(window).width();
+		if (pw == ww || pw == 0){
+			$('#record-count a.toggle').toggleClass('panel');
+			$('#panel').slideToggle();
+		}
 	},
 	initLegends: function(){
 		this.cdLeg = new nyc.BinLegend(
@@ -188,6 +187,9 @@ nyc.sr.App.prototype = {
 			callback = $.proxy(this.updateSrLayer, this);
 		}
 		this.executeSoda(soda, where, callback);
+		this.highlightSrc.clear();
+		this.listDetail.listDetailContainer.hide();
+		this.listDetail.container.collapsible('collapse');		
 	},
 	sodaInfoQuery: function(feature, layer){
 		var where = this.buildWhereClause(), soda, callback;
@@ -204,15 +206,22 @@ nyc.sr.App.prototype = {
 			soda = this.srListSoda;
 			callback = $.proxy(this.srList, this);
 		}
+		this.highlight(feature);
 		this.executeSoda(soda, where, callback);
 		return true;
 	},
+	highlight: function(feature){
+		this.highlightSrc.clear();
+		this.highlightSrc.addFeature(feature);
+	},
 	cdList: function(data, soda){
 		this.listDetail.cdList(data, soda.query.where);
+		this.toggle();
 		$('#loading').fadeOut();
 	},
 	srList: function(data, soda){
 		this.listDetail.srList(data, soda.query.where);
+		this.toggle();
 		$('#loading').fadeOut();
 	},
 	executeSoda: function(soda, where, callback){

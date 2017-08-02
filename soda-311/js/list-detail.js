@@ -36,7 +36,7 @@ nyc.sr.ListDetail.prototype = {
 	cdSrTypeDrilldown: null,
 	srListDetail: function(data, soda, title){
 		var me = this;
-		var title = title || data[0].complaint_type;
+		var title = data.length + ' ' + (title || data[0].complaint_type);
 		var moreFields = nyc.sr.ListDetail.SR_DETAIL_MORE;
 		me.detail.empty();
 		me.detailTitle.html(title);
@@ -54,6 +54,9 @@ nyc.sr.ListDetail.prototype = {
 					more.append(me.replace(moreFields[field], row));
 				}
 			}
+			nyc.util.formatDateHtml({
+				elements: detail.find('.sr-date')
+			});
 		});
 		this.detailContainer.collapsible('expand');
 	},
@@ -105,20 +108,20 @@ nyc.sr.ListDetail.prototype = {
 
 nyc.inherits(nyc.sr.ListDetail, nyc.ReplaceTokens);
 
+nyc.sr.ListDetail.LIST_DETAIL_HTML = '<div class="list-detail" data-role="collapsible-set"><div class="list" data-role="collapsible" data-collapsed="false"><h3><span class="title"></span></h3><p></p></div><div class="detail" data-role="collapsible"><h3><span class="title">Detail</span></h3><p></p></div></div>';
+
 nyc.sr.ListDetail.CD_LIST_HTML = '<table class="cd-info"><thead><tr><th>Count</th><th>Type</th></tr></thead><tbody></tbody></table>';
 
 nyc.sr.ListDetail.CD_TR_HTML = '<tr><td>${sr_count}</td><td><a>${complaint_type}</a></td></tr>';
 
-nyc.sr.ListDetail.SR_DETAIL_HTML = '<div id="sr-${unique_key}" class="sr"><div class="sr-num"><b>SR number</b>${unique_key}</div><div><b>complaint type</b>${complaint_type}</div><div><b>agency</b>${agency_name}</div><div><b>created date</b>${created_date}</div><div><a data-role="button" onclick="$(this).parent().next().slideToggle();">Details...</a></div></div>';
+nyc.sr.ListDetail.SR_DETAIL_HTML = '<div id="sr-${unique_key}" class="sr"><div class="sr-num"><b>SR number:</b>${unique_key}</div><div><b>complaint type:</b>${complaint_type}</div><div><b>agency:</b>${agency_name}</div><div><b>created date:</b><span class="sr-date">${created_date}</span></div><div><a data-role="button" onclick="$(this).parent().next().slideToggle();">Details...</a></div></div>';
 
 nyc.sr.ListDetail.SR_DETAIL_MORE = {
-	incident_address: '<div><b>address</b><br>${incident_address}<br>${city}, NY ${incident_zip}</div>',
-	street_name: '<div><b>location</b><br>${street_name} between ${cross_Street_1} and ${cross_Street_2}<br>${city}, NY ${incident_zip}</div>',
-	intersection_street_1: '<div><b>location</b><br>${intersection_street_1} and ${intersection_street_2}<br>${city}, NY ${incident_zip}</div>',
-	closed_date: '<div><b>closed date</b>${closed_date}</div>',
-	resolution_description: '<div><b>resolution</b><br>${resolution_description}</div>'
+	incident_address: '<div><b>address:</b><br>${incident_address}<br>${city}, NY ${incident_zip}</div>',
+	street_name: '<div><b>location:</b><br>${street_name} btw. ${cross_Street_1} &amp; ${cross_Street_2}<br>${city}, NY ${incident_zip}</div>',
+	intersection_street_1: '<div><b>location:</b><br>${intersection_street_1} and ${intersection_street_2}<br>${city}, NY ${incident_zip}</div>',
+	closed_date: '<div><b>closed date:</b><span class="sr-date">${closed_date}<span></div>',
+	resolution_description: '<div><b>resolution:</b><br>${resolution_description}</div>'
 };
 
-
-nyc.sr.ListDetail.LIST_DETAIL_HTML = '<div class="list-detail" data-role="collapsible-set"><div class="list" data-role="collapsible" data-collapsed="false"><h3><span class="title"></span></h3><p></p></div><div class="detail" data-role="collapsible"><h3><span class="title">Detail</span></h3><p></p></div></div>';
 
