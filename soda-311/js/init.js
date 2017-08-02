@@ -17,7 +17,7 @@ var mapRadio = new nyc.Radio({
 
 var legend = new nyc.Collapsible({target: '#legend', title: 'Legend', expanded: true}); 
 
-var dateInput = new nyc.Collapsible({target: '#date-ranges', title: 'Created Date', expanded: true}); 
+var dateInput = new nyc.Collapsible({target: '#date-ranges', title: 'Created Date', expanded: true});
 
 var sodaTextarea = new nyc.Collapsible({target: '#soda-url', title: 'NYC OpenData URL'}); 
 
