@@ -227,7 +227,11 @@ nyc.sr.App.prototype = {
 	executeSoda: function(soda, where, callback){
 		$('#loading').fadeIn();
 		soda.execute({where: where, callback: callback});
-		this.sodaTextarea.container.find('textarea').html(soda.getUrlAndQuery());		
+		this.sodaTextarea.container.find('textarea').html(
+			decodeURIComponent(
+				soda.getUrlAndQuery()
+			)
+		);		
 	},
 	mapClick: function(event){
 		this.map.forEachFeatureAtPixel(event.pixel, $.proxy(this.sodaInfoQuery, this));
