@@ -4,7 +4,6 @@ nyc.sr.App = function(options){
 	this.map = options.map;
 	this.view = this.map.getView();
 	this.view.setMinZoom(9);
-	this.whereNotMappable = options.whereNotMappable;
 	this.cdChoices = [];
 	options.cdDecorations.choices = this.cdChoices;
 	this.cdSrc = this.getCds(options);
@@ -65,7 +64,6 @@ nyc.sr.App.prototype = {
 	dateInput: null,
 	cdCheck: null,
 	srTypeCheck: null,
-	whereNotMappable: null,
 	sodaTextarea: null,
 	cdSoda: null,
 	srSoda: null,
@@ -171,14 +169,30 @@ nyc.sr.App.prototype = {
 		div.trigger('create');
 		this.srTypeCheck.on('change', $.proxy(this.sodaMapQuery, this));
 	},
-	buildWhereClause: function(){
-		var where = nyc.soda.Query.and(this.whereNotMappable, this.dateClause());
-		where = nyc.soda.Query.and(where, this.inClause('community_board', this.cdCheck));
-		where = nyc.soda.Query.and(where, this.inClause('complaint_type', this.srTypeCheck));
-		return where;
+	getFilters: function(props){
+		var filters = {
+			created_date: this.dateFilters(),
+			community_board: this.filterValues(this.cdCheck),
+			complaint_type: this.filterValues(this.srTypeCheck),
+		};
+		props = props || {};
+		if (props.x_coordinate_state_plane){
+			filters.x_coordinate_state_plane = [{op: '=', value: props.x_coordinate_state_plane}];
+			filters.y_coordinate_state_plane = [{op: '=', value: props.y_coordinate_state_plane}];
+		}
+		if (props.community_board){
+			filters.community_board = [{op: '=', value: props.community_board}];
+		}
+		return filters;
+	},		
+	dateFilters: function(){
+		return [
+	        {op: '>=', value: this.minDate.val()},
+	        {op: '<=', value: this.maxDate.val()}
+        ];
 	},
 	sodaMapQuery: function(){
-		var where = this.buildWhereClause(), soda, callback;
+		var filters = this.getFilters(), soda, callback;
 		if (this.mapType == 'cd'){
 			soda = this.cdSoda;
 			callback = $.proxy(this.updateCdLayer, this);
@@ -186,28 +200,23 @@ nyc.sr.App.prototype = {
 			soda = this.srSoda;
 			callback = $.proxy(this.updateSrLayer, this);
 		}
-		this.executeSoda(soda, where, callback);
+		this.executeSoda(soda, filters, callback);
 		this.highlightSrc.clear();
 		this.listDetail.listDetailContainer.hide();
 		this.listDetail.container.collapsible('collapse');		
 	},
 	sodaInfoQuery: function(feature, layer){
-		var where = this.buildWhereClause(), soda, callback;
+		var filters = this.getFilters(feature.getProperties()), soda, callback;
 		if (layer === this.cdLyr){
 			var cd = feature.getId();
-			where = nyc.soda.Query.and(where, "community_board = '" + cd + "'");
 			soda = this.cdListSoda;
 			callback = $.proxy(this.cdList, this);
 		}else{
-			var x = feature.get('x_coordinate_state_plane');
-			var y = feature.get('y_coordinate_state_plane');
-			where = nyc.soda.Query.and(where, 'x_coordinate_state_plane = ' + x);
-			where = nyc.soda.Query.and(where, 'y_coordinate_state_plane = ' + y);
 			soda = this.srListSoda;
 			callback = $.proxy(this.srList, this);
 		}
 		this.highlight(feature);
-		this.executeSoda(soda, where, callback);
+		this.executeSoda(soda, filters, callback);
 		return true;
 	},
 	highlight: function(feature){
@@ -215,18 +224,18 @@ nyc.sr.App.prototype = {
 		this.highlightSrc.addFeature(feature);
 	},
 	cdList: function(data, soda){
-		this.listDetail.cdList(data, soda.query.where);
+		this.listDetail.cdList(data, soda.filters);
 		this.toggle();
 		$('#loading').fadeOut();
 	},
 	srList: function(data, soda){
-		this.listDetail.srList(data, soda.query.where);
+		this.listDetail.srList(data, soda.filters);
 		this.toggle();
 		$('#loading').fadeOut();
 	},
-	executeSoda: function(soda, where, callback){
+	executeSoda: function(soda, filters, callback){
 		$('#loading').fadeIn();
-		soda.execute({query: {where: where}}, callback);
+		soda.execute({filters: filters}, callback);
 		this.sodaTextarea.container.find('textarea').html(
 			decodeURIComponent(
 				soda.getUrlAndQuery()
@@ -236,25 +245,14 @@ nyc.sr.App.prototype = {
 	mapClick: function(event){
 		this.map.forEachFeatureAtPixel(event.pixel, $.proxy(this.sodaInfoQuery, this));
 	},
-	dateClause: function(){
-		var where = "created_date >= '" + this.minDate.val() + "'";
-		where = nyc.soda.Query.and(where, "created_date <= '" + this.maxDate.val() + "'");
-		return where;
-	},
-	inClause: function(sodaCol, checkboxes){
+	filterValues: function(checkboxes){
 		if (checkboxes && checkboxes.val().length){
-			var where = sodaCol + ' IN (';
+			var values = [];
 			$.each(checkboxes.val(), function(){
-				where += "'" + this.value + "',";
+				values.push(this.value);
 			});
-			return where.substr(0, where.length - 1) + ')';			
+			return [{op: 'IN', value: values}];
 		}
-	},
-	and: function(where, more){
-		if (more){
-			return where + ' AND ' + more;
-		}
-		return where;
 	},
 	updateCdLayer: function(data){
 		var me = this, buckets = this.buckets.build(data, this.cdSrc);

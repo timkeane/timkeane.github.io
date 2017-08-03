@@ -4,6 +4,7 @@ nyc.cd = {
 		extendFeature: function(){
 			var val = this.getValue();
 			this.setId(val);
+			this.set('community_board', val);
 			this.choices.push({name: 'community_board', value: val, label: this.getLabel(), sort: this.get('BoroCD')});
 		},
 		getLabel: function(){

@@ -59,6 +59,7 @@ nyc.sr.ListDetail.prototype = {
 			});
 		});
 		this.detailContainer.collapsible('expand');
+		$('#loading').fadeOut();		
 	},
 	srList: function(data){
 		this.listDetailContainer.show();
@@ -66,10 +67,10 @@ nyc.sr.ListDetail.prototype = {
 		this.container.collapsible('expand');
 		this.srListDetail(data, null, 'Service Requests');
 	},
-	cdList: function(data, where){
+	cdList: function(data, filters){
 		var me = this, table = $(nyc.sr.ListDetail.CD_LIST_HTML), tbody = table.find('tbody');
 		me.listDetailContainer.show();
-		me.cdSrTypeDrilldown.setQuery({where: where});
+		me.cdSrTypeDrilldown.setFilters(filters);
 		me.listTitle.html(me.cdListHeading(data[0]));
 		$.each(data, function(){
 			var row = $(me.replace(nyc.sr.ListDetail.CD_TR_HTML, this));
@@ -83,17 +84,10 @@ nyc.sr.ListDetail.prototype = {
 	},
 	cdDrilldown: function(event){
 		var row = $(event.target).data('soda-row');
-		var where = this.cdSrTypeDrilldown.query.where;
-		where = this.andComplaintType(where, row.complaint_type);
-		this.cdSrTypeDrilldown.execute({query: {where: where}}, $.proxy(this.srListDetail, this));
-	},
-	andComplaintType: function(where, type){
-		var clauses = where.split(' AND '), last = clauses[clauses.length - 1];
-		if (last.indexOf('complaint_type =') == 0){
-			where = where.substr(0, where.lastIndexOf(' AND '));
-		}
-		where = nyc.soda.Query.and(where, "complaint_type = '" + type + "'");
-		return where;
+		this.cdSrTypeDrilldown.setFilter('complaint_type', {op: '=', value: row.complaint_type});
+		this.cdSrTypeDrilldown.setFilter('community_board', {op: '=', value: row.community_board});
+		$('#loading').fadeIn();
+		this.cdSrTypeDrilldown.execute({}, $.proxy(this.srListDetail, this));
 	},
 	cdListHeading: function(row){
 		var orig = row.community_board;

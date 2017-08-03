@@ -1,6 +1,6 @@
 var CD_URL = 'https://services5.arcgis.com/GfwWNkhOj9bNBqoJ/arcgis/rest/services/nycd/FeatureServer/0/query?where=1=1&outFields=BoroCD&outSR=4326&f=geojson';
 var OPEN_DATA_URL = 'https://data.cityofnewyork.us/resource/fhrw-4uyv.csv';
-var WHERE_NOT_MAPPABLE = "x_coordinate_state_plane IS NOT NULL AND y_coordinate_state_plane IS NOT NULL AND community_board NOT IN ('QNA', 'Unspecified MANHATTAN', 'Unspecified BRONX', 'Unspecified BROOKLYN', 'Unspecified QUEENS', 'Unspecified STATEN ISLAND', '0 Unspecified')";
+var WHERE_IS_MAPPABLE = "x_coordinate_state_plane IS NOT NULL AND y_coordinate_state_plane IS NOT NULL AND community_board NOT IN ('QNA', 'Unspecified MANHATTAN', 'Unspecified BRONX', 'Unspecified BROOKLYN', 'Unspecified QUEENS', 'Unspecified STATEN ISLAND', '0 Unspecified')";
 
 Date.prototype.toShortISOString = function(){
 	return this.toISOString().split('T')[0];
@@ -25,6 +25,7 @@ var cdSoda = new nyc.soda.Query({
 	url: OPEN_DATA_URL,
 	query: {
 		select: 'count(unique_key) AS sr_count, community_board AS id',
+		where: WHERE_IS_MAPPABLE,
 		group: 'id',
 		order: 'sr_count'
 	}
@@ -34,6 +35,7 @@ var srSoda = new nyc.soda.Query({
 	url: OPEN_DATA_URL,
 	query: {
 		select: "count(id) AS sr_count, x_coordinate_state_plane || ' ' || y_coordinate_state_plane AS id, x_coordinate_state_plane, y_coordinate_state_plane",
+		where: WHERE_IS_MAPPABLE,
 		group: 'id, x_coordinate_state_plane, y_coordinate_state_plane',
 		order: 'sr_count',
 		limit: 50000
@@ -44,6 +46,7 @@ var cdListSoda = new nyc.soda.Query({
 	url: OPEN_DATA_URL,
 	query: {
 		select: 'count(unique_key) AS sr_count, community_board, complaint_type',
+		where: WHERE_IS_MAPPABLE,
 		group: 'community_board, complaint_type',
 		order: 'sr_count DESC'
 	}
@@ -53,7 +56,9 @@ var cdSrTypeDrilldown = new nyc.soda.Query({
 	url: OPEN_DATA_URL,
 	query: {
 		select: 'unique_key, agency_name, complaint_type, descriptor, created_date, closed_date, resolution_description, location_type, incident_address, street_name, cross_Street_1, cross_Street_2, intersection_street_1, intersection_street_2, city, incident_zip',
-		order: 'created_date DESC'
+		where: WHERE_IS_MAPPABLE,
+		order: 'created_date DESC',
+		limit: 50000
 	}
 });
 
@@ -61,6 +66,7 @@ var srListSoda = new nyc.soda.Query({
 	url: OPEN_DATA_URL,
 	query: {
 		select: 'unique_key, agency_name, complaint_type, descriptor, created_date, closed_date, resolution_description, location_type, incident_address, street_name, cross_Street_1, cross_Street_2, intersection_street_1, intersection_street_2, city, incident_zip',
+		where: WHERE_IS_MAPPABLE,
 		order: 'complaint_type, created_date DESC'
 	}
 });
@@ -84,7 +90,6 @@ nyc.sr.app = new nyc.sr.App({
 	dateInput: dateInput,
 	sodaTextarea: sodaTextarea,
 	cdDecorations: nyc.cd.feature,
-	whereNotMappable: WHERE_NOT_MAPPABLE,
 	cdSoda: cdSoda,
 	srSoda: srSoda,
 	cdListSoda: cdListSoda,
