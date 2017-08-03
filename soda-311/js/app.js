@@ -226,7 +226,7 @@ nyc.sr.App.prototype = {
 	},
 	executeSoda: function(soda, where, callback){
 		$('#loading').fadeIn();
-		soda.execute({where: where, callback: callback});
+		soda.execute({query: {where: where}}, callback);
 		this.sodaTextarea.container.find('textarea').html(
 			decodeURIComponent(
 				soda.getUrlAndQuery()

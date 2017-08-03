@@ -23,36 +23,46 @@ var sodaTextarea = new nyc.Collapsible({target: '#soda-url', title: 'NYC OpenDat
 
 var cdSoda = new nyc.soda.Query({
 	url: OPEN_DATA_URL,
-	select: 'count(unique_key) AS sr_count, community_board AS id',
-	group: 'id',
-	order: 'sr_count'
+	query: {
+		select: 'count(unique_key) AS sr_count, community_board AS id',
+		group: 'id',
+		order: 'sr_count'
+	}
 });
 
 var srSoda = new nyc.soda.Query({
 	url: OPEN_DATA_URL,
-	select: "count(id) AS sr_count, x_coordinate_state_plane || ' ' || y_coordinate_state_plane AS id, x_coordinate_state_plane, y_coordinate_state_plane",
-	group: 'id, x_coordinate_state_plane, y_coordinate_state_plane',
-	order: 'sr_count',
-	limit: 50000
+	query: {
+		select: "count(id) AS sr_count, x_coordinate_state_plane || ' ' || y_coordinate_state_plane AS id, x_coordinate_state_plane, y_coordinate_state_plane",
+		group: 'id, x_coordinate_state_plane, y_coordinate_state_plane',
+		order: 'sr_count',
+		limit: 50000
+	}
 });
 
 var cdListSoda = new nyc.soda.Query({
 	url: OPEN_DATA_URL,
-	select: 'count(unique_key) AS sr_count, community_board, complaint_type',
-	group: 'community_board, complaint_type',
-	order: 'sr_count DESC'
+	query: {
+		select: 'count(unique_key) AS sr_count, community_board, complaint_type',
+		group: 'community_board, complaint_type',
+		order: 'sr_count DESC'
+	}
 });
 
 var cdSrTypeDrilldown = new nyc.soda.Query({
 	url: OPEN_DATA_URL,
-	select: 'unique_key, agency_name, complaint_type, descriptor, created_date, closed_date, resolution_description, location_type, incident_address, street_name, cross_Street_1, cross_Street_2, intersection_street_1, intersection_street_2, city, incident_zip',
-	order: 'created_date DESC'
+	query: {
+		select: 'unique_key, agency_name, complaint_type, descriptor, created_date, closed_date, resolution_description, location_type, incident_address, street_name, cross_Street_1, cross_Street_2, intersection_street_1, intersection_street_2, city, incident_zip',
+		order: 'created_date DESC'
+	}
 });
 
 var srListSoda = new nyc.soda.Query({
 	url: OPEN_DATA_URL,
-	select: 'unique_key, agency_name, complaint_type, descriptor, created_date, closed_date, resolution_description, location_type, incident_address, street_name, cross_Street_1, cross_Street_2, intersection_street_1, intersection_street_2, city, incident_zip',
-	order: 'complaint_type, created_date DESC'
+	query: {
+		select: 'unique_key, agency_name, complaint_type, descriptor, created_date, closed_date, resolution_description, location_type, incident_address, street_name, cross_Street_1, cross_Street_2, intersection_street_1, intersection_street_2, city, incident_zip',
+		order: 'complaint_type, created_date DESC'
+	}
 });
 
 var map = new nyc.ol.Basemap({target: $('#map').get(0)});
@@ -91,9 +101,12 @@ lastYear.setDate(lastYear.getDate() - 365);
 
 new nyc.soda.Query().execute({
 	url: OPEN_DATA_URL,
-	select: 'count(unique_key) AS sr_count, complaint_type',
-	group: 'complaint_type',
-	order: 'sr_count DESC',
-	where: "created_date >= '" + lastYear.toShortISOString() + "'",
-	callback: $.proxy(nyc.sr.app.gotSrTypes, nyc.sr.app)
-});
+	query: {
+		select: 'count(unique_key) AS sr_count, complaint_type',
+		group: 'complaint_type',
+		order: 'sr_count DESC'
+	},
+	filters: {
+		created_date: [{op: '>=', value: lastYear.toShortISOString()}]
+	}
+},$.proxy(nyc.sr.app.gotSrTypes, nyc.sr.app));

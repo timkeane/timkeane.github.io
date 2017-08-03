@@ -36,7 +36,7 @@ nyc.sr.ListDetail.prototype = {
 	cdSrTypeDrilldown: null,
 	srListDetail: function(data, soda, title){
 		var me = this;
-		var title = data.length + ' ' + (title || data[0].complaint_type);
+		var title = (title || data[0].complaint_type) + ' (' + data.length + ')';
 		var moreFields = nyc.sr.ListDetail.SR_DETAIL_MORE;
 		me.detail.empty();
 		me.detailTitle.html(title);
@@ -85,10 +85,7 @@ nyc.sr.ListDetail.prototype = {
 		var row = $(event.target).data('soda-row');
 		var where = this.cdSrTypeDrilldown.query.where;
 		where = this.andComplaintType(where, row.complaint_type);
-		this.cdSrTypeDrilldown.execute({
-			where: where,
-			callback: $.proxy(this.srListDetail, this)
-		});
+		this.cdSrTypeDrilldown.execute({query: {where: where}}, $.proxy(this.srListDetail, this));
 	},
 	andComplaintType: function(where, type){
 		var clauses = where.split(' AND '), last = clauses[clauses.length - 1];
