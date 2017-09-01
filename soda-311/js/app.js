@@ -1,12 +1,17 @@
 nyc.sr = nyc.sr || {};
 
+Date.prototype.toShortISOString = function(){
+	return this.toISOString().split('T')[0];
+};
+
 nyc.sr.App = function(options){
 	this.map = options.map;
 	this.view = this.map.getView();
 	this.view.setMinZoom(9);
 	this.cdChoices = [];
 	options.cdDecorations.choices = this.cdChoices;
-	this.cdSrc = this.getCds(options);
+	this.tips = [];
+	this.getCds(options);
 	this.style = options.style;
 	this.legend = options.legend.container.find('.legend');
 	this.mapRadio = options.mapRadio;
@@ -22,15 +27,18 @@ nyc.sr.App = function(options){
 	this.defaultDates();
 
 	this.highlightSrc = new ol.source.Vector({});
-	this.map.addLayer(new ol.layer.Vector({
+	this.highlightLyr = new ol.layer.Vector({
 		source: this.highlightSrc, 
 		style: $.proxy(this.style.highlightStyle, this.style),
 		zIndex: 1000
-	}));
+	});
+	this.map.addLayer(this.highlightLyr);
 	
 	this.srLyr = new ol.layer.Vector({style: $.proxy(this.style.srStyle, this.style)});
 	this.map.addLayer(this.srLyr);
-	new nyc.ol.FeatureTip(this.map, [{layer: this.srLyr, labelFunction: this.tip}]);
+	this.tips.push(new nyc.ol.FeatureTip(this.map, [
+        {layer: this.srLyr, labelFunction: this.tip
+	}]));
 	
 	this.mapRadio.on('change', $.proxy(this.changeMapType, this));
 	this.sodaTextarea.container.find('textarea').click($.proxy(this.copyUrl, this));
@@ -53,8 +61,10 @@ nyc.sr.App.prototype = {
 	view: null,
 	cdChoices: null,
 	highlightSrc: null,
+	highlightLyr: null,
 	cdSrc: null,
 	cdLyr: null,
+	srSrc: null,
 	srLyr: null,
 	cdLeg: null,
 	srLeg: null,
@@ -71,6 +81,7 @@ nyc.sr.App.prototype = {
 	srListSoda: null,
 	buckets: null,
 	listDetail: null,
+	tips: null,
 	mapType: 'cd',
 	toggle: function(){
 		var pw = $('#panel').width(), ww = $(window).width();
@@ -121,18 +132,20 @@ nyc.sr.App.prototype = {
 			{nativeProjection: 'EPSG:4326', projection: 'EPSG:3857'}
 		);
 		cdSrc.on(nyc.ol.source.Decorating.LoaderEventType.FEATURESLOADED, $.proxy(this.gotCds, this));
-		return cdSrc;
+		this.cdSrc = cdSrc;
 	},
 	gotCds: function(){
 		this.cdLyr = new ol.layer.Vector({
 			source: this.cdSrc, 
 			style: $.proxy(this.style.cdStyle, this.style)
 		});
-		new nyc.ol.FeatureTip(this.map, [{layer: this.cdLyr, labelFunction: this.tip}]);
+		this.tips.push(new nyc.ol.FeatureTip(this.map, [
+            {layer: this.cdLyr, labelFunction: this.tip}
+        ]));
 		this.map.addLayer(this.cdLyr);
-		this.creatCdCheck();
+		this.createCdCheck();
 	},
-	creatCdCheck: function(){
+	createCdCheck: function(){
 		var div = $('<div id="community-districts"></div>');		
 		this.cdChoices.sort(function(a, b){
 			var aCd = a.sort, bCd = b.sort;
@@ -173,7 +186,7 @@ nyc.sr.App.prototype = {
 		var filters = {
 			created_date: this.dateFilters(),
 			community_board: this.filterValues(this.cdCheck),
-			complaint_type: this.filterValues(this.srTypeCheck),
+			complaint_type: this.filterValues(this.srTypeCheck)
 		};
 		props = props || {};
 		if (props.x_coordinate_state_plane){
@@ -208,7 +221,6 @@ nyc.sr.App.prototype = {
 	sodaInfoQuery: function(feature, layer){
 		var filters = this.getFilters(feature.getProperties()), soda, callback;
 		if (layer === this.cdLyr){
-			var cd = feature.getId();
 			soda = this.cdListSoda;
 			callback = $.proxy(this.cdList, this);
 		}else{
@@ -245,10 +257,10 @@ nyc.sr.App.prototype = {
 	mapClick: function(event){
 		this.map.forEachFeatureAtPixel(event.pixel, $.proxy(this.sodaInfoQuery, this));
 	},
-	filterValues: function(checkboxes){
-		if (checkboxes && checkboxes.val().length){
+	filterValues: function(check){
+		if (check && check.val().length){
 			var values = [];
-			$.each(checkboxes.val(), function(){
+			$.each(check.val(), function(){
 				values.push(this.value);
 			});
 			return [{op: 'IN', value: values}];
@@ -272,7 +284,7 @@ nyc.sr.App.prototype = {
 	},
 	updateSrLayer: function(data){
 		var me = this;
-		var src = new nyc.ol.source.Decorating(
+		me.srSrc = new nyc.ol.source.Decorating(
 			{loader: new nyc.ol.source.CsvPointFeatureLoader({
 				url: me.srSoda.getUrlAndQuery(),
 				projection: 'EPSG:2263',
@@ -284,9 +296,9 @@ nyc.sr.App.prototype = {
 			{nativeProjection: 'EPSG:2263', projection: 'EPSG:3857'}
 		);
 
-		src.on(nyc.ol.source.Decorating.LoaderEventType.FEATURESLOADED, function(){
-			var buckets = me.buckets.build(data, src);
-			if (buckets.total == 50000){
+		me.srSrc.on(nyc.ol.source.Decorating.LoaderEventType.FEATURESLOADED, function(){
+			var buckets = me.buckets.build(data, me.srSrc);
+			if (buckets.total >= 50000){
 				$(me.mapRadio.inputs[1]).prop('disabled', true).checkboxradio('refresh');
 				$(me.mapRadio.inputs[0]).trigger('click').checkboxradio('refresh');
 			}else{
@@ -297,7 +309,7 @@ nyc.sr.App.prototype = {
 			}
 		});
 		
-		me.srLyr.setSource(src);
+		me.srLyr.setSource(me.srSrc);
 	},
 	tip: function(){
 		var count = this.get('sr_count') || '', txt = '';

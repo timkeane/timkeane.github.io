@@ -8,11 +8,11 @@ nyc.sr.ListDetail = function(options){
 	this.listDetailContainer = this.container.find('.list-detail');
 
 	this.listDetailContainer.collapsibleset('option', {
-			collapsedIcon: 'carat-d', 
-			expandedIcon: 'carat-u'
-		})
-		.addClass('ctl-collapse')
-		.hide();
+		collapsedIcon: 'carat-d', 
+		expandedIcon: 'carat-u'
+	})
+	.addClass('ctl-collapse')
+	.hide();
 
 	this.listContainer = this.container.find('.list');
 	this.detailContainer = this.container.find('.detail'); 

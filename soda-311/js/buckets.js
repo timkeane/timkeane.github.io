@@ -7,7 +7,7 @@ nyc.sr.Buckets.prototype = {
 	count: function(countTo){
 		var me = this, target = this.target;
 		if (me.interval) clearInterval(me.interval);
-		var start = $('#record-count span').html().replace(/,/, '') * 1;
+		var start = target.html().replace(/,/, '') * 1;
 		var end = countTo;
 		var count = start;
 		var step = (end - start) / 500;

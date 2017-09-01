@@ -2,10 +2,6 @@ var CD_URL = 'https://services5.arcgis.com/GfwWNkhOj9bNBqoJ/arcgis/rest/services
 var OPEN_DATA_URL = 'https://data.cityofnewyork.us/resource/fhrw-4uyv.csv';
 var WHERE_IS_MAPPABLE = "x_coordinate_state_plane IS NOT NULL AND y_coordinate_state_plane IS NOT NULL AND community_board NOT IN ('QNA', 'Unspecified MANHATTAN', 'Unspecified BRONX', 'Unspecified BROOKLYN', 'Unspecified QUEENS', 'Unspecified STATEN ISLAND', '0 Unspecified')";
 
-Date.prototype.toShortISOString = function(){
-	return this.toISOString().split('T')[0];
-};
-
 var mapRadio = new nyc.Radio({
 	target: '#map-type',
 	title: 'Map Type',
@@ -114,4 +110,4 @@ new nyc.soda.Query().execute({
 	filters: {
 		created_date: [{op: '>=', value: lastYear.toShortISOString()}]
 	}
-},$.proxy(nyc.sr.app.gotSrTypes, nyc.sr.app));
+}, $.proxy(nyc.sr.app.gotSrTypes, nyc.sr.app));
