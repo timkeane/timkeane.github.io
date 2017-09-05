@@ -1,5 +1,6 @@
 var CD_URL = 'https://services5.arcgis.com/GfwWNkhOj9bNBqoJ/arcgis/rest/services/nycd/FeatureServer/0/query?where=1=1&outFields=BoroCD&outSR=4326&f=geojson';
 var OPEN_DATA_URL = 'https://data.cityofnewyork.us/resource/fhrw-4uyv.csv';
+var OPEN_DATA_APP_TOKEN: 'NwNjHSDEkdJ2mvFMm1zSNrNAf'; 
 var WHERE_IS_MAPPABLE = "x_coordinate_state_plane IS NOT NULL AND y_coordinate_state_plane IS NOT NULL AND community_board NOT IN ('QNA', 'Unspecified MANHATTAN', 'Unspecified BRONX', 'Unspecified BROOKLYN', 'Unspecified QUEENS', 'Unspecified STATEN ISLAND', '0 Unspecified')";
 
 var mapRadio = new nyc.Radio({
@@ -19,6 +20,7 @@ var sodaTextarea = new nyc.Collapsible({target: '#soda-url', title: 'NYC OpenDat
 
 var cdSoda = new nyc.soda.Query({
 	url: OPEN_DATA_URL,
+	appToken: OPEN_DATA_APP_TOKEN,
 	query: {
 		select: 'count(unique_key) AS sr_count, community_board AS id',
 		where: WHERE_IS_MAPPABLE,
@@ -29,6 +31,7 @@ var cdSoda = new nyc.soda.Query({
 
 var srSoda = new nyc.soda.Query({
 	url: OPEN_DATA_URL,
+	appToken: OPEN_DATA_APP_TOKEN,
 	query: {
 		select: "count(id) AS sr_count, x_coordinate_state_plane || ' ' || y_coordinate_state_plane AS id, x_coordinate_state_plane, y_coordinate_state_plane",
 		where: WHERE_IS_MAPPABLE,
@@ -40,6 +43,7 @@ var srSoda = new nyc.soda.Query({
 
 var cdListSoda = new nyc.soda.Query({
 	url: OPEN_DATA_URL,
+	appToken: OPEN_DATA_APP_TOKEN,
 	query: {
 		select: 'count(unique_key) AS sr_count, community_board, complaint_type',
 		where: WHERE_IS_MAPPABLE,
@@ -50,6 +54,7 @@ var cdListSoda = new nyc.soda.Query({
 
 var cdSrTypeDrilldown = new nyc.soda.Query({
 	url: OPEN_DATA_URL,
+	appToken: OPEN_DATA_APP_TOKEN,
 	query: {
 		select: 'unique_key, agency_name, complaint_type, descriptor, created_date, closed_date, resolution_description, location_type, incident_address, street_name, cross_Street_1, cross_Street_2, intersection_street_1, intersection_street_2, city, incident_zip',
 		where: WHERE_IS_MAPPABLE,
@@ -60,6 +65,7 @@ var cdSrTypeDrilldown = new nyc.soda.Query({
 
 var srListSoda = new nyc.soda.Query({
 	url: OPEN_DATA_URL,
+	appToken: OPEN_DATA_APP_TOKEN,
 	query: {
 		select: 'unique_key, agency_name, complaint_type, descriptor, created_date, closed_date, resolution_description, location_type, incident_address, street_name, cross_Street_1, cross_Street_2, intersection_street_1, intersection_street_2, city, incident_zip',
 		where: WHERE_IS_MAPPABLE,
@@ -102,6 +108,7 @@ lastYear.setDate(lastYear.getDate() - 365);
 
 new nyc.soda.Query().execute({
 	url: OPEN_DATA_URL,
+	appToken: OPEN_DATA_APP_TOKEN,
 	query: {
 		select: 'count(unique_key) AS sr_count, complaint_type',
 		group: 'complaint_type',
