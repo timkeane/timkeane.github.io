@@ -1,6 +1,6 @@
 var CD_URL = 'https://services5.arcgis.com/GfwWNkhOj9bNBqoJ/arcgis/rest/services/nycd/FeatureServer/0/query?where=1=1&outFields=BoroCD&outSR=4326&f=geojson';
 var OPEN_DATA_URL = 'https://data.cityofnewyork.us/resource/fhrw-4uyv.csv';
-var OPEN_DATA_APP_TOKEN: 'NwNjHSDEkdJ2mvFMm1zSNrNAf'; 
+var OPEN_DATA_APP_TOKEN = 'NwNjHSDEkdJ2mvFMm1zSNrNAf'; 
 var WHERE_IS_MAPPABLE = "x_coordinate_state_plane IS NOT NULL AND y_coordinate_state_plane IS NOT NULL AND community_board NOT IN ('QNA', 'Unspecified MANHATTAN', 'Unspecified BRONX', 'Unspecified BROOKLYN', 'Unspecified QUEENS', 'Unspecified STATEN ISLAND', '0 Unspecified')";
 
 var mapRadio = new nyc.Radio({
