@@ -199,7 +199,7 @@ tk.NavAid.prototype = {
     var speed = this.getSpeed() || 0;
     var bearing = Math.round((this.getHeading() || 0) * 180 / Math.PI) + '&deg;';
     var distance = feature ? feature.getGeometry().getLength() : 0;
-    var arrival = feature ? this.remainingTime(distance, speed) : '';
+    var arrival = feature ? this.remainingTime(distance, speed);
     speed = (speed * 3.6 * 0.621371).toFixed(2) + ' mph';
     $('#speed span').html(speed);
     $('#heading span').html(bearing);
