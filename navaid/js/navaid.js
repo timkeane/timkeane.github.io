@@ -13,7 +13,6 @@ var tk = window.tk || {};
  * @param {nyc.ol.Tracker.Options} options Constructor options
  */
 tk.NavAid = function(options){
-  alert(1);
   options.showEveryTrackPositon = false;
   nyc.ol.Tracker.call(this, options);
   this.firstRun = false;
@@ -29,7 +28,6 @@ tk.NavAid = function(options){
   this.setupControls();
   this.navLayer();
   this.map.on('click', this.featureInfo, this);
-  alert(2);
 };
 
 tk.NavAid.prototype = {
