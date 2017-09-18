@@ -197,7 +197,7 @@ tk.NavAid.prototype = {
   updateDash: function(){
     var feature = this.navFeature;
     var speed = this.getSpeed() || 0;
-    var bearing = ((this.getHeading() || 0) * 180 / Math.PI) + '&deg;';
+    var bearing = Math.round((this.getHeading() || 0) * 180 / Math.PI) + '&deg;';
     var distance = feature ? feature.getGeometry().getLength() : 0;
     var arrival = feature ? this.remainingTime(distance, speed) : '';
     speed = (speed * 3.6 * 0.621371).toFixed(2) + ' mph';
