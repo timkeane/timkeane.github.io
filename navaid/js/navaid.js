@@ -93,7 +93,7 @@ tk.NavAid.prototype = {
     this.map.addLayer(
       new ol.layer.Tile({
         source: new ol.source.XYZ({
-          url: 'http://tileservice.charts.noaa.gov/tiles/50000_1/{z}/{x}/{y}.png'
+          url: 'https://tileservice.charts.noaa.gov/tiles/50000_1/{z}/{x}/{y}.png'
         })
       })
     );
