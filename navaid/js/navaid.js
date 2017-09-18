@@ -137,8 +137,7 @@ tk.NavAid.prototype = {
     $('body').append(this.navBtn).trigger('create');
     this.navBtn.click($.proxy(this.toggleNav, this));
 
-    var dash = $(tk.NavAid.DASH_HTML);
-    $('body').append(this.dash).trigger('create');
+    $('body').append($(tk.NavAid.DASH_HTML)).trigger('create');
   },
   /**
    * @private
