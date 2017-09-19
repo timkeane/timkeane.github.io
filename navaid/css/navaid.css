@@ -1,4 +1,4 @@
-#map, div.nav-list {
+#map, div#navigation {
   position: fixed;
   top: 0;
   left: 0;
@@ -44,31 +44,24 @@ div.north-arrow {
 .square, .box, .save, .gps {
   display: none;
 }
-.nav-list {
+#navigation {
     display: none;
     z-index: 1000;
     background-color: #fff;
 }
-.nav-list div {
-  margin: 5px;
+#navigation div {
+  margin: 5px 10px;
 }
-.nav-list .ui-input-search {
+#navigation .ui-input-search {
   width: calc(100% - 142px);
   height: 36px;
 }
-.nav-list .ui-input-search .ui-btn.ui-input-clear {
+#navigation .ui-input-search .ui-btn.ui-input-clear {
   margin-top: -11px;
   width: 0;
   height: 0;
   padding: 11px;
   background-position: center;
-}
-.nav-list a.cancel {
-    position: fixed;
-    margin: 0;
-    top: 5px;
-    right: 5px;
-    width: 80px;
 }
 .nav-features {
   height: calc(100% - 55px);
@@ -116,3 +109,58 @@ div.nav-dash div {
 .popup-content {
   width: 220px;
 }
+a.cancel, a.settings {
+  float: right;
+  width: 35px;
+  height: 35px;
+  margin: 5px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-color: #38c;
+  background-position: center;
+  cursor: pointer;
+}
+a.cancel {
+  background-size: 21px;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22iso-8859-1%22%3F%3E%3C!DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd%22%3E%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20%20width%3D%2214px%22%20height%3D%2214px%22%20viewBox%3D%220%200%2014%2014%22%20style%3D%22enable-background%3Anew%200%200%2014%2014%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20fill%3D%22%23fff%22%20points%3D%2214%2C3%2011%2C0%207%2C4%203%2C0%200%2C3%204%2C7%200%2C11%203%2C14%207%2C10%2011%2C14%2014%2C11%2010%2C7%20%22%2F%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+a.settings {
+  background-size: 25px;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3Asvg%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22340.274px%22%20height%3D%22340.274px%22%3E%3Cpath%20d%3D%22M293.629%2C127.806l-5.795-13.739c19.846-44.856%2C18.53-46.189%2C14.676-50.08l-25.353-24.77l-2.516-2.12h-2.937%20c-1.549%2C0-6.173%2C0-44.712%2C17.48l-14.184-5.719c-18.332-45.444-20.212-45.444-25.58-45.444h-35.765%20c-5.362%2C0-7.446-0.006-24.448%2C45.606l-14.123%2C5.734C86.848%2C43.757%2C71.574%2C38.19%2C67.452%2C38.19l-3.381%2C0.105L36.801%2C65.032%20c-4.138%2C3.891-5.582%2C5.263%2C15.402%2C49.425l-5.774%2C13.691C0%2C146.097%2C0%2C147.838%2C0%2C153.33v35.068c0%2C5.501%2C0%2C7.44%2C46.585%2C24.127%20l5.773%2C13.667c-19.843%2C44.832-18.51%2C46.178-14.655%2C50.032l25.353%2C24.8l2.522%2C2.168h2.951c1.525%2C0%2C6.092%2C0%2C44.685-17.516%20l14.159%2C5.758c18.335%2C45.438%2C20.218%2C45.427%2C25.598%2C45.427h35.771c5.47%2C0%2C7.41%2C0%2C24.463-45.589l14.195-5.74%20c26.014%2C11%2C41.253%2C16.585%2C45.349%2C16.585l3.404-0.096l27.479-26.901c3.909-3.945%2C5.278-5.309-15.589-49.288l5.734-13.702%20c46.496-17.967%2C46.496-19.853%2C46.496-25.221v-35.029C340.268%2C146.361%2C340.268%2C144.434%2C293.629%2C127.806z%20M170.128%2C228.474%20c-32.798%2C0-59.504-26.187-59.504-58.364c0-32.153%2C26.707-58.315%2C59.504-58.315c32.78%2C0%2C59.43%2C26.168%2C59.43%2C58.315%20C229.552%2C202.287%2C202.902%2C228.474%2C170.128%2C228.474z%22%20style%3D%22fill%3A%23fff%22%2F%3E%3C%2Fsvg%3E");
+}
+#navigation-settings {
+  position: fixed;
+  display: none;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-left: 10px;
+  z-index: 2000;
+}
+#navigation-settings h1 {
+  font-size: 24px;
+  display: inline-block;
+  margin: 5px 0;
+}
+#navigation-settings .ui-slider {
+  margin-right: 25px;
+}
+#navigation-settings label {
+  margin: 10px 0 0;
+}
+#warning {
+  display: none;
+  position: fixed;
+  left: calc(50% - 50px);
+  top: calc(50% - 50px);
+}
+#warning, #warning img {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+#warning img.off {
+  display: none;
+};

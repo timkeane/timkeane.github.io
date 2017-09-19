@@ -15,10 +15,8 @@ var tk = window.tk || {};
 tk.NavAid = function(options){
   options.showEveryTrackPositon = false;
   nyc.ol.Tracker.call(this, options);
-  this.firstRun = false;
   this.startingZoomLevel = options.startingZoomLevel || 14;
   this.popup = new nyc.ol.Popup(this.map);
-  this.namedStore = 'navaid-presistent';
   this.on(nyc.ol.Tracker.EventType.UPDATED, this.updateCurrentTrack, this);
   this.baseLayer();
   this.initDraw();
@@ -26,6 +24,7 @@ tk.NavAid = function(options){
   this.initCurrentTrack();
   this.setTracking(true);
   this.setupControls();
+  this.navSettings();
   this.navLayer();
   this.map.on('click', this.featureInfo, this);
 };
@@ -40,12 +39,27 @@ tk.NavAid.prototype = {
    * @private
    * @member {string}
    */
-  namedStore: null,
+  namedStore: 'navaid-presistent',
+  /**
+   * @private
+   * @member {string}
+   */
+  iconStore: 'navaid-warn-icon',
+  /**
+   * @private
+   * @member {string}
+   */
+  alarmStore: 'navaid-warn-alarm',
+  /**
+   * @private
+   * @member {string}
+   */
+  degreesStore: 'navaid-warn-degrees',
   /**
    * @private
    * @member {boolean}
    */
-  firstRun: false,
+  firstLaunch: false,
   /**
    * @private
    * @member {nyc.ol.Popup}
@@ -61,6 +75,16 @@ tk.NavAid.prototype = {
    * @member {Jquery}
    */
   navBtn: null,
+  /**
+   * @private
+   * @member {Jquery}
+   */
+  navForm: null,
+  /**
+   * @private
+   * @member {Jquery}
+   */
+  settingsForm: null,
   /**
    * @private
    * @member {ol.source.Vector}
@@ -138,6 +162,14 @@ tk.NavAid.prototype = {
     this.navBtn.click($.proxy(this.toggleNav, this));
 
     $('body').append($(tk.NavAid.DASH_HTML)).trigger('create');
+
+    $('body').append($(tk.NavAid.NAV_LIST_HTML)).trigger('create');
+    this.navForm = $('#navigation');
+    this.settingsForm = $('#navigation-settings');
+
+    $('body').append($(tk.NavAid.NAV_WARN_HTML)).trigger('create');
+
+    $('#navigation-settings input').change($.proxy(this.navSettings, this));
   },
   /**
    * @private
@@ -146,6 +178,7 @@ tk.NavAid.prototype = {
   initCurrentTrack: function(){
     var trackIdx = this.storage.getItem('navaid-track-index') || 0;
     trackIdx = (trackIdx * 1) + 1;
+    this.firstLaunch = trackIdx == 1;
     this.storage.setItem('navaid-track-index', trackIdx);
     this.trackFeature = new ol.Feature();
     this.storeNamed('navaid-track-' + trackIdx, this.trackFeature);
@@ -197,12 +230,13 @@ tk.NavAid.prototype = {
   updateDash: function(){
     var feature = this.navFeature;
     var speed = this.getSpeed() || 0;
-    var bearing = Math.round((this.getHeading() || 0) * 180 / Math.PI) + '&deg;';
+    var heading = Math.round((this.getHeading() || 0) * 180 / Math.PI) + '&deg;';
     var distance = feature ? feature.getGeometry().getLength() : 0;
     var arrival = this.remainingTime(distance, speed);
+    this.checkCourse(feature, speed, heading);
     speed = (speed * 3.6 * 0.621371).toFixed(2) + ' mph';
     $('#speed span').html(speed);
-    $('#heading span').html(bearing);
+    $('#heading span').html(heading);
     $('#arrival span').html(arrival)[arrival ? 'show' : 'hide']();
   },
   /**
@@ -233,6 +267,70 @@ tk.NavAid.prototype = {
   /**
    * @private
    * @method
+   * @param {ol.geom.LineString} line
+   * @return {number}
+   */
+  heading: function(line) {
+    var start = line.getFirstCoordinate();
+    var end = line.getLastCoordinate();
+  	var dx = end[0] - start[0];
+  	var dy = end[1] - start[1];
+  	var rad = Math.acos(dy / Math.sqrt(dx * dx + dy * dy)) ;
+    var deg = 360 / (2 * Math.PI) * rad;
+    if (dx < 0){
+        return 360 - deg;
+    }else{
+        return deg;
+    }
+  },
+  /**
+   * @private
+   * @method
+   * @param {ol.Feature} feature
+   * @param {number} speed
+   * @param {number} heading
+   */
+  checkCourse: function(feature, speed, heading){
+    if (feature && speed){
+      var course = this.heading(feature.getGeometry());
+      if (Math.abs(course - heading) > this.offCourse){
+        this.warnOn();
+      }else{
+        this.warnOff();
+      }
+    }else{
+      this.warnOff();
+    }
+  },
+  /**
+   * @private
+   * @method
+   */
+  warnOff: function(){
+    $('#warning').hide();
+    clearInterval(this.warnInterval);
+    delete this.warnInterval;
+  },
+  /**
+   * @private
+   * @method
+   */
+  warnOn: function(){
+    if (this.warnIcon){
+      $('#warning').show();
+      if (!this.warnInterval){
+        this.warnInterval = setInterval(function(){
+          $('#warning img').fadeToggle(199);
+        }, 400);
+      }
+    }
+    if (this.warnAlarm){
+      $('#warning audio').get(0).play();
+    }
+  },
+  /**
+   * @private
+   * @method
    */
   navigate: function(){
     var origin = this.getPosition();
@@ -240,6 +338,11 @@ tk.NavAid.prototype = {
     var destination = geom.getLastCoordinate();
     geom.setCoordinates([origin, destination]);
   },
+  /**
+   * @private
+   * @method
+  * @param {JQueryEvent} event
+   */
   beginNavigation: function(event){
     var feature = $(event.target).data('feature');
     var origin = this.getPosition();
@@ -248,7 +351,7 @@ tk.NavAid.prototype = {
       geometry: new ol.geom.LineString([origin, destination]),
     });
     this.navBtn.addClass('stop');
-    this.navList.slideToggle();
+    this.navForm.slideToggle();
     this.source.addFeature(this.navFeature);
     this.on(nyc.ol.Tracker.UPDATED, this.navigate, this);
   },
@@ -265,23 +368,24 @@ tk.NavAid.prototype = {
           if (yesNo){
             me.source.clear();
             me.un(nyc.ol.Tracker.UPDATED, me.navigate, me);
+            me.warnOff();
             btn.removeClass('stop');
           }
         }
       });
     }else{
-      me.showNavList();
+      me.showNavigation();
     }
   },
   /**
    * @private
    * @method
    */
-  showNavList: function(){
+  showNavigation: function(){
     var me = this;
-    if (!me.navList){
-      me.navList = $(tk.NavAid.NAV_LIST_HTML);
-      $('body').append(me.navList).trigger('create');
+    if (!me.navForm){
+      me.navForm = $(tk.NavAid.NAV_LIST_HTML);
+      $('body').append(me.navForm).trigger('create');
     }
 
     var names = [];
@@ -290,7 +394,7 @@ tk.NavAid.prototype = {
     };
     names.sort();
 
-    var div = this.navList.find('.nav-features').empty();
+    var div = this.navForm.find('.nav-features').empty();
     $.each(names, function(_, name){
       if (name.indexOf('navaid-track') == -1){
         var feature = me.namedFeatures[name];
@@ -301,7 +405,41 @@ tk.NavAid.prototype = {
       }
     });
 
-    me.navList.slideToggle();
+    me.navForm.slideToggle();
+  },
+  /**
+   * @private
+   * @method
+   * @param {JQueryEvent} event
+   */
+  navSettings: function(event){
+    if (event){
+      this.warnIcon = $('#off-course-icon').is(':checked');
+      this.warnAlarm = $('#off-course-alarm').is(':checked');
+      this.offCourse = $('#off-course-degrees').val() * 1;
+      this.storage.setItem(this.iconStore, this.warnIcon);
+      this.storage.setItem(this.alarmStore, this.warnAlarm);
+      this.storage.setItem(this.degreesStore, this.offCourse);
+    }else if(this.firstLaunch){
+      this.warnIcon = true;
+      this.warnAlarm = true;
+      this.offCourse = 10;
+      this.storage.setItem(this.iconStore, true);
+      this.storage.setItem(this.alarmStore, true);
+      this.storage.setItem(this.degreesStore, 10);
+      $('#off-course-icon').prop('checked', this.warnIcon);
+      $('#off-course-alarm').prop('checked', this.warnAlarm);
+      $('#off-course-degrees').val(this.offCourse);
+    }else{
+      this.warnIcon = this.storage.getItem(this.iconStore) == 'true';
+      this.warnAlarm = this.storage.getItem(this.alarmStore) == 'true';
+      this.offCourse = this.storage.getItem(this.degreesStore) * 1;
+      $('#off-course-icon').prop('checked', this.warnIcon);
+      $('#off-course-alarm').prop('checked', this.warnAlarm);
+      $('#off-course-degrees').val(this.offCourse);
+    }
+    $('#off-course-icon, #off-course-alarm').flipswitch().flipswitch('refresh');
+    $('#off-course-degrees').slider().slider('refresh');
   },
   /**
    * @private
@@ -460,12 +598,23 @@ nyc.inherits(tk.NavAid, nyc.ol.Tracker);
  * @const
  * @type {string}
  */
-tk.NavAid.NAV_LIST_HTML = '<div class="nav-list ui-page-theme-a">' +
-  '<a class="cancel" data-role="button" onclick="$(this).parent().slideToggle();">Cancel</a>' +
+tk.NavAid.NAV_LIST_HTML = '<div id="navigation" class="ui-page-theme-a">' +
+  '<a class="cancel" onclick="$(this).parent().slideToggle();"></a>' +
+  '<a class="settings" onclick="$(\'#navigation-settings\').slideDown();"></a>' +
   '<form class="ui-filterable">' +
-    '<input id="named-feature" data-type="search">' +
+    '<input id="named-feature" data-type="search" placeholder="Navigate to...">' +
   '</form>' +
   '<div class="nav-features" data-role="controlgroup" data-filter="true" data-input="#named-feature"></div>' +
+'</div>' +
+'<div id="navigation-settings" class="ui-page-theme-a">' +
+  '<h1>Navigation settings</h1>' +
+  '<a class="cancel" onclick="$(\'#navigation-settings\').slideUp();"></a>' +
+  '<label for="off-course-icon">Off course warning icon:</label>' +
+  '<input id="off-course-icon" type="checkbox" data-role="flipswitch">' +
+  '<label for="off-course-alarm">Off course warning alarm:</label>' +
+  '<input id="off-course-alarm" type="checkbox" data-role="flipswitch">' +
+  '<label for="off-course-degrees">Degrees:</label>' +
+  '<input type="range" id="off-course-degrees" min="0" max="180">' +
 '</div>';
 
 /**
@@ -477,4 +626,15 @@ tk.NavAid.DASH_HTML = '<div class="nav-dash">' +
   '<div id="speed"><span></span></div>' +
   '<div id="heading"><span></span></div>' +
   '<div id="arrival"><span></span></div>' +
+'</div>';
+
+/**
+ * @private
+ * @const
+ * @type {string}
+ */
+tk.NavAid.NAV_WARN_HTML = '<div id="warning">' +
+'<img class="yellow" src="img/warn-yellow.svg">' +
+'<img class="red off" src="img/warn-red.svg">' +
+  '<audio src="wav/warn.wav"></audio>' +
 '</div>';

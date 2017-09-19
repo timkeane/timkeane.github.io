@@ -18,13 +18,13 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.3.2/ol.js"></script>
 	<script src="https://maps.nyc.gov/nyc-lib/v0.4.5-SNAPSHOT/js/nyc-ol-lib.js"></script>
 	<script src="https://maps.nyc.gov/nyc-lib/v0.4.5-SNAPSHOT/js/nyc-ol-redline-lib.js"></script>
-	<script src="js/navaid.js?abc"></script>
+	<script src="js/navaid.js"></script>
 </head>
 <body>
 	<div id="map"></div>
 	<script>
 		$(document).ready(function(){
-			new tk.NavAid({
+			n=new tk.NavAid({
 				map: new ol.Map({
 					target: $('#map').get(0),
 					view: new ol.View({
