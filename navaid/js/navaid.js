@@ -463,7 +463,7 @@ tk.NavAid.prototype = {
   dms: function(feature){
     var center = this.center(feature);
     center = proj4(this.view.getProjection().getCode(), 'EPSG:4326', center);
-    return ol.coordinate.toStringHDMS(center).replace(/N/, 'N<br>').replace(/S/, 'S<br>');
+    return ol.coordinate.toStringHDMS(center).replace(/(N|S)/, '$1<br>');
   },
   /**
    * @private
