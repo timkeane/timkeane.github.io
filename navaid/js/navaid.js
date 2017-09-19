@@ -190,6 +190,7 @@ tk.NavAid.prototype = {
     $('a.pause-btn').click($.proxy(this.playPause, this));
 
     $('#navigation-settings input').change($.proxy(this.navSettings, this));
+    $('#navigation-settings button').click($.proxy(this.importExport, this));
   },
   /**
    * @private
@@ -443,6 +444,9 @@ tk.NavAid.prototype = {
         div.append(a).trigger('create');
       }
     });
+    if (!div.html()){
+      div.html('<p class="none">No stored locations</p>');
+    }
 
     me.navForm.slideToggle();
   },
@@ -546,9 +550,15 @@ tk.NavAid.prototype = {
   /**
    * @private
    * @method
+   * @param {string|undefiend} stored
    */
-  restoreNamedFeatures: function(){
-    var features = [], stored = this.storage.getItem(this.namedStore);
+  restoreNamedFeatures: function(stored){
+    var features = [];
+    if (stored){
+      this.storage.setItem(this.namedStore, stored);
+    }else{
+      stored = this.storage.getItem(this.namedStore);
+    }
     this.namedGeoJson = stored ? JSON.parse(stored) : {};
     this.namedFeatures = {};
     for (var name in this.namedGeoJson){
@@ -559,7 +569,8 @@ tk.NavAid.prototype = {
       this.namedFeatures[name] = feature;
       features.push(feature);
     }
-    this.draw.addFeatures(features);
+    this.draw.clear();
+    this.draw.addFeatures(features, true);
   },
   /**
    * @private
@@ -577,7 +588,7 @@ tk.NavAid.prototype = {
     var feature = new ol.Feature({
       geometry: new ol.geom.Point(this.getPosition())
     });
-    this.draw.addFeatures([feature]);
+    this.draw.addFeatures([feature], true);
     this.nameFeature(feature);
   },
   /**
@@ -645,6 +656,7 @@ tk.NavAid.prototype = {
       }
       this.draw.removeFeature(feature);
       feature = replacement;
+      this.namedFeatures[name] = null;
       delete this.namedFeatures[name];
     }
     feature.set('name', name);
@@ -655,10 +667,30 @@ tk.NavAid.prototype = {
     });
     this.storage.setItem(this.namedStore, JSON.stringify(this.namedGeoJson));
     if (!this.draw.source.getFeatureById(name)){
-      this.draw.addFeatures([feature]);
+      this.draw.addFeatures([feature], true);
     }
     if (replace && active){
       this.draw.activate(type);
+    }
+  },
+  importExport: function(event){
+    var me = this, storage = me.storage, btn = $(event.target);
+    if (btn.hasClass('empty')){
+      var dia = new nyc.Dialog()
+      dia.yesNo({
+        message: 'Delete all location data?',
+        callback: function(yesNo){
+          if (yesNo){
+            storage.removeItem(me.namedStore);
+            me.draw.clear();
+          }
+        }
+      });
+      dia.container.find('.btn-no').focus();
+    }else if (btn.hasClass('export')){
+      storage.saveGeoJson('locations.json', storage.getItem(me.namedStore));
+    }else{
+      storage.readTextFile($.proxy(me.restoreNamedFeatures, me));
     }
   }
 };
@@ -686,7 +718,11 @@ tk.NavAid.NAV_LIST_HTML = '<div id="navigation" class="ui-page-theme-a">' +
   '<label for="off-course-alarm">Off course warning alarm:</label>' +
   '<input id="off-course-alarm" type="checkbox" data-role="flipswitch">' +
   '<label for="off-course-degrees">Degrees:</label>' +
-  '<input type="range" id="off-course-degrees" min="0" max="180">' +
+  '<input type="range" id="off-course-degrees" value="10" min="0" max="180">' +
+  '<h1>Navigation locations</h1>' +
+  '<button class="export" data-role="button">Export</button>' +
+  '<button class="import" data-role="button">Import</button>' +
+  '<button class="empty" data-role="button">Clear</button>' +
 '</div>';
 
 /**
