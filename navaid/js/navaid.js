@@ -541,6 +541,7 @@ tk.NavAid.prototype = {
     var feature = new ol.Feature({
       geometry: new ol.geom.Point(this.getPosition())
     });
+    this.draw.addFeatures([feature]);
     this.nameFeature(feature);
   },
   /**
