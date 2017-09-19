@@ -208,13 +208,13 @@ tk.NavAid.prototype = {
   			}),
   			new ol.style.Style({
   				image: new ol.style.Circle({
-  					radius: 4,
+  					radius: 8,
   					fill: new ol.style.Fill({
   						color: 'red'
   					}),
             stroke: new ol.style.Stroke({
               color: '#fff',
-              width: 2
+              width: 2.5
             })
   				}),
   				zIndex: 300
@@ -222,6 +222,8 @@ tk.NavAid.prototype = {
   		]
     });
     this.draw.on(nyc.ol.FeatureEventType.ADD, this.nameFeature, this);
+    this.draw.on(nyc.ol.FeatureEventType.CHANGE, this.changeFeature, this);
+    this.draw.on(nyc.ol.FeatureEventType.REMOVE, this.removeFeature, this);
   },
   /**
    * @private
@@ -460,7 +462,7 @@ tk.NavAid.prototype = {
   dms: function(feature){
     var center = this.center(feature);
     center = proj4(this.view.getProjection().getCode(), 'EPSG:4326', center);
-    return ol.coordinate.toStringHDMS(center);
+    return ol.coordinate.toStringHDMS(center).replace(/N/, 'N<br>').replace(/S/, 'S<br>');
   },
   /**
    * @private
@@ -551,7 +553,9 @@ tk.NavAid.prototype = {
     new nyc.Dialog().input({
       placeholder: 'Enter a name...',
       callback: function(name){
-        if (!(name in me.namedFeatures)){
+        if (!name){
+          me.draw.removeFeature(feature);
+        }else if (!(name in me.namedFeatures)){
           me.storeNamed(name, feature, replace);
         }else{
           new nyc.Dialog().ok({
@@ -567,16 +571,43 @@ tk.NavAid.prototype = {
   /**
    * @private
    * @method
+   * @param {ol.Feature} feature
+   */
+  changeFeature: function(feature){
+    var name = feature.get('name');
+    if (name){
+      this.storeNamed(name, feature, true);
+    }
+  },
+  /**
+   * @private
+   * @method
+   * @param {ol.Feature} feature
+   */
+  removeFeature: function(feature){
+    var name = feature.get('name');
+    delete this.namedFeatures[name];
+    delete this.namedGeoJson[name];
+    this.storage.setItem(this.namedStore, JSON.stringify(this.namedGeoJson));
+  },
+  /**
+   * @private
+   * @method
    * @param {string} name
    * @param {ol.Feature} feature
    * @param {boolean} replace
    */
   storeNamed: function(name, feature, replace){
+    var type = this.draw.type;
+    var active = this.draw.active();
     if (replace){
       var replacement = new ol.Feature(feature.getProperties());
+      if (active){
+        this.draw.deactivate();
+      }
       this.draw.removeFeature(feature);
-      feature = repalcement;
-      delete me.namedFeatures[feature.get('name')];
+      feature = replacement;
+      delete this.namedFeatures[name];
     }
     feature.set('name', name);
     feature.setId(name);
@@ -587,6 +618,9 @@ tk.NavAid.prototype = {
     this.storage.setItem(this.namedStore, JSON.stringify(this.namedGeoJson));
     if (!this.draw.source.getFeatureById(name)){
       this.draw.addFeatures([feature]);
+    }
+    if (replace && active){
+      this.draw.activate(type);
     }
   }
 };
