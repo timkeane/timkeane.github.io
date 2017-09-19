@@ -246,6 +246,7 @@ tk.NavAid.prototype = {
    * @method
    * @param {number} distance
    * @param {number} speed
+   * @return {string}
    */
   remainingTime: function(distance, speed){
     if (distance && speed){
