@@ -172,9 +172,11 @@ tk.NavAid.prototype = {
     target.append(this.waypointBtn).trigger('create');
     this.waypointBtn.click($.proxy(this.waypoint, this));
 
-    this.navBtn = $('<a class="nav ctl ctl-btn" data-role="button"></a>');
+    this.navBtn = $(tk.NavAid.NAV_BUTTON_HTML);
     target.append(this.navBtn).trigger('create');
     this.navBtn.click($.proxy(this.toggleNav, this));
+
+    this.hackAudio(this.navBtn);
 
     target.append($(tk.NavAid.DASH_HTML)).trigger('create');
 
@@ -189,6 +191,14 @@ tk.NavAid.prototype = {
 
     $('#navigation-settings input').change($.proxy(this.navSettings, this));
     $('#navigation-settings button').click($.proxy(this.importExport, this));
+  },
+  hackAudio: function(btn){
+    var audio = btn.find('audio');
+    audio.on('play', function(){
+      audio.css({width: 0, height: 0, 'margin-left': '-200px'});
+      btn.trigger('click');
+    });
+    this.audio = audio.get(0);
   },
   /**
    * @private
@@ -368,6 +378,7 @@ tk.NavAid.prototype = {
    */
   warnOff: function(){
     $('#warning').hide();
+    this.audio.muted = true;
     clearInterval(this.warnInterval);
     delete this.warnInterval;
   },
@@ -385,7 +396,7 @@ tk.NavAid.prototype = {
       }
     }
     if (this.warnAlarm){
-      $('#warning audio').get(0).play();
+      this.audio.muted = false;
     }
   },
   /**
@@ -734,12 +745,17 @@ tk.NavAid.prototype = {
    * @param {JQueryEvent} event
    */
   trash: function(event){
-    var me = this, target = $(event.target), feature = target.data('feature');
+    var me = this,
+      target = $(event.target),
+      feature = target.data('feature')
+      name = feature.get('name');
     new nyc.Dialog().yesNo({
-      message: 'Delete <b>' + feature.get('name') + '</b>?',
+      message: 'Delete <b>' + name + '</b>?',
       callback: function(yesNo){
         if (yesNo){
+          var src = me.draw.source;
           me.removeFeature(feature);
+          src.removeFeature(src.getFeatureById(name));
           target.parent().fadeOut(function(){
             target.parent().remove();
           });
@@ -869,8 +885,18 @@ tk.NavAid.PAUSE_HTML = '<a class="pause-btn ctl ctl-btn" data-role="button" data
  * @const
  * @type {string}
  */
+tk.NavAid.NAV_BUTTON_HTML = '<a class="nav ctl ctl-btn" data-role="button">' +
+  '<audio controls loop muted style="opacity:0">' +
+    '<source src="wav/warn.wav" type="audio/wav">' +
+  '</audio>' +
+'</a>';
+
+/**
+ * @private
+ * @const
+ * @type {string}
+ */
 tk.NavAid.NAV_WARN_HTML = '<div id="warning">' +
-'<img class="yellow" src="img/warn-yellow.svg">' +
-'<img class="red off" src="img/warn-red.svg">' +
-  '<audio src="wav/warn.wav"></audio>' +
+  '<img class="yellow" src="img/warn-yellow.svg">' +
+  '<img class="red off" src="img/warn-red.svg">' +
 '</div>';
