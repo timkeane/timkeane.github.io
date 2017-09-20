@@ -289,6 +289,20 @@ tk.NavAid.prototype = {
     $('#heading span').html(heading + '&deg;');
     $('#arrival span').html(arrival)[arrival ? 'show' : 'hide']();
   },
+  avgSpeed: function(){
+    var speed = this.getSpeed() || 0;
+    if (this.speeds.length == 10){
+      this.speeds.unshift(speed);
+      this.speeds.pop();
+    }else{
+      this.speeds.push(speed);
+    }
+    var avgSpeed = 0;
+    $.each(speeds, function(){
+      avgSpeed += this;
+    });
+    return avgSpeed / speed.length;
+  },
   distance: function(feature){
     if (feature){
       var geom = feature.getGeometry();
@@ -406,6 +420,7 @@ tk.NavAid.prototype = {
    */
   beginNavigation: function(event){
     this.navFeature = new ol.Feature({geometry: new ol.geom.LineString([])});
+    this.speeds = [];
     this.source.addFeature(this.navFeature);
     var btn = $(event.target);
     var feature = btn.data('feature');
@@ -854,7 +869,7 @@ tk.NavAid.NAV_LIST_HTML = '<div id="navigation" class="ui-page-theme-a">' +
     '<label for="off-course-alarm">Off course warning alarm:</label>' +
     '<input id="off-course-alarm" type="checkbox" data-role="flipswitch">' +
     '<label for="off-course-degrees">Degrees:</label>' +
-    '<input type="range" id="off-course-degrees" value="10" min="0" max="180">' +
+    '<input type="range" id="off-course-degrees" value="20" min="0" max="180">' +
     '<h1>Navigation locations</h1>' +
     '<button class="export" data-role="button">Export</button>' +
     '<button class="import" data-role="button">Import</button>' +
