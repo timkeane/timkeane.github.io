@@ -2,9 +2,6 @@ var tk = window.tk || {};
 
 tk.MockNavAid = function(options){
   tk.NavAid.call(this, options);
-  this.loadBtn = $('<a data-role="button" style="margin:100px">Load mock data</a>');
-  this.loadBtn.click($.proxy(this.loadMockData, this));
-  $('body').append(this.loadBtn).trigger('create');
 };
 
 tk.MockNavAid.prototype = {
@@ -32,14 +29,14 @@ tk.MockNavAid.prototype = {
   mockTracking: function(){
     this.position = this.mockPositions[this.positionIdx];
     this.positionIdx++;
-    if (this.positionIdx == this.mockPositions.length - 1){
+    if (this.positionIdx == this.mockPositions.length - 2){
       clearInterval(this.intv);
     }
     this.dispatchEvent('changed');
     this.updatePosition();
   },
   loadMockData: function(){
-    this.loadBtn.remove();
+    $('.load-data').remove();
     this.storage.loadGeoJsonFile(this.map, $.proxy(this.ready, this));
   },
   ready: function(layer){

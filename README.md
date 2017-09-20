@@ -6,6 +6,6 @@
 
 ## [https://maps.nyc.gov/then&now/](https://maps.nyc.gov/then&now/)
 
-## [navaid](./navaid/main/webapp/)
+## [navaid](./navaid/)
 
 ## [soda-311](./soda-311/)

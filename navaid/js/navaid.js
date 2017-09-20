@@ -352,8 +352,8 @@ tk.NavAid.prototype = {
    */
   checkCourse: function(feature, speed, heading){
     if (feature && speed){
-      var course = this.heading(feature.getGeometry());
-      if (Math.abs(course - heading) > this.offCourse){
+      var courseHeading = this.heading(feature.getGeometry());
+      if (Math.abs(courseHeading - heading) > this.offCourse){
         this.warnOn();
       }else{
         this.warnOff();
@@ -413,7 +413,7 @@ tk.NavAid.prototype = {
       }
       this.course = new ol.geom.LineString(coords);
     }else{
-      this.course = this.center(feature);
+      this.course = new ol.geom.Point(this.center(feature));
     }
   },
   nextWaypoint: function(position, destination){
@@ -504,11 +504,11 @@ tk.NavAid.prototype = {
     var btns;
     if (feature.getGeometry().getType() == 'LineString'){
       var btns = $(
-        '<a data-role="button" data-direction="fwd">' + name + ' (foward)</a>' +
-        '<a data-role="button" data-direction="rev">' + name + ' (reverse)</a>'
+        '<a data-role="button" data-direction="fwd">' + name + ' (foward)</a><a class="trash"></a>' +
+        '<a data-role="button" data-direction="rev">' + name + ' (reverse)</a><a class="trash"></a>'
       );
     }else{
-      btns = $('<a data-role="button">' + name + '</a>');
+      btns = $('<a data-role="button">' + name + '</a><a class="trash"></a>');
     }
     btns.data('feature', feature);
     btns.click($.proxy(this.beginNavigation, this));
@@ -805,18 +805,20 @@ tk.NavAid.NAV_LIST_HTML = '<div id="navigation" class="ui-page-theme-a">' +
   '<div class="nav-features" data-role="controlgroup" data-filter="true" data-input="#named-feature"></div>' +
 '</div>' +
 '<div id="navigation-settings" class="ui-page-theme-a">' +
-  '<h1>Navigation settings</h1>' +
   '<a class="cancel" onclick="$(\'#navigation-settings\').slideUp();"></a>' +
-  '<label for="off-course-icon">Off course warning icon:</label>' +
-  '<input id="off-course-icon" type="checkbox" data-role="flipswitch">' +
-  '<label for="off-course-alarm">Off course warning alarm:</label>' +
-  '<input id="off-course-alarm" type="checkbox" data-role="flipswitch">' +
-  '<label for="off-course-degrees">Degrees:</label>' +
-  '<input type="range" id="off-course-degrees" value="10" min="0" max="180">' +
-  '<h1>Navigation locations</h1>' +
-  '<button class="export" data-role="button">Export</button>' +
-  '<button class="import" data-role="button">Import</button>' +
-  '<button class="empty" data-role="button">Clear</button>' +
+  '<div class="nav-settings">' +
+    '<h1>Navigation settings</h1>' +
+    '<label for="off-course-icon">Off course warning icon:</label>' +
+    '<input id="off-course-icon" type="checkbox" data-role="flipswitch">' +
+    '<label for="off-course-alarm">Off course warning alarm:</label>' +
+    '<input id="off-course-alarm" type="checkbox" data-role="flipswitch">' +
+    '<label for="off-course-degrees">Degrees:</label>' +
+    '<input type="range" id="off-course-degrees" value="10" min="0" max="180">' +
+    '<h1>Navigation locations</h1>' +
+    '<button class="export" data-role="button">Export</button>' +
+    '<button class="import" data-role="button">Import</button>' +
+    '<button class="empty" data-role="button">Clear</button>' +
+  '</div>' +
 '</div>';
 
 /**

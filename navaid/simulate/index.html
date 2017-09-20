@@ -3,6 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="apple-mobile-web-app-capable" content="yes">
 
 	<title>Tim's NavAid</title>
 
@@ -10,7 +12,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.3.2/ol.css">
 	<link rel="stylesheet" href="https://maps.nyc.gov/nyc-lib/v0.4.5-SNAPSHOT/css/nyc-ol-lib.css">
 	<link rel="stylesheet" href="https://maps.nyc.gov/nyc-lib/v0.4.5-SNAPSHOT/css/nyc-ol-redline-lib.css">
-	<link rel="stylesheet" href="css/navaid.css">
+	<link rel="stylesheet" href="../../../main/webapp/css/navaid.css">
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.js"></script>
@@ -18,13 +20,31 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.3.2/ol-debug.js"></script>
 	<script src="https://maps.nyc.gov/nyc-lib/v0.4.5-SNAPSHOT/js/nyc-ol-lib.js"></script>
 	<script src="https://maps.nyc.gov/nyc-lib/v0.4.5-SNAPSHOT/js/nyc-ol-redline-lib.js"></script>
-	<script src="js/navaid.js"></script>
+	<script src="/nyc-lib/src/main/js/nyc/storage.js"></script>
+	<script src="/nyc-lib/src/main/js/nyc/ol/storage.js"></script>
+	<script src="/nyc-lib/src/main/js/nyc/ol/tracker.js"></script>
+	<script src="../../../main/webapp/js/navaid.js"></script>
+	<script src="js/mock-tracker.js"></script>
+
+	<style>
+		.load-data.ui-btn {
+			color: #fff;
+			background-color: rgba(51,136,204,.8);
+			margin: 100px auto;
+			width: 200px;
+		}
+		.load-data.ui-btn:hover {
+			background-color: #38c;
+			color: #fff;
+		}
+	</style>
 </head>
 <body>
 	<div id="map"></div>
 	<script>
+	var navaid;
 		$(document).ready(function(){
-			navaid = new tk.NavAid({
+			navaid = new tk.MockNavAid({
 				map: new ol.Map({
 					target: $('#map').get(0),
 					view: new ol.View({
@@ -36,5 +56,8 @@
 			})
 		});
 	</script>
+	<button class="load-data" data-role="button" onclick="navaid.loadMockData();">
+		Load simulation data
+	</button>
 </body>
 </html>
