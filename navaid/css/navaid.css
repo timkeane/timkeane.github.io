@@ -123,9 +123,6 @@ div.nav-dash div {
 #arrival {
   width: 86px;
 }
-.nav-dash div.north-arrow {
-  padding: 0;
-}
 .popup-content {
   width: 120px;
 }
@@ -190,4 +187,19 @@ a.settings {
 }
 #warning img.off {
   display: none;
+}
+@media only screen and (max-width : 335px) {
+  .nav-dash div span {
+    font-size: 20px;
+  }
+  div.nav-dash div {
+    padding: 10px 0 0;
+  }
+  #speed {
+    width: 120px;
+  }
+  #heading {
+    width: 70px;
+    text-align: center;
+  }
 }
