@@ -28,13 +28,13 @@ a.ctl-btn.ui-btn:hover, .draw-mnu-btn.ui-btn:hover, a.popup-closer:hover {
 .draw-btn-mnu {
   top: 75px;
 }
-.pause-btn {
+a.ctl-btn.ui-btn.pause-btn {
   top: 3px;
   left: 3px;
   background-size: 18px;
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3Asvg%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Cpath%20style%3D%22fill%3A%23fff%22%20d%3D%22M0%200%20L%20100%2050%20L%200%20100%22%2F%3E%3C%2Fsvg%3E");
 }
-.pause {
+a.ctl-btn.ui-btn.pause-btn.pause {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3Asvg%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Cpath%20style%3D%22stroke%3A%23fff%3Bstroke-width%3A30%22%20d%3D%22M30%200%20L%2030%20100%22%2F%3E%3Cpath%20style%3D%22stroke%3A%23fff%3Bstroke-width%3A30%22%20d%3D%22M70%200%20L%2070%20100%22%2F%3E%3C%2Fsvg%3E");
 }
 .waypoint {
@@ -55,7 +55,7 @@ div.north-arrow {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3Asvg%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Cpath%20style%3D%22fill%3A%230084ca%3Bstroke-width%3A5%3Bstroke%3A%23fff%22%20d%3D%22M50%2010%20L%2070%2090%20L%2030%2090%20L%2050%2010%22%2F%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2240%22%20style%3D%22fill%3Anone%3Bstroke%3A%23fff%3Bstroke-width%3A20%22%2F%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2240%22%20style%3D%22fill%3Anone%3Bstroke%3A%230084ca%3Bstroke-width%3A10%22%2F%3E%3C%2Fsvg%3E");
   opacity: .8;
 }
-.square, .box, .save, .delete, .gps {
+.square, .box, .gps, .save, .draw-btn-mnu .delete {
   display: none;
 }
 #navigation {
@@ -114,14 +114,14 @@ div.nav-dash div {
   padding: 8px 0 0;
 }
 #speed {
-  width: 118px;
+  width: 133px;
 }
 #heading {
-  width: 54px;
+  width: 67px;
   text-align: center;
 }
 #arrival {
-  width: 95px;
+  width: 86px;
 }
 .nav-dash div.north-arrow {
   padding: 0;
@@ -184,6 +184,9 @@ a.settings {
   position: absolute;
   width: 100px;
   height: 100px;
+}
+#warning img {
+  opacity: .8;
 }
 #warning img.off {
   display: none;

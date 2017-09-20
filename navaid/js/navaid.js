@@ -170,15 +170,17 @@ tk.NavAid.prototype = {
    * @method
    */
   setupControls: function(){
+    var target = $(this.map.getTarget());
+
     this.waypointBtn = $('<a class="waypoint ctl ctl-btn" data-role="button"></a>');
-    $('body').append(this.waypointBtn).trigger('create');
+    target.append(this.waypointBtn).trigger('create');
     this.waypointBtn.click($.proxy(this.waypoint, this));
 
     this.navBtn = $('<a class="nav ctl ctl-btn" data-role="button"></a>');
-    $('body').append(this.navBtn).trigger('create');
+    target.append(this.navBtn).trigger('create');
     this.navBtn.click($.proxy(this.toggleNav, this));
 
-    $('body').append($(tk.NavAid.DASH_HTML)).trigger('create');
+    target.append($(tk.NavAid.DASH_HTML)).trigger('create');
 
     $('body').append($(tk.NavAid.NAV_LIST_HTML)).trigger('create');
     this.navForm = $('#navigation');
@@ -186,7 +188,7 @@ tk.NavAid.prototype = {
 
     $('body').append($(tk.NavAid.NAV_WARN_HTML)).trigger('create');
 
-    $('body').append($(tk.NavAid.PAUSE_HTML)).trigger('create');
+    target.append($(tk.NavAid.PAUSE_HTML)).trigger('create');
     $('a.pause-btn').click($.proxy(this.playPause, this));
 
     $('#navigation-settings input').change($.proxy(this.navSettings, this));
@@ -269,14 +271,29 @@ tk.NavAid.prototype = {
   updateDash: function(){
     var feature = this.navFeature;
     var speed = this.getSpeed() || 0;
-    var heading = Math.round((this.getHeading() || 0) * 180 / Math.PI) + '&deg;';
-    var distance = feature ? feature.getGeometry().getLength() : 0;
+    var heading = Math.round((this.getHeading() || 0) * 180 / Math.PI);
+    var distance = this.distance(feature);
     var arrival = this.remainingTime(distance, speed);
     this.checkCourse(feature, speed, heading);
     speed = (speed * 3.6 * 0.621371).toFixed(2) + ' mph';
     $('#speed span').html(speed);
-    $('#heading span').html(heading);
+    $('#heading span').html(heading + '&deg;');
     $('#arrival span').html(arrival)[arrival ? 'show' : 'hide']();
+  },
+  distance: function(feature){
+    if (feature){
+      var geom = feature.getGeometry();
+      var waypoint = geom.getLastCoordinate();
+      var distance = geom.getLength();
+      if (this.course){
+        var position = this.track.getLastCoordinate()
+        var course = this.course.getCoordinates();
+        course.slice(this.inCoords(waypoint, course));
+        distance += new ol.geom.LineString(course).getLength();
+      }
+      return distance;
+    }
+    return 0;
   },
   /**
    * @private
@@ -371,29 +388,63 @@ tk.NavAid.prototype = {
   /**
    * @private
    * @method
-   */
-  navigate: function(){
-    var origin = this.getPosition();
-    var geom = this.navFeature.getGeometry();
-    var destination = geom.getLastCoordinate();
-    geom.setCoordinates([origin, destination]);
-  },
-  /**
-   * @private
-   * @method
   * @param {JQueryEvent} event
    */
   beginNavigation: function(event){
-    var feature = $(event.target).data('feature');
-    var origin = this.getPosition();
-    var destination = this.center(feature);
-    this.navFeature = new ol.Feature({
-      geometry: new ol.geom.LineString([origin, destination]),
-    });
+    this.navFeature = new ol.Feature({geometry: new ol.geom.LineString([])});
+    this.source.addFeature(this.navFeature);
+    var btn = $(event.target);
+    var feature = btn.data('feature');
+    var direction = btn.data('direction');
+    this.setCourse(feature, direction);
+    this.nextWaypoint(this.getPosition());
     this.navBtn.addClass('stop');
     this.navForm.slideToggle();
-    this.source.addFeature(this.navFeature);
-    this.on(nyc.ol.Tracker.UPDATED, this.navigate, this);
+  },
+  setCourse: function(feature, direction){
+    var geom = feature.getGeometry();
+    if (geom.getType() == 'LineString'){
+      var coords = geom.clone().getCoordinates();
+      if (direction == 'rev'){
+        this.course = new ol.geom.LineString(coords.reverse());
+      }
+      this.course = new ol.geom.LineString(coords);
+    }else{
+      this.course = this.center(feature);
+    }
+  },
+  nextWaypoint: function(position, destination){
+    if (this.navFeature){
+      var waypoint = this.course;
+      if ('getClosestPoint' in waypoint){
+        var course = this.course;
+        var coords = course.getCoordinates();
+        waypoint = course.getClosestPoint(position);
+        if (!this.inCoords(waypoint, coords) > -1){
+          for (var i = 0; i < coords.length - 1; i++){
+            if (this.isOnSeg(coords[i], coords[i + 1], waypoint)){
+              waypoint = coords[i + 1];
+              break;
+            }
+          }
+        }
+      }
+      this.navFeature.getGeometry().setCoordinates([position, waypoint]);
+    }
+  },
+  inCoords: function(coord, coordinates){
+    var hit = false, i = -1;
+    $.each(coordinates, function(){
+      hit = this[0] == coord[0] && this[1] == coord[1];
+      i++;
+      return !hit;
+    });
+    return hit ? i : -1;
+  },
+  isOnSeg: function(start, end, waypoint){
+    var m = (start[1] - end[1]) / (start[0] - end[0]);
+    var b = start[1] - (start[0] * m);
+    return waypoint[1] == (m * waypoint[0]) + b;
   },
   /**
    * @private
@@ -407,7 +458,7 @@ tk.NavAid.prototype = {
         callback: function(yesNo){
           if (yesNo){
             me.source.clear();
-            me.un(nyc.ol.Tracker.UPDATED, me.navigate, me);
+            me.navFeature = null;
             me.warnOff();
             btn.removeClass('stop');
           }
@@ -437,11 +488,7 @@ tk.NavAid.prototype = {
     var div = this.navForm.find('.nav-features').empty();
     $.each(names, function(_, name){
       if (name.indexOf('navaid-track') == -1){
-        var feature = me.namedFeatures[name];
-        var a = $('<a data-role="button">' + name + '</a>');
-        a.data('feature', feature);
-        a.click($.proxy(me.beginNavigation, me));
-        div.append(a).trigger('create');
+        me.addNavChoices(div, name, me.namedFeatures[name]);
       }
     });
     if (!div.html()){
@@ -449,6 +496,20 @@ tk.NavAid.prototype = {
     }
 
     me.navForm.slideToggle();
+  },
+  addNavChoices: function(div, name, feature){
+    var btns;
+    if (feature.getGeometry().getType() == 'LineString'){
+      var btns = $(
+        '<a data-role="button" data-direction="fwd">' + name + ' (foward)</a>' +
+        '<a data-role="button" data-direction="rev">' + name + ' (reverse)</a>'
+      );
+    }else{
+      btns = $('<a data-role="button">' + name + '</a>');
+    }
+    btns.data('feature', feature);
+    btns.click($.proxy(this.beginNavigation, this));
+    div.append(btns).trigger('create');
   },
   /**
    * @private
@@ -497,13 +558,12 @@ tk.NavAid.prototype = {
   /**
    * @private
    * @method
-   * @param {ol.Feature} feature
+   * @param {ol.Coordinate} coordinate
    * @return {string}
    */
-  dms: function(feature){
-    var center = this.center(feature);
-    center = proj4(this.view.getProjection().getCode(), 'EPSG:4326', center);
-    return ol.coordinate.toStringHDMS(center).replace(/(N|S)/, '$1<br>');
+  dms: function(coordinate){
+    var coord = proj4(this.view.getProjection().getCode(), 'EPSG:4326', coordinate);
+    return ol.coordinate.toStringHDMS(coord);
   },
   /**
    * @private
@@ -514,18 +574,47 @@ tk.NavAid.prototype = {
   infoHtml: function(feature){
     var name = feature.get('name');
     if (name){
-      var me = this, html = $('<div></div>');
-      html.append('<div>' + me.dms(feature) + '</div>')
-      if (name.indexOf('navaid-track') == 0){
-        var btn = $('<button>Name this track...</button>');
-        btn.click(function(){
-          me.nameFeature(feature, true);
-        });
-        html.append(btn);
+      var html = $('<div></div>');
+      var geom = feature.getGeometry();
+      var type = geom.getType();
+      if (type == 'Point'){
+        this.pointHtml(geom, html);
+      }else if (type == 'LineString'){
+        this.lineHtml(geom, html);
       }else{
-        html.append('<div><b>' + name + '</b></div>')
+        this.polygonHtml(feature, html);
       }
+      this.nameHtml(name , html);
       return html;
+    }
+  },
+  pointHtml: function(geom, html){
+    var dms = this.dms(geom.getCoordinates());
+    html.append('<div>' + dms + '</div>');
+  },
+  lineHtml: function(geom, html){
+    var dms = this.dms(geom.getFirstCoordinate());
+    html.append('<div><b>Start:</b></div>');
+    html.append('<div>' + dms + '</div>');
+    dms = this.dms(geom.getLastCoordinate());
+    html.append('<div><b>End:</b></div>');
+    html.append('<div>' + dms + '</div>');
+  },
+  polygonHtml: function(feature, html){
+    var dms = this.dms(this.center(feature));
+    html.append('<div><b>Center:</b></div>');
+    html.append('<div>' + dms + '</div>');
+  },
+  nameHtml: function(name, html){
+    var me = this;
+    if (name.indexOf('navaid-track') == 0){
+      var btn = $('<button>Name this track...</button>');
+      btn.click(function(){
+        me.nameFeature(feature, true);
+      });
+      html.append(btn);
+    }else{
+      html.append('<div><b>' + name + '</b></div>');
     }
   },
   /**
@@ -534,7 +623,8 @@ tk.NavAid.prototype = {
    * @param {ol.MapBrowserEvent} event
    */
   featureInfo: function(event){
-    var feature = this.map.forEachFeatureAtPixel(event.pixel, function(feature){
+    var map = this.map, pix = event.pixel;
+    var feature = map.forEachFeatureAtPixel(pix, function(feature){
       return feature;
     });
     if (feature){
@@ -542,7 +632,7 @@ tk.NavAid.prototype = {
       if (html){
         this.popup.show({
           html: html,
-          coordinates: this.center(feature)
+          coordinates: map.getCoordinateFromPixel(pix)
         });
       }
     }
@@ -578,6 +668,7 @@ tk.NavAid.prototype = {
    */
   updateCurrentTrack: function(){
     this.trackFeature.setGeometry(this.track);
+    this.nextWaypoint(this.track.getLastCoordinate());
     this.updateDash();
   },
   /**
