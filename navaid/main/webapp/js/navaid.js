@@ -98,12 +98,7 @@ tk.NavAid.prototype = {
    * @param {boolean} tracking Whether or not to track position
    */
   setTracking: function(tracking){
-    if (tracking){
-      this.updateView = tk.NavAid.prototype.updateView;
-      nyc.ol.Tracker.prototype.setTracking.call(this, false);
-    }else{
-      this.updateView = function(){};
-    }
+    this.skipViewUpdate = !tracking;
     $('.pause-btn')[tracking ? 'addClass' : 'removeClass']('pause');
     nyc.ol.Tracker.prototype.setTracking.call(this, true);
   },
@@ -172,6 +167,7 @@ tk.NavAid.prototype = {
   setupControls: function(){
     var target = $(this.map.getTarget());
 
+    $('.draw-btn-mnu .square, .draw-btn-mnu .box, .draw-btn-mnu .gps, .draw-btn-mnu .save, .draw-btn-mnu .delete').remove();
     this.waypointBtn = $('<a class="waypoint ctl ctl-btn" data-role="button"></a>');
     target.append(this.waypointBtn).trigger('create');
     this.waypointBtn.click($.proxy(this.waypoint, this));
@@ -200,11 +196,14 @@ tk.NavAid.prototype = {
    * @param {JQueryEvent} event
    */
   playPause: function(event){
-    var btn = $(event.target), tracking = !btn.hasClass('pause');
-    this.setTracking(tracking);
+    var me = this, btn = $(event.target), tracking = !btn.hasClass('pause');
     if (tracking){
-      this.draw.deactivate(true);
+      me.view.animate({zoom: 15});
+      me.draw.deactivate(true);
     }
+    setTimeout(function(){
+      me.setTracking(tracking);
+    }, 500);
   },
   /**
    * @private
@@ -325,14 +324,18 @@ tk.NavAid.prototype = {
    * @private
    * @method
    * @param {ol.geom.LineString} line
+   * @param {boolean} asRadians
    * @return {number}
    */
-  heading: function(line) {
+  heading: function(line, asRadians) {
     var start = line.getFirstCoordinate();
     var end = line.getLastCoordinate();
   	var dx = end[0] - start[0];
   	var dy = end[1] - start[1];
-  	var rad = Math.acos(dy / Math.sqrt(dx * dx + dy * dy)) ;
+  	var rad = Math.acos(dy / Math.sqrt(dx * dx + dy * dy));
+    if (asRadians){
+      return rad;
+    }
     var deg = 360 / (2 * Math.PI) * rad;
     if (dx < 0){
         return 360 - deg;
