@@ -500,19 +500,25 @@ tk.NavAid.prototype = {
 
     me.navForm.slideToggle();
   },
-  addNavChoices: function(div, name, feature){
-    var btns;
+  addNavChoices: function(container, name, feature){
+    var div = $('<div></div>'), btns;
     if (feature.getGeometry().getType() == 'LineString'){
       var btns = $(
-        '<a data-role="button" data-direction="fwd">' + name + ' (foward)</a><a class="trash"></a>' +
-        '<a data-role="button" data-direction="rev">' + name + ' (reverse)</a><a class="trash"></a>'
+        '<a class="begin" data-role="button" data-direction="fwd">' +
+          name + ' (foward)</a><a class="trash"></a>' +
+        '<a class="begin" data-role="button" data-direction="rev">' +
+          name + ' (reverse)</a><a class="trash"></a>'
       );
     }else{
-      btns = $('<a data-role="button">' + name + '</a><a class="trash"></a>');
+      btns = $(
+        '<a class="begin" data-role="button">' + name +
+        '</a><a class="trash"></a>'
+      );
     }
     btns.data('feature', feature);
-    btns.click($.proxy(this.beginNavigation, this));
-    div.append(btns).trigger('create');
+    btns.not('.trash').click($.proxy(this.beginNavigation, this));
+    btns.not('.begin').click($.proxy(this.trash, this));
+    container.append(div.append(btns)).trigger('create');
   },
   /**
    * @private
@@ -721,6 +727,25 @@ tk.NavAid.prototype = {
     if (name){
       this.storeNamed(name, feature, true);
     }
+  },
+  /**
+   * @private
+   * @method
+   * @param {JQueryEvent} event
+   */
+  trash: function(event){
+    var me = this, target = $(event.target), feature = target.data('feature');
+    new nyc.Dialog().yesNo({
+      message: 'Delete <b>' + feature.get('name') + '</b>?',
+      callback: function(yesNo){
+        if (yesNo){
+          me.removeFeature(feature);
+          target.parent().fadeOut(function(){
+            target.parent().remove();
+          });
+        }
+      }
+    });
   },
   /**
    * @private

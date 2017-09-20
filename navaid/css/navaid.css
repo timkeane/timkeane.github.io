@@ -98,8 +98,11 @@ div.north-arrow {
     z-index: 1000;
     background-color: #fff;
 }
-#navigation div {
+#navigation form, .nav-features {
   margin: 5px 10px;
+}
+.nav-features>div {
+  margin: 10px 0;
 }
 #navigation .ui-input-search {
   width: calc(100% - 142px);
