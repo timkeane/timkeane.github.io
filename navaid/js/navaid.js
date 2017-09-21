@@ -19,6 +19,7 @@ tk.NavAid = function(options){
   this.popup = new nyc.ol.Popup(this.map);
   this.on(nyc.ol.Tracker.EventType.UPDATED, this.updateCurrentTrack, this);
   this.source = new ol.source.Vector();
+  this.dia = new nyc.Dialog();
   this.baseLayer();
   this.initDraw(this.source);
   this.restoreFeatures();
@@ -68,29 +69,84 @@ tk.NavAid.prototype = {
   popup: null,
   /**
    * @private
-   * @member {Jquery}
+   * @member {nyc.Dialog}
+   */
+  dia: null,
+  /**
+   * @private
+   * @member {JQuery}
    */
   waypointBtn: null,
   /**
    * @private
-   * @member {Jquery}
+   * @member {JQuery}
    */
   navBtn: null,
   /**
    * @private
-   * @member {Jquery}
+   * @member {JQuery}
    */
   navForm: null,
   /**
    * @private
-   * @member {Jquery}
+   * @member {JQuery}
    */
   settingsForm: null,
   /**
    * @private
    * @member {ol.source.Vector}
    */
+  source: null,
+  /**
+   * @private
+   * @member {ol.Feature}
+   */
+  trackFeature: null,
+  /**
+   * @private
+   * @member {ol.source.Vector}
+   */
   navSource: null,
+  /**
+   * @private
+   * @member {ol.Feature}
+   */
+   navFeature: null,
+  /**
+   * @private
+   * @member {Element}
+   */
+  audio: null,
+  /**
+   * @private
+   * @member {Array<number>}
+   */
+  speeds: null,
+  /**
+   * @private
+   * @member {ol.geom.LineString}
+   */
+  course: null,
+  /**
+   * @private
+   * @member {number}
+   */
+  offCourse: null,
+  /**
+   * @private
+   * @member {number}
+   */
+  warnInterval: null,
+  /**
+   * @private
+   * @member {boolean}
+   */
+  warnAlarm: null,
+  /**
+   * @private
+   * @member {JQuery}
+   */
+  warnIcon: null,
   /**
    * @desc Enable or disable tracking
    * @public
@@ -488,7 +544,7 @@ tk.NavAid.prototype = {
   toggleNav: function(){
     var me = this, btn = me.navBtn;
     if (btn.hasClass('stop')){
-      new nyc.Dialog().yesNo({
+      me.dia.yesNo({
         message: 'Stop navigation?',
         callback: function(yesNo){
           if (yesNo){
@@ -730,7 +786,7 @@ tk.NavAid.prototype = {
    */
   nameFeature: function(feature){
     var me = this;
-    new nyc.Dialog().input({
+    me.dia.input({
       placeholder: 'Enter a name...',
       callback: function(name){
         if (!name){
@@ -739,7 +795,7 @@ tk.NavAid.prototype = {
           feature.setId(name);
           me.updateStorage();
         }else{
-          new nyc.Dialog().ok({
+          me.dia.ok({
               message: '<b>' + name + '</b> is already assigned',
               callback: function(){
                 me.nameFeature(feature);
@@ -758,7 +814,7 @@ tk.NavAid.prototype = {
     var me = this,
       target = $(event.target),
       feature = target.data('feature');
-    new nyc.Dialog().yesNo({
+    me.dia.yesNo({
       message: 'Delete <b>' + feature.getId() + '</b>?',
       callback: function(yesNo){
         if (yesNo){
@@ -784,8 +840,7 @@ tk.NavAid.prototype = {
   importExport: function(event){
     var me = this, storage = me.storage, btn = $(event.target);
     if (btn.hasClass('empty')){
-      var dia = new nyc.Dialog()
-      dia.yesNo({
+      me.dia.yesNo({
         message: 'Delete all location data?',
         callback: function(yesNo){
           if (yesNo){
