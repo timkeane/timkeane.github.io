@@ -18,9 +18,10 @@ tk.NavAid = function(options){
   this.startingZoomLevel = options.startingZoomLevel || 14;
   this.popup = new nyc.ol.Popup(this.map);
   this.on(nyc.ol.Tracker.EventType.UPDATED, this.updateCurrentTrack, this);
+  this.source = new ol.source.Vector();
   this.baseLayer();
-  this.initDraw();
-  this.restoreNamedFeatures();
+  this.initDraw(this.source);
+  this.restoreFeatures();
   this.initCurrentTrack();
   this.setupControls();
   this.navSettings();
@@ -39,7 +40,7 @@ tk.NavAid.prototype = {
    * @private
    * @member {string}
    */
-  namedStore: 'navaid-presistent',
+  featuresStore: 'navaid-presistent',
   /**
    * @private
    * @member {string}
@@ -89,7 +90,7 @@ tk.NavAid.prototype = {
    * @private
    * @member {ol.source.Vector}
    */
-  source: null,
+  navSource: null,
   /**
    * @desc Enable or disable tracking
    * @public
@@ -139,10 +140,10 @@ tk.NavAid.prototype = {
    * @method
    */
   navLayer: function(){
-    this.source = new ol.source.Vector();
+    this.navSource = new ol.source.Vector();
     this.map.addLayer(
       new ol.layer.Vector({
-        source: this.source,
+        source: this.navSource,
         style: [
           new ol.style.Style({
             stroke: new ol.style.Stroke({
@@ -224,17 +225,22 @@ tk.NavAid.prototype = {
     trackIdx = (trackIdx * 1) + 1;
     this.firstLaunch = trackIdx == 1;
     this.storage.setItem('navaid-track-index', trackIdx);
-    this.trackFeature = new ol.Feature();
-    this.storeNamed('navaid-track-' + trackIdx, this.trackFeature);
+
+    var name = 'navaid-track-' + trackIdx;
+    this.trackFeature = new ol.Feature({name: name});
+    this.trackFeature.setId(name);
+    this.updateStorage();
   },
   /**
    * @private
    * @method
+   * @param {ol.source.Vector} source
    */
-  initDraw: function(){
+  initDraw: function(source){
     var me = this;
     me.draw = new nyc.ol.Draw({
       map: me.map,
+      source: source,
       restore: false,
       showEveryTrackPositon: false,
       style: [
@@ -267,8 +273,8 @@ tk.NavAid.prototype = {
   		]
     });
     me.draw.on(nyc.ol.FeatureEventType.ADD, me.nameFeature, me);
-    me.draw.on(nyc.ol.FeatureEventType.CHANGE, me.changeFeature, me);
-    me.draw.on(nyc.ol.FeatureEventType.REMOVE, me.removeFeature, me);
+    me.draw.on(nyc.ol.FeatureEventType.REMOVE, me.updateStorage, me);
+    me.draw.on(nyc.ol.FeatureEventType.CHANGE, me.updateStorage, me);
     me.draw.on(nyc.ol.Draw.EventType.ACTIVE_CHANGED, function(active){
         me.setTracking(!active);
     });
@@ -421,7 +427,7 @@ tk.NavAid.prototype = {
   beginNavigation: function(event){
     this.navFeature = new ol.Feature({geometry: new ol.geom.LineString([])});
     this.speeds = [];
-    this.source.addFeature(this.navFeature);
+    this.navSource.addFeature(this.navFeature);
     var btn = $(event.target);
     var feature = btn.data('feature');
     var direction = btn.data('direction');
@@ -486,7 +492,7 @@ tk.NavAid.prototype = {
         message: 'Stop navigation?',
         callback: function(yesNo){
           if (yesNo){
-            me.source.clear();
+            me.navSource.clear();
             me.navFeature = null;
             me.warnOff();
             btn.removeClass('stop');
@@ -508,16 +514,18 @@ tk.NavAid.prototype = {
       $('body').append(me.navForm).trigger('create');
     }
 
-    var names = [];
-    for (var name in me.namedFeatures){
-      names.push(name);
-    };
-    names.sort();
+    var features = me.source.getFeatures();
+    features.sort(function(a, b){
+			if (a.getId() < b.getId()) return -1;
+			if (a.getId() > b.getId()) return 1;
+			return 0;
+		});
 
     var div = this.navForm.find('.nav-features').empty();
-    $.each(names, function(_, name){
+    $.each(features, function(){
+      var name = this.getId();
       if (name.indexOf('navaid-track') == -1){
-        me.addNavChoices(div, name, me.namedFeatures[name]);
+        me.addNavChoices(div, name, this);
       }
     });
     if (!div.html()){
@@ -607,7 +615,7 @@ tk.NavAid.prototype = {
    * @return {JQuery|undefined}
    */
   infoHtml: function(feature){
-    var name = feature.get('name');
+    var name = feature.getId();
     if (name){
       var html = $('<div></div>');
       var geom = feature.getGeometry();
@@ -645,7 +653,7 @@ tk.NavAid.prototype = {
     if (name.indexOf('navaid-track') == 0){
       var btn = $('<button>Name this track...</button>');
       btn.click(function(){
-        me.nameFeature(feature, true);
+        me.nameFeature(feature);
       });
       html.append(btn);
     }else{
@@ -677,25 +685,21 @@ tk.NavAid.prototype = {
    * @method
    * @param {string|undefiend} stored
    */
-  restoreNamedFeatures: function(stored){
-    var features = [];
+  restoreFeatures: function(stored){
     if (stored){
-      this.storage.setItem(this.namedStore, stored);
+      this.storage.setItem(this.featuresStore, stored);
     }else{
-      stored = this.storage.getItem(this.namedStore);
+      stored = this.storage.getItem(this.featuresStore);
     }
-    this.namedGeoJson = stored ? JSON.parse(stored) : {};
-    this.namedFeatures = {};
-    for (var name in this.namedGeoJson){
-      var feature = this.geoJson.readFeature(this.namedGeoJson[name], {
+    if (stored){
+      var geoJson = JSON.parse(stored);
+      var features = this.geoJson.readFeatures(geoJson, {
         dataProjection: 'EPSG:4326',
         featureProjection: this.view.getProjection()
       });
-      this.namedFeatures[name] = feature;
-      features.push(feature);
+      this.source.clear();
+      this.source.addFeatures(features);
     }
-    this.draw.clear();
-    this.draw.addFeatures(features, true);
   },
   /**
    * @private
@@ -711,32 +715,30 @@ tk.NavAid.prototype = {
    * @method
    */
   waypoint: function(){
-    var feature = new ol.Feature({
+    this.source.addFeature(new ol.Feature({
       geometry: new ol.geom.Point(this.getPosition())
-    });
-    this.draw.addFeatures([feature], true);
-    this.nameFeature(feature);
+    }));
   },
   /**
    * @private
    * @method
    * @param {ol.Feature} feature
-   * @param {boolean} replace
    */
-  nameFeature: function(feature, replace){
+  nameFeature: function(feature){
     var me = this;
     new nyc.Dialog().input({
       placeholder: 'Enter a name...',
       callback: function(name){
         if (!name){
-          me.draw.removeFeature(feature);
-        }else if (!(name in me.namedFeatures)){
-          me.storeNamed(name, feature, replace);
+          me.source.removeFeature(feature);
+        }else if (!me.source.getFeatureById(name)){
+          feature.setId(name);
+          me.updateStorage();
         }else{
           new nyc.Dialog().ok({
               message: '<b>' + name + '</b> is already assigned',
               callback: function(){
-                me.nameFeature(feature, replace);
+                me.nameFeature(feature);
               }
           });
         }
@@ -746,31 +748,17 @@ tk.NavAid.prototype = {
   /**
    * @private
    * @method
-   * @param {ol.Feature} feature
-   */
-  changeFeature: function(feature){
-    var name = feature.get('name');
-    if (name){
-      this.storeNamed(name, feature, true);
-    }
-  },
-  /**
-   * @private
-   * @method
    * @param {JQueryEvent} event
    */
   trash: function(event){
     var me = this,
       target = $(event.target),
-      feature = target.data('feature')
-      name = feature.get('name');
+      feature = target.data('feature');
     new nyc.Dialog().yesNo({
-      message: 'Delete <b>' + name + '</b>?',
+      message: 'Delete <b>' + feature.getId() + '</b>?',
       callback: function(yesNo){
         if (yesNo){
-          var src = me.draw.source;
-          me.removeFeature(feature);
-          src.removeFeature(src.getFeatureById(name));
+          me.source.removeFeature(feature);
           target.parent().fadeOut(function(){
             target.parent().remove();
           });
@@ -781,47 +769,13 @@ tk.NavAid.prototype = {
   /**
    * @private
    * @method
-   * @param {ol.Feature} feature
    */
-  removeFeature: function(feature){
-    var name = feature.get('name');
-    delete this.namedFeatures[name];
-    delete this.namedGeoJson[name];
-    this.storage.setItem(this.namedStore, JSON.stringify(this.namedGeoJson));
-  },
-  /**
-   * @private
-   * @method
-   * @param {string} name
-   * @param {ol.Feature} feature
-   * @param {boolean} replace
-   */
-  storeNamed: function(name, feature, replace){
-    var type = this.draw.type;
-    var active = this.draw.active();
-    if (replace){
-      var replacement = new ol.Feature(feature.getProperties());
-      if (active){
-        this.draw.deactivate();
-      }
-      this.draw.removeFeature(feature);
-      feature = replacement;
-      this.namedFeatures[name] = null;
-      delete this.namedFeatures[name];
-    }
-    feature.set('name', name);
-    feature.setId(name);
-    this.namedFeatures[name] = feature;
-    this.namedGeoJson[name] = this.geoJson.writeFeature(feature, {
+  updateStorage: function(){
+    var features = this.source.getFeatures();
+    var geoJson = this.geoJson.writeFeatures(features, {
       featureProjection: this.view.getProjection()
     });
-    this.storage.setItem(this.namedStore, JSON.stringify(this.namedGeoJson));
-    if (!this.draw.source.getFeatureById(name)){
-      this.draw.addFeatures([feature], true);
-    }
-    if (replace && active){
-      this.draw.activate(type);
-    }
+    this.storage.setItem(this.featuresStore, JSON.stringify(geoJson));
   },
   importExport: function(event){
     var me = this, storage = me.storage, btn = $(event.target);
@@ -831,16 +785,16 @@ tk.NavAid.prototype = {
         message: 'Delete all location data?',
         callback: function(yesNo){
           if (yesNo){
-            storage.removeItem(me.namedStore);
-            me.draw.clear();
+            storage.removeItem(me.featuresStore);
+            me.source.clear();
           }
         }
       });
       dia.container.find('.btn-no').focus();
     }else if (btn.hasClass('export')){
-      storage.saveGeoJson('locations.json', storage.getItem(me.namedStore));
+      storage.saveGeoJson('locations.json', storage.getItem(me.featuresStore));
     }else{
-      storage.readTextFile($.proxy(me.restoreNamedFeatures, me));
+      storage.readTextFile($.proxy(me.restoreFeatures, me));
     }
   }
 };
