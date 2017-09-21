@@ -686,19 +686,23 @@ tk.NavAid.prototype = {
    * @param {string|undefiend} stored
    */
   restoreFeatures: function(stored){
-    if (stored){
-      this.storage.setItem(this.featuresStore, stored);
-    }else{
-      stored = this.storage.getItem(this.featuresStore);
-    }
-    if (stored){
-      var geoJson = JSON.parse(stored);
-      var features = this.geoJson.readFeatures(geoJson, {
-        dataProjection: 'EPSG:4326',
-        featureProjection: this.view.getProjection()
-      });
-      this.source.clear();
-      this.source.addFeatures(features);
+    try{
+      if (stored){
+        this.storage.setItem(this.featuresStore, stored);
+      }else{
+        stored = this.storage.getItem(this.featuresStore);
+      }
+      if (stored){
+        var geoJson = JSON.parse(stored);
+        var features = this.geoJson.readFeatures(geoJson, {
+          dataProjection: 'EPSG:4326',
+          featureProjection: this.view.getProjection()
+        });
+        this.source.clear();
+        this.source.addFeatures(features);
+      }
+    }catch(ex){
+      console.error(ex);
     }
   },
   /**
