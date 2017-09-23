@@ -1,4 +1,4 @@
-html, body, #map {
+html, body, #map, #dont-blame-me {
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -6,6 +6,7 @@ html, body, #map {
 html,
 body,
 #map,
+#dont-blame-me,
 #navigation,
 #navigation-settings {
   position: fixed;
@@ -13,6 +14,24 @@ body,
   left: 0;
   bottom: 0;
   right: 0;
+}
+#dont-blame-me {
+  background-color: #38c;
+  z-index: 2000;
+  padding: 10px;
+}
+#dont-blame-me p, #dont-blame-me button {
+  font-weight: bold;
+  font-size: 24px !important;
+  text-align: center;
+}
+#dont-blame-me p {
+  color: #fff;
+}
+#dont-blame-me button {
+  color: #38c;
+  width: 200px;
+  margin: auto;
 }
 a.ctl-btn.ui-btn,
 #navigation .ui-input-search .ui-btn.ui-input-clear,
