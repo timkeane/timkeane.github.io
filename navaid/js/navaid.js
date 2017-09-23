@@ -13,15 +13,14 @@ var tk = window.tk || {};
  * @param {nyc.ol.Tracker.Options} options Constructor options
  */
 tk.NavAid = function(options){
-  options.showEveryTrackPositon = false;
   nyc.ol.Tracker.call(this, options);
-  this.startingZoomLevel = options.startingZoomLevel || 14;
+  this.startingZoomLevel = options.startingZoomLevel || 15;
   this.popup = new nyc.ol.Popup(this.map);
   this.on(nyc.ol.Tracker.EventType.UPDATED, this.updateCurrentTrack, this);
   this.source = new ol.source.Vector();
   this.dia = new nyc.Dialog();
   this.baseLayer();
-  this.initDraw(this.source);
+  this.initDraw();
   this.restoreFeatures();
   this.initCurrentTrack();
   this.setupControls();
@@ -225,7 +224,7 @@ tk.NavAid.prototype = {
     var target = $(this.map.getTarget());
 
     $('.draw-btn-mnu .square, .draw-btn-mnu .box, .draw-btn-mnu .gps, .draw-btn-mnu .save, .draw-btn-mnu .delete').remove();
-    this.waypointBtn = $('<a class="waypoint ctl ctl-btn" data-role="button"></a>');
+    this.waypointBtn = $(tk.NavAid.WAYPOINT_HTML);
     target.append(this.waypointBtn).trigger('create');
     this.waypointBtn.click($.proxy(this.waypoint, this));
 
@@ -265,7 +264,7 @@ tk.NavAid.prototype = {
   playPause: function(event){
     var me = this, btn = $(event.target), tracking = !btn.hasClass('pause');
     if (tracking){
-      me.view.animate({zoom: 15});
+      me.view.animate({zoom: me.startingZoomLevel});
       me.draw.deactivate(true);
     }
     setTimeout(function(){
@@ -283,7 +282,7 @@ tk.NavAid.prototype = {
     this.storage.setItem('navaid-track-index', trackIdx);
 
     var name = 'navaid-track-' + trackIdx;
-    this.trackFeature = new ol.Feature({name: name});
+    this.trackFeature = new ol.Feature();
     this.trackFeature.setId(name);
     this.updateStorage();
   },
@@ -292,11 +291,11 @@ tk.NavAid.prototype = {
    * @method
    * @param {ol.source.Vector} source
    */
-  initDraw: function(source){
+  initDraw: function(){
     var me = this;
     me.draw = new nyc.ol.Draw({
       map: me.map,
-      source: source,
+      source: me.source,
       restore: false,
       showEveryTrackPositon: false,
       style: [
@@ -352,22 +351,22 @@ tk.NavAid.prototype = {
     $('#arrival span').html(arrival)[arrival ? 'show' : 'hide']();
   },
   avgSpeed: function(){
-    var speed = this.getSpeed() || 0;
+    var speed = this.getSpeed() || 0, speeds = this.speeds;
     if (this.speeds.length == 10){
-      this.speeds.unshift(speed);
-      this.speeds.pop();
+      speeds.unshift(speed);
+      speeds.pop();
     }else{
-      this.speeds.push(speed);
+      speeds.unshift(speed);
     }
-    var avgSpeed = 0;
+    var speedSum = 0;
     $.each(speeds, function(){
-      avgSpeed += this;
+      speedSum += this;
     });
-    return avgSpeed / speed.length;
+    return speedSum / speeds.length;
   },
-  distance: function(feature){
-    if (feature){
-      var geom = feature.getGeometry();
+  distance: function(navFeature){
+    if (navFeature){
+      var geom = navFeature.getGeometry();
       var waypoint = geom.getLastCoordinate();
       var distance = geom.getLength();
       if (this.course){
@@ -413,15 +412,12 @@ tk.NavAid.prototype = {
    * @param {boolean} asRadians
    * @return {number}
    */
-  heading: function(line, asRadians) {
+  heading: function(line) {
     var start = line.getFirstCoordinate();
     var end = line.getLastCoordinate();
   	var dx = end[0] - start[0];
   	var dy = end[1] - start[1];
   	var rad = Math.acos(dy / Math.sqrt(dx * dx + dy * dy));
-    if (asRadians){
-      return rad;
-    }
     var deg = 360 / (2 * Math.PI) * rad;
     if (dx < 0){
         return 360 - deg;
@@ -504,14 +500,14 @@ tk.NavAid.prototype = {
       this.course = new ol.geom.Point(this.center(feature));
     }
   },
-  nextWaypoint: function(position, destination){
-    if (this.navFeature){
-      var waypoint = this.course;
+  nextWaypoint: function(position){
+    var waypoint = this.course;
+    if (this.navFeature && waypoint){
       if ('getClosestPoint' in waypoint){
         var course = this.course;
         var coords = course.getCoordinates();
         waypoint = course.getClosestPoint(position);
-        if (!this.inCoords(waypoint, coords) > -1){
+        if (this.inCoords(waypoint, coords) == -1){
           for (var i = 0; i < coords.length - 1; i++){
             if (this.isOnSeg(coords[i], coords[i + 1], waypoint)){
               waypoint = coords[i + 1];
@@ -565,10 +561,6 @@ tk.NavAid.prototype = {
    */
   showNavigation: function(){
     var me = this;
-    if (!me.navForm){
-      me.navForm = $(tk.NavAid.NAV_LIST_HTML);
-      $('body').append(me.navForm).trigger('create');
-    }
 
     var features = me.source.getFeatures();
     features.sort(function(a, b){
@@ -599,11 +591,14 @@ tk.NavAid.prototype = {
         '<a class="begin" data-role="button" data-direction="rev">' +
           name + ' (reverse)</a><a class="trash"></a>'
       );
+      btns.get(0).id = 'nav-choice-' + name + '-fwd';
+      btns.get(2).id = 'nav-choice-' + name + '-rev';
     }else{
       btns = $(
         '<a class="begin" data-role="button">' + name +
         '</a><a class="trash"></a>'
       );
+      btns.get(0).id = 'nav-choice-' + name;
     }
     btns.data('feature', feature);
     btns.not('.trash').click($.proxy(this.beginNavigation, this));
@@ -626,10 +621,10 @@ tk.NavAid.prototype = {
     }else if(this.firstLaunch){
       this.warnIcon = true;
       this.warnAlarm = true;
-      this.offCourse = 10;
+      this.offCourse = 20;
       this.storage.setItem(this.iconStore, true);
       this.storage.setItem(this.alarmStore, true);
-      this.storage.setItem(this.degreesStore, 10);
+      this.storage.setItem(this.degreesStore, 20);
       $('#off-course-icon').prop('checked', this.warnIcon);
       $('#off-course-alarm').prop('checked', this.warnAlarm);
       $('#off-course-degrees').val(this.offCourse);
@@ -742,10 +737,9 @@ tk.NavAid.prototype = {
    * @param {string|undefiend} stored
    */
   restoreFeatures: function(stored){
+    var importing = stored;
     try{
-      if (stored){
-        this.storage.setItem(this.featuresStore, stored);
-      }else{
+      if (!importing){
         stored = this.storage.getItem(this.featuresStore);
       }
       if (stored){
@@ -757,7 +751,13 @@ tk.NavAid.prototype = {
         this.source.clear();
         this.source.addFeatures(features);
       }
+      if (importing){
+        this.storage.setItem(this.featuresStore, stored);
+      }
     }catch(ex){
+      this.dia.ok({
+        message: '<b>' + ex.name + ':</b><br>' + ex.message
+      });
       console.error(ex);
     }
   },
@@ -791,6 +791,7 @@ tk.NavAid.prototype = {
       callback: function(name){
         if (!name){
           me.source.removeFeature(feature);
+          me.updateStorage();
         }else if (!me.source.getFeatureById(name)){
           feature.setId(name);
           me.updateStorage();
@@ -849,7 +850,7 @@ tk.NavAid.prototype = {
           }
         }
       });
-      dia.container.find('.btn-no').focus();
+      me.dia.container.find('.btn-no').focus();
     }else if (btn.hasClass('export')){
       storage.saveGeoJson('locations.json', storage.getItem(me.featuresStore));
     }else{
@@ -907,6 +908,13 @@ tk.NavAid.DASH_HTML = '<div class="nav-dash">' +
  * @type {string}
  */
 tk.NavAid.PAUSE_HTML = '<a class="pause-btn ctl ctl-btn" data-role="button" data-icon="none" data-iconpos="notext">Play/Pause</a>';
+
+/**
+ * @private
+ * @const
+ * @type {string}
+ */
+tk.NavAid.WAYPOINT_HTML = '<a class="waypoint ctl ctl-btn" data-role="button"></a>';
 
 /**
  * @private
