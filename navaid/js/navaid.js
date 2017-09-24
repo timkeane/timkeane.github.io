@@ -580,7 +580,7 @@ tk.NavAid.prototype = {
       div.html('<p class="none">No stored locations</p>');
     }
 
-    me.navForm.slideToggle();
+    me.navForm.slideDown();
   },
   addNavChoices: function(container, name, feature){
     var div = $('<div></div>'), btns;
@@ -847,6 +847,8 @@ tk.NavAid.prototype = {
           if (yesNo){
             storage.removeItem(me.featuresStore);
             me.source.clear();
+            me.showNavigation();
+            me.settingsForm.slideUp();
           }
         }
       });
@@ -854,7 +856,11 @@ tk.NavAid.prototype = {
     }else if (btn.hasClass('export')){
       storage.saveGeoJson('locations.json', storage.getItem(me.featuresStore));
     }else{
-      storage.readTextFile($.proxy(me.restoreFeatures, me));
+      storage.readTextFile(function(json){
+        me.restoreFeatures(json);
+        me.showNavigation();
+        me.settingsForm.slideUp();
+      });
     }
   }
 };
