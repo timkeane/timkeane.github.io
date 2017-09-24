@@ -677,7 +677,7 @@ tk.NavAid.prototype = {
     }else{
       this.polygonHtml(feature, html);
     }
-    this.nameHtml(name , html);
+    this.nameHtml(feature, name, html);
     return html;
   },
   pointHtml: function(geom, html){
@@ -697,7 +697,7 @@ tk.NavAid.prototype = {
     html.append('<div><b>Center:</b></div>');
     html.append('<div>' + dms + '</div>');
   },
-  nameHtml: function(name, html){
+  nameHtml: function(feature, name, html){
     var me = this;
     if (!name || name.indexOf('navaid-track') == 0){
       var btn = $('<button>Add name...</button>');
@@ -746,7 +746,7 @@ tk.NavAid.prototype = {
           dataProjection: 'EPSG:4326',
           featureProjection: this.view.getProjection()
         });
-        this.source.clear();
+        if (!importing) this.source.clear();
         this.source.addFeatures(features);
       }
       if (importing){
@@ -792,6 +792,7 @@ tk.NavAid.prototype = {
           me.updateStorage();
         }else if (!me.source.getFeatureById(name)){
           feature.setId(name);
+          $('.popup-content button').replaceWith('<div><b>' + name + '</b></div>');
           me.updateStorage();
         }else{
           me.dia.ok({
