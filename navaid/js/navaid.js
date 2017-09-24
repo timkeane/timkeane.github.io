@@ -788,6 +788,7 @@ tk.NavAid.prototype = {
       placeholder: 'Enter a name...',
       callback: function(name){
         if (!name){
+          me.popup.hide();
           me.source.removeFeature(feature);
           me.updateStorage();
         }else if (!me.source.getFeatureById(name)){
