@@ -197,6 +197,10 @@ div.nav-dash div {
 .popup-content {
   width: 120px;
 }
+.popup-content button {
+  padding-right: 10px;
+  padding-left: 10px;
+}
 a.cancel, a.settings {
   float: right;
   width: 35px;

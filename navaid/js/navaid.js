@@ -572,7 +572,7 @@ tk.NavAid.prototype = {
     var div = this.navForm.find('.nav-features').empty();
     $.each(features, function(){
       var name = this.getId();
-      if (name.indexOf('navaid-track') == -1){
+      if (name && name.indexOf('navaid-track') == -1){
         me.addNavChoices(div, name, this);
       }
     });
@@ -667,20 +667,18 @@ tk.NavAid.prototype = {
    */
   infoHtml: function(feature){
     var name = feature.getId();
-    if (name){
-      var html = $('<div></div>');
-      var geom = feature.getGeometry();
-      var type = geom.getType();
-      if (type == 'Point'){
-        this.pointHtml(geom, html);
-      }else if (type == 'LineString'){
-        this.lineHtml(geom, html);
-      }else{
-        this.polygonHtml(feature, html);
-      }
-      this.nameHtml(name , html);
-      return html;
+    var html = $('<div></div>');
+    var geom = feature.getGeometry();
+    var type = geom.getType();
+    if (type == 'Point'){
+      this.pointHtml(geom, html);
+    }else if (type == 'LineString'){
+      this.lineHtml(geom, html);
+    }else{
+      this.polygonHtml(feature, html);
     }
+    this.nameHtml(name , html);
+    return html;
   },
   pointHtml: function(geom, html){
     var dms = this.dms(geom.getCoordinates());
@@ -701,8 +699,8 @@ tk.NavAid.prototype = {
   },
   nameHtml: function(name, html){
     var me = this;
-    if (name.indexOf('navaid-track') == 0){
-      var btn = $('<button>Name this track...</button>');
+    if (!name || name.indexOf('navaid-track') == 0){
+      var btn = $('<button>Add name...</button>');
       btn.click(function(){
         me.nameFeature(feature);
       });
