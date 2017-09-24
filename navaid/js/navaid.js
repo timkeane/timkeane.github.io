@@ -203,13 +203,13 @@ tk.NavAid.prototype = {
           new ol.style.Style({
             stroke: new ol.style.Stroke({
               color: 'yellow',
-              width: 4
+              width: 6
             })
           }),
           new ol.style.Style({
             stroke: new ol.style.Stroke({
               color: 'red',
-              width: 2
+              width: 4
             })
           })
         ]
@@ -308,7 +308,7 @@ tk.NavAid.prototype = {
   			new ol.style.Style({
   				stroke: new ol.style.Stroke({
   					color: 'red',
-  					width: 3
+  					width: 4
   				}),
   				zIndex: 200
   			}),
@@ -735,25 +735,35 @@ tk.NavAid.prototype = {
    * @param {string|undefiend} stored
    */
   restoreFeatures: function(stored){
-    var importing = stored;
+    var me = this, importing = stored;
     try{
       if (!importing){
-        stored = this.storage.getItem(this.featuresStore);
+        stored = me.storage.getItem(me.featuresStore);
       }
       if (stored){
         var geoJson = JSON.parse(stored);
-        var features = this.geoJson.readFeatures(geoJson, {
+        var features = me.geoJson.readFeatures(geoJson, {
           dataProjection: 'EPSG:4326',
-          featureProjection: this.view.getProjection()
+          featureProjection: me.view.getProjection()
         });
-        if (!importing) this.source.clear();
-        this.source.addFeatures(features);
-      }
-      if (importing){
-        this.storage.setItem(this.featuresStore, stored);
+        if (importing){
+          $.each(features, function(){
+            var name = this.getId();
+            if(name){
+              var feature = me.source.getFeatureById(name);
+              if (feature){
+                me.draw.removeFeature(feature);
+              }
+            }
+          });
+          me.updateStorage();
+        }else{
+          me.source.clear();
+        }
+        me.source.addFeatures(features);
       }
     }catch(ex){
-      this.dia.ok({
+      me.dia.ok({
         message: '<b>' + ex.name + ':</b><br>' + ex.message
       });
       console.error(ex);
@@ -789,7 +799,7 @@ tk.NavAid.prototype = {
       callback: function(name){
         if (!name){
           me.popup.hide();
-          me.source.removeFeature(feature);
+          me.draw.removeFeature(feature);
           me.updateStorage();
         }else if (!me.source.getFeatureById(name)){
           feature.setId(name);
@@ -819,7 +829,7 @@ tk.NavAid.prototype = {
       message: 'Delete <b>' + feature.getId() + '</b>?',
       callback: function(yesNo){
         if (yesNo){
-          me.source.removeFeature(feature);
+          me.draw.removeFeature(feature);
           target.parent().fadeOut(function(){
             target.parent().remove();
           });
