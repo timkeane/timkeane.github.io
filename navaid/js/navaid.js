@@ -756,11 +756,12 @@ tk.NavAid.prototype = {
               }
             }
           });
+          me.source.addFeatures(features);
           me.updateStorage();
         }else{
           me.source.clear();
+          me.source.addFeatures(features);
         }
-        me.source.addFeatures(features);
       }
     }catch(ex){
       me.dia.ok({
