@@ -715,17 +715,19 @@ tk.NavAid.prototype = {
    * @param {ol.MapBrowserEvent} event
    */
   featureInfo: function(event){
-    var map = this.map, pix = event.pixel;
-    var feature = map.forEachFeatureAtPixel(pix, function(feature){
-      return feature;
-    });
-    if (feature){
-      var html = this.infoHtml(feature);
-      if (html){
-        this.popup.show({
-          html: html,
-          coordinates: map.getCoordinateFromPixel(pix)
-        });
+    if (!this.draw.active()){
+      var map = this.map, pix = event.pixel;
+      var feature = map.forEachFeatureAtPixel(pix, function(feature){
+        return feature;
+      });
+      if (feature){
+        var html = this.infoHtml(feature);
+        if (html){
+          this.popup.show({
+            html: html,
+            coordinates: map.getCoordinateFromPixel(pix)
+          });
+        }
       }
     }
   },
