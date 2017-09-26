@@ -279,7 +279,7 @@ tk.NavAid.prototype = {
   /**
    * @private
    * @method
-   * @param {JQueryEvent} event
+   * @param {JQuery.Event} event
    */
   playPause: function(event){
     var me = this, btn = $(event.target), tracking = !btn.hasClass('pause');
@@ -503,7 +503,7 @@ tk.NavAid.prototype = {
   /**
    * @private
    * @method
-  * @param {JQueryEvent} event
+  * @param {JQuery.Event} event
    */
   beginNavigation: function(event){
     this.navFeature = new ol.Feature({geometry: new ol.geom.LineString([])});
@@ -670,7 +670,7 @@ tk.NavAid.prototype = {
   /**
    * @private
    * @method
-   * @param {JQueryEvent} event
+   * @param {JQuery.Event} event
    */
   navSettings: function(event){
     if (event){
@@ -920,7 +920,7 @@ tk.NavAid.prototype = {
   /**
    * @private
    * @method
-   * @param {JQueryEvent} event
+   * @param {JQuery.Event} event
    */
   trash: function(event){
     var me = this,
@@ -952,7 +952,7 @@ tk.NavAid.prototype = {
   /**
    * @private
    * @method
-   * @param {JQueryEvent} event
+   * @param {JQuery.Event} event
    */
   importExport: function(event){
     var me = this, storage = me.storage, btn = $(event.target);
