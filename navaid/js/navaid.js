@@ -58,6 +58,11 @@ tk.NavAid.prototype = {
   degreesStore: 'navaid-warn-degrees',
   /**
    * @private
+   * @member {string}
+   */
+  metersStore: 'navaid-warn-meters',
+  /**
+   * @private
    * @member {boolean}
    */
   firstLaunch: false,
@@ -130,7 +135,12 @@ tk.NavAid.prototype = {
    * @private
    * @member {number}
    */
-  offCourse: null,
+  degreesOff: null,
+  /**
+   * @private
+   * @member {number}
+   */
+  metersOff: null,
   /**
    * @private
    * @member {number}
@@ -202,14 +212,14 @@ tk.NavAid.prototype = {
         style: [
           new ol.style.Style({
             stroke: new ol.style.Stroke({
-              color: 'yellow',
-              width: 6
+              color: 'red',
+              width: 7
             })
           }),
           new ol.style.Style({
             stroke: new ol.style.Stroke({
-              color: 'red',
-              width: 4
+              color: 'yellow',
+              width: 3
             })
           })
         ]
@@ -232,8 +242,6 @@ tk.NavAid.prototype = {
     target.append(this.navBtn).trigger('create');
     this.navBtn.click($.proxy(this.toggleNav, this));
 
-    this.hackAudio(this.navBtn);
-
     target.append($(tk.NavAid.DASH_HTML)).trigger('create');
 
     $('body').append($(tk.NavAid.NAV_LIST_HTML)).trigger('create');
@@ -244,6 +252,8 @@ tk.NavAid.prototype = {
 
     target.append($(tk.NavAid.PAUSE_HTML)).trigger('create');
     $('a.pause-btn').click($.proxy(this.playPause, this));
+
+    this.hackAudio(this.navBtn);
 
     $('#navigation-settings input').change($.proxy(this.navSettings, this));
     $('#navigation-settings button').click($.proxy(this.importExport, this));
@@ -284,6 +294,7 @@ tk.NavAid.prototype = {
     var name = 'navaid-track-' + trackIdx;
     this.trackFeature = new ol.Feature();
     this.trackFeature.setId(name);
+    this.source.addFeature(this.trackFeature);
     this.updateStorage();
   },
   /**
@@ -434,8 +445,9 @@ tk.NavAid.prototype = {
    */
   checkCourse: function(feature, speed, heading){
     if (feature && speed){
+      var distance = this.navFeature.getGeometry().getLength();
       var courseHeading = this.heading(feature.getGeometry());
-      if (Math.abs(courseHeading - heading) > this.offCourse){
+      if (distance > this.metersOff && Math.abs(courseHeading - heading) > this.degreesOff){
         this.warnOn();
       }else{
         this.warnOff();
@@ -486,7 +498,7 @@ tk.NavAid.prototype = {
     this.setCourse(feature, direction);
     this.nextWaypoint(this.getPosition());
     this.navBtn.addClass('stop');
-    this.navForm.slideToggle();
+    this.navForm.slideUp();
   },
   setCourse: function(feature, direction){
     var geom = feature.getGeometry();
@@ -583,7 +595,7 @@ tk.NavAid.prototype = {
     me.navForm.slideDown();
   },
   addNavChoices: function(container, name, feature){
-    var div = $('<div></div>'), btns;
+    var id = name.replace(/ /g, '-'), div = $('<div></div>'), btns;
     if (feature.getGeometry().getType() == 'LineString'){
       var btns = $(
         '<a class="begin" data-role="button" data-direction="fwd">' +
@@ -591,14 +603,14 @@ tk.NavAid.prototype = {
         '<a class="begin" data-role="button" data-direction="rev">' +
           name + ' (reverse)</a><a class="trash"></a>'
       );
-      btns.get(0).id = 'nav-choice-' + name + '-fwd';
-      btns.get(2).id = 'nav-choice-' + name + '-rev';
+      btns.get(0).id = 'nav-choice-' + id + '-fwd';
+      btns.get(2).id = 'nav-choice-' + id + '-rev';
     }else{
       btns = $(
         '<a class="begin" data-role="button">' + name +
         '</a><a class="trash"></a>'
       );
-      btns.get(0).id = 'nav-choice-' + name;
+      btns.get(0).id = 'nav-choice-' + id;
     }
     btns.data('feature', feature);
     btns.not('.trash').click($.proxy(this.beginNavigation, this));
@@ -614,30 +626,38 @@ tk.NavAid.prototype = {
     if (event){
       this.warnIcon = $('#off-course-icon').is(':checked');
       this.warnAlarm = $('#off-course-alarm').is(':checked');
-      this.offCourse = $('#off-course-degrees').val() * 1;
+      this.degreesOff = $('#off-course-degrees').val() * 1;
+      this.metersOff = $('#off-course-meters').val() * 1;
       this.storage.setItem(this.iconStore, this.warnIcon);
       this.storage.setItem(this.alarmStore, this.warnAlarm);
-      this.storage.setItem(this.degreesStore, this.offCourse);
+      this.storage.setItem(this.degreesStore, this.degreesOff);
+      this.storage.setItem(this.metersStore, this.metersOff);
     }else if(this.firstLaunch){
       this.warnIcon = true;
       this.warnAlarm = true;
-      this.offCourse = 20;
+      this.degreesOff = 20;
+      this.metersOff = 50;
       this.storage.setItem(this.iconStore, true);
       this.storage.setItem(this.alarmStore, true);
       this.storage.setItem(this.degreesStore, 20);
+      this.storage.setItem(this.metersStore, 50);
       $('#off-course-icon').prop('checked', this.warnIcon);
       $('#off-course-alarm').prop('checked', this.warnAlarm);
-      $('#off-course-degrees').val(this.offCourse);
+      $('#off-course-degrees').val(this.degreesOff);
+      $('#off-course-meters').val(this.metersOff);
     }else{
       this.warnIcon = this.storage.getItem(this.iconStore) == 'true';
       this.warnAlarm = this.storage.getItem(this.alarmStore) == 'true';
-      this.offCourse = this.storage.getItem(this.degreesStore) * 1;
+      this.degreesOff = this.storage.getItem(this.degreesStore) * 1;
+      this.metersOff = this.storage.getItem(this.metersStore) * 1;
       $('#off-course-icon').prop('checked', this.warnIcon);
       $('#off-course-alarm').prop('checked', this.warnAlarm);
-      $('#off-course-degrees').val(this.offCourse);
+      $('#off-course-degrees').val(this.degreesOff);
+      $('#off-course-meters').val(this.metersOff);
     }
     $('#off-course-icon, #off-course-alarm').flipswitch().flipswitch('refresh');
     $('#off-course-degrees').slider().slider('refresh');
+    $('#off-course-meters').slider().slider('refresh');
   },
   /**
    * @private
@@ -715,19 +735,19 @@ tk.NavAid.prototype = {
    * @param {ol.MapBrowserEvent} event
    */
   featureInfo: function(event){
-    if (!this.draw.active()){
-      var map = this.map, pix = event.pixel;
-      var feature = map.forEachFeatureAtPixel(pix, function(feature){
-        return feature;
-      });
-      if (feature){
-        var html = this.infoHtml(feature);
-        if (html){
-          this.popup.show({
-            html: html,
-            coordinates: map.getCoordinateFromPixel(pix)
-          });
-        }
+    var map = this.map, pix = event.pixel, drawing = this.draw.active(), feature;
+    map.forEachFeatureAtPixel(pix, function(feat){
+      if (!drawing || name){
+        feature = feat;
+      }
+    });
+    if (feature){
+      var html = this.infoHtml(feature);
+      if (html){
+        this.popup.show({
+          html: html,
+          coordinates: map.getCoordinateFromPixel(pix)
+        });
       }
     }
   },
@@ -901,8 +921,10 @@ tk.NavAid.NAV_LIST_HTML = '<div id="navigation" class="ui-page-theme-a">' +
     '<input id="off-course-icon" type="checkbox" data-role="flipswitch">' +
     '<label for="off-course-alarm">Off course warning alarm:</label>' +
     '<input id="off-course-alarm" type="checkbox" data-role="flipswitch">' +
-    '<label for="off-course-degrees">Degrees:</label>' +
+    '<label for="off-course-degrees">Off course degrees:</label>' +
     '<input type="range" id="off-course-degrees" value="20" min="0" max="180">' +
+    '<label for="off-course-meters">Off course meters:</label>' +
+    '<input type="range" id="off-course-meters" value="50" min="0" max="200">' +
     '<h1>Navigation locations</h1>' +
     '<button class="export" data-role="button">Export</button>' +
     '<button class="import" data-role="button">Import</button>' +
@@ -926,7 +948,7 @@ tk.NavAid.DASH_HTML = '<div class="nav-dash">' +
  * @const
  * @type {string}
  */
-tk.NavAid.PAUSE_HTML = '<a class="pause-btn ctl ctl-btn" data-role="button" data-icon="none" data-iconpos="notext">Play/Pause</a>';
+tk.NavAid.PAUSE_HTML = '<a class="pause-btn ctl ctl-btn" data-role="button" data-icon="none" data-iconpos="notext"></a>';
 
 /**
  * @private
@@ -940,7 +962,7 @@ tk.NavAid.WAYPOINT_HTML = '<a class="waypoint ctl ctl-btn" data-role="button"></
  * @const
  * @type {string}
  */
-tk.NavAid.NAV_BUTTON_HTML = '<a class="nav ctl ctl-btn" data-role="button">' +
+tk.NavAid.NAV_BUTTON_HTML = '<a class="nav-btn ctl ctl-btn" data-role="button">' +
   '<audio controls loop muted style="opacity:0">' +
     '<source src="wav/warn.wav" type="audio/wav">' +
   '</audio>' +
