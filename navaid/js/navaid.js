@@ -128,6 +128,11 @@ tk.NavAid.prototype = {
   speeds: null,
   /**
    * @private
+   * @member {number}
+   */
+  speedsBuffer: 30,
+  /**
+   * @private
    * @member {ol.geom.LineString}
    */
   course: null,
@@ -258,6 +263,11 @@ tk.NavAid.prototype = {
     $('#navigation-settings input').change($.proxy(this.navSettings, this));
     $('#navigation-settings button').click($.proxy(this.importExport, this));
   },
+  /**
+   * @private
+   * @method
+   * @param {JQuery}
+   */
   hackAudio: function(btn){
     var audio = btn.find('audio');
     audio.on('play', function(){
@@ -300,7 +310,6 @@ tk.NavAid.prototype = {
   /**
    * @private
    * @method
-   * @param {ol.source.Vector} source
    */
   initDraw: function(){
     var me = this;
@@ -361,9 +370,13 @@ tk.NavAid.prototype = {
     $('#heading span').html(heading + '&deg;');
     $('#arrival span').html(arrival)[arrival ? 'show' : 'hide']();
   },
+  /**
+   * @private
+   * @method
+   */
   avgSpeed: function(){
     var speed = this.getSpeed() || 0, speeds = this.speeds;
-    if (this.speeds.length == 10){
+    if (this.speeds.length == this.speedsBuffer){
       speeds.unshift(speed);
       speeds.pop();
     }else{
@@ -375,6 +388,11 @@ tk.NavAid.prototype = {
     });
     return speedSum / speeds.length;
   },
+  /**
+   * @private
+   * @method
+   * @param {ol.Feature} navFeature
+   */
   distance: function(navFeature){
     if (navFeature){
       var geom = navFeature.getGeometry();
@@ -420,7 +438,6 @@ tk.NavAid.prototype = {
    * @private
    * @method
    * @param {ol.geom.LineString} line
-   * @param {boolean} asRadians
    * @return {number}
    */
   heading: function(line) {
@@ -439,14 +456,14 @@ tk.NavAid.prototype = {
   /**
    * @private
    * @method
-   * @param {ol.Feature} feature
+   * @param {ol.Feature} navFeature
    * @param {number} speed
    * @param {number} heading
    */
-  checkCourse: function(feature, speed, heading){
-    if (feature && speed){
-      var distance = this.navFeature.getGeometry().getLength();
-      var courseHeading = this.heading(feature.getGeometry());
+  checkCourse: function(navFeature, speed, heading){
+    if (navFeature && speed){
+      var distance = navFeature.getGeometry().getLength();
+      var courseHeading = this.heading(navFeature.getGeometry());
       if (distance > this.metersOff && Math.abs(courseHeading - heading) > this.degreesOff){
         this.warnOn();
       }else{
@@ -500,6 +517,12 @@ tk.NavAid.prototype = {
     this.navBtn.addClass('stop');
     this.navForm.slideUp();
   },
+  /**
+   * @private
+   * @method
+   * @param {ol.Feature} feature
+   * @param {string} direction
+   */
   setCourse: function(feature, direction){
     var geom = feature.getGeometry();
     if (geom.getType() == 'LineString'){
@@ -512,6 +535,11 @@ tk.NavAid.prototype = {
       this.course = new ol.geom.Point(this.center(feature));
     }
   },
+  /**
+   * @private
+   * @method
+   * @param {ol.Coordinate} position
+   */
   nextWaypoint: function(position){
     var waypoint = this.course;
     if (this.navFeature && waypoint){
@@ -531,6 +559,13 @@ tk.NavAid.prototype = {
       this.navFeature.getGeometry().setCoordinates([position, waypoint]);
     }
   },
+  /**
+   * @private
+   * @method
+   * @param {ol.Coordinate} coord
+   * @param {Array<ol.Coordinate>} coordinates
+   * @return {number}
+   */
   inCoords: function(coord, coordinates){
     var hit = false, i = -1;
     $.each(coordinates, function(){
@@ -540,6 +575,14 @@ tk.NavAid.prototype = {
     });
     return hit ? i : -1;
   },
+  /**
+   * @private
+   * @method
+   * @param {ol.Coordinate} start
+   * @param {ol.Coordinate} end
+   * @param {ol.Coordinate} waypoint
+   * @return {boolean}
+   */
   isOnSeg: function(start, end, waypoint){
     var m = (start[1] - end[1]) / (start[0] - end[0]);
     var b = start[1] - (start[0] * m);
@@ -594,6 +637,13 @@ tk.NavAid.prototype = {
 
     me.navForm.slideDown();
   },
+  /**
+   * @private
+   * @method
+   * @param {JQuery} container
+   * @param {string} name
+   * @param {ol.Feature} feature
+   */
   addNavChoices: function(container, name, feature){
     var id = name.replace(/ /g, '-'), div = $('<div></div>'), btns;
     if (feature.getGeometry().getType() == 'LineString'){
@@ -700,10 +750,22 @@ tk.NavAid.prototype = {
     this.nameHtml(feature, name, html);
     return html;
   },
+  /**
+   * @private
+   * @method
+   * @param {ol.geom.Point} geom
+   * @param {JQuery} html
+   */
   pointHtml: function(geom, html){
     var dms = this.dms(geom.getCoordinates());
     html.append('<div>' + dms + '</div>');
   },
+  /**
+   * @private
+   * @method
+   * @param {ol.geom.LineString} geom
+   * @param {JQuery} html
+   */
   lineHtml: function(geom, html){
     var dms = this.dms(geom.getFirstCoordinate());
     html.append('<div><b>Start:</b></div>');
@@ -712,11 +774,24 @@ tk.NavAid.prototype = {
     html.append('<div><b>End:</b></div>');
     html.append('<div>' + dms + '</div>');
   },
+  /**
+   * @private
+   * @method
+   * @param {ol.Feature} feature
+   * @param {JQuery} html
+   */
   polygonHtml: function(feature, html){
     var dms = this.dms(this.center(feature));
     html.append('<div><b>Center:</b></div>');
     html.append('<div>' + dms + '</div>');
   },
+  /**
+   * @private
+   * @method
+   * @param {ol.Feature} feature
+   * @param {string} name
+   * @param {JQuery} html
+   */
   nameHtml: function(feature, name, html){
     var me = this;
     if (!name || name.indexOf('navaid-track') == 0){
@@ -735,12 +810,15 @@ tk.NavAid.prototype = {
    * @param {ol.MapBrowserEvent} event
    */
   featureInfo: function(event){
-    var map = this.map, pix = event.pixel, drawing = this.draw.active(), feature;
-    map.forEachFeatureAtPixel(pix, function(feat){
-      if (!drawing || name){
-        feature = feat;
-      }
-    });
+    var map = this.map,
+      pix = event.pixel,
+      drawing = this.draw.active(),
+      feature;
+    if (!drawing){
+      map.forEachFeatureAtPixel(pix, function(feat){
+          feature = feat;
+      });
+    }
     if (feature){
       var html = this.infoHtml(feature);
       if (html){
@@ -871,6 +949,11 @@ tk.NavAid.prototype = {
     });
     this.storage.setItem(this.featuresStore, JSON.stringify(geoJson));
   },
+  /**
+   * @private
+   * @method
+   * @param {JQueryEvent} event
+   */
   importExport: function(event){
     var me = this, storage = me.storage, btn = $(event.target);
     if (btn.hasClass('empty')){
