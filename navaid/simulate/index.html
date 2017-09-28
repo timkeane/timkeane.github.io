@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<title>Tim's NavAid</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.3.2/ol.css">
+	<link rel="stylesheet" href="https://maps.nyc.gov/nyc-lib/v0.4.5-SNAPSHOT/css/nyc-ol-lib.css">
+	<link rel="stylesheet" href="https://maps.nyc.gov/nyc-lib/v0.4.5-SNAPSHOT/css/nyc-ol-redline-lib.css">
+	<link rel="stylesheet" href="../../../main/webapp/css/navaid.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.15/proj4.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.3.2/ol-debug.js"></script>
+	<script src="https://maps.nyc.gov/nyc-lib/v0.4.5-SNAPSHOT/js/nyc-ol-lib.js"></script>
+	<script src="https://maps.nyc.gov/nyc-lib/v0.4.5-SNAPSHOT/js/nyc-ol-redline-lib.js"></script>
+	<script src="/nyc-lib/src/main/js/nyc/storage.js"></script>
+	<script src="/nyc-lib/src/main/js/nyc/ol/storage.js"></script>
+	<script src="/nyc-lib/src/main/js/nyc/ol/tracker.js"></script>
+	<script src="../../../main/webapp/js/navaid.js"></script>
+	<script src="js/mock-tracker.js"></script>
+	<style>
+		#simulate {
+			position: fixed;
+			left: 0;
+			top: 25px;
+			width: 230px;
+			height: 150px;
+			color: #fff;
+			font-weight: bold;
+			background-image: url(img/arrow.svg);
+			background-size: 270px;
+			background-repeat: no-repeat;
+			padding: 31px 20px;
+			font-size: 22px;
+			text-align: center;
+			transform: rotate(30deg);
+			-webkit-transform: rotate(30deg);
+			-ms-transform: rotate(30deg);
+		}
+	nyc-ol-redline-lib.css:1
+	</style>
+</head>
+<body>
+	<div id="map"></div>
+	<script>
+	var navaid;
+		$(document).ready(function(){
+			navaid = new tk.MockNavAid({
+				map: new ol.Map({
+					target: $('#map').get(0),
+					view: new ol.View({
+						maxZoom: 16,
+						zoom: 8,
+						center: [-8178732, 4962492]
+					})
+				}),
+				startingZoomLevel: 10
+			});
+			$('button.simulate').append($('audio'));
+		});
+	</script>
+	<div id="simulate">Click to begin simulation</div>
+</body>
+</html>
