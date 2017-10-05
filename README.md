@@ -8,4 +8,6 @@
 
 ## [navaid](./navaid/)
 
+## [navaid (Jones Inlet simulation)](./navaid/simulate/)
+
 ## [soda-311](./soda-311/)
