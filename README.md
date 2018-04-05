@@ -11,5 +11,3 @@
 ## [navaid (Jones Inlet simulation)](./navaid/simulate/)
 
 ## [soda-311](./soda-311/)
-
-## [NYC DOF Tax Map - Street Smart Examples](./dtm/)
