@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NYC DOF Tax Map EPSG:3857</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.5/ol.css">
+  <link rel="stylesheet" href="css/dtm.css">
+  <link rel="stylesheet" href="css/map.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.15/proj4.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.5/ol.js"></script>
+</head>
+<body>
+  <div id="map"></div>
+  <h2>Open the developer console to view comparison of Custom Tax Map Tile Grid and Standard Web Mercator Tile Grid</h2>
+  <script src="js/3857.js"></script>
+  <script>
+    /* create a tile source that will reveal the Standard Web Mercator Tile Grid */
+    var osmSource = new ol.source.OSM();
+    /* show details of the Custom Tax Map Tile Grid */
+    console.info('Custom Tax Map Tile Grid:', source.getTileGrid());
+    console.info('Custom Tax Map Tile Grid Resolutions:', source.getTileGrid().getResolutions());
+    console.info('Custom Tax Map Tile Grid Tile Size:', source.getTileGrid().getTileSize());
+    /* show details of the Standard Web Mercator Tile Grid */
+    console.info('Standard Web Mercator Tile Grid:', osmSource.getTileGrid());
+    console.info('Standard Web Mercator Tile Grid Resolutions:', osmSource.getTileGrid().getResolutions());
+    console.info('Standard Web Mercator Tile Grid Tile Size:', osmSource.getTileGrid().getTileSize());
+  </script>
+</body>
+</html>
