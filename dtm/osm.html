@@ -17,11 +17,15 @@
     var osmSource = new ol.source.OSM();
     /* show details of the Custom Tax Map Tile Grid */
     console.info('Custom Tax Map Tile Grid:', source.getTileGrid());
+    console.info('Custom Tax Map Tile Projection:', source.getProjection().getCode());
     console.info('Custom Tax Map Tile Grid Resolutions:', source.getTileGrid().getResolutions());
+    console.info('Custom Tax Map Tile Grid Origin:', source.getTileGrid().getOrigin());
     console.info('Custom Tax Map Tile Grid Tile Size:', source.getTileGrid().getTileSize());
     /* show details of the Standard Web Mercator Tile Grid */
     console.info('Standard Web Mercator Tile Grid:', osmSource.getTileGrid());
+    console.info('Standard Web Mercator Tile Projection:', osmSource.getProjection().getCode());
     console.info('Standard Web Mercator Tile Grid Resolutions:', osmSource.getTileGrid().getResolutions());
+    console.info('Standard Web Mercator Tile Grid Origin:', osmSource.getTileGrid().getOrigin());
     console.info('Standard Web Mercator Tile Grid Tile Size:', osmSource.getTileGrid().getTileSize());
   </script>
 </body>
