@@ -1,0 +1,97 @@
+html, body,
+.ui-mobile-viewport div[data-role="page"],
+#map {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.ui-mobile-viewport .sta-name,
+.ui-mobile-viewport .nyc-user-location,
+.ui-mobile-viewport .sector,
+.ui-mobile-viewport .sector:hover {
+  color: #085095;
+  font-weight: bold;
+}
+.ui-mobile-viewport .fld-srch-container * {
+  color: #085095;
+}
+.popup-content {
+  width: auto;
+}
+.popup .sector {
+  display: block;
+}
+.ctl-btn.ui-btn, .ctl-btn.ui-btn:visited, a.popup-closer,
+div.fld-srch-container a.ui-input-clear:after,
+.fld-srch-container .ui-listview>.ui-li-static:hover {
+  background-color: rgba(8,80,149,0.5);
+}
+.ctl-btn.ui-btn:hover, a.popup-closer:hover,
+div.fld-srch-container a.ui-input-clear:hover:after {
+  background-color: #085095;
+}
+.btn-geo {
+  display: none;
+}
+.feature-tip {
+	padding: 5px;
+	font-weight: bold;
+	max-width: 220px;
+	background-color:rgba(255,255,255,0.9);
+}
+.feature-tip .sector {
+  display: none;
+}
+#fld-srch-container .ui-input-clear:after {
+  background-color: rgba(8,80,149,0.5);
+}
+#fld-srch-container .ui-input-clear:hover:after {
+  background-color: #085095;
+}div.subway div {
+  display: inline-block;
+}
+div.sta-icon {
+	display: inline-block;
+	font-weight: bold;
+	text-align: center;
+	padding: 2px 0;
+	width: 22px;
+	margin-right: 3px;
+	border: 1px solid rgba(0,0,0,0.1);
+	border-radius: 16px;
+  color: #fff;
+}
+div.sta-icon div {
+	color: #fff;
+}
+.sta-1, .sta-2, .sta-3 {
+	background-color: #ff3433;
+}
+.sta-4, .sta-5, .sta-6 {
+	background-color: #009d33;
+}
+.sta-7 {
+	background-color: #c801cc;
+}
+.sta-A, .sta-C, .sta-E {
+	background-color: #0e689a;
+}
+.sta-B, .sta-D, .sta-F {
+	background-color: #fa9705;
+}
+.sta-G {
+	background-color: #98cd01;
+}
+div.sta-J, div.sta-M, div.sta-Z {
+	background-color: #9d6400;
+}
+.sta-L, .sta-S {
+	background-color: #999999;
+}
+div.sta-N, div.sta-Q, div.sta-R, div.sta-W {
+	background-color: #ffff0c;
+  color: #000;
+}

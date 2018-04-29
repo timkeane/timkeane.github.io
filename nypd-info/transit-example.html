@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+ 	<title>NYPD Transit Sector Finder</title>
+ 	<style>
+ 		iframe {
+ 			width: 500px;
+ 			height: 500px;
+ 			border: none;
+ 		}
+ 	</style>
+ 	<script>
+		function clickedStation(station){
+ 			console.info('clickedStation:', station);
+ 		};
+ 	</script>
+</head>
+<body>
+	<iframe id="map" src="data/find-transit-sector.html"></iframe>
+	<br>Station <input id="input" value="430">
+	<button onclick="map.src = 'data/find-transit-sector.html?station=' + input.value;return false;">Find</button>
+</body>
+</html>
