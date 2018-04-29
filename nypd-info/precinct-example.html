@@ -5,7 +5,13 @@
 	<meta charset="utf-8">
  	<title>NYPD Precinct Finder</title>
  	<style>
- 		iframe {
+		body, body * {
+			font-family: 'Arial';
+			font-size: 16px;
+		}
+		iframe {
+			display: block;
+			margin-top: 10px;
  			width: 500px;
  			height: 500px;
  			border: none;
@@ -21,8 +27,8 @@
  	</script>
 </head>
 <body>
-	<iframe id="map" src="data/find-your-precinct.html"></iframe>
-	<br>Precinct <input id="input" value="1">
+	Precinct <input id="input" value="1">
 	<button onclick="map.src = 'data/find-your-precinct.html?precinct=' + input.value;return false;">Find</button>
+	<iframe id="map"></iframe>
 </body>
 </html>
