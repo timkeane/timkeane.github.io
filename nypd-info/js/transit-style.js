@@ -62,7 +62,7 @@ var STYLE = {
 				})
 			})
 		});
-		if (zoom > 5){
+		if (feature.selected || zoom > 5){
 			var label = feature.get('NAME');
 			var offsetY = 0;
 			if (label.indexOf('/') > -1){
