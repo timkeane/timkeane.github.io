@@ -1,41 +1,50 @@
 var GEOCLIENT_URL = 'https://maps.nyc.gov/geoclient/v1/search.json?app_key=E2857975AA57366BC&app_id=nyc-gov-nypd';
 
-var map, controls, stationSource, stationLayer, lineSource, lineLayer, selectionSource, selectionLayer, sationId = false;
+var map, controls, stationSource, stationLayer, lineSource, lineLayer, selectionSource, selectionLayer, bySector;
 
 var qstr = document.location.search;
 if (qstr){
-	sationId = location.search.split('=')[1];
+	var args = qstr.substring(1).split('&');
+	bySector = {};
+	$.each(args, function(){
+		var pair = this.split('=');
+		if (pair.length == 2){
+			bySector[pair[0]] = pair[1];
+		}
+	});
 	var interval = setInterval(function(){
 		if (stationSource && stationSource.getFeatures().length) {
-			zoomToSector(getStations(sationId));
 			clearInterval(interval);
-		}
-		controls.setFeatures({
-			featureTypeName: 'subway',
-			features: stationSource.getFeatures(),
-			nameField: 'NAME'
-		});
-		$(controls.input).attr('placeholder', 'Search for a station or address...');
+			zoomToSector(getStations(bySector));
+			controls.setFeatures({
+				featureTypeName: 'subway',
+				features: stationSource.getFeatures(),
+				nameField: 'NAME'
+			});
+			$(controls.input).attr('placeholder', 'Search for a station or address...');
+			}
 	}, 200);
 };
 
-function getStations(sationId){
-	var station = stationSource.getFeatureById(sationId);
-	var sector = station.get('SECTOR');
-	var district = station.get('DISTRICT');
+function getStations(bySector){
+	var station = bySector.station ? stationSource.getFeatureById(bySector.station) : '';
+	var sector = bySector.sector || (station ? station.get('SECTOR') : '');
+	var district = bySector.district || (station ? station.get('DISTRICT') : '');
 	var features = [];
 	var extent = ol.extent.createEmpty();
 	$.each(stationSource.getFeatures(), function(){
 		var props = this.getProperties()
-		if (sector && props.SECTOR == sector && props.DISTRICT == district){
+		if (props.DISTRICT == district && (!sector || props.SECTOR == sector)){
 			features.push(this);
 			extent = ol.extent.extend(extent, this.getGeometry().getExtent())
 		}
 	});
-	if (!features.length){
-		features.push(station);
+	if (station){
+		station.selected = true;
+		if (!features.length){
+			features.push(station);
+		}
 	}
-	station.selected = true;
 	return {features: features, extent: extent}
 };
 

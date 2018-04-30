@@ -5,27 +5,44 @@
 	<meta charset="utf-8">
  	<title>NYPD Transit Sector Finder</title>
  	<style>
-	body, body * {
-		font-family: 'Arial';
-		font-size: 16px;
-	}
-	iframe {
-		display: block;
-		margin-top: 10px;
-		width: 500px;
-		height: 500px;
-		border: none;
-	}
+		body, body * {
+			font-family: 'Arial';
+			font-size: 16px;
+		}
+		iframe {
+			display: block;
+			margin-top: 10px;
+			width: 500px;
+			height: 500px;
+			border: none;
+		}
+		div {
+			width: 280px;
+			height: 30px;
+		}
+		input, button {
+			float: right;
+		}
  	</style>
  	<script>
 		function clickedStation(station){
  			console.info('clickedStation:', station);
- 		};
+		};
+		function loadMap(){
+			var url = 'data/find-transit-sector.html?';
+			url += (district.value ? ('&district=' + district.value) : '');
+			url += (sector.value ? ('&sector=' + sector.value) : '');
+			url += (station.value ? ('&station=' + station.value) : '');
+			map.src = url;
+			return false;
+		};
  	</script>
 </head>
 <body>
-	Station <input id="input" value="430">
-	<button onclick="map.src = 'data/find-transit-sector.html?station=' + input.value;return false;">Find</button>
+	<div>District <input id="district" value="12"></div>
+	<div>Sector <input id="sector" value="B"></div>
+	<div>Station <input id="station" value="430"></div>
+	<div><button onclick="loadMap();">Find</button></div>
 	<iframe id="map"></iframe>
 </body>
 </html>
