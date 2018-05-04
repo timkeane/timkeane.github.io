@@ -11,6 +11,8 @@ var lineSource;
 var lineLayer;
 var selection;
 var activeStations;
+var LocationMgr;
+var popup;
 
 var qstr = document.location.search;
 if (qstr){
@@ -24,6 +26,14 @@ if (qstr){
 	});
 	var interval = setInterval(function(){
 		if (stationSource && stationSource.featuresloaded && lineSource.getFeatures().length) {
+			var stationId = selection.station;
+			if (stationId){
+				var station = stationSource.getFeatureById(stationId);
+				locationMgr.setLocation({
+					coordinates: station.getGeometry().getCoordinates(),
+					name: station.get('NAME')
+				});
+			}
 			clearInterval(interval);
 			sectorButtons();
 			zoomToStations();
@@ -112,6 +122,13 @@ function getActiveLines(){
 			}
 		});
 	});
+};
+
+function showPopup(feature){
+	popup.show({
+		coordinates: feature.getGeometry().getCoordinates(),
+		html: feature.html()
+	})
 };
 
 var stationDecorator = {
@@ -205,13 +222,7 @@ $(document).ready(function(){
 		}
 	}]);
 
-	var popup = new nyc.ol.Popup(map);
-	function showPopup(feature){
-		popup.show({
-			coordinates: feature.getGeometry().getCoordinates(),
-			html: feature.html()
-		})
-	};
+	popup = new nyc.ol.Popup(map);
 
 	map.on('click', function(event){
 		map.forEachFeatureAtPixel(event.pixel, function(feature, layer){
@@ -221,10 +232,9 @@ $(document).ready(function(){
 		});
 	});
 
-	var geocoder = new nyc.Geoclient(GEOCLIENT_URL);
-	var locationMgr = new nyc.LocationMgr({
+	locationMgr = new nyc.LocationMgr({
 		controls: controls,
-		locate: new nyc.ol.Locate(geocoder),
+		locate: new nyc.ol.Locate(new nyc.Geoclient(GEOCLIENT_URL)),
 		locator: new nyc.ol.Locator({
 			map: map,
 			style: new ol.style.Style({
