@@ -1,70 +1,147 @@
 var GEOCLIENT_URL = 'https://maps.nyc.gov/geoclient/v1/search.json?app_key=E2857975AA57366BC&app_id=nyc-gov-nypd';
 
-var map, controls, stationSource, stationLayer, lineSource, lineLayer, selectionSource, selectionLayer, bySector;
+var districtSectors = {};
+var stationNames = {};
+
+var map;
+var controls;
+var stationSource;
+var stationLayer;
+var lineSource;
+var lineLayer;
+var selection;
+var activeStations;
 
 var qstr = document.location.search;
 if (qstr){
 	var args = qstr.substring(1).split('&');
-	bySector = {};
+	selection = {};
 	$.each(args, function(){
 		var pair = this.split('=');
 		if (pair.length == 2){
-			bySector[pair[0]] = pair[1];
+			selection[pair[0]] = pair[1];
 		}
 	});
 	var interval = setInterval(function(){
-		if (stationSource && stationSource.getFeatures().length) {
+		if (stationSource && stationSource.featuresloaded && lineSource.getFeatures().length) {
 			clearInterval(interval);
-			zoomToSector(getStations(bySector));
+			sectorButtons();
+			zoomToStations();
 			controls.setFeatures({
 				featureTypeName: 'subway',
 				features: stationSource.getFeatures(),
 				nameField: 'NAME'
 			});
 			$(controls.input).attr('placeholder', 'Search for a station or address...');
-			}
+		}
 	}, 200);
 };
 
-function getStations(bySector){
-	var station = bySector.station ? stationSource.getFeatureById(bySector.station) : '';
-	var sector = bySector.sector || (station ? station.get('SECTOR') : '');
-	var district = bySector.district || (station ? station.get('DISTRICT') : '');
-	var features = [];
-	var extent = ol.extent.createEmpty();
-	$.each(stationSource.getFeatures(), function(){
-		var props = this.getProperties()
-		if (props.DISTRICT == district && (!sector || props.SECTOR == sector)){
-			features.push(this);
-			extent = ol.extent.extend(extent, this.getGeometry().getExtent())
+function sectorButtons(){
+	var sectors = districtSectors[selection.district];
+	$('#sectors').empty();
+	if (!sectors.none){
+		var sorted = [];
+		for (var sector in sectors){
+			sorted.push(sector);
 		}
-	});
-	if (station){
-		station.selected = true;
-		if (!features.length){
-			features.push(station);
-		}
+		sorted.sort();
+		$.each(sorted, function(_, sector){
+			var btn = $('<a class="ctl-btn" data-role="button">Sector </a>');
+			btn.append(sector)
+				.data('sector', sector)
+				.click(function(){
+					$('#sectors a').removeClass('active');
+					$(this).addClass('active');
+		      selection.sector = $(this).data('sector');
+		      zoomToStations();
+		    });
+			$('#sectors').append(btn).trigger('create');
+		});
 	}
-	return {features: features, extent: extent}
 };
 
-function zoomToSector(stations){
-	if (stations.features.length){
+function zoomToStations(){
+	getActiveStations();
+	var features = activeStations.features;
+	if (features.length){
 		var view = map.getView();
-		selectionSource.clear();
-		selectionSource.addFeatures(stations.features);
-		if (stations.features.length > 1){
-			view.fit(stations.extent, {size: map.getSize(), duration: 500});
+		if (features.length > 1){
+			view.fit(activeStations.extent, {
+				size: map.getSize(), duration: 500,
+				constrainResolution: false
+			});
 		}else{
 			view.animate({
-				center: stations.features[0].getGeometry().getCoordinates(),
+				center: features[0].getGeometry().getCoordinates(),
 				zoom: 16
 			});
 		}
 	}
 };
 
+function getActiveStations(){
+	var extent = ol.extent.createEmpty()
+	var features = [];
+
+	$.each(stationSource.getFeatures(), function(_, station){
+		station.active = false;
+		var districtMatch = station.get('DISTRICT') == selection.district;
+		var sectorMatch = station.get('SECTOR') == selection.sector || !selection.sector;
+		station.selected = station.getId() == selection.station;
+		if (districtMatch && sectorMatch){
+			station.active = true;
+			features.push(station);
+			extent = ol.extent.extend(extent, station.getGeometry().getExtent());
+		}
+	});
+	var width = ol.extent.getWidth(extent);
+	extent = ol.extent.buffer(extent, width / 10);
+	activeStations = {extent: extent, features: features};
+	getActiveLines();
+};
+
+function getActiveLines(){
+	$.each(lineSource.getFeatures(), function(_, line){
+		line.active = false;
+		$.each(activeStations.features, function(_, station){
+			var coord = station.getGeometry().getCoordinates();
+			var stationExt = [coord[0] - 200, coord[1] - 200, coord[0] + 200, coord[1] + 200];
+			if (!line.active){
+				line.active = line.getGeometry().intersectsExtent(stationExt);
+			}
+		});
+	});
+};
+
 var stationDecorator = {
+	extendFeature: function(){
+		var district = this.get('DISTRICT');
+		var sector = this.get('SECTOR');
+		districtSectors[district] = districtSectors[district] || {};
+		districtSectors[district][sector || 'none'] = true;
+
+		var name = this.get('NAME');
+		this.label = '';
+		if (!stationNames[name]){
+			stationNames[name] = true;
+			var wrapped = '';
+			var label = name.replace('/\//', ' ');
+			if (label.length > 12) {
+				label = label.replace(' /', '|');
+				$.each(label.split(' '), function(_, word){
+					var lines = wrapped.split('\n')
+					if (lines.length && (lines[lines.length - 1] + word).length > 12) {
+						wrapped += ('\n' + word + ' ');
+					}else{
+						wrapped += (word + ' ');
+					}
+				});
+				wrapped = wrapped.replace('|', '/');
+			}
+			this.label = wrapped ? wrapped.trim() : label;
+		}
+	},
 	html: function(){
 		var props = this.getProperties()
 		var html = $('<div></div>');
@@ -93,12 +170,13 @@ var stationDecorator = {
 $(document).ready(function(){
 
 	map = new nyc.ol.Basemap({target: $('#map').get(0)});
+	map.labels.base.setOpacity(.5);
 
 	controls = new nyc.ol.control.ZoomSearch(map);
 
 	lineSource = new ol.source.Vector({
 		url: 'subway-line.json',
-		format: new ol.format.TopoJSON
+		format: new ol.format.TopoJSON()
 	});
 	lineLayer = new ol.layer.Vector({source: lineSource, style: STYLE.line});
 	map.addLayer(lineLayer);
@@ -116,10 +194,6 @@ $(document).ready(function(){
 	);
 	stationLayer = new ol.layer.Vector({source: stationSource, style: STYLE.station});
 	map.addLayer(stationLayer);
-
-	selectionSource = new ol.source.Vector({});
-	selectionLayer = new ol.layer.Vector({source: selectionSource, style: STYLE.selection});
-	map.addLayer(selectionLayer);
 
 	new nyc.ol.FeatureTip(map, [{
 		layer: stationLayer,
@@ -169,5 +243,4 @@ $(document).ready(function(){
 			showPopup(stationSource.getFeatureById(id));
 		}
 	});
-
 });

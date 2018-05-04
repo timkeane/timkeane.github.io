@@ -95,3 +95,20 @@ div.sta-N, div.sta-Q, div.sta-R, div.sta-W {
 	background-color: #ffff0c;
   color: #000;
 }
+#sectors {
+	position: fixed;
+	right: 3px;
+	bottom: -1px;
+}
+#sectors a.ctl-btn {
+	color: #fff;
+	padding-top: 8px;
+	padding-bottom: 3px;
+	height: 25px;
+	display: inline-block;
+	width: 75px;
+  margin-left: 3px;
+}
+#sectors a.ctl-btn.active {
+  background-color: #085095;
+}

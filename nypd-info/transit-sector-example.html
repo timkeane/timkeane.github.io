@@ -12,8 +12,8 @@
 		iframe {
 			display: block;
 			margin-top: 10px;
-			width: 500px;
-			height: 500px;
+			width: 700px;
+			height: 420px;
 			border: none;
 		}
 		div {
@@ -25,14 +25,18 @@
 		}
  	</style>
  	<script>
-		function clickedStation(station){
- 			console.info('clickedStation:', station);
+		function clickedStation(event){
+			 console.info('clickedStation:', event);
+			 loadMap(event)
 		};
-		function loadMap(){
+		function loadMap(event){ 
 			var url = 'data/find-transit-sector.html?';
-			url += (district.value ? ('&district=' + district.value) : '');
-			url += (sector.value ? ('&sector=' + sector.value) : '');
-			url += (station.value ? ('&station=' + station.value) : '');
+			var dist = event ? event.DISTRICT : district.value;
+			var sect = event ? event.SECTOR : sector.value;
+			var sta = event ? event.SECTOR : station.value;
+			url += (dist ? ('&district=' + dist) : '');
+			url += (sect ? ('&sector=' + sect) : '');
+			url += (sta ? ('&station=' + sta) : '');
 			map.src = url;
 			return false;
 		};
