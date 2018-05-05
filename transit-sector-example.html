@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+ 	<title>NYPD Transit Sector Finder</title>
+ 	<style>
+		body, body * {
+			font-family: 'Arial';
+			font-size: 16px;
+		}
+		iframe {
+			display: block;
+			margin-top: 10px;
+			width: 700px;
+			height: 420px;
+			border: none;
+		}
+		div {
+			width: 280px;
+			height: 30px;
+		}
+		input, button {
+			float: right;
+		}
+ 	</style>
+ 	<script>
+		function clickedStation(event){
+			 console.info('clickedStation:', event);
+			 loadMap(event)
+		};
+		function loadMap(event){
+			var url = 'data/find-transit-sector.html?';
+			var dist = event ? event.DISTRICT : district.value;
+			var sect = event ? event.SECTOR : sector.value;
+			var sta = event ? event.STATION_ID : station.value;
+			url += (dist ? ('&district=' + dist) : '');
+			url += (sect ? ('&sector=' + sect) : '');
+			url += (sta ? ('&station=' + sta) : '');
+			map.src = url;
+			return false;
+		};
+ 	</script>
+</head>
+<body>
+	<div>District <input id="district" value="12"></div>
+	<div>Sector <input id="sector" value="B"></div>
+	<div>Station <input id="station" value="430"></div>
+	<div><button onclick="loadMap();">Find</button></div>
+	<iframe id="map"></iframe>
+</body>
+</html>
