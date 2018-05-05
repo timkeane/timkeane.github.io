@@ -20,20 +20,23 @@
  	</style>
  	<script>
 		function clickedStation(event){
-			 console.info('clickedStation:', event);
-			loadMap(event.DISTRICT);
+			console.info('clickedStation:', event);
+			loadMap(event);
 		};
-		function loadMap(district){
-			$('#map').attr(
-				'src',
-				'data/find-transit-district.html?district=' + district
-			);
+		function loadMap(event){
+			var url = 'data/find-transit-district.html?';
+			var dist = event ? event.DISTRICT : $('#district').val();
+			var sta = event ? event.STATION_ID : $('#station').val();
+			url += (dist ? ('&district=' + dist) : '');
+			url += (sta ? ('&station=' + sta) : '');
+			$('#map').attr('src', url);
+			return false;
 		};
  	</script>
 </head>
 <body>
 	District <input id="district" value="12">
-	<button onclick="loadMap($('#district').val());">Find</button>
+	<button onclick="loadMap();">Find</button>
 	<iframe id="map"></iframe>
 </body>
 </html>
