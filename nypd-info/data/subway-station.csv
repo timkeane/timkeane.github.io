@@ -1,470 +1,472 @@
-X,Y,LINE,NAME,DISTRICT,SECTOR,STATION_ID,NOTE
-1008614,221655,"N,W","Ditmars Boulevard / Astoria","20","",1,"N-all times, W part time"
-997607,222676,"Q","86 Street","04","",476,"Q-all times"
-1006001,218645,"N,W","30 Avenue","20","",3,"N-all times, W part time"
-1004799,216696,"N,W","Broadway","20","",4,"N-all times, W part time"
-1003681,214877,"N,W","36 Avenue","20","",5,"N-all times, W part time"
-987916,214202,"N,Q,R,W","42 Street / Times Square","01","",11,"N,Q-all times, R-all times exc nights, W part time"
-987382,210866,"N,R","28 Street","04","",13,"N-all times, R-all times exc nights, part time"
-986872,207375,"N,Q,R,W","14 Street / Union Square","04","",15,"N,Q-all times, R-all times exc nights"
-984887,203169,"N,R","Prince Street","04","",17,"N-all times, Q-nights, R-all times exc nights"
-983958,201160,"N,Q","Canal Street","02","",19,"N-all times, Q-weekdays and evenings"
-981164,198136,"R,W","Cortlandt Street","02","",21,"N-nights, R-all other times"
-980644,195450,"R,W","Whitehall Street / South Ferry","02","",23,"N-nights, R-all other times"
-988117,191484,"R","Jay Street / Metrotech","30","A",25,"N-nights, R-all other times"
-990127,188355,"D,N,R","Pacific Street / Atlantic Avenue / Barclays Center","32","",27,"D,N-all times, R-all times exc nights"
-987495,183684,"R","4 Avenue / 9 Street","32","",29,"D,N-nights, R-all other times"
-984780,179877,"R","25 Street","32","",31,"D,N-nights, R-all other times"
-981473,175702,"N,R","45 Street","34","",33,"N-nights, R-all times, skips nights northbound"
-979288,172942,"N,R","59 Street","34","",35,"N,R-all times"
-977169,168709,"R","77 Street","34","",37,"R-all times"
-975678,163930,"R","95 Street / Bay Ridge","34","",39,"R-all times"
-991780,185964,"B,Q","7 Avenue","32","",41,"B-weekdays and evenings, Q-all times"
-994945,177940,"Q","Parkside Avenue","32","",43,"Q-all times"
-994141,173870,"Q","Beverley Road","32","",45,"Q-all times"
-994604,170678,"B,Q","Newkirk Avenue","34","",47,"B-weekdays and evenings, Q-all times"
-995161,166991,"Q","Avenue J","34","",49,"Q-all times"
-996020,161023,"B,Q","Kings Highway","34","",51,"B-weekdays and evenings, Q-all times"
-996725,156171,"Q","Neck Road","34","",53,"Q-all times"
-994986,149754,"B,Q","Brighton Beach","34","",55,"B-weekdays and evenings, Q-all times"
-990929,149142,"Q,F","West 8 Street / NY Aquarium","34","",57,"F,Q-all times"
-985790,174808,"D","9 Avenue","34","",59,"D-all times"
-985732,171083,"D","50 Street","34","",61,"D-all times"
-985122,167427,"D","62 Street","34","",63,"D-all times"
-984088,162667,"D","79 Street","34","",65,"D-all times"
-984757,159577,"D","20 Avenue","34","",67,"D-all times"
-987908,157036,"D","25 Avenue","34","",69,"D-all times"
-981054,170614,"N","8 Avenue","34","",71,"N-all times"
-985262,166923,"N","New Utrecht Avenue","34","",73,"N-all times"
-988547,164106,"N","20 Avenue","34","",75,"N-all times"
-989700,159352,"N","Kings Highway","34","",77,"N-all times"
-990308,155128,"N","86 Street","34","",79,"N-all times"
-1029506,193296,"J,Z","111 Street","20","",81,"J-all times"
-1025277,192046,"J,Z","Woodhaven Boulevard","20","",83,"J-all times, Z-rush hours AM westbound, PM eastbound"
-1021053,191160,"J","75 Street / Elderts Lane","20","",85,"Z-rush hours AM westbound, PM eastbound, J-all other times"
-1019216,188193,"J,Z","Crescent Street","33","",87,"J-all times, Z-rush hours AM westbound, PM eastbound"
-1016093,186959,"J","Cleveland Street","33","",89,"J-all times"
-1012396,185941,"J","Alabama Avenue","33","",91,"J-all times"
-1009105,188070,"J,Z","Chauncey Street","33","",93,"Z-rush hours AM westbound, PM eastbound, J-all other times"
-1005838,190520,"J,Z","Gates Avenue","33","",95,"Z-rush hours AM westbound, PM eastbound, J-all other times"
-1002101,193290,"J,M,Z","Myrtle Avenue","33","",97,"J,M-all times, Z-rush hours AM westbound, PM eastbound"
-998847,195710,"J,M","Lorimer Street","33","",99,"J-all times, skips weekdays AM westbound, PM eastbound, M-all times exc nights"
-995941,197362,"J,M,Z","Marcy Avenue","33","",101,"J-all times, M-all times exc nights, Z-rush hours AM westbound, PM eastbound"
-985967,201682,"J,Z","Bowery","04","",103,"J-all times, Z-rush hours AM westbound, PM eastbound"
-983306,199127,"J,Z","Chambers Street","02","",105,"J-all times, Z-rush hours AM westbound, PM eastbound"
-981185,196665,"J,Z","Broad Street","02","",107,"J-all times, Z-rush hours AM westbound, PM eastbound"
-1013113,196591,"M","Fresh Pond Road","33","",109,"M-all times"
-1009875,195382,"M","Seneca Avenue","33","",111,"M-all times"
-1006511,193827,"M","Knickerbocker Avenue","33","",113,"M-all times"
-983536,208797,"L","8 Avenue","02","",115,"L-all times"
-986836,206971,"L","14 Street / Union Square","04","",117,"L-all times"
-989327,205591,"L","1 Avenue","04","",119,"L-all times"
-998042,199436,"L","Lorimer Street","33","",121,"L-all times"
-1000746,198528,"L","Grand Street","33","",123,"L-all times"
-1002785,196554,"L","Morgan Avenue","33","",125,"L-all times"
-1006921,195661,"L","Dekalb Avenue","33","",127,"L-all times"
-1010889,192687,"L","Halsey Street","33","",129,"L-all times"
-1010526,188075,"L","Bushwick Avenue / Aberdeen Street","33","",131,"L-all times"
-1011129,185338,"L","Atlantic Avenue","33","",133,"L-all times"
-1011837,181226,"L","Livonia Avenue","33","",135,"L-all times"
-1012124,176276,"L","East 105 Street","33","",137,"L-all times"
-996502,187239,"S","Franklin Avenue","30","A",139,"S to Prospect Park-all times"
-995556,183503,"S","Botanic Garden","32","",142,"S Franklin Av-Fulton St to Prospect Park-all times"
-1004366,254608,"A","Dyckman Street / 200 Street","03","",144,"A-all times"
-1001411,249579,"A","181 Street","03","",146,"A-all times"
-1000973,245580,"A,C","168 Street / Washington Heights","03","",148,"A-all times, C-all times exc nights"
-999724,239767,"A,B,C,D","145 Street","03","",151,"A,D-all times, B-weekdays and evenings, C-all times exc nights"
-997469,234776,"A,B,C,D","125 Street","03","",153,"A,D-all times, B-weekdays and evenings, C-all times exc nights"
-995860,230953,"A,B,C","110 Street / Cathedral Parkway","03","",155,"A-nights, B-weekdays and evenings, C-all times exc nights"
-994052,227687,"A,B,C","96 Street","03","",157,"A-nights, B-weekdays and evenings, C-all times exc nights"
-991977,223944,"A,B,C","81 Street / Museum of Natural History","01","",159,"A-nights, B-weekdays and evenings, C-all times exc nights"
-989333,219171,"A,B,C,D","59 Street / Columbus Circle","01","",161,"A,D-all times, B-weekdays and evenings, C-all times exc nights"
-987094,215185,"A,C,E","42 Street / Port Authority Bus Terminal","01","",163,"A,E-all times, C-all times exc nights"
-984793,211030,"A,C,E","23 Street","02","",165,"A-nights, C-all other times, E-all times"
-984165,206057,"A,B,C,D,E,F,M","West 4 Street / Washington Square","02","",167,"B,M-weekdays and evenings, D,F-all times"
-982801,201892,"A,C,E","Canal Street","02","",169,"A,E-all times, C-all times exc nights"
-981549,198883,"E","World Trade Center","02","",171,"E-all times"
-986876,194064,"A,C","High Street","30","A",173,"A-all times, C-all times exc nights"
-988400,190083,"A,C,G","Hoyt / Schermerhorn Streets","30","A",175,"A,G-all times, C-all times exc nights"
-993725,188209,"A,C","Clinton / Washington Avenues","30","A",177,"A-nights, C-all other times"
-998000,187182,"A,C","Nostrand Avenue","30","A",179,"A-all times, C-all times exc nights"
-1003463,186795,"A,C","Utica Avenue","33","",181,"A-all times, C-all times exc nights"
-1008674,186426,"A,C","Rockaway Avenue","33","",183,"A-nights, C-all other times"
-1012946,185047,"A,C","Liberty Avenue","33","",185,"A-nights, C-all other times"
-1017329,184903,"A,C","Shepherd Avenue","33","",187,"A-nights, C-all other times"
-1021682,185971,"A","Grant Avenue","33","",189,"A-all times, S Euclid Av to Ozone Park-Lefferts Blvd-nights"
-1025447,186996,"A","88 Street","23","",191,"A-all times, S Euclid Av to Ozone Park-Lefferts Blvd-nights"
-1029270,187684,"A","104 Street","23","",193,"S Euclid Av to Ozone Park-Lefferts Blvd-nights, A-all other times"
-1032563,189235,"A","Ozone Park / Lefferts Boulevard","23","",195,"S to Euclid Av-nights, A-all other times"
-1030284,182776,"A","Aqueduct / North Conduit Avenue","23","",197,"A-all times"
-1035386,160987,"A,S","Broad Channel","23","",199,"A,S to Rockaway Park-all times"
-1034102,152599,"A,S","Beach 98 Street","23","",201,"A-rush hours AM northbound, PM southbound, S Broad Channel to Rockaway Park-all times"
-1029919,150977,"A,S","Rockaway Park / Beach 116 Street","23","",203,"A-rush hours AM northbound, PM southbound, S to Broad Channel-all times"
-1042983,155165,"A","Beach 60 Street","23","",205,"A-all times"
-1048631,156281,"A","Beach 36 Street","23","",207,"A-all times"
-1052169,159423,"A","Far Rockaway / Mott Avenue","23","",209,"A-all times"
-1015463,257444,"B,D","Bedford Park Boulevard","11","",211,"B-rush hours, D-all times"
-1012534,253087,"B,D","Fordham Road / Grand Concourse","11","",213,"B-rush hours, D-all times"
-1010469,249119,"B,D","Tremont Avenue","11","",215,"B-rush hours, D-all times"
-1008212,245071,"B,D","170 Street","11","",217,"B-rush hours, D-all times, skips rush hours AM southbound, PM northbound"
-1004826,240914,"B,D","161 Street / Yankee Stadium","11","",219,"B-rush hours, D-all times, skips rush hours AM southbound, PM northbound"
-1000337,213890,"F","21 Street / Queensbridge","20","",221,"F-all times"
-993644,217850,"F,Q","Lexington Avenue / 63 Street","01","",223,"F-all times, Q all times"
-989422,215671,"B,D,F,M","47-50 Streets / Rockefeller Center","01","",225,"B,M-weekdays and evenings, D,F-all times"
-987638,212445,"B,D,F,M","34 Street / Herald Square","02","",227,"B,M-weekdays and evenings, D,F-all times"
-985301,208233,"F,M","14 Street","02","",229,"F-all times, M-weekdays and evenings"
-985982,200961,"B,D","Grand Street","04","",231,"B-weekdays and evenings, D-all times"
-987555,201112,"F","Delancey Street / Essex Street","04","",233,"F-all times"
-987887,194212,"F","York Street","30","B",235,"F-all times"
-985652,187118,"F,G","Carroll Street","30","B",237,"F,G-all times"
-987085,183475,"F,G","4 Avenue / 9 Street","30","B",239,"F,G-all times"
-989872,179746,"F,G","15 Street / Prospect Park","30","B",241,"F,G-all times"
-989878,174003,"F,G","Church Avenue","30","B",243,"F,G-all times"
-990642,168714,"F","18 Avenue","34","",245,"F-all times"
-991119,165427,"F","Bay Parkway","34","",247,"F-all times"
-991746,161095,"F","Avenue P","34","",249,"F-all times"
-991644,156389,"F","Avenue U","34","",251,"F-all times"
-991308,150856,"F","Neptune Avenue","34","",253,"F-all times"
-1041507,198205,"F","169 Street","20","",255,"F-all times"
-1036698,196336,"F","Sutphin Boulevard","20","",257,"F-all times"
-1031275,199464,"E,F","Kew Gardens / Union Turnpike","20","",259,"E,F-all times"
-1027349,202211,"E,F,M,R","71 Avenue / Forest Hills","20","",261,"E,F-all times, M-weekdays and evenings, R-all times exc nights"
-1022603,205180,"M,R","63 Drive / Rego Park","20","",263,"E-nights, R-all other times, M-weekdays and evenings"
-1018275,207741,"M,R","Grand Avenue / Newton","20","",265,"E-nights, R-all other times, M-weekdays and evenings"
-1014370,211280,"E,F,M,R","Jackson Heights / Roosevelt Ave","20","",267,"E,F-all times, M-weekdays and evenings, R-all times exc nights"
-1010276,213565,"M,R","Northern Boulevard","20","",269,"E-nights, R-all other times, M-weekdays and evenings"
-1006268,215078,"M,R","Steinway Street","20","",271,"E-nights, R-all other times, M-weekdays and evenings"
-1001668,212134,"E,M,R","Queens Plaza","20","",273,"E-all times, M-weekdays and evenings, R-all times exc nights"
-992818,215244,"E,M","Lexington Avenue / 53 Street","04","",275,"E-all times, M-weekdays and evenings"
-989320,217248,"B,D,E","7 Avenue","01","",277,"D,E-all times, B-weekdays and evenings"
-1037486,194503,"E,J,Z","Sutphin Boulevard / Archer Avenue","20","",279,"E,J-all times, Z-rush hours AM westbound, PM eastbound"
-999818,211181,"G","Long Island City / Court Square","20","",281,"G-all times"
-996881,205700,"G","Greenpoint Avenue","30","C",283,"G-all times"
-997717,198963,"G","Metropolitan Avenue","30","C",285,"G-all times"
-998049,194446,"G","Flushing Avenue","30","C",287,"G-all times"
-997139,190530,"G","Bedford / Nostrand Avenues","30","C",289,"G-all times"
-993458,189969,"G","Clinton / Washington Avenues","30","C",291,"G-all times"
-1012291,263271,"1","242 Street / Van Cortlandt Park","03","",293,"1-all times"
-1010567,259483,"1","231 Street","03","",295,"1-all times"
-1007682,256051,"1","215 Street","03","",297,"1-all times"
-1004848,252801,"1","200 Street / Dyckman Street","03","",299,"1-all times"
-1002621,248782,"1","181 Street","03","",301,"1-all times"
-999500,243146,"1","157 Street","03","",303,"1-all times"
-997071,238760,"1","137 Street / City College","03","",305,"1-all times"
-994186,233554,"1","116 Street / Columbia University","03","",307,"1-all times"
-993005,230538,"1","103 Street","03","",309,"1-all times"
-990836,226602,"1","86 Street","01","",311,"1-all times, 2-nights"
-989243,222889,"1,2,3","72 Street","01","",313,"1,2,3-all times"
-989256,219170,"1","59 Street / Columbus Circle","01","",315,"1-all times, 2-nights"
-987715,214449,"1,2,3","42 Street / Times Square","01","",317,"1,2,3-all times"
-986088,211507,"1","28 Street","02","",319,"1-all times, 2-nights"
-984840,209257,"1","18 Street","02","",321,"1-all times, 2-nights"
-983445,206482,"1","Christopher Street / Sheridan Square","02","",323,"1-all times, 2-nights"
-982510,202632,"1","Canal Street","02","",325,"1-all times, 2-nights"
-981681,199945,"1,2,3","Chambers Street","02","",327,"1,2-all times, 3-all times exc nights"
-980429,197043,"1","Rector Street","02","",329,"1-all times"
-981807,199060,"2,3","Park Place","02","",331,"2-all times, 3-all times exc nights"
-981727,196791,"2,3","Wall Street","02","",333,"2-all times, 3-all times exc nights"
-987024,191835,"2,3","Borough Hall","30","A",335,"2-all times, 3-all times exc nights"
-989684,190047,"2,3,4,5","Nevins Street","30","A",337,"2,4-all times, 3-all times exc nights, 5-weekdays"
-991184,187334,"2,3","Bergen Street","32","",339,"4-nights, 3-all other times, 2-all times"
-995873,183657,"2,3,4,5","Franklin Avenue","32","",342,"2,4-all times, 3-all times exc nights, 5-weekdays"
-1000295,183192,"3","Kingston Avenue","32","",344,"4-nights, 3-all other times"
-1007463,180301,"3","Saratoga Avenue","32","",347,"4-nights, 3-all other times"
-1011314,181055,"3","Junius Street","32","",349,"4-nights, 3-all other times"
-1014932,181762,"3","Van Siclen Avenue","32","",351,"4-nights, 3-all other times"
-997957,182608,"2,5","President Street","32","",353,"2-all times, 5 weekdays"
-998101,178519,"2,5","Winthrop Street","32","",355,"2-all times, 5-weekdays"
-998445,174316,"2,5","Beverly Road","32","",357,"2-all times, 5-weekdays"
-998810,169842,"2,5","Flatbush Avenue / Brooklyn College","32","",359,"2-all times, 5-weekdays"
-1030573,247837,"6","Buhre Avenue","12","C",361,"6 Express-weekdays AM southbound, PM northbound, 6-all other times"
-1027705,245312,"6","East Tremont Avenue / Westchester Square","12","C",363,"6 Express-weekdays AM southbound, PM northbound, 6-all other times"
-1025420,243254,"6","Castle Hill Avenue","12","C",365,"6 Express-weekdays AM southbound, PM northbound, 6-all other times"
-1020885,242246,"6","St. Lawrence Avenue","12","C",367,"6-all times"
-1017692,241176,"6","Elder Avenue","12","C",369,"6-all times"
-1014544,238390,"6","Hunts Point Avenue","12","C",371,"6-all times, 6 Express-weekdays AM southbound, PM northbound"
-1010797,235168,"6","East 149 Street","12","C",373,"6-all times"
-1008047,232706,"6","Cypress Avenue","12","C",375,"6-all times"
-1004697,234564,"6","3 Avenue / 138 Street","12","C",377,"6-all times, 6 Express-weekdays AM southbound, PM northbound"
-1016147,259815,"4","Mosholu Parkway","11","",379,"4-all times"
-1012690,255443,"4","Kingsbridge Road","11","",381,"4-all times"
-1010839,252033,"4","183 Street","11","",383,"4-all times"
-1008653,248414,"4","176 Street","11","",385,"4-all times"
-1006997,245350,"4","170 Street","11","",387,"4-all times"
-1004815,241033,"4","161 Street / Yankee Stadium","11","",389,"4-all times"
-1003668,235564,"4","138 Street / Grand Concourse","11","",391,"4-all times, skips rush hours AM southbound, PM northbound, 5-all times exc nights"
-1000415,230244,"6","116 Street","04","",393,"4 nights, 6-all times, 6 Express-weekdays AM southbound, PM northbound"
-998794,227318,"6","103 Street","04","",395,"4 nights, 6-all times, 6 Express-weekdays AM southbound, PM northbound"
-996550,223270,"4,5,6","86 Street","04","",397,"4,6-all times, 5-all times exc nights, 6 Express-weekdays AM southbound, PM northbound"
-994258,219133,"6","68 Street / Hunter College","04","",399,"4 nights, 6-all times, 6 Express-weekdays AM southbound, PM northbound"
-992029,215112,"6","51 Street","04","",401,"4 nights, 6-all times, 6 Express-weekdays AM southbound, PM northbound"
-989217,211095,"6","33 Street","04","",403,"4 nights, 6-all times, 6 Express-weekdays AM southbound, PM northbound"
-987964,208829,"6","23 Street","04","",405,"4 nights, 6-all times, 6 Express-weekdays AM southbound, PM northbound"
-986725,205255,"6","Astor Place","04","",407,"4 nights, 6-all times, 6 Express-weekdays AM southbound, PM northbound"
-985042,202430,"6","Spring Street","04","",409,"4 nights, 6-all times, 6 Express-weekdays AM southbound, PM northbound"
-983105,199065,"4,5,6","Brooklyn Bridge / City Hall","02","",411,"4,6-all times, 5-all times exc nights, 6 Express-weekdays AM southbound, PM northbound"
-980961,197059,"4,5","Wall Street","02","",413,"4-all times, 5-weekdays"
-986981,191538,"4,5","Borough Hall","30","A",415,"4-all times, 5-weekdays"
-1024525,266582,"2,5","238 Street / Nereid Avenue","12","A",417,"2-all times, 5-rush hours AM southbound, PM northbound"
-1022900,262841,"2,5","225 Street","12","A",419,"2-all times, 5-rush hours AM southbound, PM northbound"
-1021269,259127,"2,5","Gun Hill Road","12","A",421,"2-all times, 5-rush hours AM southbound, PM northbound"
-1020972,254624,"2,5","Allerton Avenue","12","A",423,"2-all times, 5-rush hours AM southbound, PM northbound"
-1020671,248534,"2,5","Bronx Park East","12","A",425,"2-all times, 5-rush hours AM southbound, PM northbound"
-1017464,245410,"2,5","East Tremont Avenue / West Farms Square","12","B",427,"2-all times, 5-all times exc nights, skips rush hours AM southbound, PM northbound"
-1014206,241683,"2,5","Freeman Street","12","B",429,"2-all times, 5-all times exc nights, skips rush hours AM southbound, PM northbound"
-1012863,238823,"2,5","Intervale Avenue","12","B",431,"2-all times, 5-all times exc nights, skips rush hours AM southbound, PM northbound"
-1009798,236741,"2,5","Jackson Avenue","12","B",433,"2-all times, 5-all times exc nights, skips rush hours AM southbound, PM northbound"
-1004532,237425,"2,5","149 Street / Grand Concourse","11","",435,"2-all times, 5-all times exc nights"
-1001896,238185,"3","145 Street","03","",437,"3-all times, exit only northbound"
-999339,233568,"2,3","125 Street","03","",439,"2,3-all times"
-997589,230405,"2,3","110 Street / Central Park North","03","",441,"2,3-all times"
-1028886,259440,"5","Baychester Avenue","12","A",443,"5-all times"
-1024261,252262,"5","Pelham Parkway","12","A",445,"5-all times"
-1031337,216065,"E,M","Main Street / Flushing","20","",447,"7-all times, 7 Express-rush hours AM westbound, PM eastbound"
-1024332,213185,"7","111 Street / Roosevelt Ave","20","",449,"7-all times"
-1020401,212237,"7","Junction Boulevard","20","",451,"7-all times, 7 Express-rush hours AM westbound, PM eastbound"
-1016476,211690,"7","82 Street / Jackson Heights","20","",453,"7-all times"
-1012955,211200,"7","69 Street","20","",455,"7-all times"
-1008482,210402,"7","52 Street","20","",457,"7-all times"
-1005305,210265,"7","40 Street","20","",459,"7-all times"
-1000829,212759,"N,W,7","Queensboro Plaza","20","",461,"7,N-all times, 7 Express-rush hours AM westbound, PM eastbound, W part time"
-998406,209690,"7","Hunters Point Avenue","20","",463,"7-all times, 7 Express-rush hours AM westbound, PM eastbound"
-990888,213044,"7","42 Street / Grand Central","04","",465,"7-all times, 7 Express-rush hours AM westbound, PM eastbound"
-987660,214518,"7","42 Street / Times Square","01","",467,"7-all times, 7 Express-rush hours AM westbound, PM eastbound"
-990016,213531,"S","42 Street / Grand Central","04","",469,"S to Times Sq-all times exc nights, closed nights-use 7"
-998909,225000,"Q","96 Street","04","",475,"Q-all times"
-995784,219375,"Q","72 Street","04","",477,"Q-all times"
-986814,189245,"F,G","Bergen Street","30","B",236,"F,G-all times"
-989462,149596,"D,F,N,Q","Stillwell Avenue / Coney Island","34","",58,"D,F,N,Q-all times"
-985390,184702,"F,G","Smith / 9 Streets","30","B",238,"F,G-all times"
-988199,206216,"L","3 Avenue","04","",118,"L-all times"
-989729,182008,"F,G","7 Avenue","30","B",240,"F,G-all times"
-987203,209353,"N,R","23 Street","04","",14,"N-all times, Q-nights, R-all times exc nights"
-990972,176375,"F,G","Fort Hamilton Parkway","30","B",242,"F,G-all times"
-996263,200565,"L","Bedford Avenue","33","",120,"L-all times"
-990308,171032,"F","Ditmas Avenue","34","",244,"F-all times"
-985859,172778,"D","Fort Hamilton Parkway","34","",60,"D-all times"
-990893,166988,"F","Avenue I","34","",246,"F-all times"
-999790,199621,"L","Graham Avenue","33","",122,"L-all times"
-991455,163104,"F","Avenue N","34","",248,"F-all times"
-986227,181705,"R","Prospect Avenue","32","",30,"D,N-nights, R-all other times"
-991926,159061,"F","Kings Highway","34","",250,"F-all times"
-1000942,197004,"L","Montrose Avenue","33","",124,"L-all times"
-991397,154030,"F","Avenue X","34","",252,"F-all times"
-985541,169341,"D","55 Street","34","",62,"D-all times"
-1044182,198986,"F","179 Street / Jamaica","20","",254,"F-all times"
-1005623,196722,"L","Jefferson Street","33","",126,"L-all times"
-1038788,197125,"F","Parsons Boulevard","20","",256,"F-all times"
-989588,217829,"N,Q,R,W","57 Street","01","",9,"N,Q-all times, R-all times exc nights, W part time"
-1033962,197694,"E,F","Van Wyck Boulevard / Briarwood","20","",258,"E-evenings, weekends, nights, F-all times"
-1008935,194125,"L","Myrtle / Wyckoff Avenues","33","",128,"L-all times"
-1029456,200922,"E,F","75 Avenue","20","",260,"E-evenings, weekends, nights, F-all times"
-984572,164889,"D","71 Street","34","",64,"D-all times"
-1025033,203996,"E,M,R","67 Avenue","20","",262,"E-nights, R-all other times, M-weekdays and evenings"
-1010885,190264,"L","Wilson Avenue","33","",130,"L-all times"
-1020436,206391,"M,R","Woodhaven Boulevard","20","",264,"E-nights, R-all other times, M-weekdays and evenings"
-983265,177963,"D,N,R","36 Street","34","",32,"D,N,R-all times"
-1016939,209764,"M,R","Elmhurst Avenue","20","",266,"E-nights, R-all other times, M-weekdays and evenings"
-1011122,186471,"L","Broadway Junction","33","",132,"L-all times"
-1012293,212436,"M,R","65 Street","20","",268,"E-nights, R-all other times, M-weekdays and evenings"
-983808,160691,"D","18 Avenue","34","",66,"D-all times"
-1008209,214835,"M,R","46 Street","20","",270,"E-nights, R-all other times, M-weekdays and evenings"
-1011459,183079,"L","Sutter Avenue","33","",134,"L-all times"
-1003917,213244,"M,R","36 Street","20","",272,"E-nights, R-all other times, M-weekdays and evenings"
-986326,205405,"N,R","8 Street / NYU","04","",16,"N-all times, Q-nights, R-all times exc nights"
-999197,211713,"E,M","Court Square / 23 Street","20","",274,"E-all times, M-weekdays and evenings"
-1012195,179353,"L","New Lots Avenue","33","",136,"L-all times"
-991107,216198,"E,M","5 Avenue / 53 Street","01","",276,"E-all times, M-weekdays and evenings"
-986006,158583,"D","Bay Parkway","34","",68,"D-all times"
-1039400,195121,"E,J,Z","Parsons / Archer / Jamaica Center","20","",278,"E,J-all times, Z-rush hours AM westbound, PM eastbound"
-1011487,174885,"L","Canarsie/ Rockaway Parkway","33","",138,"L-all times"
-1034987,195414,"E,J,Z","Jamaica / Van Wyck","20","",280,"E-all times"
-980355,174293,"N,R","53 Street","34","",34,"N-nights, R-all times, skips nights northbound"
-998216,210387,"G","21 Street","20","",282,"G-all times"
-996004,185117,"S","Park Place","32","",141,"S Franklin Av-Fulton St to Prospect Park-all times"
-997781,203228,"G","Nassau Avenue","30","C",284,"G-all times"
-988759,153807,"D","Bay 50 Street","34","",70,"D-all times"
-998026,196541,"G","Broadway","30","C",286,"G-all times"
-1006404,255550,"A","Inwood / 207 Street","03","",143,"A-all times"
-998374,192349,"G","Myrtle / Willoughby Avenues","30","C",288,"G-all times"
-988624,216093,"N,Q,R,W","49 Street","01","",10,"N-all times, Q-all times exc weekends, R-all times exc nights, W part time"
-995346,190260,"G","Classon Avenue","30","C",290,"G-all times"
-1002457,252249,"A","190 Street","03","",145,"A-all times"
-991079,189613,"G","Fulton Street","30","C",292,"G-all times"
-982765,169307,"N","Fort Hamilton Parkway","34","",72,"N-all times"
-1011661,261601,"1","238 Street","03","",294,"1-all times, exit only northbound"
-1000932,248011,"A","175 Street","03","",147,"A-all times"
-1009187,257917,"1","Marble Hill / 225 Street","03","",296,"1-all times"
-977762,170613,"R","Bay Ridge Avenue","34","",36,"R-all times"
-1006704,254290,"1","207 Street","03","",298,"1-all times"
-1000435,241863,"A,C","155 Street","03","",150,"A-nights, C-all other times"
-1003777,250867,"1","191 Street","03","",300,"1-all times"
-986900,165410,"N","18 Avenue","34","",74,"N-all times"
-1000815,245520,"1","168 Street / Washington Heights","03","",302,"1-all times"
-998772,237267,"A,B,C","135 Street","03","",152,"A-nights, B-weekdays and evenings, C-all times exc nights"
-997988,240416,"1","145 Street","03","",304,"1-all times"
-983744,201397,"R,W","Canal Street","02","",18,"N-nights, R-all other times"
-995773,236418,"1","125 Street","03","",306,"1-all times"
-996764,232585,"A,B,C","116 Street","03","",154,"A-nights, B-weekdays and evenings, C-all times exc nights"
-993428,232186,"1","110 Street / Cathedral Parkway","03","",308,"1-all times"
-989309,162047,"N","Bay Parkway","34","",76,"N-all times"
-991913,228524,"1,2,3","96 Street","03","",310,"1,2,3-all times"
-994946,229306,"A,B,C","103 Street","03","",156,"A-nights, B-weekdays and evenings, C-all times exc nights"
-989812,224886,"1","79 Street","01","",312,"1-all times, 2-nights"
-976367,166139,"R","86 Street","34","",38,"R-all times"
-989178,221062,"1","66 Street / Lincoln Center","01","",314,"1-all times, 2-nights"
-992882,225575,"A,B,C","86 Street","01","",158,"A-nights, B-weekdays and evenings, C-all times exc nights"
-988724,216795,"1","50 Street","01","",316,"1-all times, 2-nights"
-990059,156866,"N","Avenue U","34","",78,"N-all times"
-986728,212658,"1,2,3","34 Street / Penn Station","02","",318,"1,2,3-all times"
-990804,221820,"A,B,C","72 Street","01","",160,"A-nights, B-weekdays and evenings, C-all times exc nights"
-985453,210365,"1","23 Street","02","",320,"1-all times, 2-nights"
-1006937,219833,"N,W","Astoria Boulevard","20","",2,"N-all times, W part time"
-984194,208087,"1,2,3","14 Street","02","",322,"1,2-all times, 3-all times exc nights"
-988133,217060,"A,C,E","50 Street","01","",162,"A-nights, C-all other times, E-all times"
-982762,204598,"1","Houston Street","02","",324,"1-all times, 2-nights"
-1031845,194528,"J,Z","121 Street","20","",80,"Z-rush hours AM westbound, PM eastbound, J-all other times"
-982341,201344,"1","Franklin Street","02","",326,"1-all times, 2-nights"
-986081,213355,"A,C,E","34 Street / Penn Station","02","",164,"A,E-all times, C-all times exc nights"
-980871,198617,"1","Cortlandt Street","02","",328,"Temporarily closed"
-990689,188655,"B,Q","Atlantic Avenue / Barclays Center","32","",40,"B-weekdays and evenings, Q-all times"
-980599,194936,"1","South Ferry","02","",330,"1-all times"
-983782,209204,"A,C,E","14 Street","02","",166,"A,E-all times, C-all times exc nights"
-982428,197736,"2,3","Fulton Street","02","",332,"2-all times, 3-all times exc nights"
-1027388,192582,"J","104 Street","20","",82,"Z-rush hours AM westbound, PM eastbound, J-all other times"
-986167,193382,"2,3","Clark Street","30","A",334,"2-all times, 3-all times exc nights"
-983214,203861,"A,C,E","Spring Street","02","",168,"A-nights, C-all other times, E-all times"
-988392,190861,"2,3","Hoyt Street","30","A",336,"2-all times, 3-all times exc nights"
-982313,199141,"R,W","City Hall","02","",20,"N-nights, R-all other times"
-990476,188630,"2,3,4,5","Atlantic Avenue / Barclays Center","32","",338,"2,4-all times, 3-all times exc nights, 5-weekdays"
-981870,199447,"A,C","Chambers Street","02","",170,"A-all times, C-all times exc nights"
-992306,185306,"2,3","Grand Army Plaza","32","",340,"4-nights, 3-all other times, 2-all times"
-1023050,191577,"J,Z","85 Street / Forest Parkway","20","",84,"J-all times"
-998002,183357,"3","Nostrand Avenue","32","",343,"4-nights, 3-all other times"
-982137,198008,"A,C","Fulton Street / Broadway / Nassau Street","02","",172,"A-all times, C-all times exc nights"
-1005745,181478,"3","Sutter Avenue / Rutland Road","32","",346,"4-nights, 3-all other times"
-994784,180330,"B,Q,S","Prospect Park","32","",42,"B-weekdays and evenings, Q,S to Franklin Av-Fulton St-all times"
-1009508,180699,"3","Rockaway Avenue","32","",348,"4-nights, 3-all other times"
-987795,191562,"A,C,F","Jay Street / Metrotech","30","A",174,"A,F-all times, C-all times exc nights"
-1013412,181467,"3","Pennsylvania Avenue","32","",350,"4-nights, 3-all other times"
-1019381,190548,"J","Cypress Hills","33","",86,"J-all times"
-1016400,182054,"3","New Lots Avenue","32","",352,"4-nights, 3-all other times"
-991476,189247,"A,C","Lafayette Avenue","30","A",176,"A-nights, C-all other times"
-997920,180746,"2,5","Sterling Street","32","",354,"2-all times, 5-weekdays"
-1002854,213536,"N,W","39 Avenue","20","",6,"N-all times, W part time"
-998275,176407,"2,5","Church Avenue","32","",356,"2-all times, 5-weekdays"
-996219,187524,"A,C","Franklin Avenue","30","A",178,"A-nights, C-all other times"
-998598,172447,"2,5","Newkirk Avenue","32","",358,"2-all times, 5-weekdays"
-1017637,187595,"J,Z","Norwood Avenue","33","",88,"Z-rush hours AM westbound, PM eastbound, J-all other times"
-1031800,249899,"6","Pelham Bay Park","12","C",360,"6 Express-weekdays AM southbound, PM northbound, 6-all other times"
-1000654,186995,"A,C","Kingston / Throop Avenues","33","",180,"A-nights, C-all other times"
-1029537,246762,"6","Middletown Road","12","C",362,"6 Express-weekdays AM southbound, PM northbound, 6-all other times"
-994550,176271,"B,Q","Church Avenue","32","",44,"B-weekdays and evenings, Q-all times"
-1026577,244069,"6","Zerega Avenue","12","C",364,"6 Express-weekdays AM southbound, PM northbound, 6-all other times"
-1006221,186600,"A,C","Ralph Avenue","33","",182,"A-nights, C-all other times"
-1022766,242875,"6","Parkchester / East 177 Street","12","C",366,"6-all times, 6 Express-weekdays AM southbound, PM northbound"
-1014301,186319,"J,Z","Van Siclen Avenue","33","",90,"Z-rush hours AM westbound, PM eastbound, J-all other times"
-1018977,241519,"6","Morrison Avenue / Soundview","12","C",368,"6-all times"
-1010513,186426,"A,C","Broadway Junction / East New York","33","",184,"A-all times, C-all times exc nights"
-1015722,240423,"6","Whitlock Avenue","12","C",370,"6-all times"
-980653,197127,"R,W","Rector Street","02","",22,"N-nights, R-all other times"
-1012917,236623,"6","Longwood Avenue","12","C",372,"6-all times"
-1014664,184382,"A,C","Van Siclen Avenue","33","",186,"A-nights, C-all other times"
-1009813,233929,"6","East 143 Street / St. Mary's Street","12","C",374,"6-all times"
-1010797,186802,"J,Z","Broadway Junction / Eastern Parkway","33","",92,"J-all times, Z-rush hours AM westbound, PM eastbound"
-1006607,233505,"6","Brook Avenue","12","C",376,"6-all times"
-1019726,185360,"A,C,S","Euclid Avenue","33","",188,"S to Ozone Park-Lefferts Blvd-nights, C-all other times, A-all times"
-1017776,262108,"4","Woodlawn","11","",378,"4-all times"
-994299,172790,"Q","Cortelyou Road","32","",46,"Q-all times"
-1014654,257504,"4","Bedford Park Boulevard / Lehman College","11","",380,"4-all times"
-1023361,186821,"A","80 Street","23","",190,"A-all times, S Euclid Av to Ozone Park-Lefferts Blvd-nights"
-1011624,253635,"4","Fordham Road","11","",382,"4-all times"
-1007369,189367,"J","Halsey Street","33","",94,"J-all times"
-1009789,250227,"4","Burnside Avenue","11","",384,"4-all times"
-1027559,187214,"A","Rockaway Boulevard","23","",192,"A-all times, S Euclid Av to Ozone Park-Lefferts Blvd-nights"
-1007855,246939,"4","Mt. Eden Avenue","11","",386,"4-all times"
-993288,217154,"N,R,W","Lexington Avenue / 59 Street","04","",7,"N-all times, R-all times exc nights, W part time"
-1006000,243696,"4","167 Street","11","",388,"4-all times"
-1030799,188641,"A","111 Street","23","",194,"S Euclid Av to Ozone Park-Lefferts Blvd-nights, A-all other times"
-1004349,237415,"4","149 Street / Grand Concourse","11","",390,"4-all times"
-1004075,191826,"J","Kosciusko Street","33","",96,"J-all times"
-1001527,232252,"4,5,6","125 Street","04","",392,"4,6-all times, 5-all times exc nights, 6 Express-weekdays AM southbound, PM northbound"
-1029766,184182,"A","Aqueduct / Racetrack","23","",196,"A-to Manhattan only, racing days only"
-999686,228929,"6","110 Street","04","",394,"4 nights, 6-all times, 6 Express-weekdays AM southbound, PM northbound"
-994932,168516,"Q","Avenue H","34","",48,"Q-all times"
-997800,225522,"6","96 Street","04","",396,"4 nights, 6-all times, 6 Express-weekdays AM southbound, PM northbound"
-1031332,179951,"A","Howard Beach / JFK Airport","23","",198,"A-all times"
-995364,221130,"6","77 Street","04","",398,"4 nights, 6-all times, 6 Express-weekdays AM southbound, PM northbound"
-1000505,194458,"J,M","Flushing Avenue","33","",98,"J-all times, skips weekdays AM westbound, PM eastbound, M-all times exc nights"
-993124,217087,"4,5,6","59 Street / Lexington Avenue","04","",400,"4,6-all times, 5-all times exc nights, 6 Express-weekdays AM southbound, PM northbound"
-1036008,153589,"A,S","Beach 90 Street","23","",200,"A-rush hours AM northbound, PM southbound, S Broad Channel to Rockaway Park-all times"
-990702,213181,"4,5,6","42 Street / Grand Central","04","",402,"4,6-all times, 5-all times exc nights, 6 Express-weekdays AM southbound, PM northbound"
-986519,192191,"R","Court Street","30","A",24,"N-nights, R-all other times"
-988610,209997,"6","28 Street","04","",404,"4 nights, 6-all times, 6 Express-weekdays AM southbound, PM northbound"
-1032142,151824,"A,S","Beach 105 Street","23","",202,"A-rush hours AM northbound, PM southbound, S Broad Channel to Rockaway Park-all times"
-987035,206938,"4,5,6","14 Street / Union Square","04","",406,"4,6-all times, 5-all times exc nights, 6 Express-weekdays AM southbound, PM northbound"
-997146,196819,"J,M","Hewes Street","33","",100,"J-all times, skips weekdays AM westbound, PM eastbound, M-all times exc nights"
-985730,203747,"6","Bleecker Street","04","",408,"4 nights, 6-all times, 6 Express-weekdays PM"
-1040651,154632,"A","Beach 67 Street","23","",204,"A-all times"
-984197,201156,"6","Canal Street","02","",410,"4 nights, 6-all times, 6 Express-weekdays AM southbound, PM northbound"
-995565,164214,"Q","Avenue M","34","",50,"Q-all times"
-981614,198083,"4,5","Fulton Street","02","",412,"4-all times, 5-weekdays"
-1046457,155381,"A","Beach 44 Street","23","",206,"A-all times"
-980366,196096,"4,5","Bowling Green","02","",414,"4-all times, 5-all times exc nights"
-987740,200975,"J,M,Z","Essex Street / Delancey Street","04","",102,"J-all times, M-all times exc nights, Z-rush hours AM westbound, PM eastbound"
-1025544,268346,"2","241 Street / Wakefield","12","A",416,"2-all times"
-1050521,157987,"A","Beach 25 Street","23","",208,"A-all times"
-1023686,264706,"2,5","233 Street","12","A",418,"2-all times, 5-rush hours AM southbound, PM northbound"
-987592,212393,"N,Q,R,W","34 Street / Herald Square","02","",12,"N,Q-all times, R-all times exc nights"
-1022268,261332,"2,5","219 Street","12","A",420,"2-all times, 5-rush hours AM southbound, PM northbound"
-1017753,258018,"D","Norwood / 205 Street","11","",210,"D-all times"
-1021019,256729,"2,5","Burke Avenue","12","A",422,"2-all times, 5-rush hours AM southbound, PM northbound"
-984298,200927,"J,Z","Canal Street","02","",104,"J-all times, Z-rush hours AM westbound, PM eastbound"
-1020908,251604,"2,5","Pelham Parkway","12","A",424,"2-all times, 5-rush hours AM southbound, PM northbound"
-1013704,255159,"B,D","Kingsbridge Road","11","",212,"B-rush hours, D-all times"
-1019294,246016,"2,5","East 180 Street","12","A",426,"2,5-all times"
-996521,157624,"Q","Avenue U","34","",52,"Q-all times"
-1015326,244310,"2,5","174 Street","12","B",428,"2-all times, 5-all times exc nights, skips rush hours AM southbound, PM northbound"
-1011708,251191,"B,D","182-183 Streets","11","",214,"B-rush hours, D-all times, skips rush hours AM southbound, PM northbound"
-1013845,239492,"2,5","Simpson Street","12","B",430,"2-all times, 5-all times exc nights, skips rush hours AM southbound, PM northbound"
-982049,197957,"J,Z","Fulton Street","02","",106,"J-all times, Z-rush hours AM westbound, PM eastbound"
-1011436,237854,"2,5","Prospect Avenue","12","B",432,"2-all times, 5-all times exc nights, skips rush hours AM southbound, PM northbound"
-1009113,247474,"B,D","174-175 Streets","11","",216,"B-rush hours, D-all times, skips rush hours AM southbound, PM northbound"
-1007005,236589,"2,5","3 Avenue / 149 Street","12","B",434,"2-all times, 5-all times exc nights"
-989305,190899,"B,Q,R","Dekalb Avenue","30","A",26,"B-weekdays and evenings, D-all other times, N-nights, R-all other times, Q-all times"
-1001833,239445,"3","148 Street / Harlem","03","",436,"3-all times"
-1006822,243052,"B,D","167 Street","11","",218,"B-rush hours, D-all times, skips rush hours AM southbound, PM northbound"
-1000645,235928,"2,3","135 Street","03","",438,"2,3-all times"
-1014863,198489,"M","Middle Village / Metropolitan Avenue","33","",108,"M-all times"
-998197,231507,"2,3","116 Street","03","",440,"2,3-all times"
-1001350,241724,"B,D","155 Street","03","",220,"B-rush hours, D-all times, skips rush hours AM southbound, PM northbound"
-1031024,262955,"5","Dyre Avenue / Eastchester","12","A",442,"5-all times"
-997011,152975,"B,Q","Sheepshead Bay","34","",54,"B-weekdays and evenings, Q-all times"
-1026736,256107,"5","Gun Hill Road","12","A",444,"5-all times"
-997206,215867,"J,Z","Roosevelt Island","20","",222,"F-all times"
-1022842,250576,"5","Morris Park","12","A",446,"5-all times"
-1011124,195928,"M","Forest Avenue","33","",110,"M-all times"
-1027020,214244,"7","Willets Point / Citi Field","20","",448,"7-all times, 7 Express-rush hours AM westbound, PM eastbound"
-990519,217654,"F","57 Street / 6 Avenue","01","",224,"F-all times"
-1022292,212503,"7","103 Street / Corona Plaza","20","",450,"7-all times"
-991633,217919,"N,R,W","5 Avenue / 59 Street","01","",8,"N-all times, R-all times exc nights, W part time"
-1018438,211966,"7","90 Street / Elmhurst Avenue","20","",452,"7-all times"
-988519,214047,"B,D,F,M","42 Street / Bryant Park","01","",226,"B,M-weekdays and evenings, D,F-all times"
-1014396,211399,"7","74 Street / Broadway","20","",454,"7-all times"
-1008601,194119,"L,M","Myrtle / Wyckoff Avenues","33","",112,"M-all times"
-1011132,210945,"7","61 Street / Woodside","20","",456,"7-all times, 7 Express-rush hours AM westbound, PM eastbound"
-986255,209955,"F,M","23 Street","02","",228,"F-all times, M-weekdays and evenings"
-1006852,210030,"7","46 Street","20","",458,"7-all times"
-993000,149244,"Q","Ocean Parkway","34","",56,"Q-all times"
-1003370,210557,"7","33 Street","20","",460,"7-all times"
-985302,203522,"B,D,F,M","Broadway / Lafayette Street","04","",230,"B,M-weekdays and evenings, D,F-all times"
-999417,211442,"7","45 Road / Court House Square","20","",462,"7-all times, 7 Express-rush hours AM westbound, PM eastbound"
-1004425,193539,"M","Central Avenue","33","",114,"M-all times"
-997113,209839,"7","Vernon Boulevard / Jackson Avenue","20","",464,"7-all times, 7 Express-rush hours AM westbound, PM eastbound"
-987039,202831,"F","2 Avenue","04","",232,"F-all times"
-989247,213915,"7","5 Avenue / 42 Street","01","",466,"7-all times, 7 Express-rush hours AM westbound, PM eastbound"
-988935,186041,"R","Union Street","32","",28,"D,N-nights, R-all other times"
-988065,214702,"S","42 Street / Times Square","01","",468,"S to Grand Central-all times exc nights, closed nights-use 7"
-986973,199353,"F","East Broadway","04","",234,"F-all times"
-983641,214506,"7","34 Street / Hudson Yards","01","",471,"7-all times, 7 Express-rush hours AM westbound, PM eastbound"
-984873,208056,"L","6 Avenue","02","",116,"L-all times"
+X,Y,LINE,NAME,DISTRICT,SECTOR,STATION_ID,NCO 1 RANK,NCO 1 FIRST NAME,NCO 1 LAST NAME,NCO 1 EMAIL,NCO 2 RANK,NCO 2 FIRST NAME,NCO 2 LAST NAME,NCO 2 EMAIL,SGT RANK,SGT FIRST NAME,SGT LAST NAME,SGT EMAIL,MTA TITLE,MTA FIRST NAME,MTA LAST NAME,MTA EMAIL
+1008614,221655,"N,W",Ditmars Boulevard / Astoria,20,,1,,,,,,,,,,,,,,,,
+1006937,219833,"N,W",Astoria Boulevard,20,,2,,,,,,,,,,,,,,,,
+1006001,218645,"N,W",30 Avenue,20,,3,,,,,,,,,,,,,,,,
+1004799,216696,"N,W",Broadway,20,,4,,,,,,,,,,,,,,,,
+1003681,214877,"N,W",36 Avenue,20,,5,,,,,,,,,,,,,,,,
+1002854,213536,"N,W",39 Avenue,20,,6,,,,,,,,,,,,,,,,
+993288,217154,"N,R,W",Lexington Avenue / 59 Street,4,,7,,,,,,,,,,,,,,,,
+991633,217919,"N,R,W",5 Avenue / 59 Street,1,,8,,,,,,,,,,,,,,,,
+989588,217829,"N,Q,R,W",57 Street,1,,9,,,,,,,,,,,,,,,,
+988624,216093,"N,Q,R,W",49 Street,1,,10,,,,,,,,,,,,,,,,
+987916,214202,"N,Q,R,W",42 Street / Times Square,1,,11,,,,,,,,,,,,,,,,
+987592,212393,"N,Q,R,W",34 Street / Herald Square,2,,12,,,,,,,,,,,,,,,,
+987382,210866,"N,R",28 Street,4,,13,,,,,,,,,,,,,,,,
+987203,209353,"N,R",23 Street,4,,14,,,,,,,,,,,,,,,,
+986872,207375,"N,Q,R,W",14 Street / Union Square,4,,15,,,,,,,,,,,,,,,,
+986326,205405,"N,R",8 Street / NYU,4,,16,,,,,,,,,,,,,,,,
+984887,203169,"N,R",Prince Street,4,,17,,,,,,,,,,,,,,,,
+983744,201397,"R,W",Canal Street,2,,18,,,,,,,,,,,,,,,,
+983958,201160,"N,Q",Canal Street,2,,19,,,,,,,,,,,,,,,,
+982313,199141,"R,W",City Hall,2,,20,,,,,,,,,,,,,,,,
+981164,198136,"R,W",Cortlandt Street,2,,21,,,,,,,,,,,,,,,,
+980653,197127,"R,W",Rector Street,2,,22,,,,,,,,,,,,,,,,
+980644,195450,"R,W",Whitehall Street / South Ferry,2,,23,,,,,,,,,,,,,,,,
+986519,192191,R,Court Street,30,B,24,PO,Ana,Martinez,Ana.Martinez2@nypd.org,PO,Aaron,Nieves,Aaron.Nieves@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+988117,191484,R,Jay Street / Metrotech,30,A,25,PO,Jonathan,Schwaner,Jonathan.Schwaner@nypd.org,PO,John,Quinn,John.Quinn3@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+989305,190899,"B,Q,R",Dekalb Avenue,30,B,26,PO,Ana,Martinez,Ana.Martinez2@nypd.org,PO,Aaron,Nieves,Aaron.Nieves@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+990127,188355,"D,N,R",Atlantic Avenue / Barclays Center / Pacific Street,32,,27,,,,,,,,,,,,,,,,
+988935,186041,R,Union Street,32,,28,,,,,,,,,,,,,,,,
+987495,183684,R,4 Avenue / 9 Street,32,,29,,,,,,,,,,,,,,,,
+986227,181705,R,Prospect Avenue,32,,30,,,,,,,,,,,,,,,,
+984780,179877,R,25 Street,32,,31,,,,,,,,,,,,,,,,
+983265,177963,"D,N,R",36 Street,34,,32,,,,,,,,,,,,,,,,
+981473,175702,"N,R",45 Street,34,,33,,,,,,,,,,,,,,,,
+980355,174293,"N,R",53 Street,34,,34,,,,,,,,,,,,,,,,
+979288,172942,"N,R",59 Street,34,,35,,,,,,,,,,,,,,,,
+977762,170613,R,Bay Ridge Avenue,34,,36,,,,,,,,,,,,,,,,
+977169,168709,R,77 Street,34,,37,,,,,,,,,,,,,,,,
+976367,166139,R,86 Street,34,,38,,,,,,,,,,,,,,,,
+975678,163930,R,95 Street / Bay Ridge,34,,39,,,,,,,,,,,,,,,,
+990689,188655,"B,Q",Atlantic Avenue / Barclays Center,32,,40,,,,,,,,,,,,,,,,
+991780,185964,"B,Q",7 Avenue,32,,41,,,,,,,,,,,,,,,,
+994784,180330,"B,Q,S",Prospect Park,32,,42,,,,,,,,,,,,,,,,
+994945,177940,Q,Parkside Avenue,32,,43,,,,,,,,,,,,,,,,
+994550,176271,"B,Q",Church Avenue,32,,44,,,,,,,,,,,,,,,,
+994141,173870,Q,Beverley Road,32,,45,,,,,,,,,,,,,,,,
+994299,172790,Q,Cortelyou Road,32,,46,,,,,,,,,,,,,,,,
+994604,170678,"B,Q",Newkirk Avenue,34,,47,,,,,,,,,,,,,,,,
+994932,168516,Q,Avenue H,34,,48,,,,,,,,,,,,,,,,
+995161,166991,Q,Avenue J,34,,49,,,,,,,,,,,,,,,,
+995565,164214,Q,Avenue M,34,,50,,,,,,,,,,,,,,,,
+996020,161023,"B,Q",Kings Highway,34,,51,,,,,,,,,,,,,,,,
+996521,157624,Q,Avenue U,34,,52,,,,,,,,,,,,,,,,
+996725,156171,Q,Neck Road,34,,53,,,,,,,,,,,,,,,,
+997011,152975,"B,Q",Sheepshead Bay,34,,54,,,,,,,,,,,,,,,,
+994986,149754,"B,Q",Brighton Beach,34,,55,,,,,,,,,,,,,,,,
+993000,149244,Q,Ocean Parkway,34,,56,,,,,,,,,,,,,,,,
+990929,149142,"Q,F",West 8 Street / NY Aquarium,34,,57,,,,,,,,,,,,,,,,
+989462,149596,"D,F,N,Q",Stillwell Avenue / Coney Island,34,,58,,,,,,,,,,,,,,,,
+985790,174808,D,9 Avenue,34,,59,,,,,,,,,,,,,,,,
+985859,172778,D,Fort Hamilton Parkway,34,,60,,,,,,,,,,,,,,,,
+985732,171083,D,50 Street,34,,61,,,,,,,,,,,,,,,,
+985541,169341,D,55 Street,34,,62,,,,,,,,,,,,,,,,
+985122,167427,D,62 Street,34,,63,,,,,,,,,,,,,,,,
+984572,164889,D,71 Street,34,,64,,,,,,,,,,,,,,,,
+984088,162667,D,79 Street,34,,65,,,,,,,,,,,,,,,,
+983808,160691,D,18 Avenue,34,,66,,,,,,,,,,,,,,,,
+984757,159577,D,20 Avenue,34,,67,,,,,,,,,,,,,,,,
+986006,158583,D,Bay Parkway,34,,68,,,,,,,,,,,,,,,,
+987908,157036,D,25 Avenue,34,,69,,,,,,,,,,,,,,,,
+988759,153807,D,Bay 50 Street,34,,70,,,,,,,,,,,,,,,,
+981054,170614,N,8 Avenue,34,,71,,,,,,,,,,,,,,,,
+982765,169307,N,Fort Hamilton Parkway,34,,72,,,,,,,,,,,,,,,,
+985262,166923,N,New Utrecht Avenue,34,,73,,,,,,,,,,,,,,,,
+986900,165410,N,18 Avenue,34,,74,,,,,,,,,,,,,,,,
+988547,164106,N,20 Avenue,34,,75,,,,,,,,,,,,,,,,
+989309,162047,N,Bay Parkway,34,,76,,,,,,,,,,,,,,,,
+989700,159352,N,Kings Highway,34,,77,,,,,,,,,,,,,,,,
+990059,156866,N,Avenue U,34,,78,,,,,,,,,,,,,,,,
+990308,155128,N,86 Street,34,,79,,,,,,,,,,,,,,,,
+1031845,194528,"J,Z",121 Street,20,,80,,,,,,,,,,,,,,,,
+1029506,193296,"J,Z",111 Street,20,,81,,,,,,,,,,,,,,,,
+1027388,192582,J,104 Street,20,,82,,,,,,,,,,,,,,,,
+1025277,192046,"J,Z",Woodhaven Boulevard,20,,83,,,,,,,,,,,,,,,,
+1023050,191577,"J,Z",85 Street / Forest Parkway,20,,84,,,,,,,,,,,,,,,,
+1021053,191160,J,75 Street / Elderts Lane,20,,85,,,,,,,,,,,,,,,,
+1019381,190548,J,Cypress Hills,33,,86,,,,,,,,,,,,,,,,
+1019216,188193,"J,Z",Crescent Street,33,,87,,,,,,,,,,,,,,,,
+1017637,187595,"J,Z",Norwood Avenue,33,,88,,,,,,,,,,,,,,,,
+1016093,186959,J,Cleveland Street,33,,89,,,,,,,,,,,,,,,,
+1014301,186319,"J,Z",Van Siclen Avenue,33,,90,,,,,,,,,,,,,,,,
+1012396,185941,J,Alabama Avenue,33,,91,,,,,,,,,,,,,,,,
+1010797,186802,"J,Z",Broadway Junction / Eastern Parkway,33,,92,,,,,,,,,,,,,,,,
+1009105,188070,"J,Z",Chauncey Street,33,,93,,,,,,,,,,,,,,,,
+1007369,189367,J,Halsey Street,33,,94,,,,,,,,,,,,,,,,
+1005838,190520,"J,Z",Gates Avenue,33,,95,,,,,,,,,,,,,,,,
+1004075,191826,J,Kosciusko Street,33,,96,,,,,,,,,,,,,,,,
+1002101,193290,"J,M,Z",Myrtle Avenue,33,,97,,,,,,,,,,,,,,,,
+1000505,194458,"J,M",Flushing Avenue,33,,98,,,,,,,,,,,,,,,,
+998847,195710,"J,M",Lorimer Street,33,,99,,,,,,,,,,,,,,,,
+997146,196819,"J,M",Hewes Street,33,,100,,,,,,,,,,,,,,,,
+995941,197362,"J,M,Z",Marcy Avenue,33,,101,,,,,,,,,,,,,,,,
+987740,200975,"J,M,Z",Essex Street / Delancey Street,4,,102,,,,,,,,,,,,,,,,
+985967,201682,"J,Z",Bowery,4,,103,,,,,,,,,,,,,,,,
+984298,200927,"J,Z",Canal Street,2,,104,,,,,,,,,,,,,,,,
+983306,199127,"J,Z",Chambers Street,2,,105,,,,,,,,,,,,,,,,
+982049,197957,"J,Z",Fulton Street,2,,106,,,,,,,,,,,,,,,,
+981185,196665,"J,Z",Broad Street,2,,107,,,,,,,,,,,,,,,,
+1014863,198489,M,Middle Village / Metropolitan Avenue,33,,108,,,,,,,,,,,,,,,,
+1013113,196591,M,Fresh Pond Road,33,,109,,,,,,,,,,,,,,,,
+1011124,195928,M,Forest Avenue,33,,110,,,,,,,,,,,,,,,,
+1009875,195382,M,Seneca Avenue,33,,111,,,,,,,,,,,,,,,,
+1008601,194119,"L,M",Myrtle / Wyckoff Avenues,33,,112,,,,,,,,,,,,,,,,
+1006511,193827,M,Knickerbocker Avenue,33,,113,,,,,,,,,,,,,,,,
+1004425,193539,M,Central Avenue,33,,114,,,,,,,,,,,,,,,,
+983536,208797,L,8 Avenue,2,,115,,,,,,,,,,,,,,,,
+984873,208056,L,6 Avenue,2,,116,,,,,,,,,,,,,,,,
+986836,206971,L,14 Street / Union Square,4,,117,,,,,,,,,,,,,,,,
+988199,206216,L,3 Avenue,4,,118,,,,,,,,,,,,,,,,
+989327,205591,L,1 Avenue,4,,119,,,,,,,,,,,,,,,,
+996263,200565,L,Bedford Avenue,33,,120,,,,,,,,,,,,,,,,
+998042,199436,L,Lorimer Street,33,,121,,,,,,,,,,,,,,,,
+999790,199621,L,Graham Avenue,33,,122,,,,,,,,,,,,,,,,
+1000746,198528,L,Grand Street,33,,123,,,,,,,,,,,,,,,,
+1000942,197004,L,Montrose Avenue,33,,124,,,,,,,,,,,,,,,,
+1002785,196554,L,Morgan Avenue,33,,125,,,,,,,,,,,,,,,,
+1005623,196722,L,Jefferson Street,33,,126,,,,,,,,,,,,,,,,
+1006921,195661,L,Dekalb Avenue,33,,127,,,,,,,,,,,,,,,,
+1008935,194125,L,Myrtle / Wyckoff Avenues,33,,128,,,,,,,,,,,,,,,,
+1010889,192687,L,Halsey Street,33,,129,,,,,,,,,,,,,,,,
+1010885,190264,L,Wilson Avenue,33,,130,,,,,,,,,,,,,,,,
+1010526,188075,L,Bushwick Avenue / Aberdeen Street,33,,131,,,,,,,,,,,,,,,,
+1011122,186471,L,Broadway Junction,33,,132,,,,,,,,,,,,,,,,
+1011129,185338,L,Atlantic Avenue,33,,133,,,,,,,,,,,,,,,,
+1011459,183079,L,Sutter Avenue,33,,134,,,,,,,,,,,,,,,,
+1011837,181226,L,Livonia Avenue,33,,135,,,,,,,,,,,,,,,,
+1012195,179353,L,New Lots Avenue,33,,136,,,,,,,,,,,,,,,,
+1012124,176276,L,East 105 Street,33,,137,,,,,,,,,,,,,,,,
+1011487,174885,L,Canarsie/ Rockaway Parkway,33,,138,,,,,,,,,,,,,,,,
+996502,187239,S,Franklin Avenue,30,A,139,PO,Jonathan,Schwaner,Jonathan.Schwaner@nypd.org,PO,John ,Quinn,John.Quinn3@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+996004,185117,S,Park Place,32,,141,,,,,,,,,,,,,,,,
+995556,183503,S,Botanic Garden,32,,142,,,,,,,,,,,,,,,,
+1006404,255550,A,Inwood / 207 Street,3,,143,,,,,,,,,,,,,,,,
+1004366,254608,A,Dyckman Street / 200 Street,3,,144,,,,,,,,,,,,,,,,
+1002457,252249,A,190 Street,3,,145,,,,,,,,,,,,,,,,
+1001411,249579,A,181 Street,3,,146,,,,,,,,,,,,,,,,
+1000932,248011,A,175 Street,3,,147,,,,,,,,,,,,,,,,
+1000973,245580,"A,C",168 Street / Washington Heights,3,,148,,,,,,,,,,,,,,,,
+1000871,243863,"A,C",163 Street / Amsterdam Avenue,3,,149,,,,,,,,,,,,,,,,
+1000435,241863,"A,C",155 Street,3,,150,,,,,,,,,,,,,,,,
+999724,239767,"A,B,C,D",145 Street,3,,151,,,,,,,,,,,,,,,,
+998772,237267,"A,B,C",135 Street,3,,152,,,,,,,,,,,,,,,,
+997469,234776,"A,B,C,D",125 Street,3,,153,,,,,,,,,,,,,,,,
+996764,232585,"A,B,C",116 Street,3,,154,,,,,,,,,,,,,,,,
+995860,230953,"A,B,C",110 Street / Cathedral Parkway,3,,155,,,,,,,,,,,,,,,,
+994946,229306,"A,B,C",103 Street,3,,156,,,,,,,,,,,,,,,,
+994052,227687,"A,B,C",96 Street,3,,157,,,,,,,,,,,,,,,,
+992882,225575,"A,B,C",86 Street,1,,158,,,,,,,,,,,,,,,,
+991977,223944,"A,B,C",81 Street / Museum of Natural History,1,,159,,,,,,,,,,,,,,,,
+990804,221820,"A,B,C",72 Street,1,,160,,,,,,,,,,,,,,,,
+989333,219171,"A,B,C,D",59 Street / Columbus Circle,1,,161,,,,,,,,,,,,,,,,
+988133,217060,"A,C,E",50 Street,1,,162,,,,,,,,,,,,,,,,
+987094,215185,"A,C,E",42 Street / Port Authority Bus Terminal,1,,163,,,,,,,,,,,,,,,,
+986081,213355,"A,C,E",34 Street / Penn Station,2,,164,,,,,,,,,,,,,,,,
+984793,211030,"A,C,E",23 Street,2,,165,,,,,,,,,,,,,,,,
+983782,209204,"A,C,E",14 Street,2,,166,,,,,,,,,,,,,,,,
+984165,206057,"A,B,C,D,E,F,M",West 4 Street / Washington Square,2,,167,,,,,,,,,,,,,,,,
+983214,203861,"A,C,E",Spring Street,2,,168,,,,,,,,,,,,,,,,
+982801,201892,"A,C,E",Canal Street,2,,169,,,,,,,,,,,,,,,,
+981870,199447,"A,C",Chambers Street,2,,170,,,,,,,,,,,,,,,,
+981549,198883,E,World Trade Center,2,,171,,,,,,,,,,,,,,,,
+982137,198008,"A,C",Fulton Street / Broadway / Nassau Street,2,,172,,,,,,,,,,,,,,,,
+986876,194064,"A,C",High Street,30,A,173,PO,Jonathan,Schwaner,Jonathan.Schwaner@nypd.org,PO,John ,Quinn,John.Quinn3@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+987795,191562,"A,C,F",Jay Street / Metrotech,30,A,174,PO,Jonathan,Schwaner,Jonathan.Schwaner@nypd.org,PO,John ,Quinn,John.Quinn3@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+988400,190083,"A,C,G",Hoyt / Schermerhorn Streets,30,A,175,PO,Jonathan,Schwaner,Jonathan.Schwaner@nypd.org,PO,John ,Quinn,John.Quinn3@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+991476,189247,"A,C",Lafayette Avenue,30,A,176,PO,Jonathan,Schwaner,Jonathan.Schwaner@nypd.org,PO,John,Quinn,John.Quinn3@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+993725,188209,"A,C",Clinton / Washington Avenues,30,A,177,PO,Jonathan,Schwaner,Jonathan.Schwaner@nypd.org,PO,John ,Quinn,John.Quinn3@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+996219,187524,"A,C",Franklin Avenue,30,A,178,PO,Jonathan,Schwaner,Jonathan.Schwaner@nypd.org,PO,John ,Quinn,John.Quinn3@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+998000,187182,"A,C",Nostrand Avenue,30,A,179,PO,Jonathan,Schwaner,Jonathan.Schwaner@nypd.org,PO,John,Quinn,John.Quinn3@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1000654,186995,"A,C",Kingston / Throop Avenues,33,,180,,,,,,,,,,,,,,,,
+1003463,186795,"A,C",Utica Avenue,33,,181,,,,,,,,,,,,,,,,
+1006221,186600,"A,C",Ralph Avenue,33,,182,,,,,,,,,,,,,,,,
+1008674,186426,"A,C",Rockaway Avenue,33,,183,,,,,,,,,,,,,,,,
+1010513,186426,"A,C",Broadway Junction / East New York,33,,184,,,,,,,,,,,,,,,,
+1012946,185047,"A,C",Liberty Avenue,33,,185,,,,,,,,,,,,,,,,
+1014664,184382,"A,C",Van Siclen Avenue,33,,186,,,,,,,,,,,,,,,,
+1017329,184903,"A,C",Shepherd Avenue,33,,187,,,,,,,,,,,,,,,,
+1019726,185360,"A,C,S",Euclid Avenue,33,,188,,,,,,,,,,,,,,,,
+1021682,185971,A,Grant Avenue,33,,189,,,,,,,,,,,,,,,,
+1023361,186821,A,80 Street,23,,190,,,,,,,,,,,,,,,,
+1025447,186996,A,88 Street,23,,191,,,,,,,,,,,,,,,,
+1027559,187214,A,Rockaway Boulevard,23,,192,,,,,,,,,,,,,,,,
+1029270,187684,A,104 Street,23,,193,,,,,,,,,,,,,,,,
+1030799,188641,A,111 Street,23,,194,,,,,,,,,,,,,,,,
+1032563,189235,A,Ozone Park / Lefferts Boulevard,23,,195,,,,,,,,,,,,,,,,
+1029766,184182,A,Aqueduct / Racetrack,23,,196,,,,,,,,,,,,,,,,
+1030284,182776,A,Aqueduct / North Conduit Avenue,23,,197,,,,,,,,,,,,,,,,
+1031332,179951,A,Howard Beach / JFK Airport,23,,198,,,,,,,,,,,,,,,,
+1035386,160987,"A,S",Broad Channel,23,,199,,,,,,,,,,,,,,,,
+1036008,153589,"A,S",Beach 90 Street,23,,200,,,,,,,,,,,,,,,,
+1034102,152599,"A,S",Beach 98 Street,23,,201,,,,,,,,,,,,,,,,
+1032142,151824,"A,S",Beach 105 Street,23,,202,,,,,,,,,,,,,,,,
+1029919,150977,"A,S",Rockaway Park / Beach 116 Street,23,,203,,,,,,,,,,,,,,,,
+1040651,154632,A,Beach 67 Street,23,,204,,,,,,,,,,,,,,,,
+1042983,155165,A,Beach 60 Street,23,,205,,,,,,,,,,,,,,,,
+1046457,155381,A,Beach 44 Street,23,,206,,,,,,,,,,,,,,,,
+1048631,156281,A,Beach 36 Street,23,,207,,,,,,,,,,,,,,,,
+1050521,157987,A,Beach 25 Street,23,,208,,,,,,,,,,,,,,,,
+1052169,159423,A,Far Rockaway / Mott Avenue,23,,209,,,,,,,,,,,,,,,,
+1017753,258018,D,Norwood / 205 Street,11,,210,,,,,,,,,,,,,,,,
+1015463,257444,"B,D",Bedford Park Boulevard,11,,211,,,,,,,,,,,,,,,,
+1013704,255159,"B,D",Kingsbridge Road,11,,212,,,,,,,,,,,,,,,,
+1012534,253087,"B,D",Fordham Road / Grand Concourse,11,,213,,,,,,,,,,,,,,,,
+1011708,251191,"B,D",182-183 Streets,11,,214,,,,,,,,,,,,,,,,
+1010469,249119,"B,D",Tremont Avenue,11,,215,,,,,,,,,,,,,,,,
+1009113,247474,"B,D",174-175 Streets,11,,216,,,,,,,,,,,,,,,,
+1008212,245071,"B,D",170 Street,11,,217,,,,,,,,,,,,,,,,
+1006822,243052,"B,D",167 Street,11,,218,,,,,,,,,,,,,,,,
+1004826,240914,"B,D",161 Street / Yankee Stadium,11,,219,,,,,,,,,,,,,,,,
+1001350,241724,"B,D",155 Street,3,,220,,,,,,,,,,,,,,,,
+1000337,213890,F,21 Street / Queensbridge,20,,221,,,,,,,,,,,,,,,,
+997206,215867,"J,Z",Roosevelt Island,20,,222,,,,,,,,,,,,,,,,
+993644,217850,"F,Q",Lexington Avenue / 63 Street,1,,223,,,,,,,,,,,,,,,,
+990519,217654,F,57 Street / 6 Avenue,1,,224,,,,,,,,,,,,,,,,
+989422,215671,"B,D,F,M",47-50 Streets / Rockefeller Center,1,,225,,,,,,,,,,,,,,,,
+988519,214047,"B,D,F,M",42 Street / Bryant Park,1,,226,,,,,,,,,,,,,,,,
+987638,212445,"B,D,F,M",34 Street / Herald Square,2,,227,,,,,,,,,,,,,,,,
+986255,209955,"F,M",23 Street,2,,228,,,,,,,,,,,,,,,,
+985301,208233,"F,M",14 Street,2,,229,,,,,,,,,,,,,,,,
+985302,203522,"B,D,F,M",Broadway / Lafayette Street,4,,230,,,,,,,,,,,,,,,,
+985982,200961,"B,D",Grand Street,4,,231,,,,,,,,,,,,,,,,
+987039,202831,F,2 Avenue,4,,232,,,,,,,,,,,,,,,,
+987555,201112,F,Delancey Street / Essex Street,4,,233,,,,,,,,,,,,,,,,
+986973,199353,F,East Broadway,4,,234,,,,,,,,,,,,,,,,
+987887,194212,F,York Street,30,B,235,PO,Ana,Martinez,Ana.Martinez2@nypd.org,PO,Aaron,Nieves,Aaron.Nieves@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+986814,189245,"F,G",Bergen Street,30,C,236,PO,Juan,Hernandez,Juan.Hernandez5@nypd.org,PO,Tolentino,Nazaire,Tolentino.Nazaire@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+985652,187118,"F,G",Carroll Street,30,C,237,PO,Juan,Hernandez,Juan.Hernandez5@nypd.org,PO,Tolentino,Nazaire,Tolentino.Nazaire@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+985390,184702,"F,G",Smith / 9 Streets,30,C,238,PO,Juan,Hernandez,Juan.Hernandez5@nypd.org,PO,Tolentino,Nazaire,Tolentino.Nazaire@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+987085,183475,"F,G",4 Avenue / 9 Street,30,C,239,PO,Juan,Hernandez,Juan.Hernandez5@nypd.org,PO,Tolentino,Nazaire,Tolentino.Nazaire@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+989729,182008,"F,G",7 Avenue,30,C,240,PO,Juan,Hernandez,Juan.Hernandez5@nypd.org,PO,Tolentino,Nazaire,Tolentino.Nazaire@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+989872,179746,"F,G",15 Street / Prospect Park,30,C,241,PO,Juan,Hernandez,Juan.Hernandez5@nypd.org,PO,Tolentino,Nazaire,Tolentino.Nazaire@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+990972,176375,"F,G",Fort Hamilton Parkway,30,C,242,PO,Juan,Hernandez,Juan.Hernandez5@nypd.org,PO,Tolentino,Nazaire,Tolentino.Nazaire@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+989878,174003,"F,G",Church Avenue,30,C,243,PO,Juan,Hernandez,Juan.Hernandez5@nypd.org,PO,Tolentino,Nazaire,Tolentino.Nazaire@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+990308,171032,F,Ditmas Avenue,34,,244,,,,,,,,,,,,,,,,
+990642,168714,F,18 Avenue,34,,245,,,,,,,,,,,,,,,,
+990893,166988,F,Avenue I,34,,246,,,,,,,,,,,,,,,,
+991119,165427,F,Bay Parkway,34,,247,,,,,,,,,,,,,,,,
+991455,163104,F,Avenue N,34,,248,,,,,,,,,,,,,,,,
+991746,161095,F,Avenue P,34,,249,,,,,,,,,,,,,,,,
+991926,159061,F,Kings Highway,34,,250,,,,,,,,,,,,,,,,
+991644,156389,F,Avenue U,34,,251,,,,,,,,,,,,,,,,
+991397,154030,F,Avenue X,34,,252,,,,,,,,,,,,,,,,
+991308,150856,F,Neptune Avenue,34,,253,,,,,,,,,,,,,,,,
+1044182,198986,F,179 Street / Jamaica,20,,254,,,,,,,,,,,,,,,,
+1041507,198205,F,169 Street,20,,255,,,,,,,,,,,,,,,,
+1038788,197125,F,Parsons Boulevard,20,,256,,,,,,,,,,,,,,,,
+1036698,196336,F,Sutphin Boulevard,20,,257,,,,,,,,,,,,,,,,
+1033962,197694,"E,F",Van Wyck Boulevard / Briarwood,20,,258,,,,,,,,,,,,,,,,
+1031275,199464,"E,F",Kew Gardens / Union Turnpike,20,,259,,,,,,,,,,,,,,,,
+1029456,200922,"E,F",75 Avenue,20,,260,,,,,,,,,,,,,,,,
+1027349,202211,"E,F,M,R",71 Avenue / Forest Hills,20,,261,,,,,,,,,,,,,,,,
+1025033,203996,"E,M,R",67 Avenue,20,,262,,,,,,,,,,,,,,,,
+1022603,205180,"M,R",63 Drive / Rego Park,20,,263,,,,,,,,,,,,,,,,
+1020436,206391,"M,R",Woodhaven Boulevard,20,,264,,,,,,,,,,,,,,,,
+1018275,207741,"M,R",Grand Avenue / Newton,20,,265,,,,,,,,,,,,,,,,
+1016939,209764,"M,R",Elmhurst Avenue,20,,266,,,,,,,,,,,,,,,,
+1014370,211280,"E,F,M,R",Jackson Heights / Roosevelt Ave,20,,267,,,,,,,,,,,,,,,,
+1012293,212436,"M,R",65 Street,20,,268,,,,,,,,,,,,,,,,
+1010276,213565,"M,R",Northern Boulevard,20,,269,,,,,,,,,,,,,,,,
+1008209,214835,"M,R",46 Street,20,,270,,,,,,,,,,,,,,,,
+1006268,215078,"M,R",Steinway Street,20,,271,,,,,,,,,,,,,,,,
+1003917,213244,"M,R",36 Street,20,,272,,,,,,,,,,,,,,,,
+1001668,212134,"E,M,R",Queens Plaza,20,,273,,,,,,,,,,,,,,,,
+999197,211713,"E,M",Court Square / 23 Street,20,,274,,,,,,,,,,,,,,,,
+992818,215244,"E,M",Lexington Avenue / 53 Street,4,,275,,,,,,,,,,,,,,,,
+991107,216198,"E,M",5 Avenue / 53 Street,1,,276,,,,,,,,,,,,,,,,
+989320,217248,"B,D,E",7 Avenue,1,,277,,,,,,,,,,,,,,,,
+1039400,195121,"E,J,Z",Parsons / Archer / Jamaica Center,20,,278,,,,,,,,,,,,,,,,
+1037486,194503,"E,J,Z",Sutphin Boulevard / Archer Avenue,20,,279,,,,,,,,,,,,,,,,
+1034987,195414,"E,J,Z",Jamaica / Van Wyck,20,,280,,,,,,,,,,,,,,,,
+999818,211181,G,Long Island City / Court Square,20,,281,,,,,,,,,,,,,,,,
+998216,210387,G,21 Street,20,,282,,,,,,,,,,,,,,,,
+996881,205700,G,Greenpoint Avenue,30,C,283,PO,Juan,Hernandez,Juan.Hernandez5@nypd.org,PO,Tolentino,Nazaire,Tolentino.Nazaire@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+997781,203228,G,Nassau Avenue,30,C,284,PO,Juan,Hernandez,Juan.Hernandez5@nypd.org,PO,Tolentino,Nazaire,Tolentino.Nazaire@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+997717,198963,G,Metropolitan Avenue,30,C,285,PO,Juan,Hernandez,Juan.Hernandez5@nypd.org,PO,Tolentino,Nazaire,Tolentino.Nazaire@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+998026,196541,G,Broadway,30,C,286,PO,Juan,Hernandez,Juan.Hernandez5@nypd.org,PO,Tolentino,Nazaire,Tolentino.Nazaire@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+998049,194446,G,Flushing Avenue,30,C,287,PO,Juan,Hernandez,Juan.Hernandez5@nypd.org,PO,Tolentino,Nazaire,Tolentino.Nazaire@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+998374,192349,G,Myrtle / Willoughby Avenues,30,C,288,PO,Juan,Hernandez,Juan.Hernandez5@nypd.org,PO,Tolentino,Nazaire,Tolentino.Nazaire@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+997139,190530,G,Bedford / Nostrand Avenues,30,C,289,PO,Juan,Hernandez,Juan.Hernandez5@nypd.org,PO,Tolentino,Nazaire,Tolentino.Nazaire@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+995346,190260,G,Classon Avenue,30,C,290,PO,Juan,Hernandez,Juan.Hernandez5@nypd.org,PO,Tolentino,Nazaire,Tolentino.Nazaire@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+993458,189969,G,Clinton / Washington Avenues,30,C,291,PO,Juan,Hernandez,Juan.Hernandez5@nypd.org,PO,Tolentino,Nazaire,Tolentino.Nazaire@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+991079,189613,G,Fulton Street,30,C,292,PO,Juan,Hernandez,Juan.Hernandez5@nypd.org,PO,Tolentino,Nazaire,Tolentino.Nazaire@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1012291,263271,1,242 Street / Van Cortlandt Park,3,,293,,,,,,,,,,,,,,,,
+1011661,261601,1,238 Street,3,,294,,,,,,,,,,,,,,,,
+1010567,259483,1,231 Street,3,,295,,,,,,,,,,,,,,,,
+1009187,257917,1,Marble Hill / 225 Street,3,,296,,,,,,,,,,,,,,,,
+1007682,256051,1,215 Street,3,,297,,,,,,,,,,,,,,,,
+1006704,254290,1,207 Street,3,,298,,,,,,,,,,,,,,,,
+1004848,252801,1,200 Street / Dyckman Street,3,,299,,,,,,,,,,,,,,,,
+1003777,250867,1,191 Street,3,,300,,,,,,,,,,,,,,,,
+1002621,248782,1,181 Street,3,,301,,,,,,,,,,,,,,,,
+1000815,245520,1,168 Street / Washington Heights,3,,302,,,,,,,,,,,,,,,,
+999500,243146,1,157 Street,3,,303,,,,,,,,,,,,,,,,
+997988,240416,1,145 Street,3,,304,,,,,,,,,,,,,,,,
+997071,238760,1,137 Street / City College,3,,305,,,,,,,,,,,,,,,,
+995773,236418,1,125 Street,3,,306,,,,,,,,,,,,,,,,
+994186,233554,1,116 Street / Columbia University,3,,307,,,,,,,,,,,,,,,,
+993428,232186,1,110 Street / Cathedral Parkway,3,,308,,,,,,,,,,,,,,,,
+993005,230538,1,103 Street,3,,309,,,,,,,,,,,,,,,,
+991913,228524,"1,2,3",96 Street,3,,310,,,,,,,,,,,,,,,,
+990836,226602,1,86 Street,1,,311,,,,,,,,,,,,,,,,
+989812,224886,1,79 Street,1,,312,,,,,,,,,,,,,,,,
+989243,222889,"1,2,3",72 Street,1,,313,,,,,,,,,,,,,,,,
+989178,221062,1,66 Street / Lincoln Center,1,,314,,,,,,,,,,,,,,,,
+989256,219170,1,59 Street / Columbus Circle,1,,315,,,,,,,,,,,,,,,,
+988724,216795,1,50 Street,1,,316,,,,,,,,,,,,,,,,
+987715,214449,"1,2,3",42 Street / Times Square,1,,317,,,,,,,,,,,,,,,,
+986728,212658,"1,2,3",34 Street / Penn Station,2,,318,,,,,,,,,,,,,,,,
+986088,211507,1,28 Street,2,,319,,,,,,,,,,,,,,,,
+985453,210365,1,23 Street,2,,320,,,,,,,,,,,,,,,,
+984840,209257,1,18 Street,2,,321,,,,,,,,,,,,,,,,
+984194,208087,"1,2,3",14 Street,2,,322,,,,,,,,,,,,,,,,
+983445,206482,1,Christopher Street / Sheridan Square,2,,323,,,,,,,,,,,,,,,,
+982762,204598,1,Houston Street,2,,324,,,,,,,,,,,,,,,,
+982510,202632,1,Canal Street,2,,325,,,,,,,,,,,,,,,,
+982341,201344,1,Franklin Street,2,,326,,,,,,,,,,,,,,,,
+981681,199945,"1,2,3",Chambers Street,2,,327,,,,,,,,,,,,,,,,
+980871,198617,1,Cortlandt Street,2,,328,,,,,,,,,,,,,,,,
+980429,197043,1,Rector Street,2,,329,,,,,,,,,,,,,,,,
+980599,194936,1,South Ferry,2,,330,,,,,,,,,,,,,,,,
+981807,199060,"2,3",Park Place,2,,331,,,,,,,,,,,,,,,,
+982428,197736,"2,3",Fulton Street,2,,332,,,,,,,,,,,,,,,,
+981727,196791,"2,3",Wall Street,2,,333,,,,,,,,,,,,,,,,
+986167,193382,"2,3",Clark Street,30,B,334,PO,Ana,Martinez,Ana.Martinez2@nypd.org,PO,Aaron,Nieves,Aaron.Nieves@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+987024,191835,"2,3",Borough Hall,30,B,335,PO,Ana,Martinez,Ana.Martinez2@nypd.org,PO,Aaron,Nieves,Aaron.Nieves@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+988392,190861,"2,3",Hoyt Street,30,B,336,PO,Ana,Martinez,Ana.Martinez2@nypd.org,PO,Aaron,Nieves,Aaron.Nieves@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+989684,190047,"2,3,4,5",Nevins Street,30,B,337,PO,Ana,Martinez,Ana.Martinez2@nypd.org,PO,Aaron,Nieves,Aaron.Nieves@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+990476,188630,"2,3,4,5",Atlantic Avenue / Barclays Center,32,,338,,,,,,,,,,,,,,,,
+991184,187334,"2,3",Bergen Street,32,,339,,,,,,,,,,,,,,,,
+992306,185306,"2,3",Grand Army Plaza,32,,340,,,,,,,,,,,,,,,,
+994138,184121,"2,3,4",Eastern Parkway / Brooklyn Museum,32,,341,,,,,,,,,,,,,,,,
+995873,183657,"2,3,4,5",Franklin Avenue,32,,342,,,,,,,,,,,,,,,,
+998002,183357,3,Nostrand Avenue,32,,343,,,,,,,,,,,,,,,,
+1000295,183192,3,Kingston Avenue,32,,344,,,,,,,,,,,,,,,,
+1005745,181478,3,Sutter Avenue / Rutland Road,32,,346,,,,,,,,,,,,,,,,
+1007463,180301,3,Saratoga Avenue,32,,347,,,,,,,,,,,,,,,,
+1009508,180699,3,Rockaway Avenue,32,,348,,,,,,,,,,,,,,,,
+1011314,181055,3,Junius Street,32,,349,,,,,,,,,,,,,,,,
+1013412,181467,3,Pennsylvania Avenue,32,,350,,,,,,,,,,,,,,,,
+1014932,181762,3,Van Siclen Avenue,32,,351,,,,,,,,,,,,,,,,
+1016400,182054,3,New Lots Avenue,32,,352,,,,,,,,,,,,,,,,
+997957,182608,"2,5",President Street,32,,353,,,,,,,,,,,,,,,,
+997920,180746,"2,5",Sterling Street,32,,354,,,,,,,,,,,,,,,,
+998101,178519,"2,5",Winthrop Street,32,,355,,,,,,,,,,,,,,,,
+998275,176407,"2,5",Church Avenue,32,,356,,,,,,,,,,,,,,,,
+998445,174316,"2,5",Beverly Road,32,,357,,,,,,,,,,,,,,,,
+998598,172447,"2,5",Newkirk Avenue,32,,358,,,,,,,,,,,,,,,,
+998810,169842,"2,5",Flatbush Avenue / Brooklyn College,32,,359,,,,,,,,,,,,,,,,
+1031800,249899,6,Pelham Bay Park,12,C,360,PO,Emmauel,Burgos,Emmanuel.Burgos@nypd.org,PO,Jason,Melendez,Jason.Melendez2@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1030573,247837,6,Buhre Avenue,12,C,361,PO,Emmauel,Burgos,Emmanuel.Burgos@nypd.org,PO,Jason,Melendez,Jason.Melendez2@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1029537,246762,6,Middletown Road,12,C,362,PO,Emmauel,Burgos,Emmanuel.Burgos@nypd.org,PO,Jason,Melendez,Jason.Melendez2@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1027705,245312,6,East Tremont Avenue / Westchester Square,12,C,363,PO,Emmauel,Burgos,Emmanuel.Burgos@nypd.org,PO,Jason,Melendez,Jason.Melendez2@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1026577,244069,6,Zerega Avenue,12,C,364,PO,Emmauel,Burgos,Emmanuel.Burgos@nypd.org,PO,Jason,Melendez,Jason.Melendez2@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1025420,243254,6,Castle Hill Avenue,12,C,365,PO,Emmauel,Burgos,Emmanuel.Burgos@nypd.org,PO,Jason,Melendez,Jason.Melendez2@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1022766,242875,6,Parkchester / East 177 Street,12,C,366,PO,Emmauel,Burgos,Emmanuel.Burgos@nypd.org,PO,Jason,Melendez,Jason.Melendez2@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1020885,242246,6,St. Lawrence Avenue,12,C,367,PO,Emmauel,Burgos,Emmanuel.Burgos@nypd.org,PO,Jason,Melendez,Jason.Melendez2@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1018977,241519,6,Morrison Avenue / Soundview,12,C,368,PO,Emmauel,Burgos,Emmanuel.Burgos@nypd.org,PO,Jason,Melendez,Jason.Melendez2@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1017692,241176,6,Elder Avenue,12,C,369,PO,Emmauel,Burgos,Emmanuel.Burgos@nypd.org,PO,Jason,Melendez,Jason.Melendez2@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1015722,240423,6,Whitlock Avenue,12,C,370,PO,Emmauel,Burgos,Emmanuel.Burgos@nypd.org,PO,Jason,Melendez,Jason.Melendez2@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1014544,238390,6,Hunts Point Avenue,12,C,371,PO,Emmauel,Burgos,Emmanuel.Burgos@nypd.org,PO,Jason,Melendez,Jason.Melendez2@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1012917,236623,6,Longwood Avenue,12,C,372,PO,Emmauel,Burgos,Emmanuel.Burgos@nypd.org,PO,Jason,Melendez,Jason.Melendez2@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1010797,235168,6,East 149 Street,12,C,373,PO,Emmauel,Burgos,Emmanuel.Burgos@nypd.org,PO,Jason,Melendez,Jason.Melendez2@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1009813,233929,6,East 143 Street / St. Mary's Street,12,C,374,PO,Emmauel,Burgos,Emmanuel.Burgos@nypd.org,PO,Jason,Melendez,Jason.Melendez2@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1008047,232706,6,Cypress Avenue,12,C,375,PO,Emmauel,Burgos,Emmanuel.Burgos@nypd.org,PO,Jason,Melendez,Jason.Melendez2@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1006607,233505,6,Brook Avenue,12,C,376,PO,Emmauel,Burgos,Emmanuel.Burgos@nypd.org,PO,Jason,Melendez,Jason.Melendez2@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1004697,234564,6,3 Avenue / 138 Street,12,C,377,PO,Emmauel,Burgos,Emmanuel.Burgos@nypd.org,PO,Jason,Melendez,Jason.Melendez2@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1017776,262108,4,Woodlawn,11,,378,,,,,,,,,,,,,,,,
+1016147,259815,4,Mosholu Parkway,11,,379,,,,,,,,,,,,,,,,
+1014654,257504,4,Bedford Park Boulevard / Lehman College,11,,380,,,,,,,,,,,,,,,,
+1012690,255443,4,Kingsbridge Road,11,,381,,,,,,,,,,,,,,,,
+1011624,253635,4,Fordham Road,11,,382,,,,,,,,,,,,,,,,
+1010839,252033,4,183 Street,11,,383,,,,,,,,,,,,,,,,
+1009789,250227,4,Burnside Avenue,11,,384,,,,,,,,,,,,,,,,
+1008653,248414,4,176 Street,11,,385,,,,,,,,,,,,,,,,
+1007855,246939,4,Mt. Eden Avenue,11,,386,,,,,,,,,,,,,,,,
+1006997,245350,4,170 Street,11,,387,,,,,,,,,,,,,,,,
+1006000,243696,4,167 Street,11,,388,,,,,,,,,,,,,,,,
+1004815,241033,4,161 Street / Yankee Stadium,11,,389,,,,,,,,,,,,,,,,
+1004349,237415,4,149 Street / Grand Concourse,11,,390,,,,,,,,,,,,,,,,
+1003668,235564,4,138 Street / Grand Concourse,11,,391,,,,,,,,,,,,,,,,
+1001527,232252,"4,5,6",125 Street,4,,392,,,,,,,,,,,,,,,,
+1000415,230244,6,116 Street,4,,393,,,,,,,,,,,,,,,,
+999686,228929,6,110 Street,4,,394,,,,,,,,,,,,,,,,
+998794,227318,6,103 Street,4,,395,,,,,,,,,,,,,,,,
+997800,225522,6,96 Street,4,,396,,,,,,,,,,,,,,,,
+996550,223270,"4,5,6",86 Street,4,,397,,,,,,,,,,,,,,,,
+995364,221130,6,77 Street,4,,398,,,,,,,,,,,,,,,,
+994258,219133,6,68 Street / Hunter College,4,,399,,,,,,,,,,,,,,,,
+993124,217087,"4,5,6",59 Street / Lexington Avenue,4,,400,,,,,,,,,,,,,,,,
+992029,215112,6,51 Street,4,,401,,,,,,,,,,,,,,,,
+990702,213181,"4,5,6",42 Street / Grand Central,4,,402,,,,,,,,,,,,,,,,
+989217,211095,6,33 Street,4,,403,,,,,,,,,,,,,,,,
+988610,209997,6,28 Street,4,,404,,,,,,,,,,,,,,,,
+987964,208829,6,23 Street,4,,405,,,,,,,,,,,,,,,,
+987035,206938,"4,5,6",14 Street / Union Square,4,,406,,,,,,,,,,,,,,,,
+986725,205255,6,Astor Place,4,,407,,,,,,,,,,,,,,,,
+985730,203747,6,Bleecker Street,4,,408,,,,,,,,,,,,,,,,
+985042,202430,6,Spring Street,4,,409,,,,,,,,,,,,,,,,
+984197,201156,6,Canal Street,2,,410,,,,,,,,,,,,,,,,
+983105,199065,"4,5,6",Brooklyn Bridge / City Hall,2,,411,,,,,,,,,,,,,,,,
+981614,198083,"4,5",Fulton Street,2,,412,,,,,,,,,,,,,,,,
+980961,197059,"4,5",Wall Street,2,,413,,,,,,,,,,,,,,,,
+980366,196096,"4,5",Bowling Green,2,,414,,,,,,,,,,,,,,,,
+986981,191538,"4,5",Borough Hall,30,B,415,PO,Ana,Martinez,Ana.Martinez2@nypd.org,PO,Aaron,Nieves,Aaron.Nieves@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1025544,268346,2,241 Street / Wakefield,12,A,416,PO,Joel,Burgos,Joel.Burgos@nypd.org,PO,Eric,Capowski,Eric.Capowski@nypd.org ,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1024525,266582,"2,5",238 Street / Nereid Avenue,12,A,417,PO,Joel,Burgos,Joel.Burgos@nypd.org,PO,Eric,Capowski,Eric.Capowski@nypd.org ,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1023686,264706,"2,5",233 Street,12,A,418,PO,Joel,Burgos,Joel.Burgos@nypd.org,PO,Eric,Capowski,Eric.Capowski@nypd.org ,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1022900,262841,"2,5",225 Street,12,A,419,PO,Joel,Burgos,Joel.Burgos@nypd.org,PO,Eric,Capowski,Eric.Capowski@nypd.org ,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1022268,261332,"2,5",219 Street,12,A,420,PO,Joel,Burgos,Joel.Burgos@nypd.org,PO,Eric,Capowski,Eric.Capowski@nypd.org ,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1021269,259127,"2,5",Gun Hill Road,12,A,421,PO,Joel,Burgos,Joel.Burgos@nypd.org,PO,Eric,Capowski,Eric.Capowski@nypd.org ,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1021019,256729,"2,5",Burke Avenue,12,A,422,PO,Joel,Burgos,Joel.Burgos@nypd.org,PO,Eric,Capowski,Eric.Capowski@nypd.org ,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1020972,254624,"2,5",Allerton Avenue,12,A,423,PO,Joel,Burgos,Joel.Burgos@nypd.org,PO,Eric,Capowski,Eric.Capowski@nypd.org ,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1020908,251604,"2,5",Pelham Parkway,12,A,424,PO,Joel,Burgos,Joel.Burgos@nypd.org,PO,Eric,Capowski,Eric.Capowski@nypd.org ,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1020671,248534,"2,5",Bronx Park East,12,A,425,PO,Joel,Burgos,Joel.Burgos@nypd.org,PO,Eric,Capowski,Eric.Capowski@nypd.org ,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1019294,246016,"2,5",East 180 Street,12,A,426,PO,Joel,Burgos,Joel.Burgos@nypd.org,PO,Eric,Capowski,Eric.Capowski@nypd.org ,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1017464,245410,"2,5",East Tremont Avenue / West Farms Square,12,B,427,PO,Nancy,Thomas-Martinez,Nancy.ThomasMartinez@nypd.org,PO,Reginald,Minott,Reginald.Minott@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1015326,244310,"2,5",174 Street,12,B,428,PO,Nancy,Thomas-Martinez,Nancy.ThomasMartinez@nypd.org,PO,Reginald,Minott,Reginald.Minott@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1014206,241683,"2,5",Freeman Street,12,B,429,PO,Nancy,Thomas-Martinez,Nancy.ThomasMartinez@nypd.org,PO,Reginald,Minott,Reginald.Minott@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1013845,239492,"2,5",Simpson Street,12,B,430,PO,Nancy,Thomas-Martinez,Nancy.ThomasMartinez@nypd.org,PO,Reginald,Minott,Reginald.Minott@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1012863,238823,"2,5",Intervale Avenue,12,B,431,PO,Nancy,Thomas-Martinez,Nancy.ThomasMartinez@nypd.org,PO,Reginald,Minott,Reginald.Minott@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1011436,237854,"2,5",Prospect Avenue,12,B,432,PO,Nancy,Thomas-Martinez,Nancy.ThomasMartinez@nypd.org,PO,Reginald,Minott,Reginald.Minott@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1009798,236741,"2,5",Jackson Avenue,12,B,433,PO,Nancy,Thomas-Martinez,Nancy.ThomasMartinez@nypd.org,PO,Reginald,Minott,Reginald.Minott@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1007005,236589,"2,5",3 Avenue / 149 Street,12,B,434,PO,Nancy,Thomas-Martinez,Nancy.ThomasMartinez@nypd.org,PO,Reginald,Minott,Reginald.Minott@nypd.org,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1004532,237425,"2,5",149 Street / Grand Concourse,11,,435,,,,,,,,,,,,,,,,
+1001833,239445,3,148 Street / Harlem,3,,436,,,,,,,,,,,,,,,,
+1001896,238185,3,145 Street,3,,437,,,,,,,,,,,,,,,,
+1000645,235928,"2,3",135 Street,3,,438,,,,,,,,,,,,,,,,
+999339,233568,"2,3",125 Street,3,,439,,,,,,,,,,,,,,,,
+998197,231507,"2,3",116 Street,3,,440,,,,,,,,,,,,,,,,
+997589,230405,"2,3",110 Street / Central Park North,3,,441,,,,,,,,,,,,,,,,
+1031024,262955,5,Dyre Avenue / Eastchester,12,A,442,PO,Joel,Burgos,Joel.Burgos@nypd.org,PO,Eric,Capowski,Eric.Capowski@nypd.org ,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1028886,259440,5,Baychester Avenue,12,A,443,PO,Joel,Burgos,Joel.Burgos@nypd.org,PO,Eric,Capowski,Eric.Capowski@nypd.org ,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1026736,256107,5,Gun Hill Road,12,A,444,PO,Joel,Burgos,Joel.Burgos@nypd.org,PO,Eric,Capowski,Eric.Capowski@nypd.org ,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1024261,252262,5,Pelham Parkway,12,A,445,PO,Joel,Burgos,Joel.Burgos@nypd.org,PO,Eric,Capowski,Eric.Capowski@nypd.org ,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1022842,250576,5,Morris Park,12,A,446,PO,Joel,Burgos,Joel.Burgos@nypd.org,PO,Eric,Capowski,Eric.Capowski@nypd.org ,,,,,MTA Chief Station Officer ,Rachelle,Glazier,Rachelle.Glazier@nyct.com
+1031337,216065,"E,M",Main Street / Flushing,20,,447,,,,,,,,,,,,,,,,
+1027020,214244,7,Willets Point / Citi Field,20,,448,,,,,,,,,,,,,,,,
+1024332,213185,7,111 Street / Roosevelt Ave,20,,449,,,,,,,,,,,,,,,,
+1022292,212503,7,103 Street / Corona Plaza,20,,450,,,,,,,,,,,,,,,,
+1020401,212237,7,Junction Boulevard,20,,451,,,,,,,,,,,,,,,,
+1018438,211966,7,90 Street / Elmhurst Avenue,20,,452,,,,,,,,,,,,,,,,
+1016476,211690,7,82 Street / Jackson Heights,20,,453,,,,,,,,,,,,,,,,
+1014396,211399,7,74 Street / Broadway,20,,454,,,,,,,,,,,,,,,,
+1012955,211200,7,69 Street,20,,455,,,,,,,,,,,,,,,,
+1011132,210945,7,61 Street / Woodside,20,,456,,,,,,,,,,,,,,,,
+1008482,210402,7,52 Street,20,,457,,,,,,,,,,,,,,,,
+1006852,210030,7,46 Street,20,,458,,,,,,,,,,,,,,,,
+1005305,210265,7,40 Street,20,,459,,,,,,,,,,,,,,,,
+1003370,210557,7,33 Street,20,,460,,,,,,,,,,,,,,,,
+1000829,212759,"N,W,7",Queensboro Plaza,20,,461,,,,,,,,,,,,,,,,
+999417,211442,7,45 Road / Court House Square,20,,462,,,,,,,,,,,,,,,,
+998406,209690,7,Hunters Point Avenue,20,,463,,,,,,,,,,,,,,,,
+997113,209839,7,Vernon Boulevard / Jackson Avenue,20,,464,,,,,,,,,,,,,,,,
+990888,213044,7,42 Street / Grand Central,4,,465,,,,,,,,,,,,,,,,
+989247,213915,7,5 Avenue / 42 Street,1,,466,,,,,,,,,,,,,,,,
+987660,214518,7,42 Street / Times Square,1,,467,,,,,,,,,,,,,,,,
+988065,214702,S,42 Street / Times Square,1,,468,,,,,,,,,,,,,,,,
+990016,213531,S,42 Street / Grand Central,4,,469,,,,,,,,,,,,,,,,
+983641,214506,7,34 Street / Hudson Yards,1,,471,,,,,,,,,,,,,,,,
+998909,225000,Q,96 Street,4,,475,,,,,,,,,,,,,,,,
+997607,222676,Q,86 Street,4,,476,,,,,,,,,,,,,,,,
+995784,219375,Q,72 Street,4,,477,,,,,,,,,,,,,,,,

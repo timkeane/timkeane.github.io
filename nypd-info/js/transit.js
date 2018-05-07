@@ -29,6 +29,8 @@ if (qstr){
 			var stationId = selection.station;
 			if (stationId){
 				var station = stationSource.getFeatureById(stationId);
+				selection.district = selection.district || station.get('DISTRICT')
+				selection.sector = selection.sector || station.get('SECTOR')
 				locationMgr.setLocation({
 					coordinates: station.getGeometry().getCoordinates(),
 					name: station.get('NAME')
@@ -48,7 +50,7 @@ if (qstr){
 };
 
 function sectorButtons(){
-	var sectors = districtSectors[selection.district];
+	var sectors = districtSectors[selection.district] || {};
 	$('#sectors').empty();
 	if (!sectors.none){
 		var sorted = [];
