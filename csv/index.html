@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CSV Example</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.4.0/papaparse.min.js"></script>
+  <script>
+  $.ajax({
+    url: 'subway-station.csv',
+    success: function(csvData){
+        console.log('jquery-csv', $.csv.toObjects(csvData));
+        console.log('papparse', Papa.parse(csvData, {header: true}).data);
+    }
+  });
+  </script>
+</head>
+<body>
+  check the console
+</body>
+</html>
