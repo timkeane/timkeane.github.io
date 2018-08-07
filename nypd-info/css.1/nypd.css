@@ -1,0 +1,35 @@
+html, body, .ui-mobile-viewport div[data-role="page"], #map {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+#map * {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #085095;
+}
+.ctl-btn.ui-btn, .ctl-btn.ui-btn:visited {
+  background-color: rgba(8,80,149,0.5);
+}
+.ctl-btn.ui-btn:hover {
+  background-color: #085095;
+}
+.btn-geo {
+  display: none;
+}
+.feature-tip {
+	padding: 5px;
+	font-weight: bold;
+	max-width: 220px;
+	background-color:rgba(255,255,255,0.9);
+}
+.feature-tip.precinct-house {
+	font-weight: normal;
+}
+#fld-srch-container .ui-input-clear:after {
+  background-color: rgba(8,80,149,0.5);
+}
+#fld-srch-container .ui-input-clear:hover:after {
+  background-color: #085095;
+}
