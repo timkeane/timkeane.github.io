@@ -16,6 +16,7 @@ var STYLE = {
 		if (!STYLE.polygonStyleCache[zoom][color]){
 			var width = [1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 3][zoom];
 			STYLE.polygonStyleCache[zoom][color] = [new ol.style.Style({
+				fill: new ol.style.Fill({color: 'rgba(0,0,0,0)'}),
 				stroke: new ol.style.Stroke({
 					color: color,
 					width: width

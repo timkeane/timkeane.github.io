@@ -8,19 +8,23 @@ var PRECINCT_NAME_LOOKUP = {
 
 var map, precinctSource, precinctLayer, sectorSource, precinctHouseSource, precinctHouseLayer, selectionSource, selectionLayer, showPrecinct = false;
 
+ol.proj.proj4.register(nyc.proj4)
+
 var qstr = document.location.search;
 if (qstr){
-	showPrecinct = qstr.split('=')[1];
 	var interval = setInterval(function(){
-		if (precinctSource.getFeatures().length) {
+		if (precinctSource && precinctSource.getFeatures().length){
+			showPrecinct = qstr.split('=')[1];
 			zoomToPrecinct(getPrecinct(showPrecinct));
 			clearInterval(interval);
 		}
-	}, 200);
-};
+	}, 200);	
+}
 
 function mapClicked(event){
 	map.forEachFeatureAtPixel(event.pixel, function(feature, layer){
+		console.warn(feature);
+		
 		var pct = feature.get('PRECINCT');
 		if (pct){
 			window.parent.clickedPrecinct(pct);
@@ -47,7 +51,7 @@ function getPrecinctHouse(pct){
 };
 
 function located(location){
-	var coords = location.coordinates,
+	var coords = location.coordinate,
 		precinctFeature = precinctSource.getFeaturesAtCoordinate(coords)[0],
 		sectorFeature = sectorSource.getFeaturesAtCoordinate(coords)[0];
 	if (precinctFeature){
@@ -90,31 +94,35 @@ $(document).ready(function(){
 
 	map = new nyc.ol.Basemap({target: $('#map').get(0)});
 
-	var geocoder = new nyc.Geoclient(GEOCLIENT_URL);
-
-	var locationMgr = new nyc.LocationMgr({
-		controls: new nyc.ol.control.ZoomSearch(map),
-		locate: new nyc.ol.Locate(geocoder),
-		locator: new nyc.ol.Locator({map: map})
-	});
-	locationMgr.on(nyc.Locate.EventType.GEOCODE, located);
+	var locationMgr = new nyc.ol.LocationMgr({map: map, url: GEOCLIENT_URL});
+	locationMgr.mapLocator.layer.setStyle(new ol.style.Style({
+		image: new ol.style.Icon({
+			scale: 48 / 512,
+			size: [1024, 1024],
+			src: '../images/content/pages/icon.svg'
+		})
+	}));
+	locationMgr.on('geocoded', located);
 
 	sectorSource = new ol.source.Vector({
 		url: 'sector.json',
-		format: new ol.format.TopoJSON
+		format: new ol.format.TopoJSON()
 	});
 	sectorLayer = new ol.layer.Vector({source: sectorSource, style: STYLE.sectorStyle});
 	map.addLayer(sectorLayer);
 
-	precinctSource = new nyc.ol.source.Decorating(
-		{url: 'precinct.json', format: new ol.format.TopoJSON},
-		[{
-			getName: function(){
-				var pct = this.get('PRECINCT'), name = PRECINCT_NAME_LOOKUP[pct];
-				return (name || getOrdinal(pct)) + ' Precinct';
-			}
-		}]
-	);
+	precinctSource = new ol.source.Vector({
+			url: 'precinct.json', 
+			format: new nyc.ol.format.Decorate({
+				parentFormat: new ol.format.TopoJSON(),
+				decorations: [{
+					getName: function(){
+						var pct = this.get('PRECINCT'), name = PRECINCT_NAME_LOOKUP[pct];
+						return (name || getOrdinal(pct)) + ' Precinct';
+					}
+				}]
+			})
+	});
 	precinctLayer = new ol.layer.Vector({source: precinctSource, style: STYLE.precinctStyle});
 	map.addLayer(precinctLayer);
 
@@ -122,51 +130,61 @@ $(document).ready(function(){
 	selectionLayer = new ol.layer.Vector({source: selectionSource, style: STYLE.selectionStyle});
 	map.addLayer(selectionLayer);
 
-	precinctHouseSource = new nyc.ol.source.Decorating(
-		{url: 'precinct-house.json', format: new ol.format.GeoJSON},
-		[{
-			getName: function(){
-				var pct = this.get('PRECINCT'), name = PRECINCT_NAME_LOOKUP[pct];
-				return (name || getOrdinal(pct)) + ' Precinct House';
-			},
-			getAddress: function(){
-				var num = this.get('NUM'),
-					suf = this.get('SUF') || '',
-					st = this.get('STREET'),
-					boro = this.get('BORO'),
-					zip = this.get('ZIP');
-				return num + ' ' + suf + ' ' + st + '<br>' + boro + ', NY ' + zip;
-			}
-		}]
-	);
+	precinctHouseSource = new ol.source.Vector({
+		url: 'precinct-house.json', 
+		format: new nyc.ol.format.Decorate({
+			parentFormat: new ol.format.GeoJSON({
+				defaultDataProjection: 'EPSG:2263',
+				defaultFeatureProjection: 'EPSG:3857'
+			}),
+			decorations: [{
+				getName: function(){
+					var pct = this.get('PRECINCT'), name = PRECINCT_NAME_LOOKUP[pct];
+					return (name || getOrdinal(pct)) + ' Precinct House';
+				},
+				getAddress: function(){
+					var num = this.get('NUM'),
+						suf = this.get('SUF') || '',
+						st = this.get('STREET'),
+						boro = this.get('BORO'),
+						zip = this.get('ZIP');
+					return num + ' ' + suf + ' ' + st + '<br>' + boro + ', NY ' + zip;
+				}
+			}]
+		})
+	});
 	precinctHouseLayer = new ol.layer.Vector({source: precinctHouseSource, style: STYLE.precinctHouseStyle});
 	map.addLayer(precinctHouseLayer);
 
 	map.on('click', mapClicked);
 
-	new nyc.ol.FeatureTip(map, [{
-		layer: precinctLayer,
-		labelFunction: function(){
-			return {text: this.getName()};
-		}
-	},{
-		layer: precinctHouseLayer,
-		labelFunction: function(){
-			return {
-				cssClass: 'precinct-house',
-				text: '<b>' + this.getName() + '</b><br>' + this.getAddress()
-			};
-		}
-	},{
-		layer: selectionLayer,
-		labelFunction: function(){
-			if (this.getAddress){
+	new nyc.ol.FeatureTip({
+		map: map,
+		tips: [{
+			layer: precinctLayer,
+			label: function(feature){
+				return {html: feature.getName()};
+			}
+		},{
+			layer: precinctHouseLayer,
+			label: function(feature){
 				return {
-					cssClass: 'precinct-house',
-					text: '<b>' + this.getName() + '</b><br>' + this.getAddress()
+					css: 'precinct-house',
+					html: '<b>' + feature.getName() + '</b><br>' + feature.getAddress()
 				};
 			}
-		}
-	}]);
-
+		},{
+			layer: selectionLayer,
+			label: function(feature){
+				if (feature.getAddress){
+					return {
+						css: 'precinct-house',
+						html: '<b>' + feature.getName() + '</b><br>' + feature.getAddress()
+					};
+				}else if (feature.getName){
+					return {html: feature.getName()};
+				}
+			}
+		}]
+	});
 });

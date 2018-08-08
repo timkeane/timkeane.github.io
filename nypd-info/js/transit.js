@@ -4,7 +4,6 @@ var districtSectors = {};
 var stationNames = {};
 
 var map;
-var controls;
 var stationSource;
 var stationLayer;
 var lineSource;
@@ -12,7 +11,32 @@ var lineLayer;
 var selection;
 var activeStations;
 var LocationMgr;
+var zoomSearch;
 var popup;
+
+ol.proj.proj4.register(nyc.proj4)
+
+function ready(features){
+	var stationId = selection.station;
+		if (stationId){
+			var station = stationSource.getFeatureById(stationId);
+			selection.district = selection.district || station.get('DISTRICT')
+			selection.sector = selection.sector || station.get('SECTOR')
+			locationMgr.setLocation({
+				coordinate: station.getGeometry().getCoordinates(),
+				name: station.get('NAME')
+			});
+		}
+		sectorButtons();
+		zoomToStations();
+		zoomSearch.setFeatures({
+			layerName: 'subway',
+			features: features,
+			nameField: 'NAME'
+		});
+		$(zoomSearch.input).attr('placeholder', 'Search for a station or address...');
+
+	};
 
 var qstr = document.location.search;
 if (qstr){
@@ -24,47 +48,28 @@ if (qstr){
 			selection[pair[0]] = pair[1];
 		}
 	});
-	var interval = setInterval(function(){
-		if (stationSource && stationSource.featuresloaded && lineSource.getFeatures().length) {
-			var stationId = selection.station;
-			if (stationId){
-				var station = stationSource.getFeatureById(stationId);
-				selection.district = selection.district || station.get('DISTRICT')
-				selection.sector = selection.sector || station.get('SECTOR')
-				locationMgr.setLocation({
-					coordinates: station.getGeometry().getCoordinates(),
-					name: station.get('NAME')
-				});
-			}
-			clearInterval(interval);
-			sectorButtons();
-			zoomToStations();
-			controls.setFeatures({
-				featureTypeName: 'subway',
-				features: stationSource.getFeatures(),
-				nameField: 'NAME'
-			});
-			$(controls.input).attr('placeholder', 'Search for a station or address...');
-		}
-	}, 200);
 };
 
 function sectorButtons(){
 	var sectors = districtSectors[selection.district] || {};
 	$('#sectors').empty();
-	if (!sectors.none){
+	if (sectors.none){
+		$('#sectors').hide();
+	}else{
 		var sorted = [];
+		$('#sectors').show()
+			.attr('region', 'Select a sector for District ' + selection.district);
 		for (var sector in sectors){
 			sorted.push(sector);
 		}
 		sorted.sort();
 		$.each(sorted, function(_, sector){
-			var btn = $('<a class="ctl-btn" data-role="button">Sector </a>');
+			var btn = $('<a class="btn rad-all" role="button" href="#">Sector </a>');
 			btn.append(sector)
 				.data('sector', sector)
 				.click(function(){
-					$('#sectors a').removeClass('active');
-					$(this).addClass('active');
+					$('#sectors a').removeClass('focused');
+					$(this).addClass('focused');
 		      selection.sector = $(this).data('sector');
 		      zoomToStations();
 		    });
@@ -126,13 +131,6 @@ function getActiveLines(){
 	});
 };
 
-function showPopup(feature){
-	popup.show({
-		coordinates: feature.getGeometry().getCoordinates(),
-		html: feature.html()
-	})
-};
-
 var stationDecorator = {
 	extendFeature: function(){
 		var district = this.get('DISTRICT');
@@ -161,8 +159,11 @@ var stationDecorator = {
 			this.label = wrapped ? wrapped.trim() : label;
 		}
 	},
+	getName: function(){
+		return this.get('NAME');
+	},
 	html: function(){
-		var props = this.getProperties()
+		var props = this.getProperties();
 		var html = $('<div></div>');
 		var div = $('<div class="sta-name"></div>');
 		div.append(props.NAME);
@@ -174,7 +175,7 @@ var stationDecorator = {
 			html.append(div);
 		});
 		var sector = props.SECTOR.trim()
-		var btn = $('<button class="sector" role="buton"></button>');
+		var btn = $('<button class="btn rad-all" role="buton"></button>');
 		btn.append('District ' + props.DISTRICT);
 		if (sector){
 			btn.append(' Sector ' + sector);
@@ -187,11 +188,8 @@ var stationDecorator = {
 };
 
 $(document).ready(function(){
-
 	map = new nyc.ol.Basemap({target: $('#map').get(0)});
 	map.labels.base.setOpacity(.5);
-
-	controls = new nyc.ol.control.ZoomSearch(map);
 
 	lineSource = new ol.source.Vector({
 		url: 'subway-line.json',
@@ -200,59 +198,49 @@ $(document).ready(function(){
 	lineLayer = new ol.layer.Vector({source: lineSource, style: STYLE.line});
 	map.addLayer(lineLayer);
 
-	stationSource = new nyc.ol.source.Decorating(
-	  {loader: new nyc.ol.source.CsvPointFeatureLoader({
-	    url: 'subway-station.csv',
-	    projection: 'EPSG:2263',
-	    xCol: 'X',
-	    yCol: 'Y',
-	    fidCol: 'STATION_ID'
-	  })},
-	  [stationDecorator],
-	  {projection: 'EPSG:3857'}
-	);
-	stationLayer = new ol.layer.Vector({source: stationSource, style: STYLE.station});
-	map.addLayer(stationLayer);
-
-	new nyc.ol.FeatureTip(map, [{
-		layer: stationLayer,
-		labelFunction: function(){
-			return {
-				css: 'subway',
-				text: this.html()
-			};
-		}
-	}]);
-
-	popup = new nyc.ol.Popup(map);
-
-	map.on('click', function(event){
-		map.forEachFeatureAtPixel(event.pixel, function(feature, layer){
-			if (layer === stationLayer){
-				showPopup(feature);
-			}
-		});
-	});
-
-	locationMgr = new nyc.LocationMgr({
-		controls: controls,
-		locate: new nyc.ol.Locate(new nyc.Geoclient(GEOCLIENT_URL)),
-		locator: new nyc.ol.Locator({
-			map: map,
-			style: new ol.style.Style({
-				image: new ol.style.Icon({
-					scale: 48 / 512,
-					size: [1024, 1024],
-					src: '../images/content/pages/icon.svg'
-				})
+	stationSource = new nyc.ol.source.AutoLoad({
+		url: 'subway-station.csv',
+		format: new nyc.ol.format.Decorate({
+			decorations:  [stationDecorator],
+			parentFormat: new nyc.ol.format.CsvPoint({
+				x: 'X',
+				y: 'Y',
+				id: 'STATION_ID',
+				defaultDataProjection: 'EPSG:2263'
 			})
 		})
 	});
+	stationSource.autoLoad().then(ready);
 
-	locationMgr.on(nyc.Locate.EventType.GEOCODE, function(location){
+	stationLayer = new ol.layer.Vector({source: stationSource, style: STYLE.station});
+	map.addLayer(stationLayer);
+
+	new nyc.ol.FeatureTip({
+		map: map,
+		tips: [{
+			layer: stationLayer,
+			label: function(feature) {
+				return {css: 'subway', html: feature.getName()}
+			}
+		}]
+	});
+
+	popup = new nyc.ol.FeaturePopup({map: map, layers: [stationLayer]});
+
+	locationMgr = new nyc.ol.LocationMgr({map: map, url: GEOCLIENT_URL});
+	zoomSearch = locationMgr.zoomSearch
+	locationMgr.mapLocator.layer.setStyle(new ol.style.Style({
+		image: new ol.style.Icon({
+			scale: 48 / 512,
+			size: [1024, 1024],
+			src: '../images/content/pages/icon.svg'
+		})
+	}));
+
+	locationMgr.on('geocoded', function(location){
 		var id = location.data.STATION_ID;
 		if (id){
-			showPopup(stationSource.getFeatureById(id));
+			popup.showFeature(stationSource.getFeatureById(id));
 		}
 	});
 });
