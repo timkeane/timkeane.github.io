@@ -232,7 +232,7 @@ $(document).ready(function(){
 	locationMgr.mapLocator.layer.setStyle(new ol.style.Style({
 		image: new ol.style.Icon({
 			scale: 48 / 512,
-			size: [1024, 1024],
+			imgSize: [1024, 1024],
 			src: '../images/content/pages/icon.svg'
 		})
 	}));
