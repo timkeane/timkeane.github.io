@@ -36,7 +36,6 @@ html, body, #map {
   display: block;
   width: 20px;
   height: 20px;
-  border: 2px solid;
   border-radius: 50%;
   float: left;
   background-repeat: no-repeat;
@@ -45,19 +44,19 @@ html, body, #map {
 }
 label[for="chc-chc-0"]:before {
   background-color: rgba(255,0,0,.4);
-  border-color: rgb(255,0,0);
+  border: 2px solid rgb(255,0,0);
 }
 label[for="chc-chc-1"]:before {
   background-color: rgba(255,165,0,.4);
-  border-color: rgb(255,165,0);
+  border: 2px solid rgb(255,165,0);
 }
 label[for="chc-chc-2"]:before {
   background-color: rgba(0,255,0,.4);
-  border-color: rgb(0,255,0);
+  border: 2px solid rgb(0,255,0);
 }
 label[for="chc-chc-3"]:before {
   background-color: rgba(0,0,255,.4);
-  border-color: rgb(0,0,255);
+  border: 2px solid rgb(0,0,255);
 }
 .pop>.content {
   width: 250px;
