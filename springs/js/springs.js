@@ -29,6 +29,11 @@ var decorations = {
     if (tmp === 'H') this.set('temperature', 'hot');
     if (tmp === 'W') this.set('temperature', 'warm');  
   },
+  tip: function() {
+    return $('<div></div>')
+      .append(this.temp())
+      .append(this.name());
+  },
   html: function() {
     return $('<div></div>')
       .append(this.temp())
@@ -128,6 +133,18 @@ new nyc.ol.Filters({
       {name: 'temperature', label: 'Warm', values: ['warm'], checked: true},
       {name: 'temperature', label: 'Luke warm', values: ['luke-warm'], checked: true}
     ]
+  }]
+});
+
+new nyc.ol.FeatureTip({
+  map: map,
+  tips: [{
+    layer: layer,
+    label: function(feature) {
+      return {
+        html: feature.tip()
+      }
+    }
   }]
 });
 

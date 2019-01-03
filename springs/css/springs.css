@@ -20,7 +20,7 @@ html, body, #map {
   bottom: 5px;
   text-align: right;
 }
-#info a, .pop .name, .pop .temp {
+#info a, .name, .temp {
   font-weight: bold;
 }
 #info a {
@@ -59,20 +59,24 @@ label[for="chc-chc-3"]:before {
   margin: 10px;
 }
 .pop .temp {
-  color: #fff;
   width: 220px;
+}
+.temp {
+  color: #fff;
   padding: 2px;
 }
-.pop .temp.really-hot {
+.temp.really-hot {
   background-color: rgb(255,0,0);
 }
-.pop .temp.hot {
+.temp.hot {
   background-color: rgb(255,165,0);
+  color: #000;
 }
-.pop .temp.warm {
+.temp.warm {
   background-color: rgb(0,255,0);
+  color: #000;
 }
-.pop .temp.luke-warm {
+.temp.luke-warm {
   background-color: rgb(0,0,255);
 }
 .ol-control button {
