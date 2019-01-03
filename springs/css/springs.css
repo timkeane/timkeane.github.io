@@ -109,3 +109,6 @@ label[for="chc-chc-3"]:before {
   background-color: transparent;
   margin-right: 5px;
 }
+.chc {
+  width: calc(100% - 2px);
+}
