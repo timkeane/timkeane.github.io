@@ -83,9 +83,23 @@ label[for="chc-chc-3"]:before {
 .temp.luke-warm {
   background-color: rgb(0,0,255);
 }
-.ol-control button {
-  background-color: rgba(0,0,0,.6);
+.ol-zoom button {
+  height: 35px;
+  width: 35px;
+  font-weight: bold;
+  font-size: 26px;
+  padding-bottom: 5px;
 }
-.ol-control button:hover {
+.ol-zoom button, .clps button {
+  background-color: rgba(0,0,0,.6);
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 2px;
+}
+.ol-zoom button:hover, .clps button:hover {
   background-color: #000;
+}
+.clps button:before, .clps button:hover:before {
+  background-color: transparent;
+  margin-right: 5px;
 }
