@@ -1,4 +1,4 @@
-html, body, #map, #filter, #info {
+html, body, #map, #menu, #info {
   position: fixed;
 }
 html, body, #map {
@@ -9,11 +9,16 @@ html, body, #map {
   margin: 0;
   padding: 0;
 }
-#filter {
+#menu {
   top: 10px;
   right: 10px;
   width: 205px;
+  padding: 2px;
+  border-radius: 4px;
   background-color: rgba(255,255,255,.4);
+}
+#menu .content {
+  background-color: #fff;
 }
 #info {
   right: 5px;
@@ -26,7 +31,7 @@ html, body, #map {
 #info a {
   display: block;
 }
-.chc-chc label:before {
+#filter .chc-chc label:before {
   content: " ";
   display: block;
   width: 20px;

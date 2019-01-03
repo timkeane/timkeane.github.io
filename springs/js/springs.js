@@ -88,7 +88,7 @@ var decorations = {
   }
 };
 
-var source = new nyc.ol.source.FilterAndSort({
+var springSource = new nyc.ol.source.FilterAndSort({
   url: 'data/springs.csv',
   format: new nyc.ol.format.Decorate({
     decorations: [decorations],
@@ -98,33 +98,37 @@ var source = new nyc.ol.source.FilterAndSort({
   })
 });
 
-source.autoLoad();
+springSource.autoLoad();
 
-var layer = new ol.layer.Vector({
-  source: source,
-  style: style
+var springLayer = new ol.layer.Vector({
+  source: springSource,
+  style: style,
+  zIndex: 100
 });
+
+var osmLayer = new ol.layer.Tile({
+  source: new ol.source.OSM()
+});
+
+var topoLayer = new ol.layer.Tile();
 
 var map = new ol.Map({
   target: 'map',
-  layers: [
-    new ol.layer.Tile({
-      source: new ol.source.OSM()
-    }),
-    layer
-  ],
+  layers: [osmLayer, topoLayer, springLayer],
   view: new ol.View({
     center: [-12484642, 4506141],
     zoom: 8
   }),
-  controls: ol.control.defaults({attribution: false}),
+  controls: ol.control.defaults({attribution: false})
 });
 
-new nyc.ol.MultiFeaturePopup({map: map, layers: [layer]});
+usgsTopo(topoLayer);
+
+new nyc.ol.MultiFeaturePopup({map: map, layers: [springLayer]});
 
 new nyc.ol.Filters({
   target: '#filter',
-  source: source,
+  source: springSource,
   choiceOptions: [{
     title: 'Filter by temperature',
     choices: [
@@ -136,10 +140,31 @@ new nyc.ol.Filters({
   }]
 });
 
+var basemapChoice = new nyc.Choice({
+  target: '#layers',
+  radio: true,
+  choices: [
+    {name: 'basemap', label: 'OpenStreetMap', values: [osmLayer], checked: true},
+    {name: 'basemap', label: 'USGS Topo', values: [topoLayer]}
+  ]
+});
+
+new nyc.Collapsible({
+  target: '#basemap',
+  title: 'Base map',
+  content: '#layers'
+});
+
+basemapChoice.on('change', function() {
+  osmLayer.setVisible(false);
+  topoLayer.setVisible(false);
+  basemapChoice.val()[0].values[0].setVisible(true);
+});
+
 new nyc.ol.FeatureTip({
   map: map,
   tips: [{
-    layer: layer,
+    layer: springLayer,
     label: function(feature) {
       return {
         html: feature.tip()
@@ -148,4 +173,4 @@ new nyc.ol.FeatureTip({
   }]
 });
 
-$('#filter button').trigger('click');
+$('#menu button').trigger('click');
