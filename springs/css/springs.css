@@ -93,7 +93,7 @@ label[for="chc-chc-3"]:before {
 .ol-zoom button, .clps button {
   background-color: rgba(0,0,0,.6);
   color: #fff;
-  border: 1px solid transparent;
+  border: 1px solid #ddd;
   border-radius: 2px;
 }
 .ol-zoom button:hover, .clps button:hover {
