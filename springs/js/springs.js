@@ -40,7 +40,6 @@ var decorations = {
       .append(this.name())
       .append(this.location())
       .append(this.map())
-      .append(this.usgs())
       .append(this.info());
   },
   temp: function(tmp) {
@@ -59,21 +58,15 @@ var decorations = {
       .append(this.get('NAME') || 'NO NAME');
   },
   location: function() {
+    var area = this.get('AREA');
     return $('<div></div>')
-      .append(this.get('AREA') + ', ')
+      .append(area ? (nyc.capitalize(area) + ', ') : '')
       .append(this.get('STATE'));
-  },
-  usgs: function() {
-    var href = 'https://www.topozone.com/map/?lat=' + 
-      this.get('LAT') + '&lon=' + this.get('LNG');
-    var a = $('<a target="blank">USGS</a>')
-      .attr('href', href);
-    return $('<div></div>').append(a);
   },
   map: function() {
     var href = 'https://www.google.com/maps/search/?api=1&query=' + 
       this.get('LAT') + ',' + this.get('LNG');
-    var a = $('<a target="blank">Map</a>')
+    var a = $('<a target="blank">Google map</a>')
       .attr('href', href);
     return $('<div></div>').append(a);
   },
@@ -82,7 +75,7 @@ var decorations = {
       '"' + this.get('NAME') + '"+' +
       '"' + this.get('AREA') + '"+' +
       (this.get('STATE') === 'UT' ? 'UTAH' : 'ARIZONA');
-    var a = $('<a target="blank">Info</a>')
+    var a = $('<a target="blank">Google search</a>')
       .attr('href', href);
     return $('<div></div>').append(a);
   }
