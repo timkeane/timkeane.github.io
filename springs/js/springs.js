@@ -16,7 +16,7 @@ function style(feature) {
         color: 'rgb(' + color + ')'
       })
     })
-  })
+  });
 };
 
 var decorations = {
@@ -74,9 +74,9 @@ var decorations = {
   },
   info: function() {
     var href = 'https://www.google.com/search?q="hot+spring"+' + 
-    '"' + this.get('NAME') + '"+' +
-    '"' + this.get('AREA') + '"+' +
-    (this.get('STATE') === 'UT' ? 'UTAH' : 'ARIZONA');
+      '"' + this.get('NAME') + '"+' +
+      '"' + this.get('AREA') + '"+' +
+      (this.get('STATE') === 'UT' ? 'UTAH' : 'ARIZONA');
     var a = $('<a target="blank">Info</a>')
       .attr('href', href);
     return $('<div></div>').append(a);
