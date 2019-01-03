@@ -110,7 +110,22 @@ var osmLayer = new ol.layer.Tile({
   source: new ol.source.OSM()
 });
 
-var topoLayer = new ol.layer.Tile();
+var topoLayer = new ol.layer.Tile({visible: false});
+
+var parser = new ol.format.WMTSCapabilities();
+
+fetch('https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/WMTS/1.0.0/WMTSCapabilities.xml').then(function(response){
+  return response.text();
+}).then(function(text){
+  var result = parser.read(text);
+
+  var topoOptions = ol.source.WMTS.optionsFromCapabilities(result, {
+      layer: 'USGSTopo',
+      matrixSet: 'EPSG:900913'
+  });
+
+  topoLayer.setSource(new ol.source.WMTS(topoOptions));
+});
 
 var map = new ol.Map({
   target: 'map',
@@ -121,8 +136,6 @@ var map = new ol.Map({
   }),
   controls: ol.control.defaults({attribution: false})
 });
-
-usgsTopo(topoLayer);
 
 new nyc.ol.MultiFeaturePopup({map: map, layers: [springLayer]});
 
