@@ -56,7 +56,7 @@ label[for="chc-chc-3"]:before {
 }
 .pop>.content {
   width: 250px;
-  margin: 10px;
+  padding: 5px;
 }
 .pop .temp {
   width: 220px;
