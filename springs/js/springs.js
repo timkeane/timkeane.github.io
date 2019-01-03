@@ -241,5 +241,5 @@ new nyc.ol.FeatureTip({
   }]
 });
 
-$('.ol-overlaycontainer-stopevent').append($('#menu, #info'));
+$('.ol-overlaycontainer-stopevent').append($('#info, #menu'));
 $('#menu button').trigger('click');
