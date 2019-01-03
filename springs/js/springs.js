@@ -1,3 +1,65 @@
+var states = {
+  AL: 'Alabama',
+  AK: 'Alaska',
+  AS: 'American Samoa',
+  AZ: 'Arizona',
+  AR: 'Arkansas',
+  CA: 'California',
+  CO: 'Colorado',
+  CT: 'Connecticut',
+  DE: 'Delaware',
+  DC: 'District of Columbia',
+  FM: 'Federated States of Micronesia',
+  FL: 'Florida',
+  GA: 'Georgia',
+  GU: 'Guam',
+  HI: 'Hawaii',
+  ID: 'Idaho',
+  IL: 'Illinois',
+  IN: 'Indiana',
+  IA: 'Iowa',
+  KS: 'Kansas',
+  KY: 'Kentucky',
+  LA: 'Louisiana',
+  ME: 'Maine',
+  MH: 'Marshall Islands',
+  MD: 'Maryland',
+  MA: 'Massachusetts',
+  MI: 'Michigan',
+  MN: 'Minnesota',
+  MS: 'Mississippi',
+  MO: 'Missouri',
+  MT: 'Montana',
+  NE: 'Nebraska',
+  NV: 'Nevada',
+  NH: 'New Hampshire',
+  NJ: 'New Jersey',
+  NM: 'New Mexico',
+  NY: 'New York',
+  NC: 'North Carolina',
+  ND: 'North Dakota',
+  MP: 'Northern Mariana Islands',
+  OH: 'Ohio',
+  OK: 'Oklahoma',
+  OR: 'Oregon',
+  PW: 'Palau',
+  PA: 'Pennsylvania',
+  PR: 'Puerto Rico',
+  RI: 'Rhode Island',
+  SC: 'South Carolina',
+  SD: 'South Dakota',
+  TN: 'Tennessee',
+  TX: 'Texas',
+  UT: 'Utah',
+  VT: 'Vermont',
+  VI: 'Virgin Islands',
+  VA: 'Virginia',
+  WA: 'Washington',
+  WV: 'West Virginia',
+  WI: 'Wisconsin',
+  WY: 'Wyoming'
+};
+
 var colors = {
   'really-hot': '255,0,0', 
   hot: '255,165,0', 
@@ -74,7 +136,7 @@ var decorations = {
     var href = 'https://www.google.com/search?q="hot+spring"+' + 
       '"' + this.get('NAME') + '"+' +
       '"' + this.get('AREA') + '"+' +
-      (this.get('STATE') === 'UT' ? 'UTAH' : 'ARIZONA');
+      '"' + states[this.get('STATE')] + '"';
     var a = $('<a target="blank">Google search</a>')
       .attr('href', href);
     return $('<div></div>').append(a);
