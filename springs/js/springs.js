@@ -200,10 +200,10 @@ new nyc.ol.Filters({
   choiceOptions: [{
     title: 'Filter by temperature',
     choices: [
-      {name: 'temperature', label: 'Really hot', values: ['really-hot'], checked: true},
+      {name: 'temperature', label: 'Really Hot', values: ['really-hot'], checked: true},
       {name: 'temperature', label: 'Hot', values: ['hot'], checked: true},
       {name: 'temperature', label: 'Warm', values: ['warm'], checked: true},
-      {name: 'temperature', label: 'Luke warm', values: ['luke-warm'], checked: true}
+      {name: 'temperature', label: 'Luke Warm', values: ['luke-warm'], checked: true}
     ]
   }]
 });
