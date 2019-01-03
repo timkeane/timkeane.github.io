@@ -23,9 +23,9 @@ var decorations = {
   extendFeature: function() {
     var tmp = this.get('TF');
     this.set('temperature', 'luke-warm');
-    if (tmp > 104) this.set('temperature', 'really-hot');
-    if (tmp > 90) this.set('temperature', 'hot');
     if (tmp > 80) this.set('temperature', 'warm');   
+    if (tmp > 90) this.set('temperature', 'hot');
+    if (tmp > 104) this.set('temperature', 'really-hot');
     if (tmp === 'H') this.set('temperature', 'hot');
     if (tmp === 'W') this.set('temperature', 'warm');  
   },
