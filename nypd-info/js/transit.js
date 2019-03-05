@@ -206,7 +206,7 @@ $(document).ready(function(){
 				x: 'X',
 				y: 'Y',
 				id: 'STATION_ID',
-				defaultDataProjection: 'EPSG:2263'
+				dataProjection: 'EPSG:2263'
 			})
 		})
 	});

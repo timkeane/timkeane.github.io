@@ -134,8 +134,8 @@ $(document).ready(function(){
 		url: 'precinct-house.json', 
 		format: new nyc.ol.format.Decorate({
 			parentFormat: new ol.format.GeoJSON({
-				defaultDataProjection: 'EPSG:2263',
-				defaultFeatureProjection: 'EPSG:3857'
+				dataProjection: 'EPSG:2263',
+				featureProjection: 'EPSG:3857'
 			}),
 			decorations: [{
 				getName: function(){
