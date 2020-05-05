@@ -63,15 +63,18 @@ body * {
 }
 .feature .prop .value {
   height: 20px;
-  width: 150px;
+  width: 130px;
   border: 1px solid #ddd;
+}
+.feature .prop select.value {
+  width: 138px;
+  height: 22px;
 }
 .pop .btns {
   text-align: center;
 }
 .pop button {
-  font-size: 12px;
-  width: 44px;
+  width: 52px;
   margin: 5px 5px 5px 0;
 }
 .delete {

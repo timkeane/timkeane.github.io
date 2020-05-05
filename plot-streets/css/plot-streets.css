@@ -36,7 +36,7 @@ body * {
   background-color: #000;
 }
 .pop>.content {
-  width: 230px;
+  width: 245px;
 }
 .pop .btn-x {
   display: none;
@@ -57,7 +57,7 @@ body * {
 }
 .feature .prop .value {
   height: 20px;
-  width: 135px;
+  width: 130px;
   border: 1px solid #ddd;
 }
 .btns {
@@ -68,9 +68,8 @@ body * {
   display: block;
 }
 .pop button {
-  font-size: 12px;
-  width: 51px;
-  margin: 5px 5px 5px 0;
+  width: 60px;
+  margin: 5px 10px 5px 0;
 }
 .delete {
   color: red;
