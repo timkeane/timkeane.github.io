@@ -16,12 +16,13 @@ body * {
   bottom: 0;
 }
 .photo,
-.save-json {
+.save-json,
+.load-json {
   position: fixed;
   background-color: rgba(0,0,0,.55);
   text-align: center;
   color: #fff;
-  width: 105px;
+  width: 115px;
 }
 .photo {
   left: 10px;
@@ -31,8 +32,13 @@ body * {
   right: 10px;
   bottom: 10px;
 }
+.load-json {
+  right: 10px;
+  bottom: 48px;
+}
 .photo:hover,
-.save-json:hover {
+.save-json:hover,
+.load-json:hover {
   background-color: #000;
 }
 .pop>.content {
