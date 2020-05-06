@@ -85,3 +85,6 @@ body * {
   color: green;
   border-color: green;
 }
+.f-tip.evt {
+  text-align: left;
+}
