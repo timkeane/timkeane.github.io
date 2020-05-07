@@ -95,3 +95,44 @@ body * {
   color: white;
   border-color: white;
 }
+.legend {
+  position: fixed;
+  display: table;
+  top: 10px;
+  right: 10px; 
+  text-align: right;
+  background-color: rgba(255,255,255,.5);
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+}
+.legend .item {
+  display: table-row;
+}
+.legend .item div {
+  display: table-cell;
+}
+.legend .text {
+  padding-right: 5px;
+  vertical-align: top;
+  font-weight: bold;
+}
+.legend .symbol div {
+  float: right;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1.25px solid black;
+}
+.red div {
+  background-color: rgba(255,0,0,.7);
+}
+.green div {
+  background-color: rgba(0,255,0,.7);
+}
+.yellow div {
+  background-color: rgba(255,255,0,.7);
+}
+.blue div {
+  background-color: rgba(0,0,255,.7);
+}
