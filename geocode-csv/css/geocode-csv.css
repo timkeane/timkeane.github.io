@@ -59,14 +59,18 @@ body * {
   border: 1px solid gray;
   white-space: nowrap;
 }
+.failed .address.geocoded,
+.failed .borough.geocoded,
+.failed .facility_type.valid,
+.failed .testing_type.valid {
+  background-color: rgba(0,255,0,0.6);
+}
 .failed .address,
-.failed .borough {
+.failed .borough,
+.failed .facility_type.invalid,
+.failed .testing_type.invalid {
   padding: 0;
   background-color: pink;
-}
-.failed .address.geocoded,
-.failed .borough.geocoded {
-  background-color: rgba(0,255,0,0.6);
 }
 .failed input,
 .failed select {
