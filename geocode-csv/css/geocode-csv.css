@@ -61,8 +61,12 @@ body * {
 }
 .failed .address,
 .failed .borough {
-  padding: none;
+  padding: 0;
   background-color: pink;
+}
+.failed .address.geocoded,
+.failed .borough.geocoded {
+  background-color: rgba(0,255,0,0.6);
 }
 .failed input,
 .failed select {
@@ -70,4 +74,28 @@ body * {
   border: none;
   height: 20px;
   background-color: transparent;
+}
+.failed .address button {
+  float: right;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,.55);
+}
+.failed .address button {
+  position: relative;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,.55);
+  color: #fff;
+  border: none;
+  width: 20px;
+  height: 20px;
+  margin: -24px 3px 0 0;
+}
+.failed .address button:hover {
+  background-color: #000;
+}
+td.address {
+  min-width: 200px;
+}
+button.pressed {
+  background-color: #000;
 }
