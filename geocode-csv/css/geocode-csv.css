@@ -96,6 +96,6 @@ body * {
 td.address {
   min-width: 200px;
 }
-button.pressed {
+.failed .address button.pressed {
   background-color: #000;
 }
