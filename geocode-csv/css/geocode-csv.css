@@ -102,3 +102,6 @@ td.address {
 .failed .address button.pressed {
   background-color: #000;
 }
+.failed .testing_type.invalid {
+  text-align: right;
+}
