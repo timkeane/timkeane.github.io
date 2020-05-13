@@ -65,8 +65,8 @@ body * {
 .failed .testing_type.valid {
   background-color: rgba(0,255,0,0.6);
 }
-.failed .address,
-.failed .borough,
+.failed .address.not-geocoded,
+.failed .borough.not-geocoded,
 .failed .facility_type.invalid,
 .failed .testing_type.invalid {
   padding: 0;
@@ -85,14 +85,13 @@ body * {
   background-color: rgba(0,0,0,.55);
 }
 .failed .address button {
-  position: relative;
   border-radius: 50%;
   background-color: rgba(0,0,0,.55);
   color: #fff;
   border: none;
   width: 20px;
   height: 20px;
-  margin: -24px 3px 0 0;
+  margin: 3px;
 }
 .failed .address button:hover {
   background-color: #000;
