@@ -52,7 +52,7 @@ body * {
 }
 .failed table {
   border-collapse: collapse;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 .failed th, .failed td {
   padding: 3px;
