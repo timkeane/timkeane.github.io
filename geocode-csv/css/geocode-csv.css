@@ -106,3 +106,12 @@ td.address {
 .failed .testing_type.invalid {
   text-align: right;
 }
+.pop .nyc-html>div:nth-child(14),
+.pop .nyc-html>div:nth-child(15),
+.pop .nyc-html>div:nth-child(16),
+.pop .nyc-html>div:nth-child(17) {
+  display: none;
+}
+nyc-html {
+  margin-right: 26px;
+}
