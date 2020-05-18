@@ -106,10 +106,12 @@ td.address {
 .failed .testing_type.invalid {
   text-align: right;
 }
-.pop .nyc-html>div:nth-child(14),
-.pop .nyc-html>div:nth-child(15),
-.pop .nyc-html>div:nth-child(16),
-.pop .nyc-html>div:nth-child(17) {
+.pop .nyc-html>div:nth-child(1),
+.pop .nyc-html>div:nth-child(2),
+.pop .nyc-html>div:nth-child(17),
+.pop .nyc-html>div:nth-child(18),
+.pop .nyc-html>div:nth-child(19),
+.pop .nyc-html>div:nth-child(20) {
   display: none;
 }
 .pop .nyc-html {
