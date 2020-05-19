@@ -108,12 +108,15 @@ td.address {
 }
 .pop .nyc-html>div:nth-child(1),
 .pop .nyc-html>div:nth-child(2),
-.pop .nyc-html>div:nth-child(17),
-.pop .nyc-html>div:nth-child(18),
 .pop .nyc-html>div:nth-child(19),
-.pop .nyc-html>div:nth-child(20) {
+.pop .nyc-html>div:nth-child(20),
+.pop .nyc-html>div:nth-child(21),
+.pop .nyc-html>div:nth-child(22) {
   display: none;
 }
 .pop .nyc-html {
   margin-right: 26px;
+}
+.pop .content {
+  max-height: 300px;
 }
