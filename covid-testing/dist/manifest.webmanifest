@@ -1,0 +1,11 @@
+{
+  "short_name": "COVID-19 Diagnostic Testing Sites",
+  "name": "COVID-19 Diagnostic Testing Sites",
+  "description": "New COVID testing sites are open in New York City.  Safe, simple, and easy.  Get tested at any of our convenient locations today.",
+  "start_url": "index.html",
+  "icons": [
+  ],
+  "background_color": "#1e90ff",
+  "theme_color": "#D8D8D8",
+  "display": "standalone"
+}
