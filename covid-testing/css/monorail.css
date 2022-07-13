@@ -1,3 +1,17 @@
+#monorail {
+  opacity: 0;
+}
+
+#monorail.monorail {
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: auto;
+  width: 100%;
+  z-index: 1000000;
+}
+
 .fnd .splash .dia {
   height: 260px;
 }
