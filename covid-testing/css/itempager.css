@@ -1,0 +1,16 @@
+.it-pg .btns {
+	width: 135px;
+	height: 26px;
+	text-align: center;
+	margin-top: 15px;
+	margin-left: 4px;
+}
+.it-pg .btns button {
+	margin-top: -3px
+}
+.it-pg .btns .btn-prv {
+	float: left;
+}
+.it-pg .btns .btn-nxt {
+	float: right;
+}

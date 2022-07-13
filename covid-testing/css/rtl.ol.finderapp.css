@@ -1,0 +1,22 @@
+.translated-rtl .fnd .splash .dia-msg * {
+  text-align: right;
+}
+.translated-rtl .fnd #home {
+    position: fixed;
+    width: auto;
+}
+.translated-rtl .fnd #tabs .btns .btn-2.filtered:before {
+  left: 0;
+  right: auto;
+  margin: -3px 5px -3px 5px;
+}
+.translated-rtl .fnd .facility a.btn-ico {
+  padding-left: 0;
+  padding-right: 30px;
+}
+.translated-rtl .fnd .notranslate * {
+  direction: ltr;
+}
+.translated-rtl .fnd #banner {
+  text-align: left;
+}

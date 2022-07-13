@@ -1,0 +1,42 @@
+.tog {
+  display: inline-block;
+}
+.tog .chc-chc {
+  display: block;
+  width: 50%;
+  text-align: center;
+  padding: 0;
+  background-color: var(--color-button);
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border: none;
+}
+.tog label {
+  border: none;
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 35px;
+  line-height: 35px;
+  padding: 0 5px;
+}
+.tog .chc-chc:first-of-type {
+  float: left;
+  border-top-left-radius: 3px;  
+  border-bottom-left-radius: 3px;
+}
+.tog .chc-chc:last-of-type {
+  float: right;
+}
+.tog input {
+    display: none;
+}
+.tog input:checked+label, .tog input:checked+label * {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+.tog .chc-chc label:before {
+  display: none;
+}

@@ -1,0 +1,14 @@
+.translated-rtl .srch .btn-x, .translated-rtl .lst-srch .btn-x {
+	right: calc(100% - 28px);
+	left: auto;
+}
+.translated-rtl .srch input, .translated-rtl .lst-srch input {
+	background-position: calc(100% - 3px) center;
+	direction: ltr;
+}
+.translated-rtl .srch input[data-msg-attr="placeholder"], .translated-rtl .lst-srch input[data-msg-attr="placeholder"] {
+	direction: rtl;
+}
+html.translated-rtl .ol-overlaycontainer-stopevent .srch input {
+  position: static;
+}

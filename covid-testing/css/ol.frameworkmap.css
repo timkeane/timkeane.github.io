@@ -1,0 +1,32 @@
+.it-pg .btns button {
+	margin-top: 0;
+}
+.pop.fullscreen {
+	width: 100%;
+	height: 100%;
+	border: 1px solid var(--color-border);
+}
+.nyc-map {
+	position: relative;
+}
+.posbl li {
+	list-style-type: none;
+	margin-left: -40px;
+	text-align: left;
+}
+.posbl .dia-msg ul {
+	max-height: 150px;
+	overflow: auto;
+}
+.posbl .dia {
+	overflow: hidden;
+	width: 365px;
+	margin-left: -183px;
+	max-height: 300px;
+}
+.posbl .dia-msg * {
+	text-align: left;
+}
+.ol-overlaycontainer-stopevent .fas, .ol-control {
+  display: none;
+}

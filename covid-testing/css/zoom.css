@@ -1,0 +1,42 @@
+.zoom {
+	position: absolute;
+	left: 3px;
+	top: 3px;
+	right: 0;
+}
+.fm .zoom {
+	left: auto;
+	top: auto;
+	right: 3px;
+	bottom: 0;
+	width: 37px;
+	height: 75px;
+}
+.btn-z-in, .btn-z-out {
+	background-size: 19px;
+	position: absolute;
+}
+.btn-z-in {
+	left: 0;
+	top: 0;
+}
+.btn-z-out {
+	left: 0;
+	top: 37px;
+}
+.fm .btn-z-in {
+	left: auto;
+	right: 0;
+}
+.fm .btn-z-out {
+	left: auto;
+	top: 37px;
+	right: 0;
+}
+.btn-z-in {
+	background-image: var(--zoom-in-icon-light, none);
+}
+.btn-z-out {
+	background-image: var(--zoom-out-icon-light, none);
+}
+

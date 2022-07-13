@@ -1,0 +1,96 @@
+html * {
+	direction: ltr;
+}
+html, body, body * {
+	font-size: 16px;
+	font-family: var(--font-family);
+	color: var(--color-dark);
+}
+*:focus, .focused {
+	outline: 0;
+	box-shadow: 0px 1px 7px 3px var(--focus-ring-color);
+	z-index: 100000;
+}
+.rad-all, .rad-top, .rad-bot {
+	border-radius: var(--border-radius, 0);
+	border: 1px solid var(--color-border);
+}
+.rad-top {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.rad-bot {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+.btn, .btn-sq, .btn-rnd, .btn.btn-sq, .btn.btn-rnd {
+	background-repeat: no-repeat;
+	cursor: pointer;
+	font-weight: bold;
+	padding: 0;
+	text-align: center;
+}
+.btn {
+	background-position: 3px center;
+}
+.btn-sq, .btn-rnd, .btn.btn-sq, .btn.btn-rnd {
+	background-position: center;	
+}
+.btn, .btn-sq {
+	background-size: 28px;
+}
+.btn {
+	background-color: var(--color-button);
+	color: var(--color-dark);
+	height: 35px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-transform: capitalize;
+}
+.translated .btn {
+	text-transform: none;
+}
+.btn-ico {
+	padding-left: 30px;
+}
+h2.btn, h3.btn, a.btn, div.btn {
+	padding-top: 9px;
+	height: 26px;
+	text-decoration: none;
+}
+.btn-sq, .btn-rnd {
+	background-color: var(--color-dark-translucent);
+	color: var(--color-light);
+}
+.btn:hover {
+	background-color: var(--color-border);
+}
+.btn-sq:hover, .btn-rnd:hover {
+	background-color: var(--color-dark);
+	color: var(--color-light);
+}
+.btn-rnd, .btn.btn-rnd {
+	width: 24px;
+	height: 24px;
+	background-size: 14px;
+	border-radius: 50%;
+	border: none;
+}
+.btn-rnd:focus {
+	outline: 0;
+}
+.btn-x {
+	background-image: var(--x-icon-light, none);
+	border-radius: 50%;
+}
+.btn-prv {
+	background-image: var(--left-icon-light, none);
+}
+.btn-nxt {
+	background-image: var(--right-icon-light, none);
+}
+input {
+	height: 33px;
+	padding: 0 3px;
+}

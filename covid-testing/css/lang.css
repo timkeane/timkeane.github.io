@@ -1,0 +1,115 @@
+#lng {
+	overflow: visible;
+	height: 33px;
+}
+#lng .menu {
+	width: 100%;
+	margin: -35px auto;
+	height: 100%;
+}
+#lng .btn {
+	position: relative;
+  display: inline-block;
+	padding: 4px 35px 5px 35px;
+	width: 210px;
+	background-position: 3px center;
+	background-image: var(--translate-icon-medium, none);
+}
+#lng .btn-sq {
+	background-image: var(--translate-icon-light, none);
+}
+#lng .btn:hover {
+	background-image: var(--translate-icon-dark, none);
+}
+#lng .btn * {
+	color: var(--color-dark);
+}
+#lng div.btn:after {
+	content: " ";
+    display: block;
+    width: 22px;
+    height: 22px;
+    float: right;
+    margin: 2px -31px 0 0;
+    background-color: var(--color-dark-translucent);
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: 14px;
+    background-position: center;
+    background-image: var(--down-icon-light, none);
+}
+#lng div.btn:hover:after {
+	background-color: var(--color-dark);
+}
+#lng .btn .hint {
+	line-height: 30px;
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+}
+#lng select {
+	display: block;
+	left: 0;
+	top: 0;
+	width: 100%;
+	opacity: 0;
+}
+#lng select option.rtl {
+	direction: rtl;
+}
+#lng .btn-sq, #lng select {
+	padding: 0;
+	width: 33px;
+}
+#lng .btn-sq .hint {
+	position: absolute;
+	top: -1000px;
+	color: transparent;
+	z-index: -1000;
+ }
+ .lng {
+	visibility: hidden;
+	position: fixed;
+	left: -10000px;
+}
+
+#lng .goog-te-gadget-icon, #lng-goog, .skiptranslate, .goog-te-banner-frame {
+	display: none;
+	height: 0;
+	position: absolute;
+	left: -1000px;
+	top: -1000px;
+}
+body .goog-text-highlight {
+	background-color: inherit;
+	-webkit-box-shadow: inherit;
+	-moz-box-shadow: inherit;
+	box-shadow: inherit;
+	box-sizing: inherit;
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	position: inherit;
+}
+font {
+	color: inherit;
+	padding: 0;
+	margin: 0;
+	line-height: inherit;
+	vertical-align: unset !important;
+}
+#banner * {
+    text-align: left;
+}
+html[lang="ur"] .fnd #banner>div {
+  margin-right: 150px;
+  overflow: hidden;
+  max-height: 35px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+html[lang="ur"] p, html[lang="ur"] font, html[lang="ur"] input {
+  line-height: 25px;
+}
+.apply font {
+  color: inherit;
+}

@@ -1,0 +1,53 @@
+.translated-rtl * {
+	text-align: right;
+	direction: rtl;
+}
+#map .ol-overlaycontainer-stopevent, 
+.name,
+.name *,
+.addr,
+.addr *,
+.phone, 
+.phone *, 
+.notranslate,
+.notranslate *,
+.ol-overlaycontainer {
+	direction: ltr !important;
+}
+.notranslate.rtl {
+	direction: rtl !important;
+}
+.translated-rtl #map .ol-overlaycontainer-stopevent * {
+	direction: rtl;
+}
+.translated-rtl .btn {
+  background-position: calc(100% - 3px) center;
+}
+.translated-rtl .btn, .translated-rtl .btn-rnd, .translated-rtl .btn-sq {
+	text-align: center;
+}
+.translated-rtl .btn-x, .translated-rtl .btn-prv, .translated-rtl .btn-nxt {
+  background-position: center center;
+}
+.translated-rtl .btn-prv {
+	background-image: var(--right-icon-light, none);
+}
+.translated-rtl .btn-nxt {
+	background-image: var(--left-icon-light, none);
+}
+.translated-rtl .btn-ico {
+	padding-right: 30px;
+	padding-left: unset;
+}
+html.translated-rtl *.notranslate .btn,
+html.translated-rtl *.notranslate .btn-sq,
+html.translated-rtl *.notranslate .btn-rnd,
+html.translated-rtl *.notranslate .btn.btn-sq,
+html.translated-rtl *.notranslate .btn.btn-rnd,
+html.translated-rtl *.notranslate.btn,
+html.translated-rtl *.notranslate.btn-sq,
+html.translated-rtl *.notranslate.btn-rnd,
+html.translated-rtl *.notranslate.btn.btn-sq,
+html.translated-rtl *.notranslate.btn.btn-rnd {
+	text-align: center;
+}

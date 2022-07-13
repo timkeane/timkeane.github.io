@@ -1,0 +1,89 @@
+.chc {
+	border: 1px solid var(--color-border);
+  width: 100%;
+}
+.chc-chc {
+	height: auto;
+  min-height: 33px;
+	width: 100%;
+  background-color: var(--color-medium);
+}
+.chc-chc {
+  border-bottom: 1px solid var(--color-border);
+}
+.chc-chc:last-of-type {
+  border-bottom: none;
+}
+.chc table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.chc td {
+  vertical-align: middle;
+}
+.chc td label {
+  display: block;
+  line-height: 20px;
+}
+.chc td.input {
+  width: 20px;
+  padding: 5px;
+}
+.chc-chc td.ico {
+  width: 32px;
+}
+.chc-chc .ico div {
+  width: 22px;
+  height: 22px;
+  margin: 5px;
+  background-repeat: no-repeat;
+  background-size: 22px;
+  background-position: center center;
+}
+.chc-chc input[type="checkbox"] {
+  height: 15px;
+  width: 15px;
+}
+.chc-chc input[type="radio"] {
+  height: 16px;
+  width: 14px;
+}
+.chc-chc:last-of-type {
+	border: none;
+}
+.chc-chc:hover {
+	background-color: var(--color-border);
+}
+.chc-chc input {
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  /* Set here so that Windows' High-Contrast Mode can override */
+  color: green;
+  outline: none;
+}
+.chc-chc input::before {
+  content: " ";
+  position: absolute;
+  border: 1px solid var(--color-dark);
+  background-color: var(--color-light);
+  width: 15px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 0 0 0 -5px;
+}
+.chc-chc input[type="checkbox"]::before {
+  background-size: 14px;
+  border-radius: var(--border-radius);
+}
+.chc-chc input[type="radio"]::before {
+  background-size: 10px;
+  border-radius: 50%;
+}
+.chc-chc input[type="checkbox"]:checked::before {
+  background-image: var(--check-icon-dark);
+}
+.chc-chc input[type="radio"]:checked::before {
+  background-image: var(--dot-icon-dark);
+}

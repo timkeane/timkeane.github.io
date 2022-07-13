@@ -36,7 +36,8 @@
   line-height: 1.55rem;
 }
 
-.fnd.monorail .facility * {
+.fnd.monorail .facility *,
+.fnd.monorail .chc-chc label{
   color: rgb(76, 76, 76);        
 }
 
@@ -62,8 +63,8 @@
   height: 28px;
   background-size: 14px;
   background-position: 5px center;
-  margin-bottom: 5px;
-  margin-top: 5px;
+  margin-bottom: 3px;
+  margin-top: 2px;
 }
 
 .fnd.monorail button.btn.rad-top,
@@ -74,7 +75,10 @@
 }
 
 .fnd.monorail .btn.rad-all.phone,
-.fnd.monorail .btn.rad-all.web {
+.fnd.monorail .btn.rad-all.web,
+.fnd.monorail .dtl .btn,
+.fnd.monorail .shw-lst .btn,
+.fnd.monorail .clps .btn {
   line-height: 28px;
   padding: 0 0.93rem;
 }
@@ -83,10 +87,15 @@
 .fnd.monorail .btn.rad-all *,
 .fnd.monorail .btn.rad-top *,
 .fnd.monorail #tabs .btn.btn-tab,
-.fnd.monorail #tabs .btns h2 button * {
+.fnd.monorail #tabs .btns h2 button *,
+.fnd.monorail .clps .btn {
   font-weight: 300;
   color: #fff;
   padding: 0;
+}
+
+.fnd.monorail .clps .btn {
+
 }
 
 .fnd.monorail #tabs .btns h2 {
@@ -102,8 +111,8 @@
   border: 1px solid rgb(39, 65, 137);
 }
 
-.fnd.monorail .facility.acc:before {
-  margin: 0 5px 0 0;
+.fnd.monorail .facility.acc .name:before {
+  margin: 1px 5px 0 0;
 }
 
 .fnd.monorail .btn.web {
@@ -111,11 +120,15 @@
 }
 
 .fnd.monorail .btn.phone {
-  background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20height%3D%221792%22%20width%3D%221792%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M1600%201240q0%2027-10%2070.5t-21%2068.5q-21%2050-122%20106-94%2051-186%2051-27%200-52.5-3.5t-57.5-12.5-47.5-14.5-55.5-20.5-49-18q-98-35-175-83-128-79-264.5-215.5t-215.5-264.5q-48-77-83-175-3-9-18-49t-20.5-55.5-14.5-47.5-12.5-57.5-3.5-52.5q0-92%2051-186%2056-101%20106-122%2025-11%2068.5-21t70.5-10q14%200%2021%203%2018%206%2053%2076%2011%2019%2030%2054t35%2063.5%2031%2053.5q3%204%2017.5%2025t21.5%2035.5%207%2028.5q0%2020-28.5%2050t-62%2055-62%2053-28.5%2046q0%209%205%2022.5t8.5%2020.5%2014%2024%2011.5%2019q76%20137%20174%20235t235%20174q2%201%2019%2011.5t24%2014%2020.5%208.5%2022.5%205q18%200%2046-28.5t53-62%2055-62%2050-28.5q14%200%2028.5%207t35.5%2021.5%2025%2017.5q25%2015%2053.5%2031t63.5%2035%2054%2030q70%2035%2076%2053%203%207%203%2021z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E);
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20height%3D%221792%22%20width%3D%221792%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M1600%201240q0%2027-10%2070.5t-21%2068.5q-21%2050-122%20106-94%2051-186%2051-27%200-52.5-3.5t-57.5-12.5-47.5-14.5-55.5-20.5-49-18q-98-35-175-83-128-79-264.5-215.5t-215.5-264.5q-48-77-83-175-3-9-18-49t-20.5-55.5-14.5-47.5-12.5-57.5-3.5-52.5q0-92%2051-186%2056-101%20106-122%2025-11%2068.5-21t70.5-10q14%200%2021%203%2018%206%2053%2076%2011%2019%2030%2054t35%2063.5%2031%2053.5q3%204%2017.5%2025t21.5%2035.5%207%2028.5q0%2020-28.5%2050t-62%2055-62%2053-28.5%2046q0%209%205%2022.5t8.5%2020.5%2014%2024%2011.5%2019q76%20137%20174%20235t235%20174q2%201%2019%2011.5t24%2014%2020.5%208.5%2022.5%205q18%200%2046-28.5t53-62%2055-62%2050-28.5q14%200%2028.5%207t35.5%2021.5%2025%2017.5q25%2015%2053.5%2031t63.5%2035%2054%2030q70%2035%2076%2053%203%207%203%2021z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E");
 }
 
 .fnd.monorail .btn.dir {
-  background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22512%22%20height%3D%22512%22%3E%3Cpath%20d%3D%22M504.401%2C237.893L273.994%2C7.486c-9.988-9.981-26.245-9.981-36.102%2C0L7.486%2C237.893c-9.981%2C9.988-9.981%2C26.251%2C0%2C36.227%20l230.406%2C230.282v0.125c9.988%2C9.987%2C26.251%2C9.987%2C36.227%2C0l230.407-230.407C514.514%2C264.006%2C514.514%2C247.881%2C504.401%2C237.893z%20%20M307.145%2C319.945v-64.002H204.742v76.803H153.54V230.343c0-14.207%2C11.395-25.601%2C25.601-25.601h128.004V140.74l89.604%2C89.603%20L307.145%2C319.945z%22%20fill%3D%22rgb(39%2C65%2C137)%22%2F%3E%3C%2Fsvg%3E);
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22512%22%20height%3D%22512%22%3E%3Cpath%20d%3D%22M504.401%2C237.893L273.994%2C7.486c-9.988-9.981-26.245-9.981-36.102%2C0L7.486%2C237.893c-9.981%2C9.988-9.981%2C26.251%2C0%2C36.227%20l230.406%2C230.282v0.125c9.988%2C9.987%2C26.251%2C9.987%2C36.227%2C0l230.407-230.407C514.514%2C264.006%2C514.514%2C247.881%2C504.401%2C237.893z%20%20M307.145%2C319.945v-64.002H204.742v76.803H153.54V230.343c0-14.207%2C11.395-25.601%2C25.601-25.601h128.004V140.74l89.604%2C89.603%20L307.145%2C319.945z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.fnd.monorail .btn.map {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22512%22%20height%3D%22512%22%3E%3Cpath%20d%3D%22m%20256%2C25.6%20c%20-95.4279%2C0%20-172.8%2C77.3721%20-172.8%2C172.8%200%2C95.4279%20144%2C288%20172.8%2C288%2028.8%2C0%20172.8%2C-192.5721%20172.8%2C-288%20C%20428.8%2C102.9721%20351.4279%2C25.6%20256%2C25.6%20Z%20m%200%2C288%20c%20-63.5346%2C0%20-115.2%2C-51.6942%20-115.2%2C-115.2%200%2C-63.5058%2051.6654%2C-115.2%20115.2%2C-115.2%2063.5346%2C0%20115.2%2C51.6942%20115.2%2C115.2%200%2C63.5058%20-51.6654%2C115.2%20-115.2%2C115.2%20z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E")
 }
 
 .fnd.monorail .zoom .btn-sq,
@@ -142,7 +155,7 @@
     top: 60px;
 }
 .fnd.monorail #lng {
-  bottom: 38px;
+  bottom: 34px;
 }
 
 .fnd.monorail .srch input {
@@ -157,9 +170,20 @@
   background-size: 12px;
 }
 
-
 .fnd.monorail .clps>button.btn:before {
-  margin: 0 5px 0 -10px;
+  margin: 3px 5px 0 -10px;
+}
+
+.fnd.monorail .clps>button.btn[aria-pressed="true"]:before {
+  margin: 5px 5px 0 -5px;
+}
+
+.fnd.monorail .dtl .btn span {
+  margin-right: 20px;
+}
+
+.fnd.monorail .dtl .btn[aria-pressed="true"] span {
+  margin-right: 25px;
 }
 
 .fnd.monorail label[for=chc-chc-0]:before {
@@ -168,7 +192,7 @@
 
 .fnd.monorail #lng div.btn:after {
   width: 20px;
-  height: 2opx;
+  height: 20px;
   background-color: #fff;
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2214px%22%20height%3D%2214px%22%3E%3Cpolygon%20points%3D%2211.949%2C3.404%207%2C8.354%202.05%2C3.404%20-0.071%2C5.525%207%2C12.596%2014.07%2C5.525%20%22%20fill%3D%22rgb(39%2C65%2C137)%22%2F%3E%3C%2Fsvg%3E");
 }
@@ -182,6 +206,46 @@
 .monorail #lng .btn {
     background-size: 20px;
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22256%22%20height%3D%22256%22%3E%3Cpath%20d%3D%22m%2028.1%2C12.8%20c%20-8.64%2C0%20-15.3%2C6.66%20-15.3%2C15.3%20l%200%2C104.7%20c%200%2C7.68%206.66%2C14.4%2015.3%2C14.4%20l%2023.1%2C0%20-19.2%2C19.2%209.6%2C0%200%2C28.8%2028.8%2C28.8%2028.8%2C0%200%2C9.6%209.6%2C-9.6%200%2C3%20c%200%2C8.64%207.56%2C16.2%2016.2%2C16.2%20l%20102%2C0%20c%208.64%2C0%2016.2%2C-7.56%2016.2%2C-16.2%20l%200%2C-102%20c%200%2C-8.64%20-7.56%2C-16.2%20-16.2%2C-16.2%20l%20-78.9%2C0%200%2C-80.7%20c%20-0.96%2C-8.64%20-7.56%2C-15.3%20-16.2%2C-15.3%20l%20-103.8%2C0%20z%20m%202.1%2C17.4%2099.6%2C0%200%2C78.6%20-4.8%2C0%20c%20-8.64%2C0%20-16.2%2C7.56%20-16.2%2C16.2%20l%200%2C6%20-78.6%2C0%200%2C-100.8%20z%20m%2040.2%2C11.4%200%2C9.6%20-28.8%2C0%200%2C9.6%2059.1%2C0%20C%2094.707191%2C71.877461%2087.315449%2C80.799287%2079.7%2C88.1%2076.011559%2C84.868487%2072.790584%2C81.779101%2070.4%2C79.1%2063.932078%2C71.851466%2062%2C67.7%2062%2C67.7%20l%20-12%2C5.4%20c%200%2C0%202.747922%2C6.648534%2010.2%2C15%202.471241%2C2.769494%205.69058%2C5.822522%209.3%2C9%20-15.412245%2C11.84203%20-29.1%2C16.8%20-29.1%2C16.8%20l%204.5%2C12.9%20c%200%2C0%2016.933957%2C-5.9946%2035.4%2C-21%205.376718%2C3.87857%2011.429626%2C7.73742%2018.6%2C11.7%20l%206.3%2C-11.7%20c%20-5.650438%2C-3.12261%20-10.377325%2C-6.25778%20-14.7%2C-9.3%208.557086%2C-8.493857%2016.83825%2C-18.961785%2023.4%2C-31.8%20l%20-7.8%2C-3.9%2012.3%2C0%200%2C-9.6%20-28.8%2C0%200%2C-9.6%20-19.2%2C0%20z%20m%2096.9%2C89.4%2020.1%2C0%2032.7%2C89.1%20-21%2C0%20-6.9%2C-19.2%20-31.5%2C0%20-6.9%2C19.2%20-20.1%2C0%2033.6%2C-89.1%20z%20m%20-106.5%2C16.2%2048%2C0%200%2C48%20-9.6%2C-9.6%200%2C9.6%20-28.8%2C0%200%2C-28.8%209.6%2C0%20-19.2%2C-19.2%20z%20m%20115.2%2C8.7%20-11.4%2C31.5%2021.9%2C0%20-10.5%2C-31.5%20z%22%20fill%3D%22rgb(35%2C65%2C138)%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.fnd.monorail  #tabs .btns .btn-2.filtered:before {
+  width: 20px;
+  height: 20px;
+  margin: -1px 10px;
+}
+
+.fnd.monorail  #tabs .btns .btn-2.filtered:before {
+  border: none;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-2%20-256%201792%201792%22%3E%3Cg%20transform%3D%22matrix(1%2C0%2C0%2C-1%2C182.23729%2C1201.8983)%22%20fill%3D%22rgb(39%2C65%2C137)%22%3E%3Cpath%20d%3D%22m%201403%2C1241%20q%2017%2C-41%20-14%2C-70%20L%20896%2C678%20V%20-64%20q%200%2C-42%20-39%2C-59%20-13%2C-5%20-25%2C-5%20-27%2C0%20-45%2C19%20L%20531%2C147%20q%20-19%2C19%20-19%2C45%20V%20678%20L%2019%2C1171%20q%20-31%2C29%20-14%2C70%2017%2C39%2059%2C39%20h%201280%20q%2042%2C0%2059%2C-39%20z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+
+.fnd.monorail  #tabs .btns .btn-2.filtered.active:before {
+  background-color: transparent;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-2%20-256%201792%201792%22%3E%3Cg%20transform%3D%22matrix(1%2C0%2C0%2C-1%2C182.23729%2C1201.8983)%22%20fill%3D%22%23fff%22%3E%3Cpath%20d%3D%22m%201403%2C1241%20q%2017%2C-41%20-14%2C-70%20L%20896%2C678%20V%20-64%20q%200%2C-42%20-39%2C-59%20-13%2C-5%20-25%2C-5%20-27%2C0%20-45%2C19%20L%20531%2C147%20q%20-19%2C19%20-19%2C45%20V%20678%20L%2019%2C1171%20q%20-31%2C29%20-14%2C70%2017%2C39%2059%2C39%20h%201280%20q%2042%2C0%2059%2C-39%20z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+
+.fnd.monorail .list .facility .dtl {
+  margin-top: 0;
+}
+
+.fnd.monorail .pop .facility .dtl {
+  margin-top: 5px;
+}
+
+.fnd.monorail .chc-chc:hover,
+.fnd.monorail .chc-chc:hover * {
+  background-color: rgb(247, 247, 247);
+  cursor: pointer;
+}
+
+.fnd.monorail .ol-overlaycontainer-stopevent .srch, 
+.fnd.monorail .ol-overlaycontainer-stopevent .srch-ctl>ul {
+  left: 34px;
+}
+
+.fnd.monorail .shr {
+  bottom: 0;
 }
 
 @media only screen and (max-width: 750px), screen and (max-device-height: 350px) {

@@ -1,0 +1,163 @@
+@import "nyc-lib.css";
+@import "ol.featuretip.css";
+@import "ol.popup.css";
+@import "rtl.ol.popup.css";
+
+.ol-overlaycontainer-stopevent .fas, .ol-control {
+  display: none;
+}.ol-rotate-reset {
+  display: none;
+}
+.lst-it:nth-child(even) {
+  background-color: var(--color-button-translucent);
+}
+.lst-it:nth-child(even) .dtl .clps .content {
+  background-color: var(--color-light);
+}
+.lst-it:nth-child(odd) .dtl .clps .content {
+  background-color: var(--color-button-translucent);
+}
+.btn-sq {
+  background-color: var(--color-dark);
+}
+.btn-sq:hover {
+  background-color: var(--color-button);
+}
+.btn:hover {
+  color: var(--color-light);
+}
+.btn:hover * {
+  color: var(--color-light);
+}
+.btn.map:hover {
+  background-image: var(--map-icon-light);
+}
+.btn.dir:hover {
+  background-image: var(--directions-icon-light);
+}
+.btn.phone:hover {
+  background-image: var(--phone-icon-light);
+}
+.btn.web:hover {
+  background-image: var(--web-icon-light);
+}
+.splash .dia-msg a.btn {
+  display: block;
+  color: var(--color-dark);
+  text-align: center;
+  text-transform: none;  
+}
+.splash .btn {
+  background-color: var(--color-button);
+}
+.splash .btn:hover,
+.splash .dia-msg a.btn:hover {
+  background-color: #F68C1E;
+  color: var(--color-light);
+}
+.fnd .splash .dia a.btn-yes:hover {
+  background-image: var(--speaker-icon-light);
+}
+.fnd .splash a.btn.rad-all.btn-yes {
+  width: calc(100% - 75px);
+}
+.fnd .splash a.btn.rad-all.btn-no {
+  width: calc(100% - 40px);
+}
+#lng .btn.rad-all {
+  width: calc(100% - 110px);
+}
+.splash p {
+  margin: 5px 0;
+}
+.dtl table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.dtl th, .dtl td {
+  border: 1px solid var(--color-dark-translucent);
+  padding: 2px 3px;
+}
+.dtl .hrs {
+  text-align: right;
+}
+.op-hours {
+  padding-top: 5px;
+}
+#mode td .btn-sq.active {
+  background-color: #F68C1E;
+}
+.fnd.translated .splash .btn {
+  text-align: center !important;
+}
+.fnd.translated .splash .btn * {
+  color: var(--color-dark);
+}
+.fnd.translated .splash .btn:hover * {
+  color: var(--color-light);
+}
+.chc-chc:hover, .chc-chc:hover * {
+  background-color: var(--color-dark);
+  color: white;
+}
+#mta * {
+  color: white;
+}
+.translated-rtl .clps .content {
+  margin-right: 3px;
+}
+.translated-rtl .pop>.content .name {
+  padding-right: initial;
+}
+.list .dtl .hrs {
+  width: 45%;
+}
+.pop .dtl .hrs {
+  width: 55%;
+}
+.fnd .splash .dia {
+  height: 250px;
+}
+.facility.acc .name:before,
+label[for="chc-chc-0"]:before {
+  display: block;
+  content: ' ';
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-size: 14px;
+  background-image: url("../img/acc.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--color-dark);
+  float: left;
+  margin: -3px 3px;
+}
+.translated-rtl .facility.acc .name:before,
+.translated-rtl label[for="chc-chc-0"]:before {
+  float: right;
+}
+.facility .detail {
+  margin: 5px;
+}
+.facility .detail .op-hours {
+  margin: 5px 0;
+}
+.facility .detail li {
+  margin: 5px 0 0 0;
+}
+.facility .detail ul {
+  padding: 0 0 0 20px;
+}
+
+@media only screen and (max-width: 750px), screen and (max-device-height: 350px) {
+  .fnd .lst-srch .srch {
+    display: block;
+    width: 100%;
+  }
+  .fnd .splash .dia {
+    width: auto;
+    left: 0;
+    right: 0;
+  }  
+}

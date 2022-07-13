@@ -1,0 +1,109 @@
+.srch {
+  position: relative;
+	width: auto;
+}
+.ol-overlaycontainer-stopevent .srch, .ol-overlaycontainer-stopevent .srch-ctl>ul {
+  position: absolute;
+	top: 3px;
+	left: 41px;
+	right: 3px;
+	max-width: 400px;
+	pointer-events: all;
+}
+.ol-overlaycontainer-stopevent .srch-ctl>ul {
+	margin-top: 38px;
+	max-width: 398px;
+}
+.srch, .srch-ctl ul {
+	background-color: var(--color-light-translucent);
+}
+.srch input {
+  padding-left: 23px;
+  padding-right: 28px;
+  width: calc(100% - 54px);
+	background-image: var(--magnify-icon-medium, none);
+	background-size: 14px;
+	background-repeat: no-repeat;
+	background-position: 3px center;
+	box-sizing: content-box;
+	min-height: 31px;
+}
+.ol-overlaycontainer-stopevent .srch input {
+  position: absolute;
+  border: 1px solid var(--color-dark);
+  background-color: var(--color-light-translucent);
+	z-index: 1;
+}
+
+.ol-overlaycontainer-stopevent {
+    z-index: 1 !important;
+}
+.ol-overlaycontainer-stopevent .srch-ctl {
+    z-index: -1;
+}
+
+.ol-overlaycontainer-stopevent .srch .btn-srch, .fnd .btn-srch {
+	display: none;
+}
+.srch-ctl ul {
+	display: none;
+	max-height: 300px;
+	padding: 0;
+	list-style-type: none;
+	box-shadow: var(--box-shadow, none);
+	overflow-x: hidden;
+	overflow-y: auto;
+	-ms-overflow-style: scrollbar;
+	margin: 1px 0 0 0;
+}
+.srch .btn-x {
+	display: none;
+	position: absolute;
+	left: calc(100% - 28px);
+	top: 5px;
+	z-index: 2;
+}
+.ol-overlaycontainer-stopevent .srch-ctl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.srch-ctl ul li {
+	background-color: var(--color-light-translucent);
+	cursor: pointer;
+	padding: 6px 3px;
+	margin: 0;
+	border-bottom: 1px solid var(--color-border);
+}
+.srch-ctl ul li:last-child {
+	border-bottom: none;
+}
+.srch-ctl ul li:focus {
+	outline: 0;
+}
+.srch-ctl ul li a {
+	text-decoration: none;
+	padding: 1px 3px;
+	width: calc(100% - 10px);
+	display: block;
+	margin: -1px 3px;
+}
+.srch-ctl ul li:hover {
+	background-color: var(--color-dark-translucent);
+}
+.srch-ctl ul li:hover a, .srch-ctl ul li:hover a * {
+	color: var(--color-light);	
+}
+.srch-ctl ul.retention {
+	display: none;
+}
+.fm .srch-ctl {
+	left: -38px;
+}
+::-ms-clear {
+  display: none;
+}
+.srch *, .srch *::before, .srch *::after {
+	box-sizing: content-box;
+}
