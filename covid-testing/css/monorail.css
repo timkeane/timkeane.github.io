@@ -1,5 +1,10 @@
 #monorail {
   opacity: 0;
+  background-image: url("https://media0.giphy.com/media/l2Je8YG8hW0q1fQo8/giphy.gif?cid=ecf05e47vq4gfvlogz3m9jkw47kqzlwli30qtf9179us112m&rid=giphy.gif&ct=g");
+  background-color: #000;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 #monorail.monorail {
@@ -7,8 +12,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  height: auto;
-  width: 100%;
+  bottom: 0;
+  right: 0;
   z-index: 1000000;
 }
 
