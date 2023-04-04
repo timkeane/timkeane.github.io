@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>random character</title>
+  <style>
+    body {
+      padding: 20px;
+      font-family: 'helvetica neue', helvetica, arial, sans-serif;
+      text-align: center;
+    }
+    img {
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+  <img id="picture" alt="The X-Men" src="https://upload.wikimedia.org/wikipedia/en/d/db/X-Men_%28Vol._6%29_No._2_Mahmud_Asrar_Variant_%28Textless%29.jpg">
+  <h1 id="name">The X-Men</h1>
+  <button id="changePicture">Next</button>
+  <script>
+    const characters = [
+      {
+        name: 'Professor X',
+        picture: 'https://upload.wikimedia.org/wikipedia/en/0/00/Professor_Charles_%27X%27_Xavier.png?20220720180922'
+      },
+      {
+        name: 'Cyclops',
+        picture: 'https://upload.wikimedia.org/wikipedia/en/e/e9/Cyclops_%28Scott_Summers_circa_2019%29.png'
+      },
+      {
+        name: 'Iceman',
+        picture: 'https://upload.wikimedia.org/wikipedia/en/0/03/Iceman.png'
+      },
+      {
+        name: 'Beast',
+        picture: 'https://upload.wikimedia.org/wikipedia/en/0/0b/Beast_%28Hank_McCoy_-_circa_2019%29.png'
+      },
+      {
+        name: 'Warren Worthington III',
+        picture: 'https://upload.wikimedia.org/wikipedia/en/1/1b/X-men_angel_archangel.jpg'
+      },
+      {
+        name: 'Jean Grey',
+        picture: 'https://upload.wikimedia.org/wikipedia/en/5/52/JeanGreyPhoenix.png'
+      }
+    ];
+    const picture = document.getElementById('picture');
+    const html = document.getElementById('name');
+    const changePicture = () => {
+      const idx = Math.floor(Math.floor(Math.random() * (characters.length)));
+      const character = characters[idx];
+      const name = character.name;
+      if (name !== html.innerHTML) {
+        html.innerHTML = name;
+        picture.alt = name;
+        picture.src = character.picture;
+      } else {
+        changePicture();
+      }
+    }
+    document.getElementById('changePicture').addEventListener('click', changePicture);
+  </script>
+</body>
+</html>
