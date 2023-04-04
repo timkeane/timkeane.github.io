@@ -1,23 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
-  <title>random character</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, height=device-height">
+  <title>The X-Men</title>
+
   <style>
+
     body {
-      padding: 20px;
+      margin: 0;
+      padding: 0;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
       font-family: 'helvetica neue', helvetica, arial, sans-serif;
       text-align: center;
     }
-    img {
-      height: 400px;
+
+    body * {
+      color: #71797E;
     }
+
+    #name {
+      font-size: 28px;
+      margin: .25em 0;
+    }
+
+    #picture {
+      background: url(https://upload.wikimedia.org/wikipedia/en/d/db/X-Men_%28Vol._6%29_No._2_Mahmud_Asrar_Variant_%28Textless%29.jpg) no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      height: 85%;
+    }
+
+    #change {
+      margin: 0;
+      font-size: 24px;
+      border-radius: .3em;
+      border: .1em solid #71797E;
+      padding: .25em .5em;
+    }
+
   </style>
+
 </head>
 <body>
-  <img id="picture" alt="The X-Men" src="https://upload.wikimedia.org/wikipedia/en/d/db/X-Men_%28Vol._6%29_No._2_Mahmud_Asrar_Variant_%28Textless%29.jpg">
+
+  <div id="picture"></div>
   <h1 id="name">The X-Men</h1>
-  <button id="changePicture">Next</button>
+  <button id="change">Next</button>
+
   <script>
+  
     const characters = [
       {
         name: 'Professor X',
@@ -44,21 +82,25 @@
         picture: 'https://upload.wikimedia.org/wikipedia/en/5/52/JeanGreyPhoenix.png'
       }
     ];
+  
     const picture = document.getElementById('picture');
     const html = document.getElementById('name');
-    const changePicture = () => {
+  
+    const change = () => {
       const idx = Math.floor(Math.floor(Math.random() * (characters.length)));
       const character = characters[idx];
       const name = character.name;
       if (name !== html.innerHTML) {
         html.innerHTML = name;
-        picture.alt = name;
-        picture.src = character.picture;
+        picture.style.backgroundImage = `url(${character.picture})`;
       } else {
-        changePicture();
+        change();
       }
     }
-    document.getElementById('changePicture').addEventListener('click', changePicture);
+  
+    document.getElementById('change').addEventListener('click', change);
+
   </script>
+
 </body>
 </html>
