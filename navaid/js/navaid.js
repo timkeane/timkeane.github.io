@@ -199,8 +199,8 @@ tk.NavAid.prototype = {
   baseLayer: function(){
     this.map.addLayer(
       new ol.layer.Tile({
-        source: new ol.source.XYZ({
-          url: 'https://tileservice.charts.noaa.gov/tiles/50000_1/{z}/{x}/{y}.png'
+        source: new ol.source.TileWMS({
+          url: 'https://gis.charttools.noaa.gov/arcgis/rest/services/MCS/ENCOnline/MapServer/exts/MaritimeChartService/WMSServer'
         })
       })
     );
