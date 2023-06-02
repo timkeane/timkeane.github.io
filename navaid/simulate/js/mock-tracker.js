@@ -73,16 +73,18 @@ tk.MockNavAid.prototype = {
     clearInterval(this.intv);
     this.navSource.clear();
     this.navBtn.removeClass('stop');
+    $('.pause-btn').removeClass('pause');
   },
   mockTracking: function(){
     this.position = this.mockPositions[this.positionIdx];
     this.positionIdx++;
-    if (this.positionIdx == this.mockPositions.length - 2){
-      this.endMockTracking();
-    }
     this.dispatchEvent('changed');
     this.updatePosition();
     this.dispatchEvent(nyc.ol.Tracker.EventType.UPDATED, this);
+    if (this.positionIdx == this.mockPositions.length - 2){
+      this.endMockTracking();
+      this.positionIdx = 0;
+    }
   },
   simulate: function(){
     $('#simulate').fadeOut();
