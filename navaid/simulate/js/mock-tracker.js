@@ -34,7 +34,7 @@ tk.MockNavAid.prototype = {
       margin: '0 0 0 -15px'
     }).on('play', function(){
       me.simulate();
-    });
+    }).trigger('click');
     me.audio = audio.get(0);
   },
   getPosition: function(){
