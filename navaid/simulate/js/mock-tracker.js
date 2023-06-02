@@ -14,7 +14,6 @@ tk.MockNavAid = function(options){
   this.source.clear();
   this.source.addFeature(this.trackFeature);
   this.restoreFeatures(tk.MockNavAid.JONES);
-  $('audio').click($.proxy(this.simulate, this));
 };
 
 tk.MockNavAid.prototype = {
@@ -24,7 +23,25 @@ tk.MockNavAid.prototype = {
   mockPositions: null,
   hackAudio: function(btn){
     var me = this, audio = btn.find('audio');
-    $('.pause-btn').append(audio);
+    me.audio = audio.get(0);
+    $('.pause-btn').on('click', function(){
+      if (me.positionIdx) {
+        if (me.position) {
+          me.position = null;
+          me.endMockTracking();
+        } else {
+          me.position = me.mockPositions[me.positionIdx];
+          me.intv = setInterval($.proxy(me.mockTracking, me), 600);
+          me.beginNavigation({
+            target: $('<div></div>')
+              .data('feature', me.source.getFeatureById('Entering Jones Inlet'))
+          });
+        }
+      } else {
+        me.simulate();
+        me.audio.play();
+      }
+    }).append(audio);
     audio.css({
       opacity: 0,
       'z-index': 1000,
@@ -32,10 +49,7 @@ tk.MockNavAid.prototype = {
       width: '100px',
       position: 'absolute',
       margin: '0 0 0 -15px'
-    }).on('play', function(){
-      me.simulate();
-    }).trigger('click');
-    me.audio = audio.get(0);
+    });
   },
   getPosition: function(){
     return this.position;
@@ -55,15 +69,16 @@ tk.MockNavAid.prototype = {
   getAccuracy: function(){
     return 30;
   },
+  endMockTracking: function(){
+    clearInterval(this.intv);
+    this.navSource.clear();
+    this.navBtn.removeClass('stop');
+  },
   mockTracking: function(){
     this.position = this.mockPositions[this.positionIdx];
     this.positionIdx++;
     if (this.positionIdx == this.mockPositions.length - 2){
-      clearInterval(this.intv);
-      this.navSource.clear();
-      this.navFeature = null;
-      this.warnOff();
-      this.navBtn.removeClass('stop');
+      this.endMockTracking();
     }
     this.dispatchEvent('changed');
     this.updatePosition();
@@ -84,7 +99,6 @@ tk.MockNavAid.prototype = {
     this.mockPositions = feature.getGeometry().getCoordinates();
     this.mockTracking();
     this.intv = setInterval($.proxy(this.mockTracking, this), 600);
-    $('a.pause-btn').trigger('click');
     this.beginNavigation({
       target: $('<div></div>')
         .data('feature', this.source.getFeatureById('Entering Jones Inlet'))
