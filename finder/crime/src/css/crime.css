@@ -1,0 +1,496 @@
+html, body {
+	overflow: hidden;
+}
+html, body, .ui-mobile .ui-page-active, #main {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+.ui-page-theme-a * {
+	font-size: 14px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	text-decoration: none;
+	text-shadow: none;
+	color: black;
+}
+#main {
+	width: 100%;
+	height: 100%;
+}
+#map {
+	position: fixed;
+	width: calc(100% - 320px);
+	bottom: 0;
+	top: 45px;
+}
+span.noshow {
+	display: none;
+}
+.capitalize{
+	text-transform: capitalize;
+}
+span.srch-icon-precinct:after, span.srch-icon-correction:after {
+	background-image: url(../img/shield.png);
+	background-repeat: no-repeat;
+	background-size: 16px;
+}
+span.srch-icon-correction:after {
+	background-image: url(../img/key.png);
+}
+
+#ctl-z-srch {
+	top: -3px;
+}
+
+/* ========================== begin panel ======================== */
+
+div#panel {
+    position: fixed;
+    width: 314px;
+	top: 45px;
+	right: 0;
+	bottom: 0;	
+    z-index: 1000;
+	box-shadow: 5px 10px 20px 5px rgba(0,0,0,0.5);
+	background-color: white;
+    padding: 0 3px 15px 3px;
+    overflow-y: auto;
+}
+div#panel label {
+	font-weight: bold;
+}
+div#panel .ui-radio-on:after {
+    border-color: rgba(0,0,0,0.5);
+}
+div#map-type-input {
+	margin-top: 4px;
+}
+#chart-pane div.ui-collapsible-content {
+	padding: 5px;
+}
+#legend {
+	min-height: 205px;
+}
+
+/* =========================== end panel ========================= */
+
+
+/* ======================== begin legend ========================= */
+
+/* precinct */
+table.legend.precinct td.leg-bin img {
+	width: 20px;
+	height: 20px;
+	border: 2px solid rgba(0,0,0,0.5);
+}
+table.legend.precinct .leg-bin-0 img {
+	background-color: rgba(254,237,222, 0.5);
+}
+table.legend.precinct .leg-bin-1 img {
+	background-color: rgba(253,190,133, 0.5);
+}
+table.legend.precinct .leg-bin-2 img {
+	background-color: rgba(253,141,60, 0.5);
+}
+table.legend.precinct .leg-bin-3 img {
+	background-color: rgba(230,85,13, 0.5);
+}
+table.legend.precinct .leg-bin-4 img {
+	background-color: rgba(166,54,3, 0.5);
+}
+/* location */
+table.legend.location img {
+	background-color: rgba(95,174,231,0.7);
+	border: 2px solid rgba(0,0,0,0.5);
+}
+table.legend.location .leg-bin-0 img {
+	border-radius: 9px;
+	width: 9px;
+	height: 9px;
+}
+table.legend.location .leg-bin-1 img {
+	border-radius: 19px;
+	width: 19px;
+	height: 19px;
+}
+table.legend.location .leg-bin-2 img {
+	border-radius: 29px;
+	width: 29px;
+	height: 29px;
+}
+table.legend.location .leg-bin-3 img {
+	border-radius: 39px;
+	width: 39px;
+	height: 39px;
+}
+table.legend.location .leg-bin-4 img {
+	border-radius: 49px;
+	width: 49px;
+	height: 49px;
+}
+.small table.legend.location .leg-bin-0 img {
+	border-radius: 4px;
+	width: 4px;
+	height: 4px;
+}
+.small table.legend.location .leg-bin-1 img {
+	border-radius: 9px;
+	width: 9px;
+	height: 9px;
+}
+.small table.legend.location .leg-bin-2 img {
+	border-radius: 14px;
+	width: 14px;
+	height: 14px;
+}
+.small table.legend.location .leg-bin-3 img {
+	border-radius: 19px;
+	width: 19px;
+	height: 19px;
+}
+.small table.legend.location .leg-bin-4 img {
+	border-radius: 24px;
+	width: 24px;
+	height: 24px;
+}
+/* heat */
+table.legend.heat {
+	border-collapse: collapse;
+	margin-left: 3px;
+}
+table.legend.heat caption{
+	margin-left: -3px;
+	margin-bottom: 3px;
+}
+table.legend.heat td.leg-bin{
+	width: 20px;
+	height: 20px;
+	padding: 0;
+	border-left: 2px solid rgba(0,0,0,0.5);
+	border-right: 2px solid rgba(0,0,0,0.5);
+}
+table.legend.heat .leg-bin-0 {
+	border-top: 2px solid rgba(0,0,0,0.5);
+	background-color: rgba(254,237,222,0.7);
+}
+table.legend.heat .leg-bin-1 {
+	background-color: rgba(253,190,133,0.7);
+}
+table.legend.heat .leg-bin-2 {
+	background-color: rgba(253,141,60,0.7);
+}
+table.legend.heat .leg-bin-3 {
+	background-color: rgba(230,85,13,0.7);
+}
+table.legend.heat .leg-bin-4 {
+	background-color: rgba(166,54,3,0.7);
+	border-bottom: 2px solid rgba(0,0,0,0.5);
+}
+
+/* ========================== end legend =========================== */
+
+
+/* ======================= begin first load ======================== */
+
+#first-load {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #E8E8E8;
+	z-index: 1000000;
+}
+#first-load td {
+	text-align: center;
+}
+#first-load img {
+	width: 220px;
+	height: 75px;
+}
+#first-load p {
+	font-size: 34px;
+	font-weight: bold;
+	color: black;
+	text-align: center;
+	margin-top: -14px;
+}
+
+/* ======================= end first load ======================== */
+
+
+/* ========================= begin banner ======================== */
+
+.ui-page-theme-a .banner {
+	background-color: black;
+	height: 44px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	border-top: none;
+	overflow: hidden;
+}
+.logo {
+	height: 24px;
+	cursor: pointer;
+	position: absolute;
+	top: 10px;
+}
+.nypd {
+	left: 3px;
+}
+.nyc {
+	left: 28px;
+}
+.ui-page-theme-a .banner h1 {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	color: white;
+	margin: -4px 0 0 0;
+	cursor: pointer;
+	font-size: 24px;
+	font-weight: bold;
+	text-align: left;
+	position: absolute;
+	left: 105px;
+	top: 11px;
+	right: 3px;
+}
+#dir-page .banner h1 {
+	right: 135px;
+}
+#map-page .ui-content, #dir-page .ui-content {
+	overflow: hidden;
+	position: fixed;
+	top: 45px;
+	bottom: 0;
+	width: 100%;
+}
+#btn-toggle, #spinner {
+	display: none;
+	width: 44px;
+	height: 44px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 30px 30px;
+	position: fixed;
+	top:  0;
+	right: 0;
+	cursor: pointer;
+}
+#btn-toggle {
+	cursor: pointer;
+}
+#btn-toggle.btn-map {
+	background-image: url(../img/map.svg);
+}
+#btn-toggle.btn-panel {
+	background-image: url(../img/panel.png);
+}
+#spinner {
+	background-image: url(../img/searching.gif);
+	background-color: black;
+}
+
+/* ========================== end banner ========================= */
+
+
+/* ========================= begin chart ========================= */
+
+#chart-all {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 1000;
+	background-color: white;
+	max-height: calc(100% - 45px);
+	height: 320px;
+	overflow-x: auto;
+	overflow-y: hidden;
+	box-shadow: 5px 10px 20px 5px rgba(0,0,0,0.9);
+}
+#chart-all-close {
+	display: none;
+	position: fixed;
+	right: 0;
+	width: 22px;
+	height: 22px;
+	background-color: rgba(0,0,0,0.3);
+	border-radius: 22px;
+	background-image: url("data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22iso-8859-1%22%3F%3E%3C!DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd%22%3E%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20%20width%3D%2214px%22%20height%3D%2214px%22%20viewBox%3D%220%200%2014%2014%22%20style%3D%22enable-background%3Anew%200%200%2014%2014%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20style%3D%22fill%3A%23FFFFFF%3B%22%20points%3D%223.404%2C2.051%208.354%2C7%203.404%2C11.95%205.525%2C14.07%2012.596%2C7%205.525%2C-0.071%20%22%2F%3E%3C%2Fsvg%3E");
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+	margin: 5px;
+}
+#chart-all-close:hover {
+	background-color: rgba(0,0,0,0.5);
+}
+div.chart-title {
+	height: 55px;
+}
+#chart-sum canvas {
+	width: 300px;
+	height: 145px;
+}
+#chart-all canvas {
+	width: 3000px;
+	height: calc(100% - 85px);
+	margin: 0 10px 10px 10px;
+}
+#chart-all .chart-title {
+	padding: 10px 0 0 10px;
+}
+#chart-sum.chart-none div.chart-title, #chart-sum.chart-none canvas {
+	display: none;
+}
+#chart-sum div.chart-note {
+	display: none;
+}
+#chart-sum.chart-none div.chart-note {
+	display: block;
+	text-align: center;
+	height: 44px;
+	padding: 80px 20px;
+}
+
+/* ========================== end chart ========================== */
+
+
+/* ======================= begin copyright ======================= */
+
+#copyright {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(255,255,255,0.5);
+	z-index: 1000;
+}
+div#copyright {
+	font-size: 12px;
+	padding: 0 3px;
+}
+
+/* ======================== end copyright ======================== */
+
+
+/* ======================= begin downloads ======================= */
+
+.download-data, .download-code {
+	text-align: left;
+}
+.download-data:after, .download-code:after {
+	background-color: rgba(0,0,0,0.3);
+	color: white;
+	width: 22px;
+	height: 22px;
+	border-radius: 11px;
+	content: " ";
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.download-data:hover:after, .download-code:hover:after {
+	background-color: black;
+}
+.download-data:after {
+	background-image: url(../img/data.png);
+	background-size: 26px;
+}
+.download-code:after {
+	background-image: url(../img/github.png);
+	background-size: 19px;
+}
+
+/* ======================== end downloads ======================== */
+
+
+/* ======================= begin overrides ======================= */
+
+.tip-pct {
+	min-width: 130px;
+}
+.tip-sct, .tip-loc {
+	min-width: 75px;
+	text-align: center;
+}
+.tip-1000, .tip-1000 span {
+	font-size: 80%;
+	text-transform: lowercase;
+}
+.crime-count div{
+	display: inline-block;
+}
+div.cartodb-popup {
+    width: 290px !important;
+}
+div.cartodb-popup-content .crime-count a {
+	display: none;
+}
+div.crime-count[data-type="Crimes"] {
+	margin-bottom: 2px;
+}
+div.crime-count[data-type="Crimes"] div {
+	padding: 2px 0 0 27px;
+}
+div.crime-count[data-type="Crimes"] a {
+	display: inline;
+	position: absolute;
+	cursor: pointer;
+	width: 22px;
+	height: 22px;
+	padding: 0;
+	margin-left: -7px;
+}
+.crime-count a:hover:after {
+	background-color: rgba(0,0,0,0.5);
+}
+ul.crime-count-type {
+	display: none;
+	padding: 0 0 0 24px;
+	margin: 0;
+	background-color: #f6f6f6;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	margin: 3px 0;
+}
+ul.crime-count-type li span.crime-type-indent {
+	position: relative;
+	left: -6px;
+}
+a.stat-note, a.stat-note:visited {
+	color: black;
+	font-weight: normal;
+}
+a.stat-note:hover {
+	text-decoration: underline;
+}
+a.stat-note:before {
+	content: '\25ba';
+}
+
+/* ======================== end overrides ======================== */
+
+
+/* ===================== begin media queries ===================== */
+
+@media only screen and (max-width : 495px), screen and (max-height: 350px) {
+	#btn-toggle {
+		display: block;
+	}
+	#map {
+		width: 100%;
+	}
+	div#panel {
+		width: calc(100% - 6px);
+		display: none;
+	}
+}
+
+/* ====================== end media queries ====================== */

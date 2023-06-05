@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-41281554-16"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-41281554-16');
+	</script>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta prefix="og: http://ogp.me/ns#" property="og:title" content="FoodHelp.nyc Food Map">
+	<meta prefix="og: http://ogp.me/ns#" property="og:type" content="website">
+	<meta prefix="og: http://ogp.me/ns#" property="og:url" content="https://maps.nyc.gov/foodhelp">
+	<meta prefix="og: http://ogp.me/ns#" property="og:image" content="https://maps.nyc.gov/foodhelp/img/og.png">
+	<meta prefix="og: http://ogp.me/ns#" property="og:image:width" content="1200">
+	<meta prefix="og: http://ogp.me/ns#" property="og:image:height" content="626">
+	<meta prefix="og: http://ogp.me/ns#" property="og:description" content="You can get food today from New York City’s food pantries, which provide groceries you can cook at home, and community kitchens, which provide hot meals. Food pantries and community kitchens are located throughout the five boroughs. If you need food immediately, find locations near you by using our Food Map.">
+	<meta prefix="og: http://ogp.me/ns#" property="og:site_name" content="NYC.gov">
+	<meta name="google-translate-customization" content="4707bd7f535893a0-45bca7b6a97e5a2d-g609df9381571b349-c">
+
+ 	<title class="food_help_locator">FoodHelp NYC Locator</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.2.0/ol.css">
+	<link rel="stylesheet" href="../nyc-lib/v0.4.2/css/nyc-ol-lib.css">
+	<link rel="stylesheet" href="css/food.css">
+
+	<link rel="manifest" href="manifest.webmanifest">
+	<link rel="apple-touch-startup-image" href="img/icon-512.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/icon-60.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/icon-76.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/icon-120.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/icon-152.png">
+	<link rel="apple-touch-icon" sizes="167x167" href="img/icon-167.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/icon-180.png">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.15/proj4.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.2.0/ol.js"></script>
+</head>
+<body>
+	<table id="first-load">
+		<tbody><tr><td>
+			<img src="img/first-load.gif" alt="maps.nyc.gov"><p>maps.nyc.gov</p>
+		</td></tr></tbody>
+	</table>
+	<h1 id="print-header">FoodHelp.nyc (<span class="call_311">Call 311 for more information</span>)</h1>
+	<div class="banner" id="banner">
+		<img class="banner-logo" src="img/foodhelp_logo.png" onclick="document.location='./';" alt="FoodHelp NYC" title="FoodHelp NYC">
+		<a class="hamburger" onclick="$('div.lnks').slideToggle();"><span class="noshow">links</span></a>
+		<a class="prn-btn" data-msg-key="print_list" data-msg-attr="title" onmouseover="$('.prn-msg').fadeIn();" onmouseout="$('.prn-msg').fadeOut();" title="Print the list of locations"><span class="noshow print_list">Print the list of locations</span></a>
+		<div class="prn-msg print_list">Print the list of locations</div>
+	</div>
+	<div class="lnks">
+		<div>
+			<a class="link_hra_txt" href="https://a069-access.nyc.gov/ACCESSNYC/application.do" target="_blank" rel="noopener noreferrer">ACCESS HRA</a>
+			<a class="link_snap_txt" data-msg-key="link_snap_href" data-msg-attr="href" href="https://portal.311.nyc.gov/article/?kanumber=KA-01018" target="_blank" rel="noopener noreferrer">Apply for SNAP</a>
+		</div>
+	</div>
+
+	<div id="splash-page" data-role="page">
+		<div class="content">
+			<div class="splash-btns">
+				<div id="translate"></div>
+				<div class="splash-msg splash_msg">You can get food today from New York City’s food pantries, which provide groceries you can cook at home, and community kitchens, which provide hot meals.
+					<p></p>Food pantries and community kitchens are located throughout the five boroughs. If you need food immediately, find locations near you by using our Food Map.
+				</div>
+				<a class="splash-map splash_continue" data-role="button" href="#map-page">
+					Continue To FoodHelp NYC Map
+				</a>
+			</div>
+		</div>
+	</div>
+	<div id="map-page" data-role="page" data-title="FoodHelp NYC Locator">
+		<div id="main" data-role="main" class="ui-content">
+			<div id="map"></div>
+			<a class="ctl-btn call-311" data-msg-key="call_311" data-msg-attr="title" data-role="button" href="tel:311" title="For more information call 311">311</a>
+		</div>
+		<div id="panel">
+			<div id="panel-content">
+				<div id="tabs" data-role="tabs">
+					<div data-role="navbar">
+						<ul>
+							<li id="map-tab-btn">
+								<a href="#map-tab">Map</a>
+							</li>
+							<li id="locations-tab-btn">
+								<a class="ui-btn-active locations_tab" href="#locations-tab">Locations</a>
+							</li>
+							<li>
+								<a href="#filters-tab" class="filters_tab">Filters</a>
+							</li>
+						</ul>
+					</div>
+					<div id="map-tab"></div>
+					<div id="locations-tab">
+						<a class="call-311 call_311" data-role="button" href="tel:311">For more information call 311</a>
+						<div id="location-list"></div>
+						<div id="btn-more"><a class="more_button" data-role="button">More...</a></div>
+					</div>
+					<div id="filters-tab">
+						<a class="call-311 call_311" data-role="button" href="tel:311">For more information call 311</a>
+						<div id="filters" class="filters-content">
+							<div class="filter-name filter_boro">Filter by Borough</div>
+							<select id="filter-by-borough">
+								<option class="filter_all" value="All" selected="selected">All...</option>
+								<option value="Bronx">Bronx</option>
+								<option Value="Brooklyn">Brooklyn</option>
+								<option value="New York">Manhattan</option>
+								<option value="Queens">Queens</option>
+								<option value="Staten Island">Staten Island</option>
+							</select>
+
+							<div class="filter-name filter_type">Filter by Facility Type</div>
+							<select id="filter-by-type">
+								<option class="filter_all" value="All" selected="selected">All...</option>
+								<option value="SL" class="legend_snap">Apply for SNAP/Food Benefits</option>
+								<option value="SK" class="legend_kitchen">Community Kitchen (serves hot foods)</option>
+								<option value="FP" class="legend_pantry">Food Pantry (provides packaged goods)</option>
+							</select>
+
+							<label for="filter-by-kosher" class="filter-name filter_kosher">Show only Kosher providers</label>
+							<input id="filter-by-kosher" type="checkbox">
+
+							<!-- No presentation of language information at facilities at this time
+
+							<div class="filter-name filter_lang">Filter by Language</div>
+							<select id="filter-by-language"></select>
+
+							-->
+						</div>
+
+						<div  class="legend-content">
+							<h3 class="legend_1">Service Type</h3>
+							<div class="legend-row">
+								<div class="circle snap"></div>
+								<span class="legend-text legend_snap">Apply for SNAP/Food Benefits</span>
+							</div>
+							<div class="legend-row">
+								<div class="circle community-kitchen"></div>
+								<span class="legend-text legend_kitchen">Community Kitchen</span>
+							</div>
+							<div class="legend-row">
+								<div class="circle food-pantry"></div>
+								<span class="legend-text legend_pantry">Food Pantry</span>
+								<div></div>
+							</div>
+							<h3 class="info_speciality">Service Speciality</h3>
+							<div class="legend-row">
+								<div class="circle special">K</div>
+								<span class="legend-text legend_kosher">Kosher</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.3/jquery.csv.min.js"></script>
+	<script src="../nyc-lib/v0.4.2/js/nyc-ol-lib.js" type="text/javascript"></script>
+	<script src="js/messages.js"></script>
+	<script src="js/feature.js"></script>
+	<script src="js/locator.js"></script>
+	<script src="js/style.js"></script>
+	<script src="js/init.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>

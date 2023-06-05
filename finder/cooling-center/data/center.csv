@@ -1,0 +1,362 @@
+﻿OBJECTID,NYCEM_ID,FACILITY_NAME,ADDRESS,BOROUGH,ZIP_CODE,PHONE,HANDICAP_ACCESS,EXTENDED_HOURS,STATUS,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday,X,Y,FACILITY_TYPE,Entrance_info,PET_FRIENDLY
+9,CC1053,New Amsterdam Branch Library,9 Murray St,Manhattan,10007,(212) 732-8186,Yes,No,OPEN,10a-7p,10a-7p,10a-7p,10a-7p,10a-5p,10a-5p,,982074.0,199261.0,Library,,No
+12,CC362,LaGuardia NSC - SENIORS ONLY,280 Cherry St,Manhattan,10002,(212) 732-3656,No,No,OPEN,8:30a-4:30p,8:30a-4:30p,8:30a-4:30p,8:30a-4:30p,8:30a-4:30p,,,987408.999904,198534.999961,Senior center,,No
+13,CC215,Chatham Square Library,33 East Broadway,Manhattan,10002,(212) 964-6598,Yes,No,OPEN,9a-7p,9a-7p,9a-7p,9a-7p,10a-6p,10a-5p,,985222.0,199149.0,Library,,No
+15,CC120,Seward Park Library,192 East Broadway,Manhattan,10002,(212) 477-6770,Yes,No,OPEN,10a-8p,10a-8p,10a-8p,10a-8p,10a-5p,10a-5p,,987428.0,199577.0,Library,,No
+16,CC361,Weinberg Neighborhood NSC - SENIORS ONLY,197 East Broadway ,Manhattan,10002,(646) 395-4270,Yes,Hours may be extended during a heat emergency.,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,987481.408223,199396.696401,Senior center,6th floor,No
+21,CC122,Tompkins Square Library,331 E 10 St,Manhattan,10009,(212) 228-4747,Yes,No,OPEN,11a-7p,11a-7p,11a-7p,11a-7p,10a-6p,10a-5p,,989659.0,204226.0,Library,,No
+23,CC264,John Paul II Friendship NSC - SENIORS ONLY,103 E 7 St,Manhattan,10009,(212) 673-7704,Yes,No,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,988486.000046,204065.000056,Senior center,,No
+25,CC474,Mott Street NSC - SENIORS ONLY,180 Mott St,Manhattan,10012,(212) 966-5460,Yes,No,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,985461.999861,201791.000011,Senior center,,No
+26,CC263,Mulberry Street Library,10 Jersey St,Manhattan,10012,(212) 966-3424,Yes,No,OPEN,11a-7p,10a-7p,11a-7p,10a-7p,10a-5p,10a-5p,,985427.0,203065.0,Library,,No
+27,CC412,Center on the Square NSC - SENIORS ONLY,20 Washington Square North,Manhattan,10011,(212) 777-3555,Yes,Hours may be extended during a heat emergency.,OPEN,9a-4:45p,9a-4:45p,9a-4:45p,9a-4:45p,9a-4:45p,,,984905.999988,205984.000155,Senior center,,No
+28,CC459,Hudson Park Library,66 Leroy St,Manhattan,10014,(212) 243-6876,No,No,OPEN,10a-6p,10a-6p,10a-6p,10a-6p,10a-6p,10a-5p,,982769.0,205187.0,Library,,No
+30,CC110,Our Lady of Pompeii NSC - SENIORS ONLY,25 Carmine St,Manhattan,10014,(212) 989-3620,Yes,No,OPEN,9a-5p,9a-5p,9a-5p,9a-5p,9a-5p,,,983444.999958,205440.999929,Senior center,Entrance on Carmine St.,No
+34,CC244,Muhlenberg Library,209 W 23 St,Manhattan,10011,(212) 924-1585,Yes,No,OPEN,10a-7p,10a-7p,10a-7p,10a-7p,10a-6p,10a-5p,,985368.0,210525.0,Library,,No
+38,CC1037,Petco Union Square - Pet Friendly,860 Broadway,Manhattan,10003,(212) 358-0692,Yes,No,OPEN,9a-9p,9a-9p,9a-9p,9a-9p,9a-9p,9a-9p,9a-9p,987075.0,207871.0,Other,,Yes
+40,CC261,Kips Bay Library,446 3 Av,Manhattan,10016,(212) 683-2520,Yes,No,OPEN,10a-6p,10a-6p,10a-6p,10a-6p,10a-6p,10a-5p,,989811.0,210266.0,Library,,No
+41,CC043,Epiphany Library,228 E 23 St,Manhattan,10010,(212) 679-2645,No,No,OPEN,12p-7p,10a-6p,12p-7p,10a-6p,10a-5p,10a-5p,,989218.0,208168.0,Library,,No
+44,CC957,NYC Vaccine Hub - ATC Vaccination Times Square (Pet Friendly),"20 Times Square, 7 Av",Manhattan,10036,,Yes,No,OPEN,7:30a-7p,7:30a-7p,7:30a-7p,7:30a-7p,7:30a-7p,7:30a-7p,7:30a-7p,987979.48728,214779.745031,Other,,Yes
+45,CC004,Project Find Woodstock NSC - SENIORS ONLY,127 W 43 St,Manhattan,10036,(212) 575-0693,Yes,Hours may be extended during a heat emergency.,OPEN,8:30a-5p,8:30a-5p,8:30a-5p,8:30a-5p,8:30a-5p,8:30a-5p,8:30a-5p,988459.573262,214783.9527,Senior center,,No
+49,CC091,Columbus Library,742 10 Av,Manhattan,10019,(212) 586-5098,Yes,No,OPEN,10a-7p,10a-7p,10a-7p,10a-7p,10a-5p,10a-5p,,986649.0,217970.0,Library,,No
+50,CC034,Project Find Clinton NSC - SENIORS ONLY,530 W 55 St,Manhattan,10019,(212) 580-0888,Yes,No,OPEN,8a-5p,8a-5p,8a-5p,8a-5p,8a-5p,,,986733.999941,219096.999848,Senior center,,No
+51,CC463,Find Aid ISC - SENIORS ONLY,141 W 73 St,Manhattan,10023,(212) 787-7710,Yes,Hours may be extended during a heat emergency.,OPEN,9a-7p,9a-7p,9a-7p,9a-7p,9a-7p,,9a-5p,989858.999925,223072.0001,Senior center,,No
+52,CC641,JASA Club 76 NSC - SENIORS ONLY,120 W 76 St,Manhattan,10023,(212) 712-0170,Yes,Hours may be extended during a heat emergency.,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,990365.146222,223531.508367,Senior center,,No
+53,CC250,West 65 Street NSC - SENIORS ONLY,250 W 65 St,Manhattan,10023,(212) 874-0860,Yes,No,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,987865.148926,221555.394865,Senior center,,No
+57,CC083,St Agnes Library,444 Amsterdam Av,Manhattan,10024,(212) 621-0619,Yes,No,OPEN,10a-6p,10a-7p,10a-7p,10a-7p,10a-6p,10a-6p,,990497.136721,225212.324883,Library,,No
+59,CC584,53rd Street,18 West 53 St,Manhattan,10019,(212) 714-8400,Yes,No,OPEN,11a-6p,11a-6p,11a-6p,11a-6p,11a-6p,11a-6p,,990525.853906,216463.939169,Library,,No
+63,CC094,Fifty Eighth Street Library,127 E 58 St,Manhattan,10022,(212) 759-7358,Yes,No,OPEN,10a-6p,10a-6p,10a-6p,10a-6p,10a-5p,10a-5p,,992745.0,216937.0,Library,,No
+64,CC1043,Petco Turtle Bay - Pet Friendly,991 2 Ave,Manhattan,10022,(212) 593-7213,Yes,No,OPEN,9a-9p,9a-9p,9a-9p,9a-9p,9a-9p,9a-9p,9a-9p,993190.0,214896.0,Other,,Yes
+66,CC116,Yorkville Library,222 E 79 St,Manhattan,10021,(212) 744-5824,No,No,OPEN,11a-7p,10a-6p,11a-7p,10a-6p,10a-5p,10a-5p,,996317.0,221122.0,Library,,No
+67,CC260,Sixty-Seventh Street Library,328 E 67 St,Manhattan,10065,(212) 734-1717,Yes,No,OPEN,11a-7p,11a-7p,11a-7p,11a-7p,10a-5p,10a-5p,,995450.0,217951.0,Library,,No
+70,CC464,Webster Library,1465 York Av,Manhattan,10021,(212) 288-5049,Yes,No,OPEN,11a-7p,11a-7p,11a-7p,11a-7p,10a-5p,10a-5p,,997718.0,220048.0,Library,,No
+72,CC1040,Petco 86th Lexington NY - Pet Friendly,1280 Lexington Ave,Manhattan,10028,(212) 369-7903,Yes,No,OPEN,9a-9p,9a-9p,9a-9p,9a-9p,9a-9p,9a-9p,9a-9p,996515.0,223481.0,Other,,Yes
+73,CC117,Ninety Sixth Street Library,112 E 96 St,Manhattan,10128,(212) 289-0908,Yes,No,OPEN,10a-7p,10a-7p,10a-7p,10a-7p,10a-5p,10a-5p,,997606.0,225653.0,Library,,No
+77,CC524,Aguilar Library,174 E 110 St,Manhattan,10029,(212) 534-2930,Yes,No,OPEN,10a-6p,10a-6p,10a-6p,10a-6p,10a-6p,10a-5p,,999900.0,228619.0,Library,,No
+78,CC335,Harlem Library,9 W 124 St,Manhattan,10027,(212) 348-5620,Yes,No,OPEN,11a-7p,11a-7p,11a-7p,11a-7p,10a-5p,10a-5p,,999942.0,233007.0,Library,,No
+79,CC084,Harlem Temple Corps Comm Center,540 Lenox Av,Manhattan,10037,(212) 862-3900,Yes,Hours may be extended during a heat emergency.,OPEN,8a-6p,8a-8p,8a-8p,8a-6p,8a-6p,,,1001043.0,236409.0,Community center,,No
+82,CC085,Manhattan Citadel Corps Comm Center,145 E 125 St,Manhattan,10035,(212) 860-3200,Yes,Hours may be extended during a heat emergency.,OPEN,8:30a-4p,8:30a-4p,8:30a-4p,8:30a-4p,8:30a-4p,,,1001686.21048,232397.756994,Community center,,No
+83,CC255,Beatrice Lewis NSC - SENIORS ONLY,2322 3 Av,Manhattan,10035,(212) 289-9155,Yes,No,OPEN,9a-5p,9a-5p,9a-5p,9a-5p,9a-5p,,,1002096.00006,232517.999909,Senior center,,No
+84,CC253,Robinson,110 E 129 St,Manhattan,10035,(646) 476-4088,Yes,Hours may be extended during a heat emergency.,OPEN,6p-10p,6p-10p,6p-10p,6p-10p,6p-10p,3p-11p,3p-11p,1001804.0,233237.0,Cornerstone Program,,No
+85,CC337,One Hundred Twenty-fifth St Library,224 E 125 St,Manhattan,10035,(212) 534-5050,Yes,No,OPEN,11a-7p,11a-7p,11a-7p,11a-7p,10a-5p,10a-5p,,1002276.0,231831.0,Library,,No
+87,CC1030,Harry Belafonte-15th Street Library,203 W 115th St New York NY 10026,Manhattan,10026,212-666-9393,Yes,No,OPEN,11a-7p,11a-7p,11a-7p,11a-7p,10a-5p,10a-5p,,997120.0,231835.0,Library,,No
+88,CC355,One Hundred Fifteenth St Library,203 W 115 St,Manhattan,10026,(212) 666-9393,Yes,No,OPEN,11a-7p,11a-7p,11a-7p,11a-7p,10a-5p,10a-5p,,997118.0,231824.0,Library,,No
+90,CC251,Bloomingdale Library,150 W 100 St,Manhattan,10025,(212) 222-8030,Yes,No,OPEN,10a-7p,10a-7p,11a-7p,11a-7p,10a-5p,10a-5p,,993159.710236,229257.107389,Library,,No
+92,CC461,The Center at the Red Oak NSC - SENIORS ONLY,135 W 106 St,Manhattan,10025,(212) 749-7015,Yes,Hours may be extended during a heat emergency.,OPEN,8:30a-4p,8:30a-4p,8:30a-4p,8:30a-4p,8:30a-4p,,,994165.999841,230836.99999,Senior center,,No
+93,CC112,Morningside Heights Library,2900 Broadway,Manhattan,10025,(212) 864-2530,Yes,No,OPEN,10a-6p,10a-6p,10a-6p,10a-6p,10a-6p,10a-5p,,993997.0,232947.0,Library,,No
+94,CC336,Countee Cullen Library,104 W 136 St,Manhattan,10030,(212) 491-2070,Yes,No,OPEN,11a-7p,11a-7p,11a-7p,11a-7p,11a-5p,11a-5p,,1000539.84799,236165.242932,Library,,No
+98,CC1018,P.S. 180 Hugo Newman,370 WEST 120TH STREET,Manhattan,10027,,Yes,No,OPEN,8a-5p,8a-5p,8a-5p,8a-5p,8a-5p,,,996468.0,233499.0,School,,No
+99,CC354,George Bruce Library,518 W 125 St,Manhattan,10027,(212) 662-9727,Yes,No,OPEN,12p-7p,12p-7p,12p-7p,12p-7p,11a-6p,11a-6p,,996123.0,235765.0,Library,,No
+103,CC937,Thomas Jefferson Recreation Center,2180 1 Av,Manhattan,10029,(212) 860-1383,Yes,No,OPEN,10a-6p,10a-6p,10a-6p,10a-6p,10a-6p,9a-3p,,1001762.6815,228320.688749,Community center,,No
+104,CC041,Hamilton Grange NSC - SENIORS ONLY,420 W 145 St,Manhattan,10031,(212) 862-4181,Yes,Hours may be extended during a heat emergency.,OPEN,9a-5p,9a-5p,9a-5p,9a-5p,9a-5p,,,999168.000008,239593.999864,Senior center,,No
+105,CC356,Hamilton Grange Library,503 W 145 St,Manhattan,10031,(212) 926-2147,Yes,No,OPEN,10a-7p,10a-7p,10a-7p,10a-7p,11a-6p,11a-5p,,998638.558959,240098.904603,Library,,No
+107,CC045,Washington Heights,1000 St Nicholas Av,Manhattan,10032,(212) 923-6054,Yes,No,OPEN,10a-7p,10a-7p,10a-7p,10a-7p,10a-5p,10a-5p,,1000915.51115,243339.964528,Library,,No
+109,CC434,Riverstone Senior Life NSC - SENIORS ONLY,99 Fort Washington Av,Manhattan,10032,(212) 927-5600,Yes,No,OPEN,8:30a-4:30p,8:30a-4:30p,8:30a-4:30p,8:30a-4:30p,8:30a-4:30p,,,999585.000158,245038.000131,Senior center,,No
+116,CC436,YM YWHA ISC - SENIORS ONLY,54 Nagle Av,Manhattan,10040,(212) 569-6200,Yes,No,OPEN,9a-4:30p,9a-4:30p,9a-4:30p,9a-4:30p,9a-4:30p,,9a-4:30p,1003737.00006,252696.999905,Senior center,,No
+121,CC338,Rain Inwood NSC - SENIORS ONLY,84 Vermilyea Av,Manhattan,10034,(212) 567-3200,No,No,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,1005476.99986,254840.999882,Senior center,,No
+125,CC339,Washington Heights Star NSC - SENIORS ONLY,650 W 187 St,Manhattan,10033,(212) 781-8331,No,No,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,1002819.99992,250243.99989,Senior center,,No
+128,CC246,Andrew Heiskell Braille & Talking Book Library,40 W 20 St,Manhattan,10011,(212) 206-5400,Yes,No,OPEN,10a-5p,12p-7p,10a-5p,12p-7p,10a-5p,10a-5p,,986089.0,209046.0,Library,,No
+133,CC124,Rutgers,200 Madison St,Manhattan,10002,(646) 666-3040,Yes,Hours may be extended during a heat emergency.,OPEN,6p-10p,6p-10p,6p-10p,6p-10p,6p-10p,3p-11p,3p-11p,986778.87494,198767.515378,Cornerstone Program,,No
+136,CC248,Riverside Library,127 Amsterdam Av,Manhattan,10023,(212) 870-1810,Yes,No,OPEN,10a-7p,10a-7p,10a-7p,10a-7p,10a-5p,10a-5p,,988608.0,221342.0,Library,,No
+137,CC007,Baruch,605 FDR Drive,Manhattan,10002,(212) 477-2541,Yes,Hours may be extended during a heat emergency.,OPEN,6p-10p,6p-10p,6p-10p,6p-10p,6p-10p,3p-11p,3p-11p,991046.388959,200914.688702,Cornerstone Program,,No
+140,CC022,Clinton,120 E 110 St,Manhattan,10029,(929) 281-2814,Yes,Hours may be extended during a heat emergency.,OPEN,6p-10p,6p-10p,6p-10p,6p-10p,6p-10p,3p-11p,3p-11p,999391.880371,228888.541469,Cornerstone Program,,No
+142,CC130,BRC Neighborhood NSC - SENIORS ONLY,30 Delancey St,Manhattan,10002,(212) 533-2020,Yes,Hours may be extended during a heat emergency.,OPEN,8a-3:30p,8a-3:30p,8a-3:30p,8a-3:30p,8a-3:30p,,,986390.261456,201734.106752,Senior center,,No
+145,CC111,Goddard Riverside NSC - SENIORS ONLY,593 Columbus Av,Manhattan,10024,(212) 873-6600,Yes,No,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,992386.00012,226350.000106,Senior center,,No
+146,CC121,Ottendorfer Library,135 2 Av,Manhattan,10003,(212) 674-0947,No,No,OPEN,11a-7p,11a-7p,11a-7p,11a-7p,10a-5p,10a-5p,,987649.044589,204833.655297,Library,,No
+147,CC530,Dyckman Neighborhood Senior Center - SENIORS ONLY,3754 10 Av,Manhattan,10034,(212) 569-7790,Yes,No,OPEN,8:30a-4:30p,8:30a-4:30p,8:30a-4:30p,8:30a-4:30p,8:30a-4:30p,,,1005818.53416,252982.64003,Senior center,,No
+148,CC614,Dyckman Community Center,3782 Tenth Avenue,Manhattan,10022,(646) 429-8447,Yes,Hours may be extended during a heat emergency.,OPEN,6p-10p,6p-10p,6p-10p,6p-10p,6p-10p,3p-11p,3p-11p,1005938.58227,253281.771373,Cornerstone Program,,No
+152,CC358,Jefferson Houses NSC - SENIORS ONLY,2205 First Av,Manhattan,10029,(212) 828-6104,Yes,Hours may be extended during a heat emergency.,OPEN,8:30a-4:30p,8:30a-4:30p,8:30a-4:30p,8:30a-4:30p,8:30a-4:30p,,,1001667.9809,228776.101553,Senior center,,No
+155,CC1010,Saint Nicholas SC - SENIORS ONLY,210 West 131st Street,Manhattan,10027,,No,No,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,998793.0,235405.0,Senior center,,No
+159,CC613,Johnson Community Center,1833 Lexington Ave,Manhattan,10029,(212) 360-7625,Yes,Hours may be extended during a heat emergency.,OPEN,6p-10p,6p-10p,6p-10p,6p-10p,6p-10p,3p-11p,3p-11p,1000264.58968,229533.538686,Cornerstone Program,,No
+162,CC467,Carver NSC - SENIORS ONLY,55 E 102 St,Manhattan,10029,(212) 289-2709,Yes,No,OPEN,9a-5p,9a-5p,9a-5p,9a-5p,9a-5p,,,997982.587352,227500.606728,Senior center,,No
+165,CC606,Marble Hill Community Center,5365 Broadway,Bronx,10463,(718) 220-2421,Yes,Hours may be extended during a heat emergency.,OPEN,6p-10p,6p-10p,6p-10p,6p-10p,6p-10p,3p-11p,3p-11p,1009675.61449,258636.415519,Cornerstone Program,,No
+171,CC615,Seward Park Community Center,56 Essex Street,Manhattan,10002,(212) 460-8163,Yes,Hours may be extended during a heat emergency.,OPEN,6p-10p,6p-10p,6p-10p,6p-10p,6p-10p,3p-11p,3p-11p,987396.795204,200446.556834,Cornerstone Program,,No
+172,CC247,Project Find Coffeehouse NSC - SENIORS ONLY,331 W 42 St,Manhattan,10036,(646) 545-4621,Yes,Hours may be extended during a heat emergency.,OPEN,8a-5p,8a-5p,8a-5p,8a-6p,8a-5p,,,986711.999985,215506.00014,Senior center,,No
+173,CC465,East River,404 E 105 St,Manhattan,10029,(212) 384-1220,Yes,Hours may be extended during a heat emergency.,OPEN,6p-10p,6p-10p,6p-10p,6p-10p,6p-10p,3p-11p,3p-11p,1000758.6976,226269.713965,Cornerstone Program,,No
+176,CC114,Central Harlem Kennedy NSC - SENIORS ONLY,34 W 134 St,Manhattan,10037,(212) 926-4871,No,Hours may be extended during a heat emergency.,OPEN,9a-5p,9a-5p,9a-5p,9a-5p,9a-5p,,,1000758.02471,235253.822193,Senior center,,No
+179,CC599,Jackie Robinson NSC - SENIORS ONLY,1301 Amsterdam Ave.,Manhattan,10027,(212) 666-4910,No,No,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,996344.161167,235038.798673,Senior center,,No
+183,CC039,Macomb's Bridge Library,2633 Adam C Powell Blvd,Manhattan,10039,(212) 281-4900,Yes,No,OPEN,10a-6p,10a-6p,11a-7p,11a-7p,10a-5p,10a-5p,,1001983.15982,240419.301023,Library,,No
+185,CC050,Grand Coalition of Seniors NSC - SENIORS ONLY,175 Delancy St 4th FlL,Manhattan,10002,(646) 201-4251,Yes,No,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,989309.329436,200977.791664,Senior center,,No
+187,CC470,Roosevelt Island Library,524 Main St,Manhattan,10044,(212) 308-6243,Yes,No,OPEN,10a-8p,10a-6p,10a-8p,10a-6p,10a-5p,10a-5p,,998050.714486,216635.190876,Library,,No
+192,CC509,Battery Park City Library,175 North End Av,Manhattan,10282,(212) 790-3499,Yes,No,OPEN,10a-6p,11a-7p,10a-6p,11a-7p,10a-5p,10a-5p,,979847.277142,199976.032056,Library,,No
+197,CC611,Polo Ground Community Center,3005 Frederick Douglass Blvd,Manhattan,10039,(646) 707-0145,Yes,Hours may be extended during a heat emergency.,OPEN,6p-10p,6p-10p,6p-10p,6p-10p,6p-10p,3p-11p,3p-11p,1001717.55757,242375.401454,Cornerstone Program,,No
+198,CC1032,Inwood Library (Temporary Location),4857 Broadway,Manhattan,10034,,Yes,No,OPEN,10a-7p,10a-7p,10a-7p,10a-7p,10a-5p,10a-5p,,1005177.0,255141.0,Library,,No
+208,CC233,High Bridge Library,78 W 168 St,Bronx,10452,(718) 293-7800,Yes,No,OPEN,10a-7p,10a-7p,10a-7p,10a-7p,10a-6p,10a-5p,,1005402.49107,244580.247615,Library,,No
+213,CC1029,Woodstock Library,761 E 160th St Bronx NY 10456,Bronx,10456,718-665-6255,Yes,No,OPEN,10a-6p,10a-6p,10a-6p,10a-6p,10a-6p,10a-5p,,1010652.0,238291.0,Library,,No
+220,CC315,Sebco Senior Programs NSC - SENIORS ONLY,887 Southern Blvd ,Bronx,10459,(718) 617-3465,Yes,Hours may be extended during a heat emergency.,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,1013659.04484,237694.927875,Senior center,Basement,No
+224,CC216,Bronxworks East Concourse NSC - SENIORS ONLY,236 E Tremont Av,Bronx,10457,(718) 731-6300,Yes,Hours may be extended during a heat emergency.,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,1010646.00002,248483.000131,Senior center,,No
+225,CC452,Grand Concourse Library,155 E 173 St,Bronx,10457,(718) 583-6611,Yes,No,OPEN,10a-8p,10a-7p,10a-8p,10a-7p,10a-5p,10a-5p,,1009126.0,246785.0,Library,,No
+227,CC520,Bronxworks Heights NSC - SENIORS ONLY,200 West Tremont Av,Bronx,10453,(718) 299-0300,Yes,Hours may be extended during a heat emergency.,OPEN,8a-5p,8a-5p,8a-5p,8a-5p,8a-5p,,,1007173.00007,249628.000137,Senior center,,No
+229,CC024,Tremont Library,1866 Washington Av,Bronx,10457,(718) 299-5177,No,No,OPEN,10a-6p,10a-6p,10a-6p,10a-6p,10a-6p,10a-5p,,1012374.0,247530.0,Library,,No
+231,CC944,Mass Vaccination Site - Bathgate Contract Postal Station,4006 3rd Ave,Bronx,10457,,Yes,No,OPEN,10a-10p,10a-10p,10a-10p,10a-10p,10a-10p,10a-10p,10a-10p,1012418.58407,246090.109575,Other,,No
+232,CC401,Arturo Schomburg NSC - SENIORS ONLY,1315 Franklin Av,Bronx,10456,(718) 842-6880,Yes,Hours may be extended during a heat emergency.,OPEN,9a-5p,9a-5p,9a-5p,9a-5p,9a-5p,,,1011394.00016,242563.00016,Senior center,,No
+233,CC028,Neighborhood SHOPP Innovative Senior Center - SENIORS ONLY,910 E 172 St,Bronx,10460,(718) 542-0222,Yes,No,OPEN,9a-5p,9a-5p,9a-5p,9a-5p,9a-5p,,,1014629.99992,243112.000046,Senior center,,No
+236,CC026,Belmont Library,610 E 186 St,Bronx,10458,(718) 933-6410,Yes,No,OPEN,10a-6p,10a-6p,10a-6p,10a-6p,10a-6p,10a-5p,,1015256.0,250553.0,Library,,No
+237,CC314,Thomas Guess NSC - SENIORS ONLY,2070 Clinton Av,Bronx,10457,(718) 584-2357,Yes,No,OPEN,8:30a-4:30p,8:30a-4:30p,8:30a-4:30p,8:30a-4:30p,8:30a-4:30p,,,1015279.40414,247922.72238,Senior center,,No
+239,CC400,West Farms Library,2085 Honeywell Av,Bronx,10460,(718) 367-5376,Yes,No,OPEN,10a-7p,10a-7p,10a-7p,10a-7p,10a-5p,10a-5p,,1016585.0,247038.0,Library,,No
+242,CC519,Bronxworks Morris ISC - SENIORS ONLY,80 E 181 St,Bronx,10453,(718) 933-6671,Yes,No,OPEN,8a-3p,8a-3p,8a-3p,8a-3p,8a-3p,8a-4p,,1010707.99989,250755.99985,Senior center,,No
+243,CC309,Francis Martin Library,2150 University Av,Bronx,10453,(718) 295-5287,Yes,No,OPEN,11a-7p,11a-7p,11a-7p,11a-7p,10a-6p,10a-5p,,1009344.0,251688.0,Library,,No
+244,CC316,Van Cortlandt Library,3874 Sedgwick Av,Bronx,10463,(718) 543-5150,Yes,No,OPEN,10a-7p,10a-7p,10a-7p,10a-7p,10a-5p,10a-5p,,1013583.08764,260913.631456,Library,,No
+245,CC310,Jerome Park Library,118 Eames Pl,Bronx,10468,(718) 549-5200,Yes,No,OPEN,10a-7p,10a-7p,10a-7p,10a-7p,10a-5p,10a-5p,,1011564.0,255894.0,Library,,No
+247,CC027,Mosholu Library,285 E 205 St,Bronx,10467,(718) 882-8239,Yes,No,OPEN,11a-7p,11a-7p,11a-7p,11a-7p,10a-5p,10a-5p,,1017885.0,257854.0,Library,,No
+248,CC222,Woodlawn Heights Library,4355 Katonah Av,Bronx,10470,(718) 519-9627,Yes,No,OPEN,10a-7p,10a-7p,10a-7p,10a-7p,10a-5p,10a-5p,,1020742.0,267350.0,Library,,No
+250,CC033,Soundview Library,660 Soundview Av,Bronx,10473,(718) 589-0880,Yes,No,OPEN,10a-6p,10a-6p,10a-6p,10a-6p,10a-5p,10a-5p,,1022175.0,237601.0,Library,,No
+251,CC334,Castle Hill Library,947 Castle Hill Av,Bronx,10473,(718) 824-3838,Yes,No,OPEN,10a-6p,10a-6p,11a-6p,11a-6p,10a-5p,10a-5p,,1025707.0,240470.0,Library,,No
+253,CC350,Clason's Point Library,1215 Morrison Av,Bronx,10472,(718) 842-1235,Yes,No,OPEN,10a-7p,10a-7p,10a-7p,10a-7p,10a-5p,10a-5p,,1018828.0,241686.0,Library,,No
+255,CC333,Parkchester Library,1985 Westchester Av,Bronx,10462,(718) 829-7830,Yes,No,OPEN,10a-8p,10a-8p,10a-8p,10a-8p,10a-5p,10a-5p,,1023431.0,243068.0,Library,,No
+257,CC098,Westchester Square Library,2521 Glebe Av,Bronx,10461,(718) 863-0436,No,No,OPEN,11a-7p,10a-6p,11a-7p,10a-6p,10a-5p,10a-5p,,1026672.0,245749.0,Library,,No
+258,CC326,Morris Park Library,985 Morris Park Av,Bronx,10462,(718) 931-0636,Yes,No,OPEN,10a-7p,10a-7p,10a-7p,10a-7p,10a-5p,10a-5p,,1023812.11107,248259.000091,Library,,No
+259,CC453,Rain Middletown NSC - SENIORS ONLY,3035 Middletown Rd,Bronx,10461,(718) 822-0486,Yes,Hours may be extended during a heat emergency.,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,1031562.12157,247020.230419,Senior center,,No
+260,CC106,Pelham Parkway-Van Nest Library,2147 Barnes Av,Bronx,10462,(718) 829-5864,Yes,No,OPEN,10a-6p,10a-6p,10a-6p,10a-6p,10a-6p,10a-5p,,1021825.0,250756.0,Library,,No
+263,CC324,Allerton Library,2740 Barnes Av,Bronx,10467,(718) 881-4240,Yes,No,OPEN,10a-6p,10a-6p,10a-6p,10a-6p,10a-6p,10a-5p,,1022086.0,255112.0,Library,,No
+264,CC243,Rain Boston East NSC - SENIORS ONLY,3450 Boston Rd ,Bronx,10469,(718) 654-9200,Yes,No,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,1026174.00013,258512.000086,Senior center,Program on Second Floor,No
+265,CC103,Eastchester Library,1385 East Gun Hill Rd,Bronx,10469,(718) 653-3292,Yes,No,OPEN,10a-7p,10a-7p,10a-7p,10a-7p,10a-5p,10a-5p,,1027067.0,256352.0,Library,,No
+268,CC325,Wakefield Library,4100 Lowerre Pl,Bronx,10466,(718) 652-4663,Yes,No,OPEN,10a-7p,10a-7p,10a-7p,10a-7p,10a-5p,10a-5p,,1023102.0,263958.0,Library,,No
+270,CC207,Edenwald Library,1255 E 233 St,Bronx,10466,(718) 798-3355,Yes,No,OPEN,10a-7p,10a-7p,10a-7p,10a-7p,10a-6p,10a-5p,,1028245.0,263152.0,Library,,No
+271,CC456,Rain Nereid NSC - SENIORS ONLY,720 Nereid Av,Bronx,10466,(718) 994-0132,Yes,No,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,1024678.8709,266469.29782,Senior center,,No
+273,CC100,Pelham Bay Library,3060 Middletown Rd,Bronx,10461,(718) 792-6744,Yes,No,OPEN,10a-6p,10a-6p,10a-6p,10a-6p,10a-5p,10a-5p,,1031846.0,246916.0,Library,,No
+274,CC101,Throg's Neck Library,3025 Cross Bronx Exwy Ext,Bronx,10465,(718) 792-2612,Yes,No,OPEN,10a-6p,10a-6p,10a-6p,10a-6p,10a-5p,10a-5p,,1034314.0,239132.0,Library,,No
+275,CC1049,Petco Throgs Neck Bronx - Pet Friendly,815 Hutchinson River Pkwy,Bronx,10465,(718) 239-2715,Yes,No,OPEN,9a-8p,9a-8p,9a-8p,9a-8p,9a-8p,9a-8p,10a-7p,1029251.0,239373.0,Other,,Yes
+277,CC104,City Island Library,320 City Island Av,Bronx,10464,(718) 885-1703,Yes,No,OPEN,11a-7p,11a-6p,11a-6p,11a-7p,10a-5p,10a-5p,,1043361.0,248183.0,Library,,No
+279,CC404,Riverdale NSC - SENIORS ONLY,2600 Netherland Av,Bronx,10463,(718) 884-5900,Yes,Hours may be extended during a heat emergency.,OPEN,9a-5p,9a-5p,9a-5p,9a-5p,9a-5p,,,1007819.00009,259427.999894,Senior center,,No
+280,CC220,Riverdale Library,5540 Mosholu Av,Bronx,10471,(718) 549-1212,Yes,No,OPEN,10a-6p,10a-6p,10a-6p,10a-6p,10a-5p,10a-5p,,1011148.0,268516.0,Library,,No
+281,CC219,Spuyten Duyvil Library,650 W 235 St,Bronx,10463,(718) 796-1202,Yes,No,OPEN,10a-6p,10a-6p,10a-6p,10a-6p,10a-5p,10a-5p,,1007855.0,262171.0,Library,,No
+282,CC405,Riverdale Y NSC - SENIORS ONLY,5625 Arlington Av,Bronx,10471,(718) 548-8200,Yes,Hours may be extended during a heat emergency.,OPEN,8:30a-4p,8:30a-4p,8:30a-4p,8:30a-4p,8:30a-4p,,,1009669.0,269056.999993,Senior center,,No
+283,CC221,Van Cortlandt NSC - SENIORS ONLY,3880 Sedgwick Ave,Bronx,10463,(718) 549-4700,Yes,No,OPEN,9a-5p,9a-5p,9a-5p,9a-5p,9a-5p,,,1013635.66858,260826.87144,Senior center,"Front entrance, elevator to 2nd fl",No
+285,CC458,Rain Gunhill NSC - SENIORS ONLY,3377 White Plains Rd,Bronx,10467,(718) 881-5589,Yes,Hours may be extended during a heat emergency.,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,1020925.71141,257995.903677,Senior center,,No
+293,CC029,Bronxworks E Roberts Moore NSC - SENIORS ONLY,515 Jackson Av,Bronx,10455,(718) 665-5559,Yes,No,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,1009248.37913,235339.828911,Senior center,,No
+295,CC330,Neighborhood SHOPP Leon NSC - SENIORS ONLY,735 E 152 St,Bronx,10455,(718) 708-6897,Yes,No,OPEN,8a-4:30p,8a-4:30p,8a-4:30p,8a-4:30p,8a-4:30p,,,1009965.62047,236619.72891,Senior center,,No
+298,CC1009,The Sedgwick SC - SENIORS ONLY,1553 University Ave,Bronx,10453,,No,No,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,1005684.0,247727.0,Senior center,,No
+300,CC605,Murphy Community Center,601 Crotona Park North,Bronx,10457,(718) 466-6724,Yes,Hours may be extended during a heat emergency.,OPEN,6p-10p,6p-10p,6p-10p,6p-10p,6p-10p,3p-11p,3p-11p,1013479.82211,246485.869611,Cornerstone Program,,No
+303,CC607,Soundview Community Center,1680 Seward Ave.,Bronx,10473,(718) 378-6246,Yes,Hours may be extended during a heat emergency.,OPEN,6p-10p,6p-10p,6p-10p,6p-10p,6p-10p,3p-11p,3p-11p,1020556.66163,237367.89408,Cornerstone Program,,No
+304,CC322,Kips Bay Castle Hill NSC - SENIORS ONLY,625 Castle Hill Av,Bronx,10473,(718) 319-9156,Yes,No,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,1026171.01949,237835.392817,Senior center,,No
+305,CC035,James Monroe NSC - SENIORS ONLY,1776 Story Av,Bronx,10473,(718) 893-3484,Yes,No,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,1021550.64061,239165.258924,Senior center,,No
+306,CC454,Bronx River NSC - SENIORS ONLY,1619 E 174 St,Bronx,10472,(718) 617-6334,Yes,Hours may be extended during a heat emergency.,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,1018469.23765,243512.044522,Senior center,,No
+308,CC013,Pelham Parkway,785 Pelham Pkwy North,Bronx,10467,(718) 547-5929,Yes,Hours may be extended during a heat emergency.,OPEN,6p-10p,6p-10p,6p-10p,6p-10p,6p-10p,3p-11p,3p-11p,1021789.05856,252051.181073,Cornerstone Program,,No
+309,CC241,Rain Boston Road NSC - SENIORS ONLY,2424 Boston Rd,Bronx,10467,(718) 547-8827,Yes,Hours may be extended during a heat emergency.,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,1021228.51461,253247.725181,Senior center,,No
+311,CC108,Rain Eastchester NSC - SENIORS ONLY,1246 Burke Av,Bronx,10469,(718) 882-8513,Yes,No,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,1025341.24458,256578.68768,Senior center,,No
+315,CC208,Boston Secor,3540 Bivona St,Bronx,10475,(718) 671-1040,Yes,Hours may be extended during a heat emergency.,OPEN,6p-10p,6p-10p,6p-10p,6p-10p,6p-10p,3p-11p,3p-11p,1030526.27298,261081.544713,Cornerstone Program,,No
+316,CC398,Rain Boston Secor NSC - SENIORS ONLY,3540 Bivona St,Bronx,10475,(718) 671-8550,Yes,No,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,1030531.97206,261058.967433,Senior center,,No
+317,CC603,Betances,465 St. Ann's Ave,Bronx,10455,(718) 585-5040,Yes,Hours may be extended during a heat emergency.,OPEN,6p-10p,6p-10p,6p-10p,6p-10p,6p-10p,3p-11p,3p-11p,1007980.01782,235339.243282,Cornerstone Program,,No
+318,CC637,Edenwald Community Center,1150 East 229th St.,Bronx,10466,(718) 652-0478,Yes,Hours may be extended during a heat emergency.,OPEN,6p-10p,6p-10p,6p-10p,6p-10p,6p-10p,3p-11p,3p-11p,1026977.25246,262070.564163,Cornerstone Program,,No
+321,CC1008,JASA Einstein NSC - SENIORS ONLY,135 Einstein Loop,Bronx,10475,,No,No,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,1033241.0,254399.0,Senior center,,No
+322,CC1011,PSS Highbridge Gardens SC - SENIORS ONLY,1145 University Ave,Bronx,10453,,Yes,No,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,1003780.0,244237.0,Senior center,,No
+323,CC235,Highbridge Gardens,1155 University Av,Bronx,10452,(718) 992-7797,Yes,Hours may be extended during a heat emergency.,OPEN,6p-10p,6p-10p,6p-10p,6p-10p,6p-10p,3p-11p,3p-11p,1003984.76774,244602.531405,Cornerstone Program,,No
+325,CC313,Mosholu Montefiore NSC - SENIORS ONLY,3450 Dekalb Av,Bronx,10467,(718) 798-6601,Yes,Hours may be extended during a heat emergency.,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,1017224.57315,260453.051978,Senior center,,No
+326,CC321,Rain Parkchester NSC - SENIORS ONLY,1380 Metropolitan Av,Bronx,10462,(718) 892-5520,Yes,No,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,1022772.88193,243571.791777,Senior center,,No
+327,CC1048,Petco Riverdale Bronx - Pet Friendly,193 W 237 St,Bronx,10463,(718) 796-0604,Yes,No,OPEN,9a-8p,9a-8p,9a-8p,9a-8p,9a-8p,9a-8p,10a-7p,1011950.0,261490.0,Other,,Yes
+330,CC099,Baychester Library,2049 Asch Loop North,Bronx,10475,(718) 379-6700,Yes,No,OPEN,10a-7p,10a-7p,10a-7p,10a-7p,10a-6p,10a-5p,,1031470.89869,256547.606691,Library,,No
+332,CC455,Dreiser NSC - SENIORS ONLY,177 Dreiser Loop,Bronx,10475,(718) 320-1345,Yes,Hours may be extended during a heat emergency.,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,1031597.66776,259132.82496,Senior center,"2nd floor, Room #7",No
+336,CC308,Sedgwick Library,1701 Dr M L King Jr Blvd,Bronx,10453,(718) 731-2074,Yes,No,OPEN,10a-6p,10a-6p,10a-6p,10a-6p,10a-6p,10a-5p,,1007056.60475,248789.686583,Library,,No
+337,CC107,Parkside NSC - SENIORS ONLY,644 Adee Av,Bronx,10467,(718) 881-7780,Yes,No,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,1020464.94134,255978.228251,Senior center,,No
+339,CC1027,Mott Haven Educational Campus,730 Concourse village West,Bronx,10451,,Yes,No,OPEN,8a-5p,8a-5p,8a-5p,8a-5p,8a-5p,,,1005604.0,238669.0,School,,No
+341,CC1026,PS/IS 194,2365 Waterbury Avenue,Bronx,10462,,Yes,No,OPEN,8a-5p,8a-5p,8a-5p,8a-5p,8a-5p,,,1026741.0,243660.0,School,,No
+343,CC561,Hunts Point Recreation Center,765 Manida St,Bronx,10474,(718) 860-5544,No,No,OPEN,11a-7p,11a-7p,11a-7p,11a-7p,11a-7p,10a-6p,,1014909.11485,236207.954799,Community center,,No
+345,CC516,Bronx Tremont Corps Comm Center,2121 Washington Av,Bronx,10457,(718) 584-6250,Yes,Hours may be extended during a heat emergency.,OPEN,9a-5p,9a-8p,9a-5p,9a-5p,9a-5p,,,1013165.0,249777.0,Community center,,No
+346,CC025,Bronx Center Library,310 East Kingsbridge Rd,Bronx,10458,(718) 579-4244,Yes,No,OPEN,9a-9p,9a-9p,9a-9p,9a-9p,10a-8p,10a-8p,,1013415.0,253710.0,Library,,No
+348,CC402,Kingsbridge Library,291 W 231 St,Bronx,10463,(718) 548-5656,Yes,No,OPEN,10a-7p,10a-7p,10a-7p,10a-7p,10a-5p,10a-5p,,1009769.84271,260157.578795,Library,,No
+349,CC602,Melrose Community Center,286 East 156th Street,Bronx,10451,(718) 665-1300,Yes,Hours may be extended during a heat emergency.,OPEN,6p-10p,6p-10p,6p-10p,6p-10p,6p-10p,3p-11p,3p-11p,1006300.18194,238621.155681,Cornerstone Program,Center is in the gym.,No
+354,CC134,CCNS St Charles NSC - SENIORS ONLY,55 Pierrepont St,Brooklyn,11201,(718) 855-0326,Yes,No,OPEN,9:30a-5:30p,9:30a-5:30p,9:30a-5:30p,9:30a-5:30p,9:30a-5:30p,,,985621.999869,192861.000155,Senior center,,No
+356,CC417,Carroll Gardens Library,396 Clinton St,Brooklyn,11231,(718) 596-6972,Yes,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,984789.0,188194.0,Library,,No
+357,CC135,Eileen Dugan Amico NSC - SENIORS ONLY,378 Court St,Brooklyn,11231,(718) 596-1956,Yes,No,OPEN,8:30a-4:30p,8:30a-4:30p,8:30a-4:30p,8:30a-4:30p,8:30a-4:30p,,,985169.000119,187533.999982,Senior center,,No
+360,CC416,Red Hook Library,7 Wolcott St,Brooklyn,11231,(718) 935-0203,Yes,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,981373.0,185285.0,Library,,No
+368,CC1034,Pacific Library,25 4 Ave,Brooklyn,11217,,No,,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,990200.491696,188278.694687,Library,,No
+370,CC369,Parkslope NSC - SENIORS ONLY,463A 7 St,Brooklyn,11215,(718) 832-3726,Yes,Hours may be extended during a heat emergency.,OPEN,9a-5p,9a-5p,9a-5p,9a-5p,9a-5p,,,989525.999935,182833.999867,Senior center,Basement - Entrance on 7th Street,No
+371,CC274,Park Slope Library,431 6 Av,Brooklyn,11215,(718) 832-1853,Yes,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,988853.112934,182732.863735,Library,,No
+373,CC371,Brooklyn Central Library,10 Grand Army Plz,Brooklyn,11238,(718) 230-2100,Yes,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,993072.058083,184261.856001,Library,Entrance from street level at Eastern Parkway side of building,No
+375,CC138,Ft Greene Grant Square NSC - SENIORS ONLY,19 Grant Sq,Brooklyn,11216,(718) 363-3133,Yes,Hours may be extended during a heat emergency.,OPEN,9a-5p,9a-5p,9a-5p,9a-5p,9a-5p,,,997471.39743,185830.695318,Senior center,,No
+377,CC141,CCNS Saint Louis NSC - SENIORS ONLY,230 Kingston Av,Brooklyn,11213,(718) 771-7945,Yes,No,OPEN,9a-5p,9a-5p,9a-5p,9a-5p,9a-5p,,,1000249.7941,183947.404137,Senior center,,No
+378,CC142,H Gilroy NSC - SENIORS ONLY,447 Kingsborough 4 Walk,Brooklyn,11233,(718) 756-8400,Yes,Hours may be extended during a heat emergency.,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,1005164.46866,185243.652528,Senior center,,No
+381,CC414,Eastern Parkway Library,1044 Eastern Pkwy,Brooklyn,11213,(718) 953-4225,Yes,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,1002666.0,182818.0,Library,,No
+382,CC442,Shalom NSC - SENIORS ONLY,483 Albany Av,Brooklyn,11203,(718) 774-9213,Yes,Hours may be extended during a heat emergency.,OPEN,9a-5p,9a-5p,9a-5p,9a-5p,9a-5p,,,1000951.28811,180970.49572,Senior center,,No
+387,CC431,Stuyvesant Gardens,214 Stuyvesant Av,Brooklyn,11221,(718) 226-0481,Yes,Hours may be extended during a heat emergency.,OPEN,6p-10p,6p-10p,6p-10p,6p-10p,6p-10p,3p-11p,3p-11p,1002775.12697,189874.191855,Cornerstone Program,,No
+390,CC366,Macon Library,361 Lewis Av,Brooklyn,11233,(718) 573-5606,Yes,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,1002336.0,188125.0,Library,,No
+393,CC562,Marcy Library,617 DeKalb Av,Brooklyn,11216,(718) 935-0032,Yes,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,997759.083206,191256.747786,Library,,No
+394,CC266,Bedford Temple Corps Comm Center,601 Lafayette Av,Brooklyn,11216,(718) 622-0614,Yes,Hours may be extended during a heat emergency.,OPEN,9a-5p,9a-5p,9a-5p,9a-5p,9a-5p,,10:30a-2p,997908.0,190828.0,Community center,,No
+396,CC126,Clinton Hill Library,380 Washington Av,Brooklyn,11238,(718) 398-8713,Yes,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,993680.994677,189714.068193,Library,,No
+399,CC364,Grace Agard Harewood NSC - SENIORS ONLY,966 Fulton St,Brooklyn,11238,(718) 638-6910,Yes,No,OPEN,9a-5p,9a-5p,9a-7p,9a-7p,9a-5p,,,994728.000029,187843.00002,Senior center,,No
+400,CC273,Walt Whitman Library,93 St Edwards St,Brooklyn,11205,(718) 935-0244,No,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,990423.0,192292.0,Library,,No
+402,CC522,Independence Towers,114 Taylor St,Brooklyn,11211,(718) 408-6374,Yes,Hours may be extended during a heat emergency.,OPEN,6p-10p,6p-10p,6p-10p,6p-10p,6p-10p,3p-11p,3p-11p,994420.783891,196270.525158,Cornerstone Program,,No
+403,CC267,Williamsburg Library,240 Division Av,Brooklyn,11211,(718) 302-3485,Yes,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,996007.0,196834.0,Library,,No
+405,CC476,CCNS Northside NSC - SENIORS ONLY,179 North 6 St,Brooklyn,11211,(718) 387-2316,No,No,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,996125.999858,200442.000084,Senior center,,No
+407,CC363,Krakus Luncheon Club NSC - SENIORS ONLY,176 Java St,Brooklyn,11222,(718) 383-3434,Yes,Hours may be extended during a heat emergency.,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,997135.000137,205780.999905,Senior center,,No
+408,CC127,Greenpoint Library,107 Norman Av,Brooklyn,11222,(718) 349-8504,Yes,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,997915.993011,203791.975573,Library,,No
+415,CC053,Bushwick Library,340 Bushwick Av,Brooklyn,11206,(718) 602-1348,Yes,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,1000986.22636,195970.109094,Library,,No
+425,CC052,Washington Irving Library,360 Irving Av,Brooklyn,11237,(718) 628-8378,Yes,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,1008586.0,193403.0,Library,,No
+428,CC588,Brownsville Library,61 Glenmore Ave,Brooklyn,11212,(718) 498-9721,Yes,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,1009603.63727,183944.32934,Library,,No
+434,CC407,Stone Avenue Library,581 Mother Gaston Blvd,Brooklyn,11212,(718) 485-8347,Yes,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,1010545.4556,181373.088419,Library,,No
+437,CC075,New Lots Library,665 New Lots Av,Brooklyn,11207,(718) 649-0311,Yes,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,1015859.0,181645.0,Library,,No
+440,CC347,Cypress Hills Fulton St NSC - SENIORS ONLY,3208 Fulton St,Brooklyn,11208,(718) 235-0064,Yes,Hours may be extended during a heat emergency.,OPEN,8:15a-4:15p,8:15a-4:15p,8:15a-4:15p,8:15a-4:15p,8:15a-4:15p,,,1018396.99994,187787.000132,Senior center,,No
+441,CC564,Spring Creek Library,12143 Flatlands Ave,Brooklyn,11207,(718) 257-6571,Yes,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,1015907.97014,177298.989612,Library,,No
+443,CC829,P.S. 268 Emma Lazarus,133 EAST 53 STREET,Brooklyn,11203,,No,Hours may be extended during a heat emergency.,OPEN,8a-5p,8a-5p,8a-5p,8a-5p,8a-5p,,,1004352.66057,178693.426456,School,,No
+445,CC1035,Rugby Library,1000 Utica Av,Brooklyn,11203,,No,,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,1003568.75302,175598.564207,Library,,No
+447,CC055,Crown Heights Library,560 New York Av,Brooklyn,11225,(718) 773-1180,Yes,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,998623.0,180171.0,Library,,No
+449,CC140,Christopher C Blenman NSC - SENIORS ONLY,720 East New York Av,Brooklyn,11203,(718) 773-7400,Yes,Hours may be extended during a heat emergency.,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,10a-3p,,1001343.99992,180448.000046,Senior center,,No
+454,CC785,P.S. 361 East Flatbush Early Childho,1957 NOSTRAND AVENUE,Brooklyn,11210,,No,Hours may be extended during a heat emergency.,OPEN,8a-5p,8a-5p,8a-5p,8a-5p,8a-5p,,,998773.045089,171630.010792,School,,No
+455,CC563,Flatbush Library,22 Linden Blvd,Brooklyn,11226,(718) 856-0813,Yes,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,995838.05424,176792.677304,Library,,No
+459,CC594,Ft Hazel Brooks NSC - SENIORS ONLY,961 Ocean Ave.,Brooklyn,11226,(347) 435-3287,No,No,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,995730.091529,172078.805827,Senior center,,No
+460,CC950,NYC Vaccine Hub - Flatbush YMCA ,1401 Flatbush Ave,Brooklyn,11210,,Yes,No,OPEN,9a-6p,9a-6p,9a-6p,9a-6p,9a-6p,9a-6p,9a-6p,997764.639954,171305.375287,Other,,No
+461,CC1054,Windsor Terrace,160 E 5 St,Brooklyn,11218,(718) 686-9707,Yes,No,OPEN,10a-6p,1p-8p,10a-6p,10a-8p,10a-6p,10a-5p,,990694.0,175615.0,Library,,No
+462,CC278,Mapleton Library,1702 60 St,Brooklyn,11204,(718) 256-2117,Yes,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,987164.0,166245.0,Library,,No
+463,CC231,Borough Park Library,1265 43 St,Brooklyn,11219,(718) 437-4085,No,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,987302.052349,172041.058896,Library,,No
+465,CC282,Amico 59 St NSC - SENIORS ONLY,5901 13 Av,Brooklyn,11219,(718) 972-1558,Yes,Hours may be extended during a heat emergency.,OPEN,8:30a-4:30p,8:30a-4:30p,8:30a-4:30p,8:30a-4:30p,8:30a-4:30p,,,984841.000118,168476.00004,Senior center,,No
+466,CC485,McKinley Park Library,6802 Fort Hamilton Pkwy,Brooklyn,11219,(718) 748-8001,No,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,980940.0,168520.0,Library,,No
+468,CC489,Bay Ridge NSC - SENIORS ONLY,6935 4 Av,Brooklyn,11209,(718) 748-0650,Yes,Hours may be extended during a heat emergency.,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,977734.20298,170179.810609,Senior center,,No
+470,CC277,Bay Ridge Library,7223 Ridge Blvd,Brooklyn,11209,(718) 748-5709,Yes,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,976060.0,170114.0,Library,,No
+471,CC276,Bay Ridge Corps Comm Center,252 86 St,Brooklyn,11209,(718) 238-2991,Yes,No,OPEN,10a-3p,,8a-4p,10a-3p,10a-3p,,,975310.0,166361.0,Community center,,No
+472,CC486,Fort Hamilton Library,9424 4 Av,Brooklyn,11209,(718) 748-6919,Yes,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,975550.556582,163831.213859,Library,,No
+479,CC1020,P.S. 204 Vince Lombardi,8101 15 AVENUE,Brooklyn,11228,,Yes,No,OPEN,8a-5p,8a-5p,8a-5p,8a-5p,8a-5p,,,982545.0,162804.0,School,,No
+481,CC059,New Utrecht Library,1743 86 St,Brooklyn,11214,(718) 236-4086,Yes,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,983316.0,160792.0,Library,,No
+484,CC406,Ryder Library,5902 23 Av,Brooklyn,11204,(718) 331-2962,Yes,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,990901.611685,163670.602827,Library,,No
+485,CC544,House of Jacob - SENIORS ONLY,6222 23 Av,Brooklyn,11204,(718) 259-0100,Yes,No,OPEN,9a-4p,9a-4p,9a-4p,9a-4p,9a-4p,,,990328.0,162950.0,Senior center,,No
+486,CC152,Highlawn Library,1664 W 13 St,Brooklyn,11223,(718) 234-7208,Yes,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,988067.0,159941.0,Library,,No
+488,CC376,Sephardic Multi Service NSC - SENIORS ONLY,485 Kings Hwy,Brooklyn,11223,(718) 336-1300,Yes,No,OPEN,9a-5p,9a-5p,9a-5p,9a-5p,,,,992152.99993,159511.999924,Senior center,,No
+490,CC493,Midwood Library,975 E 16 St,Brooklyn,11230,(718) 252-0967,Yes,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,995279.0,167294.0,Library,,No
+492,CC408,Kings Highway Library,2115 Ocean Av,Brooklyn,11229,(718) 375-3037,Yes,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,997269.277868,161608.67875,Library,,No
+493,CC1021,J.H.S. 234 Arthur W. Cunningham,1875 EAST  17 STREET,Brooklyn,11229,,Yes,No,OPEN,8a-5p,8a-5p,8a-5p,8a-5p,8a-5p,,,996705.0,159501.0,School,,No
+499,CC156,JCCGCI ISC - SENIORS ONLY,3001 W 37 St ,Brooklyn,11224,(718) 449-5000 ext. 2350,Yes,Hours may be extended during a heat emergency.,OPEN,8:30a-4:30p,8:30a-4:30p,8:30a-7p,8:30a-4:30p,8:30a-4p,,,983652.99987,147949.000084,Senior center,Enter on second (2nd floor),No
+500,CC377,Gravesend Library,303 Av X,Brooklyn,11223,(718) 382-5792,Yes,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,992081.961015,154425.383938,Library,,No
+504,CC318,Homecrest Library,2525 Coney Is Av,Brooklyn,11223,(718) 382-5924,Yes,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,995191.493853,156138.184821,Library,,No
+505,CC449,Kings Bay Library,3650 Nostrand Av,Brooklyn,11229,(718) 368-1709,Yes,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,1000589.96066,156006.678467,Library,,No
+506,CC1038,Petco Ave Y Sheepshead - Pet Friendly,1610 Ave Y,Brooklyn,11235,(718) 743-2147,Yes,No,OPEN,9a-9p,9a-9p,9a-9p,9a-9p,9a-9p,9a-9p,9a-9p,997232.0,154197.0,Other,,Yes
+510,CC056,Paerdegat Library,850 E 59 St,Brooklyn,11234,(718) 241-3994,Yes,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,1006460.0,169766.0,Library,,No
+512,CC595,Midwood NSC - SENIORS ONLY,2164 Ralph Av,Brooklyn,11234,(718) 253-5557,No,No,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,1006975.65664,166783.488661,Senior center,,No
+518,CC589,Canarsie Library,1580 Rockaway Pkwy,Brooklyn,11236,(718) 257-6547,Yes,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,1012134.71095,173266.154502,Library,,No
+520,CC373,Jamaica Bay Library,9727 Seaview Av,Brooklyn,11236,(718) 241-3571,Yes,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,1014964.0,170450.0,Library,,No
+522,CC565,Mill Basin Library,2385 Ralph Ave,Brooklyn,11234,(718) 241-3973,Yes,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,1007277.65144,165110.563201,Library,,No
+524,CC537,Mill Basin Senior Center - SENIORS ONLY,2075 E 68 St,Brooklyn,11234,(718) 444-3850,Yes,No,OPEN,8:30a-3:30p,8:30a-3:30p,8:30a-3:30p,8:30a-3:30p,8:30a-3:30p,,,1009338.0,164760.0,Senior center,,No
+528,CC552,Brighton Beach,16 Brighton First Road,Brooklyn,11235,(718) 946 2917,Yes,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,993481.56786,149188.253725,Library,,No
+529,CC155,JASA Senior Alliance NSC - SENIORS ONLY,161 Corbin Pl,Brooklyn,11235,(718) 646-4100,Yes,No,OPEN,9a-4p,9a-4p,9a-4p,9a-4p,9a-4p,,,997074.252227,149748.828177,Senior center,,No
+531,CC617,Taylor-ÂWythe Community Center,80 Clymer St.,Brooklyn,11211,(718) 782-5553,Yes,Hours may be extended during a heat emergency.,OPEN,6p-10p,6p-10p,6p-10p,6p-10p,6p-10p,3p-11p,3p-11p,993775.067552,196092.774203,Cornerstone Program,,No
+532,CC015,Marcus Garvey,20 Amboy St,Brooklyn,11212,(718) 649-3972,No,Hours may be extended during a heat emergency.,OPEN,6p-10p,6p-10p,6p-10p,6p-10p,6p-10p,3p-11p,3p-11p,1007833.64519,183359.214524,Cornerstone Program,,No
+539,CC379,JASA Sheuer House of Coney Isl NSC - SENIORS ONLY,3601 Surf Av,Brooklyn,11224,(718) 373-3954,Yes,No,OPEN,10a-6p,10a-6p,10a-6p,10a-6p,10a-6p,,,983612.605594,148275.625415,Senior center,Main entrance on W 37 St,No
+551,CC021,Tompkins,736 Park Av,Brooklyn,11206,(718) 420-1966,Yes,Hours may be extended during a heat emergency.,OPEN,6p-10p,6p-10p,6p-10p,6p-10p,6p-10p,3p-11p,3p-11p,999229.62954,193463.533921,Cornerstone Program,,No
+552,CC346,Boulevard,726 Stanley Av,Brooklyn,11207,(718) 272-0050,Yes,Hours may be extended during a heat emergency.,OPEN,6p-10p,6p-10p,6p-10p,6p-10p,6p-10p,3p-11p,3p-11p,1017114.76255,179728.998912,Cornerstone Program,,No
+557,CC008,Brevoort,280 Ralph Av,Brooklyn,11233,(718) 226-0415,Yes,Hours may be extended during a heat emergency.,OPEN,6p-10p,6p-10p,6p-10p,6p-10p,6p-10p,3p-11p,3p-11p,1005501.73088,186994.425854,Cornerstone Program,,No
+562,CC439,Tilden,630 Mother Gaston Blvd,Brooklyn,11212,(718) 485-4970,Yes,Hours may be extended during a heat emergency.,OPEN,6p-10p,6p-10p,6p-10p,6p-10p,6p-10p,3p-11p,3p-11p,1010370.85465,180988.711965,Cornerstone Program,,No
+568,CC232,Clarendon Library,2035 Nostrand Av,Brooklyn,11210,(718) 421-1159,Yes,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,998784.082604,170897.94578,Library,,No
+573,CC1019,P.S. 138 Brooklyn,760 PROSPECT PLACE,Brooklyn,11216,,Yes,No,OPEN,8a-5p,8a-5p,8a-5p,8a-5p,8a-5p,,,997719.0,184808.0,School,,No
+574,CC427,Glenwood,5816 Farragut Rd,Brooklyn,11234,(347) 492-4813,Yes,Hours may be extended during a heat emergency.,OPEN,6p-10p,6p-10p,6p-10p,6p-10p,6p-10p,3p-11p,3p-11p,1006309.95176,171170.15918,Cornerstone Program,,No
+575,CC090,CCNS Glenwood NSC - SENIORS ONLY,5701 Avenue H,Brooklyn,11234,(718) 241-7711,Yes,Hours may be extended during a heat emergency.,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,1005985.62253,170149.245053,Senior center,,No
+578,CC438,CCNS Pete McGuinness NSC - SENIORS ONLY,715 Leonard St,Brooklyn,11222,(718) 383-1940,Yes,No,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,997277.162582,204855.642504,Senior center,,No
+584,CC1045,Petco Brooklyn Sunset Park - Pet Friendly,241 37 St,Brooklyn,11232,(718) 666-4019,Yes,No,OPEN,9a-9p,9a-9p,9a-9p,9a-9p,9a-9p,9a-9p,9a-9p,981972.0,178273.0,Other,,Yes
+596,CC951,NYC Vaccine Hub - Starrett City/Spring Creek Towers - Cityblock Health,1310 Pennsylvania Ave,Brooklyn,11239,,Yes,No,OPEN,10a-6p,10a-6p,10a-6p,10a-6p,10a-6p,10a-6p,10a-6p,1016718.57481,175567.954688,Other,,No
+598,CC186,JASA Starrett City NSC - SENIORS ONLY,1540 Van Siclen Av,Brooklyn,11239,(718) 642-1010,Yes,No,OPEN,8a-3p,8a-3p,8a-3p,8a-3p,8a-3p,,,1018121.95127,175216.09614,Senior center,,No
+599,CC160,Gerritsen Beach Library,2808 Gerritsen Av,Brooklyn,11229,(718) 368-1435,Yes,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,1005374.89752,154736.894404,Library,,No
+600,CC494,Sheepshead/Nostrand,3679 Nostrand Av,Brooklyn,11229,(718) 226-0429,Yes,Hours may be extended during a heat emergency.,OPEN,6p-10p,6p-10p,6p-10p,6p-10p,6p-10p,3p-11p,3p-11p,1000806.56184,155798.012908,Cornerstone Program,,No
+601,CC162,CCNS the Bay NSC - SENIORS ONLY,3643 Nostrand Av,Brooklyn,11229,(718) 648-2053,Yes,No,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,1000762.21171,156113.095304,Senior center,,No
+606,CC020,Langston Hughes,301 Sutter Av,Brooklyn,11212,(917) 893-8215,Yes,Hours may be extended during a heat emergency.,OPEN,6p-10p,6p-10p,6p-10p,6p-10p,6p-10p,3p-11p,3p-11p,1009488.93932,182563.26905,Cornerstone Program,,No
+608,CC185,Vandalia NSC - SENIORS ONLY,47 Vandalia Av,Brooklyn,11239,(718) 272-3949,Yes,No,OPEN,8a-4p,8a-4:30p,8a-4p,8a-4:30p,8a-4p,,,1015587.99998,176154.000104,Senior center,,No
+612,CC1039,Petco Brooklyn Utica - Pet Friendly,2343 Utica Ave,Brooklyn,11234,(718) 338-3896,Yes,No,OPEN,9a-9p,9a-9p,9a-9p,9a-9p,9a-9p,9a-9p,9a-9p,1004798.0,162952.0,Other,,Yes
+616,CC986,Van Dyke I,392 Blake Av,Brooklyn,11212,,Yes,No,OPEN,6p-10p,6p-10p,6p-10p,6p-10p,6p-10p,3p-11p,3p-11p,1010726.47394,181944.840885,Cornerstone Program,,No
+619,CC1041,Petco Gateway Brooklyn - Pet Friendly,528 Gateway Dr,Brooklyn,11239,(718) 647-2604,Yes,No,OPEN,9a-9p,9a-9p,9a-9p,9a-9p,9a-9p,9a-9p,9a-9p,1020036.0,177471.0,Other,,Yes
+624,CC949,Mass Vaccination Site - Brooklyn Army Terminal,140 58th Street,Brooklyn,11220,,Yes,No,OPEN,10a-10p,10a-10p,10a-10p,10a-10p,10a-10p,10a-10p,10a-10p,977618.056887,174450.144916,Other,,No
+625,CC342,Kensington Library,4207 18th Av,Brooklyn,11218,(718) 436-0545,Yes,No,OPEN,10a-4p,1p-7p,10a-4p,1p-7p,10a-4p,10a-4p,,991077.847041,169277.231558,Library,,No
+628,CC1042,Petco Forest Hills - Pet Friendly,9111 Metropolitan Ave,Queens,11374,(718) 830-6261,Yes,No,OPEN,9a-9p,9a-9p,9a-9p,9a-9p,9a-9p,9a-9p,9a-9p,1023636.0,198638.0,Other,,Yes
+630,CC512,Sunnyside Library,43-06 Greenpoint Av,Queens,11104,(718) 784-3033,Yes,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,10a-5p,,1005952.0,209179.0,Library,,No
+631,CC239,Astoria Library,14-01 Astoria Blvd,Queens,11102,(718) 278-2220,No,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,10a-5p,,1003981.0,220678.0,Library,,No
+633,CC209,CCNS Dellamonica-Steinway NSC - SENIORS ONLY,23-56 Broadway,Queens,11106,(718) 626-1500,Yes,Hours may be extended during a heat emergency.,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,1003970.99992,217386.999987,Senior center,,No
+634,CC327,Broadway Library,40-20 Broadway,Queens,11103,(718) 721-2462,Yes,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,,,1006783.0,215619.0,Library,,No
+637,CC061,Jackson Heights Library,35-51 81 St,Queens,11372,(718) 899-2500,Yes,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,10a-5p,,1016096.0,212610.0,Library,,No
+639,CC023,Woodside Library,54-22 Skillman Av,Queens,11377,(718) 429-4700,Yes,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,,,1009232.0,210833.0,Library,,No
+643,CC384,Florence E Smith NSC - SENIORS ONLY,102-19 34 Av,Queens,11368,(718) 899-0553,Yes,Hours may be extended during a heat emergency.,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,1021419.00012,214740.000032,Senior center,,No
+644,CC383,Elmcor NSC - SENIORS ONLY,98-19 Astoria Blvd,Queens,11368,(718) 457-9757,Yes,Hours may be extended during a heat emergency.,OPEN,9a-5p,9a-5p,9a-5p,9a-5p,9a-5p,,,1022662.0,215195.0,Senior center,,No
+646,CC166,Corona Library,38-23 104 St,Queens,11368,(718) 426-2844,No,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,,,1022471.0,212869.0,Library,,No
+648,CC969,Queens Mall - Former Modell's Location,58-56 92nd St,Queens,11373,,Yes,No,OPEN,8a-7p,8a-7p,8a-7p,8a-7p,8a-7p,8a-7p,8a-7p,1020478.00004,206856.000052,Other,,No
+649,CC167,LeFrak City Library,98-30 57 Avenue,Queens,11368,(718) 592-7677,Yes,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,10a-5p,,1022586.0,207986.0,Library,,No
+652,CC168,Forest Hills Library,108-19 71 Av,Queens,11375,(718) 268-7934,Yes,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,10a-5p,,1027759.0,202392.0,Library,,No
+658,CC387,Rego Park Library,91-41 63 Dr,Queens,11374,(718) 459-5140,Yes,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,10a-5p,,1021800.0,204280.0,Library,,No
+659,CC064,North Forest Park Library,98-27 Metropolitan Av,Queens,11375,(718) 261-5512,Yes,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,,,1024813.0,198403.0,Library,,No
+662,CC286,Ridgewood Library,20-12 Madison St,Queens,11385,(718) 821-4770,Yes,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,10a-5p,,1011264.0,196206.0,Library,,No
+668,CC198,Hanac Angelo Petromelis NSC - SENIORS ONLY,13-28 123 St,Queens,11356,(718) 961-0344,Yes,Hours may be extended during a heat emergency.,OPEN,8:30a-7p,8:30a-7p,8:30a-7p,8:30a-7p,8:30a-7p,,,1027157.00013,225598.999967,Senior center,,No
+669,CC192,Poppenhusen Library,121-23 14 Av,Queens,11356,(718) 359-1102,Yes,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,,,1026875.91012,225756.0,Library,,No
+674,CC927,Tzu Chi Foundation,137-77 Northern Blvd,Queens,11354,(718) 888-0866 x206,Yes,No,OPEN,10a-4p,10a-4p,10a-4p,10a-4p,10a-4p,10a-4p,10a-4p,1031726.93456,217727.170895,Other,,No
+679,CC393,McGoldrick Library,155-06 Roosevelt Av,Queens,11354,(718) 461-1616,Yes,No,OPEN,12p-5p,12p-5p,12p-5p,12p-5p,12p-5p,12p-5p,,1036937.0,217580.0,Library,,No
+680,CC077,East Flushing Library,196-36 Northern Blvd,Queens,11358,(718) 357-6643,Yes,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,10a-5p,,1044014.0,215342.0,Library,,No
+681,CC076,Auburndale-Clearview Library,25-55 Francis Lewis Blvd,Queens,11358,(718) 352-2027,Yes,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,10a-5p,,1040654.0,221228.0,Library,,No
+683,CC078,Bay Terrace Library,18-36 Bell Blvd,Queens,11360,(718) 423-7004,Yes,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,,,1046013.0,224422.0,Library,,No
+684,CC963,NYC Vaccine Hub - Korean Community Services,203-05 32nd Ave,Queens,11361,,Yes,No,OPEN,9a-7p,9a-7p,9a-7p,9a-7p,9a-7p,9a-7p,9a-7p,1043346.11441,220228.948043,Other,,No
+687,CC292,Kew Gardens Hills Library,71-34 Main St,Queens,11367,(718) 261-6654,Yes,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,10a-5p,,1033505.01853,204152.919391,Library,,No
+690,CC173,Hillcrest Library,187-05 Union Turnpike,Queens,11366,(718) 454-2786,Yes,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,10a-5p,,1044689.0,205029.0,Library,,No
+691,CC301,Bayside Library,214-20 Northern Blvd,Queens,11361,(718) 229-1834,Yes,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,10a-5p,,1048413.0,216287.0,Library,,No
+693,CC303,CCNS Bayside NSC - SENIORS ONLY,221-15 Horace Harding Exwy,Queens,11364,(718) 225-1144,Yes,No,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,9:30a-4p,,1051649.00003,212566.000115,Senior center,,No
+695,CC551,Windsor Park Library,79-50 Bell Boulevard,Queens,11364,(718) 468-8300,Yes,No,OPEN,12p-8p,1p-6p,10a-6p,12p-8p,10a-6p,10a-5p,,1051958.40238,206964.378765,Library,,No
+696,CC503,Douglaston-Little Neck Library,249-01 Northern Blvd,Queens,11362,(718) 225-8414,No,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,,,1056779.0,219229.0,Library,,No
+697,CC1051,Petco Little Neck - Pet Friendly,25451 Horace Harding Expy,Queens,11362,(718) 225-0342,Yes,No,OPEN,9a-8p,9a-8p,9a-8p,9a-8p,9a-8p,9a-8p,10a-7p,1060191.0,218094.0,Other,,Yes
+698,CC504,North Hills Library,57-04 Marathon Pkwy,Queens,11362,(718) 225-3550,No,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,,,1058554.0,216055.0,Library,,No
+699,CC195,Samuel Field NSC - SENIORS ONLY,58-20 Little Neck Pkwy,Queens,11362,(718) 225-6750,Yes,No,OPEN,8a-6p,8a-6p,8a-6p,8a-6p,8a-6p,,,1060912.95165,216576.582645,Senior center,,No
+700,CC295,Bellerose Library,250-06 Hillside Av,Queens,11426,(718) 831-8644,Yes,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,10a-5p,,1062647.0,207233.0,Library,,No
+701,CC1023,P.S. 097 Forest Park,85-52 85 STREET,Queens,11421,,Yes,No,OPEN,8a-5p,8a-5p,8a-5p,8a-5p,8a-5p,,,1023066.0,192236.0,School,,No
+702,CC181,Woodhaven Library,85-41 Forest Pkwy,Queens,11421,(718) 849-1010,Yes,No,OPEN,12p-8p,1p-6p,10a-6p,12p-8p,10a-6p,10a-5p,,1022662.0,192339.0,Library,,No
+704,CC1022,P.S. 064 Joseph P. Addabbo,82-01 101 AVENUE,Queens,11416,,Yes,No,OPEN,8a-5p,8a-5p,8a-5p,8a-5p,8a-5p,,,1023925.0,187748.0,School,,No
+708,CC388,Richmond Hill Library,118-14 Hillside Av,Queens,11418,(718) 849-7150,No,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,10a-5p,,1030935.0,194626.0,Library,,No
+709,CC190,CCNS Ozone Park NSC - SENIORS ONLY,103-02 101 Av,Queens,11416,(718) 847-2100,Yes,No,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,1028803.00012,189093.000145,Senior center,Entrance on 103rd Street,No
+711,CC069,Briarwood Library,85-12 Main St,Queens,11435,(718) 658-1680,No,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,10a-5p,,1034302.10071,198000.761779,Library,,No
+713,CC297,Jamaica Citadel Corps Comm Center,90-23 161 St,Queens,11432,(862) 438-1598,Yes,Hours may be extended during a heat emergency.,OPEN,9a-4p,9a-4p,9a-4p,9a-4p,9a-4p,,,1040053.0,196162.0,Community center,,No
+714,CC070,Central Library,89-11 Merrick Blvd,Queens,11411,(718) 990-0700,Yes,No,OPEN,10a-8p,10a-8p,10a-8p,10a-8p,10a-6p,10a-5p,,1041166.0,197224.0,Library,,No
+720,CC1025,P.S. 035 Nathaniel Woodhull,191-02 90 Avenue,Queens,11423,,Yes,No,OPEN,8a-5p,8a-5p,8a-5p,8a-5p,8a-5p,,,1048319.0,199288.0,School,,No
+721,CC499,Hollis Library,202-05 Hillside Av,Queens,11423,(718) 465-7355,Yes,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,10a-5p,,1050144.0,201717.0,Library,,No
+722,CC180,JASA Holliswood NSC - SENIORS ONLY,86-25 Francis Lewis Blvd,Queens,11427,(718) 454-6157,Yes,Hours may be extended during a heat emergency.,OPEN,9a-4p,9a-4p,9a-4p,9a-4p,9a-4p,,,1049441.99985,203521.00016,Senior center,,No
+724,CC500,St Albans Library,191-05 Linden Blvd,Queens,11412,(718) 528-8196,Yes,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,10a-5p,,1050774.0,191665.0,Library,,No
+726,CC1024,P.S. 100 Glen Morris,111-11 118 Street,Queens,11420,,Yes,No,OPEN,8a-5p,8a-5p,8a-5p,8a-5p,8a-5p,,,1033744.0,186992.0,School,,No
+727,CC074,South Ozone Park Library,128-16 Rockaway Blvd,Queens,11420,(718) 529-1660,Yes,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,10a-5p,,1037152.0,185170.0,Library,,No
+733,CC498,Rochdale Village Library,169-09 137 Av,Queens,11434,(718) 723-4440,Yes,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,10a-5p,,1047880.97116,184515.611514,Library,,No
+736,CC397,Snap Brookville NSC - SENIORS ONLY,133-33 Brookville Blvd ,Queens,11422,(718) 525-8899,Yes,No,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,1058662.00011,185127.999873,Senior center,Program lower level,No
+737,CC179,Robert Couche NSC - SENIORS ONLY,137-57 Farmers Blvd,Queens,11434,(718) 978-8352,Yes,No,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,1049747.18264,184406.845803,Senior center,,No
+739,CC175,Laurelton Library,134-26 225 St,Queens,11413,(718) 528-2822,Yes,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,10a-5p,,1054808.0,185984.0,Library,,No
+741,CC177,Rosedale Library,144-20 243 St,Queens,11422,(718) 990-8605,No,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,,,1056393.0,179832.0,Library,,No
+743,CC184,Howard Beach Library,92-06 156 Av,Queens,11414,(718) 641-7086,Yes,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,,,1028140.0,181157.0,Library,,No
+745,CC390,Broad Channel Library,16-26 Crossbay Blvd,Queens,11693,(718) 318-4943,No,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,,,1034218.89343,158185.575223,Library,,No
+747,CC224,Sorrentino Recreation Center,18-48 Cornaga Av,Queens,11691,(718) 471-4818,Yes,No,OPEN,9a-10p,9a-10p,9a-10p,9a-10p,9a-10p,9a-5p,,1053286.86248,158854.706807,Community center,,No
+748,CC225,JASA Roy Reuther NSC - SENIORS ONLY,7-11C Seagirt Avenue,Queens,11691,(718) 471-3110,Yes,Hours may be extended during a heat emergency.,OPEN,9a-4p,9a-4p,9a-4p,9a-4p,9a-4p,,,1055922.00002,156276.000162,Senior center,Apt 2N,No
+752,CC223,Arverne Library,312 Beach 54 St,Queens,11692,(718) 990-5157,Yes,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,10a-5p,,1044218.0,155422.0,Library,,No
+753,CC640,Beach 41st Community Center,426 Beach 40th Street,Queens,11691,(347) 246-9759,Yes,Hours may be extended during a heat emergency.,OPEN,6p-10p,6p-10p,6p-10p,6p-10p,6p-10p,3p-11p,3p-11p,1047640.93357,156696.756866,Cornerstone Program,,No
+755,CC227,CCNS Seaside NSC - SENIORS ONLY,320 Beach 94 St,Queens,11693,(347) 926-4119,Yes,No,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,1035089.67948,153343.469282,Senior center,,No
+756,CC548,Peninsula Library,92-25 Rockaway Beach Blvd,Queens,11693,(718) 634-1110,Yes,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,10a-5p,,1035340.59466,152766.761446,Library,,No
+758,CC228,JASA Rockaway Park NSC - SENIORS ONLY,106-20 Shore Front Pkwy,Queens,11694,(718) 634-3044,Yes,No,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,1032271.71497,151135.1361,Senior center,,No
+761,CC287,Maspeth Library,69-70 Grand Av,Queens,11378,(718) 639-5228,Yes,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,10a-5p,,1013876.76826,204165.962087,Library,,No
+763,CC385,Middle Village Library,72-31 Metropolitan Av,Queens,11379,(718) 326-1390,Yes,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,,,1017277.0,199039.0,Library,,No
+766,CC630,Astoria Community Center,4-05 Astoria Blvd,Queens,11102,(347) 813-4452,Yes,Hours may be extended during a heat emergency.,OPEN,6p-10p,6p-10p,6p-10p,6p-10p,6p-10p,3p-11p,3p-11p,1002607.14634,221035.619986,Cornerstone Program,,No
+767,CC213,HANAC Ravenswood NSC - SENIORS ONLY,34-35A 12 St ,Queens,11106,(718) 786-1550,Yes,No,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,1001760.6418,217251.274865,Senior center,Entrance in the rear of the building,No
+769,CC012,Woodside,50-19 Broadway,Queens,11377,(718) 784-6173,Yes,Hours may be extended during a heat emergency.,OPEN,6p-10p,6p-10p,6p-10p,6p-10p,6p-10p,3p-11p,3p-11p,1009099.95139,214472.327592,Cornerstone Program,,No
+774,CC298,Allen Community NSC - SENIORS ONLY,166-01 Linden Blvd,Queens,11434,(718) 658-0980,Yes,Hours may be extended during a heat emergency.,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,1044425.77432,190870.111092,Senior center,,No
+778,CC639,Ocean Bay Community Center,57-10 Beach Channel Drive,Queens,11692,(718) 577-5260,Yes,Hours may be extended during a heat emergency.,OPEN,6p-10p,6p-10p,6p-10p,6p-10p,6p-10p,3p-11p,3p-11p,1043270.85143,156162.622108,Cornerstone Program,,No
+779,CC513,Sunnyside Community NSC - SENIORS ONLY,43-31 39 St,Queens,11104,(718) 784-6173,Yes,Hours may be extended during a heat emergency.,OPEN,8:30a-4:30p,8:30a-4:30p,8:30a-4:30p,8:30a-4:30p,8:30a-4:30p,,,1004859.10936,210743.853496,Senior center,,No
+780,CC062,East Elmhurst Library,95-06 Astoria Blvd,Queens,11369,(718) 424-2619,Yes,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,10a-5p,,1019189.0,217071.0,Library,,No
+783,CC164,CCNS Catherine Sheridan NSC - SENIORS ONLY,35-24 83 St,Queens,11372,(718) 458-4600,Yes,Hours may be extended during a heat emergency.,OPEN,8:30a-4:30p,8:30a-4:30p,8:30a-4:30p,8:30a-4:30p,8:30a-4:30p,,,1016405.90188,213086.293037,Senior center,,No
+787,CC932,Hillcrest NSC - SENIORS ONLY,91-34 182nd Pl,Queens,11423,(718) 217-0126,Yes,Hours may be extended during a heat emergency.,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,1046249.13124,197553.999955,Senior center,Cooling area on second floor and elevator for use,No
+789,CC1044,Petco Jackson Heights - Pet Friendly,7507 31 Ave,Queens,11370,(718) 446-1061,Yes,No,OPEN,9a-9p,9a-9p,9a-9p,9a-9p,9a-9p,9a-9p,9a-9p,1014212.0,216076.0,Other,,Yes
+790,CC197,KCS Flushing NSC - SENIORS ONLY,42-15 166 St ,Queens,11358,(718) 886-8203,Yes,No,OPEN,8:30a-5p,8:30a-5p,8:30a-5p,8:30a-5p,8:30a-5p,,,1039626.00013,215868.000072,Senior center,Basement,No
+791,CC296,Glen Oaks Library,256-04 Union Turnpike,Queens,11004,(718) 831-8636,Yes,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,10a-5p,,1063131.2547,211013.246199,Library,,No
+792,CC174,South Hollis Library,204-01 Hollis Av,Queens,11412,(718) 465-6779,Yes,No,OPEN,12p-5p,12p-5p,12p-5p,12p-5p,12p-5p,12p-5p,,1052508.0,196953.0,Library,,No
+793,CC191,Howard Beach NSC - SENIORS ONLY,155-55 Cross Bay Blvd,Queens,11414,(718) 738-8100,Yes,Hours may be extended during a heat emergency.,OPEN,9a-4p,9a-4p,9a-4p,9a-4p,9a-4p,,,1028591.99989,181589.000061,Senior center,Entrance on 156th Avenue,No
+798,CC1052,Petco Fresh Meadows Queens Unleashed - Pet Friendly,61-23 190 St,Queens,11365,(718) 454-3259,Yes,No,OPEN,9a-8p,9a-8p,9a-8p,9a-8p,9a-8p,9a-8p,10a-7p,1044060.0,209103.0,Other,,Yes
+799,CC172,Fresh Meadows Library,193-20 Horace Harding Exwy,Queens,11365,(718) 454-7272,Yes,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,10a-5p,,1044608.0,209515.0,Library,,No
+804,CC515,Long Island City Library,37-44 21 St,Queens,11101,(718) 752-3700,Yes,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,10a-5p,,1001084.75757,215362.667374,Library,,No
+807,CC176,Cambria Heights Library,218-13 Linden Blvd,Queens,11411,(718) 528-3535,Yes,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,10a-5p,,1056023.928,192848.144026,Library,,No
+808,CC1050,Petco College Point - Pet Friendly,13311 20 Ave,Queens,11356,(718) 321-1295,Yes,No,OPEN,9a-8p,9a-8p,9a-8p,9a-8p,9a-8p,9a-8p,10a-7p,1029812.0,224518.0,Other,,Yes
+809,CC961,Mass Vaccination Site - Citi Field,36-2 Seaver Way,Queens,11368,,Yes,No,OPEN,10a-10p,10a-10p,10a-10p,10a-10p,10a-10p,10a-10p,10a-10p,1027176.92004,214942.848051,Other,,No
+811,CC214,HANAC Harmony JVL ISC - SENIORS ONLY,27-40 Hoyt Av South,Queens,11102,(718) 626-3035,Yes,No,OPEN,8:30a-3:30p,8:30a-3:30p,8:30a-3:30p,8:30a-3:30p,8:30a-3:30p,9:30a-1p,,1006618.44672,220245.270517,Senior center,Entrance at 29th St,No
+815,CC553,Elmhurst Library,86-07 Broadway,Queens,11373,(718) 271-1020,Yes,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,10a-5p,,1018392.09577,208385.337921,Library,,No
+816,CC1036,Hunters Point Library,47-40 Center Blvd,Queens,11109,(718) 990-4150,No,No,OPEN,10a-6p,1p-6p,10a-6p,12p-8p,10a-6p,10a-5p,,995687.0,210878.0,Library,,No
+818,CC1046,Petco Rego Park - Pet Friendly,6135 Junction Blvd,Queens,11374,(718) 289-1000,Yes,No,OPEN,9a-9p,9a-9p,9a-9p,9a-9p,9a-9p,9a-9p,9a-9p,1022210.0,206404.0,Other,,Yes
+819,CC237,St George Center Library,5 Central Av,Staten Island,10301,(718) 442-8560,Yes,No,OPEN,10a-7p,10a-7p,10a-7p,10a-7p,10a-5p,10a-5p,,962981.004092,173051.052765,Library,,No
+821,CC304,West New Brighton Library,976 Castleton Av,Staten Island,10310,(718) 442-1416,Yes,No,OPEN,11a-6p,11a-6p,11a-6p,11a-6p,10a-5p,10a-5p,,952379.276224,170479.90785,Library,,No
+822,CC443,Stapleton Corps Comm Center,15 Broad St,Staten Island,10304,(718) 448-8480,No,Hours may be extended during a heat emergency.,OPEN,9a-2p,9a-2p,9a-2p,9a-2p,9a-2p,,,963243.0,167268.0,Community center,,No
+823,CC202,Stapleton,132 Canal St,Staten Island,10304,(718) 727-0427,Yes,No,OPEN,11a-7p,11a-7p,11a-7p,11a-7p,10a-5p,10a-5p,,962641.393575,167447.096724,Library,,No
+826,CC410,Dongan Hills Library,1617 Richmond Rd,Staten Island,10304,(718) 351-1444,Yes,No,OPEN,11a-6p,11a-6p,11a-6p,11a-6p,10a-5p,10a-5p,,956164.0,154377.0,Library,,No
+828,CC200,Anderson NSC - SENIORS ONLY,120 Anderson Av ,Staten Island,10302,(718) 448-5757,Yes,Hours may be extended during a heat emergency.,OPEN,7a-3p,7a-3p,7a-3p,7a-3p,7a-3p,,,946913.999857,170547.000163,Senior center,Program located in the basement,No
+833,CC507,Todt Hill-Westerleigh Library,2550 Victory Blvd,Staten Island,10314,(718) 494-1642,Yes,No,OPEN,10a-7p,10a-7p,10a-7p,10a-7p,10a-5p,10a-5p,,943056.205024,161401.528979,Library,,No
+835,CC203,New Lane Neighborhood NSC - SENIORS ONLY,70 New Ln,Staten Island,10305,(718) 448-5936,Yes,No,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,967116.443376,162666.530688,Senior center,,No
+837,CC409,New Dorp Library,309 New Dorp La,Staten Island,10306,(718) 351-2977,Yes,No,OPEN,10a-7p,10a-7p,10a-7p,10a-7p,10a-5p,10a-5p,,953141.0,147658.0,Library,,No
+840,CC306,Richmondtown Library,200 Clarke Av,Staten Island,10306,(718) 668-0413,Yes,No,OPEN,10a-6p,10a-6p,10a-6p,10a-6p,10a-5p,10a-5p,,945751.063141,145714.769744,Library,,No
+842,CC305,Great Kills Library,56 Giffords La,Staten Island,10308,(718) 984-6670,Yes,No,OPEN,11a-6p,11a-6p,11a-6p,11a-6p,10a-5p,10a-5p,,942270.222262,140577.739057,Library,,No
+845,CC1028,Tottenville High School,100 Luten Avenue,Staten Island,10312,,Yes,No,OPEN,8a-5p,8a-5p,8a-5p,8a-5p,8a-5p,,,930452.0,131811.0,School,,No
+846,CC205,Huguenot Park Library,830 Huguenot Av,Staten Island,10312,(718) 984-4636,Yes,No,OPEN,10a-6p,10a-6p,10a-6p,10a-6p,10a-5p,10a-5p,,930527.0,133910.0,Library,,No
+847,CC430,Tottenville Library,7430 Amboy Rd,Staten Island,10307,(718) 984-0945,Yes,No,OPEN,11a-6p,11a-6p,11a-6p,11a-6p,10a-5p,10a-5p,,916371.111067,124998.000091,Library,,No
+848,CC081,West Brighton,230 Broadway,Staten Island,10310,(718) 682-1681,Yes,Hours may be extended during a heat emergency.,OPEN,6p-10p,6p-10p,6p-10p,6p-10p,6p-10p,3p-11p,3p-11p,951560.270833,170987.729167,Cornerstone Program,,No
+855,CC447,Stapleton Neighborhood NSC - SENIORS ONLY,189 Gordon St,Staten Island,10304,(718) 981-8828,No,No,OPEN,8a-4p,8a-4p,8a-4p,8a-4p,8a-4p,,,961427.251998,166268.682932,Senior center,,No
+857,CC444,Todt Hill,255 Westwood Av,Staten Island,10314,(718) 513-8117,Yes,Hours may be extended during a heat emergency.,OPEN,6p-10p,6p-10p,6p-10p,6p-10p,6p-10p,3p-11p,3p-11p,951225.975462,160360.063571,Cornerstone Program,,No
+859,CC201,Mariners Harbor Library,206 South Av,Staten Island,10303,(212) 621-0690,Yes,No,OPEN,11a-7p,11a-7p,11a-7p,11a-7p,10a-5p,10a-5p,,938038.415752,170529.686655,Library,,No
+863,CC238,South Beach Library,21-15 Robin Rd,Staten Island,10305,(718) 816-5834,Yes,No,OPEN,11a-7p,11a-7p,11a-7p,11a-7p,10a-5p,10a-5p,,966760.521617,156349.51797,Library,,No
+869,CC558,Ocean Breeze Athletic Complex,625 Father Capodanno Blvd,Staten Island,10305,(718) 351-7923,Yes,No,OPEN,5:30a-7:30p,5:30a-7:30p,5:30a-7:30p,5:30a-7:30p,6:30a-1:30p,6:30a-1:30p,6:30a-1:30p,963365.346219,151716.255673,Community center,,No
+871,CC1047,Petco Staten Island - Pet Friendly,165 Bricktown Way Suite 1C,Staten Island,10309,(718) 569-3011,Yes,No,OPEN,9a-8p,9a-8p,9a-8p,9a-8p,9a-8p,9a-8p,10a-7p,920287.0,132623.0,Other,,Yes

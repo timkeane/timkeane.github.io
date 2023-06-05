@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-41281554-18"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-41281554-18');</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="twitter:card" content="summary_large_image">
+  <meta prefix="og: http:/ogp.me/ns#" property="og:title" content="NYC Crime Victim Services Finder">
+	<meta prefix="og: http:/ogp.me/ns#" property="og:type" content="website">
+	<meta prefix="og: http:/ogp.me/ns#" property="og:url" content="https://maps.nyc.gov/victim-services/">
+	<meta prefix="og: http:/ogp.me/ns#" property="og:image" content="https://maps.nyc.gov/victim-services/img/og.png">
+	<meta prefix="og: http:/ogp.me/ns#" property="og:image:width" content="1200">
+	<meta prefix="og: http:/ogp.me/ns#" property="og:image:height" content="626">
+	<meta prefix="og: http:/ogp.me/ns#" property="og:site_name" content="maps.nyc.gov">
+	<meta prefix="og: http:/ogp.me/ns#" property="og:description" content="NYC Crime Victim Services Finder">
+
+  <title>Crime Victim Services</title>
+
+  <link rel="manifest" href="manifest.webmanifest">
+	<link rel="apple-touch-startup-image" href="img/icon-512.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/icon-60.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/icon-76.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/icon-120.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/icon-152.png">
+	<link rel="apple-touch-icon" sizes="167x167" href="img/icon-167.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/icon-180.png">
+	<link rel="apple-touch-icon" sizes="192x192" href="img/icon-192.png">
+	<link rel="apple-touch-icon" sizes="256x256" href="img/icon-256.png">
+	<link rel="apple-touch-icon" sizes="384x384" href="img/icon-384.png">
+	<link rel="apple-touch-icon" sizes="512x512" href="img/icon-512.png">
+
+  <script src="js/babel-polyfill.js?0.4.22"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.8.0/proj4.min.js" integrity="sha512-pLnzlcFjcj9A9ggTfXZyscd+BWAV9pHdDrLekEoTimItxZI3uOAi7CSLXAHGZu7zRgG9Xyhl9bG3A1uRSJJOJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js" integrity="sha512-SGWgwwRA8xZgEoKiex3UubkSkV1zSE1BS6O4pXcaxcNtUlQsOmOmhVnDwIvqGRfEmuz83tIGL13cXMZn6upPyg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <link href="css/victim-services.css?1.0.24" rel="stylesheet">
+
+</head>
+<body class="loading">
+  <div style="display:none">
+    <div id="phone-content"> 
+      <a class="btn rad-all call" role="button" href="tel:911">For Emergencies Call 911</a>
+      <a class="btn rad-all call" role="button" href="tel:866-689-4357">Crime Victim Hotline<br>866-689-HELP</a>
+      <a class="btn rad-all call" role="button" href="tel:800-621-4673">Domestic Violence Hotline<br>800-621-HOPE</a>
+      <a class="btn rad-all call" role="button" href="tel:800-342-3720">To Report Child Abuse To The<br>Administration For Children's Services<br>800-342-3720</a>
+    </div>
+    <div id="info-content"> 
+      <a class="btn rad-all call" role="button" href="tel:911">For Emergencies Call 911</a>
+      <a class="btn rad-all email" role="button" href="tel:311">Text 311 For Assistance (311-692)</a>
+      <a class="btn rad-all web" role="button" href="https://www1.nyc.gov/site/ocdv/programs/resource-directory.page" target="__blank">Click Here For Additional Resources Related To Domestic Violence</a>
+      <p>Click below if you are a service provider seeking to update or add provider information.</p>
+      <a class="btn rad-all email" role="button" href="https://www1.nyc.gov/site/criminaljustice/connect/crime-victim-service-providers-update-form.page" target="__blank">Update Provider Info</a>
+    </div>
+    <div id="splash-content">
+      <h1>Computer Safety Notice</h1>
+      <p>Be aware that abusers may be able to track your visit to this web page.</p>
+      <button class="btn rad-all call">If you feel that<br>you are in danger<br>click here to call for help</button>
+    </div>
+  </div>
+  <div id="phn">
+    <a class="btn-phn btn-sq rad-all" role="button" title="Call for assistance"></a>
+  </div>
+  <div id="info">
+    <a class="btn-info btn-sq rad-all" role="button" title="Help"></a>
+  </div>
+
+  <script src="js/victim-services.js?1.0.24"></script>
+</body>
+</html>

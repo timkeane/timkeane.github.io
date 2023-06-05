@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta prefix="og: http://ogp.me/ns#" property="og:title" content="NYC Crime Map">
+	<meta prefix="og: http://ogp.me/ns#" property="og:type" content="website">
+	<meta prefix="og: http://ogp.me/ns#" property="og:url" content="/crime/">
+	<meta prefix="og: http://ogp.me/ns#" property="og:image" content="/crime/img/og.png">
+	<meta prefix="og: http://ogp.me/ns#" property="og:image:width" content="1200">
+	<meta prefix="og: http://ogp.me/ns#" property="og:image:height" content="626">
+	<meta prefix="og: http://ogp.me/ns#" property="og:description" content="View NYC crime statistics and locations">
+	<meta prefix="og: http://ogp.me/ns#" property="og:site_name" content="NYC.gov">	
+ 	
+	<title>NYC Crime Map</title>
+
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/3.15/themes/css/cartodb.css">
+	<link rel="stylesheet" href="../nyc-lib/v0.1.0/css/nyc-carto-lib.css">
+	<link rel="stylesheet" href="css/nyc-crime.css"> 
+
+	<link rel="apple-touch-icon" sizes="60x60" href="img/apple-touch-icon-60.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/apple-touch-icon-76.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/apple-touch-icon-120.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon-152.png">
+
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script src="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/3.15/cartodb.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.12/proj4.js"></script>
+	<!--[if IE <= 9]>
+		<script>
+			Date.prototype.toLocaleDateString = function(){
+				return (this.getMonth() + 1) + '/' + this.getDate() + '/' + this.getFullYear();
+			};
+		</script>
+	<![endif]-->
+	<!--[if IE <= 10]>
+		<script src="../nyc-lib/v0.1.0/src/js/nyc/ie/legacy/mutationobserver.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<table id="first-load">
+		<tbody><tr><td>
+			<img src="img/first-load.gif" alt="maps.nyc.gov"><p>maps.nyc.gov</p>
+		</td></tr></tbody>
+	</table>
+	<div id="map-page" data-role="page" data-title="NYC Crime Map">
+		<div class="banner">
+			<img class="logo nypd" src="img/nypd.png" onclick="document.location='./';" alt="NYC Crime Map" title="NYC Crime Map">
+			<img class="logo nyc" src="img/nyc.png" onclick="document.location='./';" alt="NYC Crime Map" title="NYC Crime Map">
+			<h1 onclick="document.location='./';" title="NYC Crime Map">
+				Crime Map
+			</h1>
+			<div id="btn-toggle" class="btn-panel"><a><span class="noshow">Map</span></a></div>
+			<div id="spinner"></div>
+		</div>
+		<div id="main" data-role="main" class="ui-content">
+			<div id="map"></div>
+			<div id="map-title"></div>
+			<div id="panel">
+				<div id="map-type-input"></div>
+				<div id="crime-type-input"></div>
+				<div id="date-range-input"></div>
+				<div data-role="collapsible" data-collapsed="false" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+					<h3>Legend</h3>
+					<div id="legend" class="small"></div>
+					<a class="stat-note" href="http://www.nyc.gov/html/nypd/html/crime_mapping/nyc_crime_map_introduction.shtml" target="nypd">
+        				See statistical/technical notes
+  					</a>
+				</div>		
+				<div id="chart-pane" data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+					<h3>Chart</h3>
+					<div id="chart-sum" class="chart-none">
+						<div class="chart-title"></div>
+						<div class="chart-note">Search for a location to create the summary chart.</div>
+						<canvas></canvas>
+						<a class="ui-btn ui-icon-carat-l ui-btn-icon-left ui-corner-all" onclick="nyc.app.showAllChart();">Compare All Precincts</a>
+					</div>
+				</div>		
+				<div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+					<h3>Download</h3>
+					<div>
+						<a class="ui-btn ui-btn-icon-left ui-corner-all download-data" href="https://data.cityofnewyork.us/Public-Safety/Police-Precincts/78dh-3ptz" target="_blank">NYC OpenData - NYPD Precincts</a>
+						<a class="ui-btn ui-btn-icon-left ui-corner-all download-data" href="https://data.cityofnewyork.us/Public-Safety/NYPD-Complaint-Data-Historic/qgea-i56i" target="_blank">NYPD Complaints (Historic)</a>
+						<a class="ui-btn ui-btn-icon-left ui-corner-all download-data" href="https://data.cityofnewyork.us/Public-Safety/NYPD-Complaint-Data-Current-Year-To-Date-/5uac-w243" target="_blank">NYPD Complaints (Year-To-Date)</a>
+						<!--  <a class="ui-btn ui-btn-icon-left ui-corner-all download-code" href="" target="_blank">GitHub - Source Code</a> -->
+					</div>
+				</div>		
+			</div>
+			<div id="chart-all">
+				<a id="chart-all-close" onclick="nyc.app.hideAllChart();"><span class="noshow">close</span></a>
+				<div class="chart-title"></div>
+				<canvas></canvas>
+			</div>
+		</div>
+	</div>
+	<div id="info-pct" class="info-tmpl">
+		<div class="cartodb-popup v2 precinct">
+			<a href="#close" class="cartodb-popup-close-button close">x</a>
+			<div class="cartodb-popup-content-wrapper">
+				<div class="cartodb-popup-content">
+					<div><b>{{name}}</b></div>
+					<div class="crime-count" data-type="{{type}}">
+						<a class="ui-btn-icon-left ui-icon-carat-d" title="Show detail"></a>
+						<div><span class="fmt-num">{{crime_count}}</span> {{type}}</div>
+					</div>
+					<ul class="crime-count-type"></ul>
+					<div>
+						<span class="fmt-num">{{per1000}}</span>
+						{{type}} per <span class="fmt-num">1000</span> residents
+					</div>
+					<div>Population <span class="fmt-num">{{pop}}</span> </div>
+					<a class="stat-note" href="http://www.nyc.gov/html/nypd/html/crime_mapping/nyc_crime_map_introduction.shtml" target="nypd">
+        				See statistical/technical notes
+  					</a>
+				</div>
+			</div>
+			<div class="tip-tmpl">
+				<div class="tip-pct">
+					<div><b>{{name}}</b></div>
+					<div>
+						<span class="fmt-num">{{per1000}}</span>
+						<span class="tip-1000"> {{type}}/<span class="fmt-num">1000</span> res</span></div>
+				</div>
+			</div>
+			<div class="cartodb-popup-tip-container"></div>
+		</div>
+	</div>
+	<div id="info-sct" class="info-tmpl">
+		<div class="cartodb-popup v2 location">
+			<a href="#close" class="cartodb-popup-close-button close">x</a>
+			<div class="cartodb-popup-content-wrapper">
+				<div class="cartodb-popup-content">
+					<div class="crime-count" data-type="{{type}}">
+						<a class="ui-btn-icon-left ui-icon-carat-d" title="Show detail"></a>
+						<div><span class="fmt-num">{{crime_count}}</span> {{type}}</div>
+					</div>
+					<ul class="crime-count-type"></ul>
+					<a class="stat-note" href="http://www.nyc.gov/html/nypd/html/crime_mapping/nyc_crime_map_introduction.shtml" target="nypd">
+        				See statistical/technical notes
+  					</a>
+ 				</div>
+			</div>
+			<div class="tip-tmpl">
+				<div class="tip-loc"><span class="fmt-num">{{crime_count}}</span> {{type}}</div>
+			</div>
+			<div class="cartodb-popup-tip-container"></div>
+		</div>
+	</div>
+	<div id="info-loc" class="info-tmpl">
+		<div class="cartodb-popup v2 location">
+			<a href="#close" class="cartodb-popup-close-button close">x</a>
+			<div class="cartodb-popup-content-wrapper">
+				<div class="cartodb-popup-content">
+					<div class="crime-count" data-type="{{type}}">
+						<a class="ui-btn-icon-left ui-icon-carat-d" title="Show detail"></a>
+						<div><span class="fmt-num">{{crime_count}}</span> {{type}}</div>
+					</div>
+					<ul class="crime-count-type"></ul>
+					<a class="stat-note" href="http://www.nyc.gov/html/nypd/html/crime_mapping/nyc_crime_map_introduction.shtml" target="nypd">
+        				See statistical/technical notes
+  					</a>
+ 				</div>
+			</div>
+			<div class="tip-tmpl">
+				<div class="tip-loc"><span class="fmt-num">{{crime_count}}</span> {{type}}</div>
+			</div>
+			<div class="cartodb-popup-tip-container"></div>
+		</div>
+	</div>
+	<div id="copyright"></div>
+	<script src="../nyc-lib/v0.1.0/js/nyc-carto-lib.js"></script>
+	
+	<script src="js/nyc-crime.js"></script>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-41281554-6', 'nyc.gov');ga('send', 'pageview');
+	</script>	
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta prefix="og: http://ogp.me/ns#" property="og:title" content="NYC Mental Health Service Finder Beta">
+	<meta prefix="og: http://ogp.me/ns#" property="og:type" content="website">
+	<meta prefix="og: http://ogp.me/ns#" property="og:url" content="https://maps.nyc.gov/mental-health">
+	<meta prefix="og: http://ogp.me/ns#" property="og:image" content="https://maps.nyc.gov/mental-health/img/li.png">
+	<meta prefix="og: http://ogp.me/ns#" property="og:image:type" content="image/png">
+	<meta prefix="og: http://ogp.me/ns#" property="og:image:width" content="280">
+	<meta prefix="og: http://ogp.me/ns#" property="og:image:height" content="136">
+	<meta prefix="og: http://ogp.me/ns#" property="og:image" content="https://maps.nyc.gov/mental-health/img/og.png">
+	<meta prefix="og: http://ogp.me/ns#" property="og:image:width" content="1200">
+	<meta prefix="og: http://ogp.me/ns#" property="og:image:height" content="626">
+	<meta prefix="og: http://ogp.me/ns#" property="og:description" content="As part of #ThriveNYC, this web app can help you identify local mental health and substance abuse service providers.">
+	<meta prefix="og: http://ogp.me/ns#" property="og:site_name" content="NYC.gov">	
+	<meta name="google-translate-customization" content="4707bd7f535893a0-45bca7b6a97e5a2d-g609df9381571b349-c"> 	
+ 	
+ 	<title>NYC Mental Health Service Finder Beta</title>
+
+	<link rel="stylesheet" href="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="js/ol/v3.7.0-dist/ol.css">
+    
+	 
+    
+    
+    
+    
+	 
+	<link rel="stylesheet" href="css/nyc-min.css"> 
+
+	<link rel="apple-touch-icon" sizes="60x60" href="img/apple-touch-icon-60.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/apple-touch-icon-76.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/apple-touch-icon-120.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon-152.png">
+
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/proj4/proj4.js"></script>
+    <script src="js/ol/v3.7.0-dist/ol.js"></script>    
+	<script src="js/jq/jquery.csv.js"></script>
+</head>
+<body>
+	<table id="first-load">
+		<tbody><tr><td>
+			<img src="img/first-load.gif" alt="maps.nyc.gov"><p>maps.nyc.gov</p>
+		</td></tr></tbody>
+	</table>
+	<div id="map-page" data-role="page" data-title="NYC Mental Health Service Finder Beta">
+		<div id="intro">
+			<div class="intro-cont">
+				<div id="translate-container"></div>
+				This mental health and substance use finder is a prototype tool for New Yorkers to 
+				become familiar with services located in their neighborhood. If you are in crisis, 
+				call <a class="lifenet-word ui-btn ui-corner-all" href=tel:1-800-LIFENET>1-800-LIFENET</a> to speak with a counselor. 
+				If this is an emergency, call 911.
+				<button class="continue" onclick="$('#intro').fadeOut();$('#splash-cont').fadeIn();">Continue to Service Finder Map</button>
+			</div>
+		</div>
+		<div id="click-blocker"></div>
+		<div id="splash">
+			<div id="splash-cont">
+				<div id="filters">
+					<select>
+						<option value="any">Choose an age group...</option>
+						<option value="flag_chld">Children & Adolescents (17 and younger)</option>
+						<option value="flag_yad">Young Adults (18-25)</option>
+						<option value="flag_adlt">Adults (26-64)</option>
+						<option value="flag_snr">Seniors (65 or older)</option>
+					</select>
+					<select>
+						<option value="any">Choose a type of care...</option>
+						<option value="flag_mhf">Mental Health</option>
+						<option value="flag_saf">Substance Use</option>
+						<option value="flag_mhf,flag_saf">Both</option>
+					</select>
+					<select>
+						<option value="any">Choose a type of insurance...</option>
+						<option value="flag_mc">Medicare</option>
+						<option value="flag_md">Medicaid</option>
+						<option value="flag_si">CHP/FHP/Essential</option>
+						<option value="flag_pi">Private</option>
+						<option value="flag_np_ss">No insurance</option>
+					</select>
+					<select>
+						<option value="any">(Optional) Choose a demographic...</option>
+						<option value="filter_military">Military-Affiliated</option>
+						<option value="flag_gl">LGBTQ Community</option>
+						<option value="flag_pw">Pregnant/postpartum women</option>
+						<option value="flag_dv">Intimate Partner Violence Survivors</option>
+						<option value="flag_hv">HIV/AIDS Community</option>
+					</select>
+				</div>
+				<div id="filter-btn">
+					<button class="capitalize continue" onclick="$('#splash').fadeOut();nyc.app.layout();">Find health care facilities</button>
+				</div>
+			</div>
+		</div>
+		<div id="panel">
+			<div id="panel-content">
+				<div id="tabs" data-role="tabs">
+					<div data-role="navbar">
+						<ul>
+							<li id="map-tab-btn">
+								<a class="capitalize" href="#map-tab">map</a>
+							</li>
+							<li id="facility-tab-btn">
+								<a class="capitalize" href="#facility-tab" onclick="nyc.app.initList();">facilities</a>
+							</li>
+							<li>
+								<a class="capitalize" href="#filter-tab">filters</a>
+							</li>
+						</ul>
+					</div>
+					<div id="map-tab"></div>
+					<div id="facility-tab">
+						<div id="facility-list">
+							<div id="facilities"></div>
+							<div class="list-more">
+								<button onclick="nyc.app.next();">Show more facilities...</button>
+							</div>
+						</div>
+					</div>
+					<div id="filter-tab">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="banner">
+			<img class="banner-logo" src="img/nyc.png" onclick="document.location='./';" alt="NYC Mental Health Service Finder Beta" title="NYC Mental Health Service Finder Beta">
+			<h1 class="notranslate" translate="no" onclick="document.location='./';" title="NYC Mental Health Service Finder Beta">
+				Mental Health Service Finder Beta
+			</h1>
+		</div>
+		<div id="main" data-role="main" class="ui-content">
+			<div id="map"></div>
+		</div>
+		<div id="copyright"></div>
+		<div id="vcard-download">download contact</div>
+		<div id="alert">
+			<div id="alert-msg"></div>
+			<button title="OK" onclick="$('#alert').fadeOut();">OK</button>
+		</div>
+	</div>
+	<div id="dir-page" data-role="page">
+		<div class="banner">
+			<img class="banner-logo" src="img/nyc.png" onclick="document.location='./';" alt="NYC Mental Health Service Finder Beta" title="NYC Mental Health Service Finder Beta">
+			<h1 class="notranslate" translate="no" onclick="document.location='./';" title="NYC Mental Health Service Finder Beta">
+				Mental Health Service Finder Beta
+			</h1>
+			<a data-role="button" data-icon="arrow-l" class="hdr-btn back-btn ui-btn-right" href="#map-page" data-transition="slidedown">
+				Back to Finder
+			</a>
+		</div>		
+		<div data-role="content">
+			<div id="dir-panel">
+				<div id="dir-content">
+					<div class="fld-lbl">From my location:</div>
+					<div id="fld-from"><input placeholder="Enter an address..."></div>
+					<div class="fld-lbl">To <span id="fld-facility"></span>:</div>
+					<div id="fld-to"></div>
+					<table id="dir-mode">
+						<tbody><tr>
+							<td><a id="mode-transit" class="dir-mode-btn active-mode" data-role="button" data-mode="TRANSIT" title="Get transit directions">
+								<span class="noshow">Get transit directions</span>
+							</a></td>
+							<td><a id="mode-bike" class="dir-mode-btn" data-role="button" data-mode="BICYCLING" title="Get bicycling directions">
+								<span class="noshow">Get bicycling directions</span>
+							</a></td>
+							<td><a id="mode-walk" class="dir-mode-btn" data-role="button" data-mode="WALKING" title="Get walking directions">
+								<span class="noshow">Get walking directions</span>
+							</a></td>
+							<td><a id="mode-car" class="dir-mode-btn" data-role="button" data-mode="DRIVING" title="Get driving directions">
+								<span class="noshow">Get driving directions</span>
+							</a></td>
+						</tr></tbody>
+					</table>
+				</div>
+				<div id="directions"></div>
+			</div>
+			<div id="dir-main">
+				<div id="dir-map"></div>
+			</div>
+			<div id="dir-toggle" data-role="controlgroup" data-type="horizontal">
+				<a class="toggle-map capitalize" data-role="button">map</a>
+				<a class="ui-btn-active capitalize" data-role="button">directions</a>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<script src="js/nyc/pager.js"></script>
+	
+	<script src="js/nyc-min.js"></script>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+		ga('create', 'UA-41281554-12', 'auto');
+		ga('send', 'pageview');
+	</script>	
+</body>
+</html>

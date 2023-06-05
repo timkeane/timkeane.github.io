@@ -1,0 +1,153 @@
+body {
+  width: 750px !important;
+  overflow-x: visible;
+}
+
+
+#tabs {
+  width: 100% !important;
+  left: 0 !important;
+}
+
+.fnd #map.tab {
+  display: block;
+  background-color: transparent;
+  overflow: visible;
+}
+
+.fnd #map.tab .ol-layers {
+opacity: 0;
+}
+
+#map.tab .ol-overlay-container.ol-selectable {
+transform: unset !important;
+position: fixed !important;
+left: 0;
+top: 0;
+}
+
+.pop {
+	position: fixed;
+	left: 0;
+	top: 150px;
+	height: 100px;
+    border: none;
+    box-shadow: none;
+}
+
+.active-order .pop {
+	top: 174px;
+}
+
+.pop:before,
+.pop:after {
+display: none;
+}
+
+.note {
+	height: 180px;
+}
+
+.tabs .container {
+	overflow: hidden !important;
+}
+
+.tabs .lst-pg {
+    position: fixed;
+    top: 320px;
+    width: 100%;
+    height: calc(100% - 320px);
+}
+
+.active-order .tabs .lst-pg {
+    top: 344px;
+}
+
+
+#tabs .btns,
+#tabs .btn,
+.fnd #map.tab .zoom,
+.fnd #map.tab .shr,
+.fnd #map.tab #lng,
+.fnd #map.tab .btn-geo,
+.splash,
+#screen-reader-info,
+.f-tip, 
+#slider-map {
+  display: none !important;
+}
+
+#tabs .srch-ctl .btn-x {
+	display: inline-block !important;
+}
+
+#tabs .srch .btn-x {
+  display: none;
+  position: absolute;
+  left: calc(100% - 34px);
+  top: 10px;
+  z-index: 2;
+}
+#tabs .btn.dtl,
+#tabs .btn-more {
+  display: block !important;
+}
+
+#tabs .btn-more {
+    position: fixed;
+    margin: -65px 5px;
+    bottom: 75px;
+}
+
+*:focus, .focused, 
+.tab.active:focus {
+  box-shadow: none;
+}
+
+.fnd .lst-srch .srch {
+    display: block;
+    border-bottom: 1px solid var(--color-dark);
+    background-color: var(--color-dark);
+    width: 100%;
+}
+
+.fnd .lst-srch .srch input {
+    width: calc(100% - 65px);
+    margin: 5px;
+}
+
+.srch-ctl {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
+#facilities .note {
+  margin: 50px 5px 5px 5px;
+  position: fixed;
+}
+
+#acc-filter {
+  position: fixed;
+  top: 275px;
+  width: calc(100% - 10px);
+}
+
+.active-order #acc-filter {
+  top: 299px;
+}
+
+.active-order .lst-pg .list {
+  height: calc(100% - 74px);
+}
+
+h2.alert {
+	left: 0;
+}
+
+.alert div>div>div {
+	animation: none !important;
+	text-align: center;
+	width: 100%;
+	left: 0;
+}

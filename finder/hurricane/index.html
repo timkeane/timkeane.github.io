@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta prefix="og: http://ogp.me/ns#" property="og:title" content="NYC Hurricane Evacuation Zone Finder">
+  <meta prefix="og: http://ogp.me/ns#" property="og:type" content="website">
+  <meta prefix="og: http://ogp.me/ns#" property="og:url" content="https://maps.nyc.gov/hurricane">
+  <meta prefix="og: http://ogp.me/ns#" property="og:image" content="https://maps.nyc.gov/hurricane/img/og.png">
+  <meta prefix="og: http://ogp.me/ns#" property="og:image:width" content="1200">
+  <meta prefix="og: http://ogp.me/ns#" property="og:image:height" content="626">
+  <meta prefix="og: http://ogp.me/ns#" property="og:description" content="NYC Hurricane Evacuation Zone Finder">
+  <meta prefix="og: http://ogp.me/ns#" property="og:site_name" content="NYC.gov">
+  <meta name="google-translate-customization" content="4707bd7f535893a0-45bca7b6a97e5a2d-g609df9381571b349-c">
+
+ 	<title>NYC Hurricane Evacuation Zone Finder</title>
+
+	<link rel="manifest" href="manifest.webmanifest">
+	<link rel="apple-touch-startup-image" href="img/icon-512.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/icon-60.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/icon-76.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/icon-120.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/icon-152.png">
+	<link rel="apple-touch-icon" sizes="167x167" href="img/icon-167.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/icon-180.png">
+
+	<link rel="stylesheet" href="css/hurricane.css?2.0.74">
+
+  <script src="js/babel-polyfill.js?2.0.74"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.8.0/proj4.min.js" integrity="sha512-pLnzlcFjcj9A9ggTfXZyscd+BWAV9pHdDrLekEoTimItxZI3uOAi7CSLXAHGZu7zRgG9Xyhl9bG3A1uRSJJOJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js" integrity="sha512-SGWgwwRA8xZgEoKiex3UubkSkV1zSE1BS6O4pXcaxcNtUlQsOmOmhVnDwIvqGRfEmuz83tIGL13cXMZn6upPyg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body class="loading" aria-hidden="true">
+  <div id="legend">
+    <div class="note top"></div>
+    <div class="leg">
+      <div class="leg-it ec">
+        <div class="leg-sw ec-access"></div>
+        <span>accessible <span class="center"></span></span>
+      </div>
+      <div class="leg-it ec">
+        <div class="leg-sw"></div><span class="center"></span>
+        </div>
+      <div class="leg-it">
+        <div class="leg-sw zone z1"></div><span>Zone 1</span></div>
+      <div class="leg-it">
+        <div class="leg-sw zone z2"></div><span>Zone 2</span>
+      </div>
+      <div class="leg-it">
+        <div class="leg-sw zone z3"></div><span>Zone 3</span>
+      </div>
+      <div class="leg-it">
+        <div class="leg-sw zone z4"></div><span>Zone 4</span>
+      </div>
+      <div class="leg-it">
+        <div class="leg-sw zone z5"></div><span>Zone 5</span>
+      </div>
+      <div class="leg-it">
+        <div class="leg-sw zone z6"></div><span>Zone 6</span>
+      </div>
+      <div id="leg-slider"></div>
+    </div>
+    <div class="note">Find out more about the zones and preparing for a coastal storm:
+      <a href="https://www1.nyc.gov/site/em/ready/coastal-storms-hurricanes.page" target="_blank" rel="noopener noreferrer">
+      NYC Hazards - Coastal Storms & Hurricanes</a>
+    </div>
+  </div>
+  <div id="slider-map">
+    <button class="btn btn-sq rad-all" title="Zone transparency">
+      <span class="screen-reader-only">Zone transparency</span>
+    </button>
+    <div class="slider rad-all"></div>
+  </div>
+  <script src="js/hurricane.js?2.0.74"></script>
+  <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-41281554-1', 'auto');ga('send', 'pageview');</script>
+</body>
+</html>
