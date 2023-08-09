@@ -5,7 +5,7 @@
 
 ## NYC map tiles
 ### [https://maps.nyc.gov/tiles/](https://maps.nyc.gov/tiles/)
-### [https://maps.nyc.gov/then&now/](https://maps.nyc.gov/then&now/)
+### [Then & Now](./finder/then-now/)
 
 ## Navigating my boat
 ### [navaid](./navaid/)
