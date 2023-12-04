@@ -1,57 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title></title>
+  <title data-i18n="appTitle"></title>
   <meta charset="utf-8">
-  <meta name="description" content="Illinois BEAD Challenge">
+  <meta name="description" data-i18n="[content]appTitle">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@whoever">
-  <meta name="twitter:title" content="Illinois BEAD Challenge">
-  <meta name="twitter:description" content="Illinois BEAD Challenge">
+  <meta name="twitter:title" data-i18n="[content]appTitle">
+  <meta name="twitter:description" data-i18n="[content]appTitle">
   <meta name="twitter:image" content="img/og.png">
-  <meta prefix="og: http://ogp.me/ns#" property="og:title" content="Illinois BEAD Challenge">
-  <meta prefix="og: http://ogp.me/ns#" property="og:description" content="Illinois BEAD Challenge">
+  <meta prefix="og: http://ogp.me/ns#" property="og:title" data-i18n="[content]appTitle">
+  <meta prefix="og: http://ogp.me/ns#" property="og:description" data-i18n="[content]appTitle">
   <meta prefix="og: http://ogp.me/ns#" property="og:type" content="website">
   <meta prefix="og: http://ogp.me/ns#" property="og:url" content="https://...">
   <meta prefix="og: http://ogp.me/ns#" property="og:image" content="img/og.png">
   <meta prefix="og: http://ogp.me/ns#" property="og:image:width" content="1200">
   <meta prefix="og: http://ogp.me/ns#" property="og:image:height" content="626">
   <meta prefix="og: http://ogp.me/ns#" property="og:site_name" content="illinois.gov">
-	<link rel="manifest" href="data:application/manifest+json;base64,ew0KICAibGFuZyI6ICJlbiIsDQogICJkaXIiOiAibHRyIiwNCiAgIm5hbWUiOiAiSWxsaW5vaXMgQkVBRCBDaGFsbGVuZ2UiLA0KICAic2hvcnRfbmFtZSI6ICJJbGxpbm9pcyBCRUFEIENoYWxsZW5nZSIsDQogICJzdGFydF91cmwiOiAiLiIsDQogICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLA0KICAiYmFja2dyb3VuZF9jb2xvciI6ICIjZmZmIiwNCiAgImRlc2NyaXB0aW9uIjogIklsbGlub2lzIEJFQUQgQ2hhbGxlbmdlIiwNCiAgImljb25zIjogWw0KICAgIHsNCiAgICAgICJzcmMiOiAiaW1nLzQ4LnBuZyIsDQogICAgICAic2l6ZXMiOiAiNDh4NDgiLA0KICAgICAgInR5cGUiOiAiaW1hZ2UvcG5nIg0KICAgIH0sDQogICAgew0KICAgICAgInNyYyI6ICJpbWcvNzIucG5nIiwNCiAgICAgICJzaXplcyI6ICI3Mng3MiIsDQogICAgICAidHlwZSI6ICJpbWFnZS9wbmciDQogICAgfSwNCiAgICB7DQogICAgICAic3JjIjogImltZy85Ni5wbmciLA0KICAgICAgInNpemVzIjogIjk2eDk2IiwNCiAgICAgICJ0eXBlIjogImltYWdlL3BuZyINCiAgICB9LA0KICAgIHsNCiAgICAgICJzcmMiOiAiaW1nLzE0NC5wbmciLA0KICAgICAgInNpemVzIjogIjE0NHgxNDQiLA0KICAgICAgInR5cGUiOiAiaW1hZ2UvcG5nIg0KICAgIH0sDQogICAgew0KICAgICAgInNyYyI6ICJpbWcvMTY4LnBuZyIsDQogICAgICAic2l6ZXMiOiAiMTY4eDE2OCIsDQogICAgICAidHlwZSI6ICJpbWFnZS9wbmciDQogICAgfSwNCiAgICB7DQogICAgICAic3JjIjogImltZy8xOTIucG5nIiwNCiAgICAgICJzaXplcyI6ICIxOTJ4MTkyIiwNCiAgICAgICJ0eXBlIjogImltYWdlL3BuZyINCiAgICB9DQogIF0NCn0NCg==">
+	<link rel="manifest" href="data:application/manifest+json;base64,ewogICJsYW5nIjogImVuIiwKICAiZGlyIjogImx0ciIsCiAgIm5hbWUiOiAiSWxsaW5vaXMgQkVBRCBDaGFsbGVuZ2UiLAogICJzaG9ydF9uYW1lIjogIklsbGlub2lzIEJFQUQgQ2hhbGxlbmdlIiwKICAic3RhcnRfdXJsIjogIi4iLAogICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLAogICJiYWNrZ3JvdW5kX2NvbG9yIjogIiNmZmYiLAogICJkZXNjcmlwdGlvbiI6ICJJbGxpbm9pcyBCRUFEIENoYWxsZW5nZSIsCiAgImljb25zIjogWwogICAgewogICAgICAic3JjIjogImltZy80OC5wbmciLAogICAgICAic2l6ZXMiOiAiNDh4NDgiLAogICAgICAidHlwZSI6ICJpbWFnZS9wbmciCiAgICB9LAogICAgewogICAgICAic3JjIjogImltZy83Mi5wbmciLAogICAgICAic2l6ZXMiOiAiNzJ4NzIiLAogICAgICAidHlwZSI6ICJpbWFnZS9wbmciCiAgICB9LAogICAgewogICAgICAic3JjIjogImltZy85Ni5wbmciLAogICAgICAic2l6ZXMiOiAiOTZ4OTYiLAogICAgICAidHlwZSI6ICJpbWFnZS9wbmciCiAgICB9LAogICAgewogICAgICAic3JjIjogImltZy8xNDQucG5nIiwKICAgICAgInNpemVzIjogIjE0NHgxNDQiLAogICAgICAidHlwZSI6ICJpbWFnZS9wbmciCiAgICB9LAogICAgewogICAgICAic3JjIjogImltZy8xNjgucG5nIiwKICAgICAgInNpemVzIjogIjE2OHgxNjgiLAogICAgICAidHlwZSI6ICJpbWFnZS9wbmciCiAgICB9LAogICAgewogICAgICAic3JjIjogImltZy8xOTIucG5nIiwKICAgICAgInNpemVzIjogIjE5MngxOTIiLAogICAgICAidHlwZSI6ICJpbWFnZS9wbmciCiAgICB9CiAgXQp9Cg==">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   
   
   
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>  
-  <!-- package.version="0.1.7" -->
-  <script type="module" crossorigin src="./assets/index.990362dd.js"></script>
-  <link rel="stylesheet" href="./assets/index.9475d167.css">
+  <!-- package.version="0.1.8" -->
+  <script type="module" crossorigin src="./assets/index.e1a80f66.js"></script>
+  <link rel="stylesheet" href="./assets/index.5539f5ee.css">
 </head>
 <body>
   <div class="banner" onclick="document.location = './'">
     <div class="logoState">
-      <img src="./assets/Seal_of_Illinois.bd5b69a9.png" alt="Illinois State Seal">
+      <img src="./assets/Seal_of_Illinois.bd5b69a9.png" data-i18n="[alt]stateSeal">
     </div>
     <div class="logoBBLab">
-      <img src="./assets/il-bb-lab2.28ad675a.png" alt="Illinois Broadband Lab Logo">
+      <img src="./assets/il-bb-lab2.28ad675a.png" data-i18n="[alt]bbLabLogo">
     </div>
-    <h1></h1>
+    <h1 data-i18n="appTitle"></h1>
   </div>
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-12">
         <ul class="nav nav-tabs flex-sm-column" role="tablist">
           <li class="nav-item" role="presentation" aria-hidden="true">
-            <button class="nav-link active" id="map-tab" data-bs-toggle="tab" data-bs-target="#map" type="button" role="tab" aria-controls="map" aria-selected="true">Map</button>
+            <button data-i18n="map" class="nav-link active" id="map-tab" data-bs-toggle="tab" data-bs-target="#map" type="button" role="tab" aria-controls="map" aria-selected="true"></button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="location-tab" data-bs-toggle="tab" data-bs-target="#locations" type="button" role="tab" aria-controls="locations" aria-selected="false"></button>
+            <button data-i18n="locations" class="nav-link" id="location-tab" data-bs-toggle="tab" data-bs-target="#locations" type="button" role="tab" aria-controls="locations" aria-selected="false"></button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="challenge-tab" data-bs-toggle="tab" data-bs-target="#challenges" type="button" role="tab" aria-controls="challenges" aria-selected="false"></button>
+            <button data-i18n="challenges" class="nav-link" id="challenge-tab" data-bs-toggle="tab" data-bs-target="#challenges" type="button" role="tab" aria-controls="challenges" aria-selected="false"></button>
           </li>
         </ul>
       </div>
@@ -63,15 +63,105 @@
           <div class="tab-pane fade show active" id="map" role="tabpanel" aria-labelledby="map-tab" aria-hidden="true">
             <div id="map-container" aria-hidden="true"></div>
           </div>
-          <div class="tab-pane fade" id="locations" role="tabpanel" aria-labelledby="location-tab"></div>
-          <div class="tab-pane fade" id="challenges" role="tabpanel" aria-labelledby="challenge-tab">
+          <div data-i18n="[append]startContent" class="tab-pane fade" id="locations" role="tabpanel" aria-labelledby="location-tab"></div>
+          <div data-i18n="[html]challengeMessage" class="tab-pane fade" id="challenges" role="tabpanel" aria-labelledby="challenge-tab">
             <form id="challenge">
-              <button type="submit" class="btn btn-primary"></button>
+              <button data-i18n="submit" type="submit" class="btn btn-primary"></button>
             </form>
           </div>
         </div>
       </div>
       <div class="col-sm-8"></div>
+    </div>
+  </div>
+
+  <div id="legend" class="legend" style="display: none;">
+    <h6 data-i18n="[append]legendTitle">
+      <a href="#" class="legend-closer" data-i18n="[aria-label]close"></a>
+    </h6>
+    <div class="legend-content">
+      <div class="layer">
+        <input id="cai-check" type="checkbox"
+          class="form-check-input layer-check"
+          data-i18n="[aria-label]caiTitle" disabled>
+        <h7 data-i18n="caiTitle"></h7>
+        <ul>
+          <li>
+            <img src="./assets/y-eligible.7dfe4352.svg" data-i18n="[alt]eligibleTxt">
+            <span data-i18n="eligibleTxt"></span>
+          </li>
+          <li>
+            <img src="./assets/n-eligible.c4b83f0c.svg" data-i18n="[alt]notEligibleTxt">
+            <span data-i18n="notEligibleTxt"></span>
+          </li>
+        </ul>
+      </div>
+      <div class="layer">
+        <input id="bsl-check" type="checkbox"
+          class="form-check-input layer-check"
+          data-i18n="[aria-label]bslTitle" disabled>
+        <h7 data-i18n="bslTitle"></h7>
+        <div class="theme">
+          <input name="bsl-radio" type="radio"
+            class="form-check-input theme-radio"
+            data-i18n="[aria-label]serviceabilityTxt" checked disabled>
+          <h8 data-i18n="serviceabilityTxt"></h8>
+          <ul>
+            <li>
+              <img src="./assets/served.26fe2afc.svg" data-i18n="[alt]served">
+              <span data-i18n="served"></span>
+            </li>
+            <li>
+              <img src="./assets/underserved.b72870a8.svg" data-i18n="[alt]underserved">
+              <span data-i18n="underserved"></span>
+            </li>
+            <li>
+              <img src="./assets/unserved.42cd97ec.svg" data-i18n="[alt]unserved">
+              <span data-i18n="unserved"></span>
+            </li>
+          </ul>
+        </div>
+        <div class="theme">
+          <input name="bsl-radio" type="radio"
+            class="form-check-input theme-radio"
+            data-i18n="[aria-labelen]enforceableCommitment" disabled>
+          <h8 data-i18n="enforceableCommitment"></h8>
+          <ul>
+            <li>
+              <img src="./assets/y-enforce.a7a5a647.svg" data-i18n="[alt]enforceableTxt">
+              <span data-i18n="enforceableTxt"></span>
+            </li>
+            <li>
+              <img src="./assets/n-enforce.273a5e0a.svg" data-i18n="[alt]notEnforceableTxt">
+              <span data-i18n="notEnforceableTxt"></span>
+            </li>
+          </ul>
+        </div>
+        <div class="theme">
+          <input name="bsl-radio" type="radio"
+            class="form-check-input layer-check"
+            data-i18n="[aria-label]mdu" disabled>
+          <h8 data-i18n="mdu"></h8>
+          <ul>
+            <li>
+              <img src="./assets/mdu.4be8c6b8.svg" data-i18n="[alt]mdu">
+              <span data-i18n="mdu"></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="layer">
+        <input id="bg-check" type="checkbox"
+          class="form-check-input layer-check"
+          data-i18n="[aria-label]bgTitle" disabled>
+        <h7 data-i18n="bgTitle"></h7>
+        <ul>
+          <li>
+            <img src="./assets/bg.1172e32c.svg" data-i18n="[alt]bgTitle">
+            <span data-i18n="bgTitle"></span>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
   
