@@ -27,8 +27,8 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>  
   <!-- package.version="0.2.5" -->
-  <script type="module" crossorigin src="/assets/index.c62203d0.js"></script>
-  <link rel="stylesheet" href="/assets/index.66495be5.css">
+  <script type="module" crossorigin src="/assets/index.fed3e72a.js"></script>
+  <link rel="stylesheet" href="/assets/index.28abe45c.css">
 </head>
 <body class="loading">
   <div class="banner" onclick="document.location = './'">
@@ -76,15 +76,15 @@
   </div>
 
   <div id="legend" class="legend" style="display: none;">
-    <h6 data-i18n="[append]legend.name">
+    <h2 data-i18n="[append]legend.name">
       <a href="#" class="legend-closer" data-i18n="[aria-label]close"></a>
-    </h6>
+    </h2>
     <div class="legend-content">
       <div class="layer">
         <input id="cai-check" type="checkbox"
           class="form-check-input layer-check"
           data-i18n="[aria-label]layer.cai.name" disabled>
-        <h7 data-i18n="layer.cai.name"></h7>
+        <h3 data-i18n="layer.cai.name"></h3>
         <ul>
           <li>
             <img src="/assets/y-eligible.7dfe4352.svg" data-i18n="[alt]feature.value.eligible">
@@ -100,15 +100,15 @@
         <input id="bsl-check" type="checkbox"
           class="form-check-input layer-check"
           data-i18n="[aria-label]layer.bsl.name" disabled>
-        <h7 data-i18n="layer.bsl.name"></h7>
-        <div class="theme">
+        <h3 data-i18n="layer.bsl.name"></h3>
+        <div class="filter">
           <input name="bsl-radio" type="radio"
-            class="form-check-input theme-radio"
+            class="form-check-input filter-radio"
             data-i18n="[aria-label]feature.field.service" checked disabled>
-          <h8 data-i18n="feature.field.service"></h8>
+          <h4 data-i18n="feature.field.service"></h4>
           <ul>
             <li>
-              <img src="/assets/served.26fe2afc.svg" data-i18n="[alt]legend.served">
+              <img src="/assets/served.42cd97ec.svg" data-i18n="[alt]legend.served">
               <span data-i18n="legend.served"></span>
             </li>
             <li>
@@ -116,45 +116,32 @@
               <span data-i18n="legend.underserved"></span>
             </li>
             <li>
-              <img src="/assets/unserved.42cd97ec.svg" data-i18n="[alt]legend.unserved">
+              <img src="/assets/unserved.26fe2afc.svg" data-i18n="[alt]legend.unserved">
               <span data-i18n="legend.unserved"></span>
             </li>
           </ul>
         </div>
-        <div class="theme">
-          <input name="bsl-radio" type="radio"
-            class="form-check-input theme-radio"
-            data-i18n="[aria-label]feature.field.enforce" disabled>
-          <h8 data-i18n="feature.field.enforce"></h8>
-          <ul>
-            <li>
-              <img src="/assets/y-enforce.a7a5a647.svg" data-i18n="[alt]feature.value.enforce">
-              <span data-i18n="feature.value.enforce"></span>
-            </li>
-            <li>
-              <img src="/assets/n-enforce.273a5e0a.svg" data-i18n="[alt]feature.value.not_enforce">
-              <span data-i18n="feature.value.not_enforce"></span>
-            </li>
-          </ul>
+        <div class="filter">
+          <h5>Filter:</h5>
         </div>
-        <div class="theme">
+        <div class="filter">
+          <input name="bsl-radio" type="radio"
+            class="form-check-input layer-check"
+            data-i18n="[aria-label]feature.field.enforce" disabled>
+          <h6 data-i18n="feature.field.enforce"></h6>
+        </div>
+        <div class="filter">
           <input name="bsl-radio" type="radio"
             class="form-check-input layer-check"
             data-i18n="[aria-label]feature.field.mdu" disabled>
-          <h8 data-i18n="feature.field.mdu"></h8>
-          <ul>
-            <li>
-              <img src="/assets/mdu.c62c8a2d.svg" data-i18n="[alt]feature.field.mdu">
-              <span data-i18n="feature.field.mdu"></span>
-            </li>
-          </ul>
+          <h6 data-i18n="feature.field.mdu"></h6>
         </div>
       </div>
       <div class="layer">
         <input id="bg-check" type="checkbox"
           class="form-check-input layer-check"
           data-i18n="[aria-label]layer.bg.name" disabled>
-        <h7 data-i18n="layer.bg.name"></h7>
+        <h3 data-i18n="layer.bg.name"></h3>
         <ul>
           <li>
             <img src="/assets/bg.1172e32c.svg" data-i18n="[alt]layer.bg.name">
