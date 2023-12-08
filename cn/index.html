@@ -20,25 +20,34 @@
   <meta prefix="og: http://ogp.me/ns#" property="og:image:height" content="626">
   <meta prefix="og: http://ogp.me/ns#" property="og:site_name" content="illinois.gov">
 	<link rel="manifest" href="data:application/manifest+json;base64,ewogICJsYW5nIjogImVuIiwKICAiZGlyIjogImx0ciIsCiAgIm5hbWUiOiAiSWxsaW5vaXMgQkVBRCBDaGFsbGVuZ2UiLAogICJzaG9ydF9uYW1lIjogIklsbGlub2lzIEJFQUQgQ2hhbGxlbmdlIiwKICAic3RhcnRfdXJsIjogIi4iLAogICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLAogICJiYWNrZ3JvdW5kX2NvbG9yIjogIiMxMTFhNTIiLAogICJkZXNjcmlwdGlvbiI6ICJJbGxpbm9pcyBCRUFEIENoYWxsZW5nZSIsCiAgImljb25zIjogWwogICAgewogICAgICAic3JjIjogImltZy9JTC1CRUFELUNoYWxsZW5nZS1zcXVhcmUuc3ZnIiwKICAgICAgInNpemVzIjogIjQ4eDQ4IDcyeDcyIDk2eDk2IDEyOHgxMjggMjU2eDI1NiA1MTJ4NTEyIiwKICAgICAgInR5cGUiOiAiaW1hZ2Uvc3ZnK3htbCIsCiAgICAgICJwdXJwb3NlIjogImFueSIKICAgIH0KICBdCn0K">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
   
   
   
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>  
-  <!-- package.version="0.2.5" -->
-  <script type="module" crossorigin src="/assets/index.fed3e72a.js"></script>
-  <link rel="stylesheet" href="/assets/index.28abe45c.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <!-- package.version="0.2.6" -->
+  <script type="module" crossorigin src="/assets/index.fab2cfc5.js"></script>
+  <link rel="stylesheet" href="/assets/index.a93a5599.css">
 </head>
 <body class="loading">
-  <div class="banner" onclick="document.location = './'">
+  <div class="banner">
     <div class="logoState">
-      <img src="/assets/Illinois.bd5b69a9.png" data-i18n="[alt]banner.state_seal.alt">
+      <img src="/assets/Illinois.bd5b69a9.png" data-i18n="[alt]banner.state_seal.alt" onclick="document.location = './'">
     </div>
     <div class="logoBBLab">
-      <img src="/assets/IL-BB-Lab.28ad675a.png" data-i18n="[alt]banner.bb_lab.alt">
+      <img src="/assets/IL-BB-Lab.28ad675a.png" data-i18n="[alt]banner.bb_lab.alt" onclick="document.location = './'">
     </div>
-    <h1 data-i18n="app.title"></h1>
+    <h1 data-i18n="app.title" onclick="document.location = './'"></h1>
+    <div class="dropdown">
+      <button data-i18n="translate" class="btn btn-primary dropdown-toggle" type="button" id="translate" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+      <div class="dropdown-menu" aria-labelledby="translate">
+        <a data-i18n="translate.en" class="dropdown-item" href="./?locale=en"></a>
+        <a data-i18n="translate.es" class="dropdown-item" href="./?locale=es"></a>
+        <a data-i18n="translate.pl" class="dropdown-item" href=".?/locale=pl"></a>
+        <a data-i18n="translate.he" class="dropdown-item" href="./?locale=he"></a>
+        <a data-i18n="translate.yi" class="dropdown-item" href="./?locale=he"></a>
+      </div>
+    </div>
   </div>
   <div class="container-fluid">
     <div class="row">
@@ -122,7 +131,7 @@
           </ul>
         </div>
         <div class="filter">
-          <h5>Filter:</h5>
+          <h5 data-i18n="legend.filter"></h5>
         </div>
         <div class="filter">
           <input name="bsl-radio" type="radio"
