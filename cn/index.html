@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <title data-i18n="app.title"></title>
+  <meta charset="utf-8">
+  <meta name="description" content="Illinois BEAD Challenge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ILBroadbandLab">
+  <meta name="twitter:title" content="Illinois BEAD Challenge">
+  <meta name="twitter:description" content="Illinois BEAD Challenge">
+  <meta name="twitter:image" content="https://d1wntdefyoxmnb.cloudfront.net/illinois/img/IL-BEAD-Challenge.webp">
+  <meta prefix="og: http://ogp.me/ns#" property="og:title" content="Illinois BEAD Challenge">
+  <meta prefix="og: http://ogp.me/ns#" property="og:description" content="Illinois BEAD Challenge">
+  <meta prefix="og: http://ogp.me/ns#" property="og:type" content="website">
+  <meta prefix="og: http://ogp.me/ns#" property="og:url" content="https://d1wntdefyoxmnb.cloudfront.net/illinois/">
+  <meta prefix="og: http://ogp.me/ns#" property="og:image" content="https://d1wntdefyoxmnb.cloudfront.net/illinois/img/IL-BEAD-Challenge.webp">
+  <meta prefix="og: http://ogp.me/ns#" property="og:image:secure_url" content="https://d1wntdefyoxmnb.cloudfront.net/illinois/img/IL-BEAD-Challenge.webp">
+  <meta prefix="og: http://ogp.me/ns#" property="og:image:width" content="1200">
+  <meta prefix="og: http://ogp.me/ns#" property="og:image:height" content="630">
+  <meta prefix="og: http://ogp.me/ns#" property="og:image:type" content="image/png">
+  <meta prefix="og: http://ogp.me/ns#" property="og:image:alt"  content="Illinois BEAD Challenge">
+  <meta prefix="og: http://ogp.me/ns#" property="og:site_name" content="timkeane.github.io">
+  <link rel="icon" type="image/png" sizes="48x48" rel="noopener" target="_blank" href="./assets/icon-48-nBUgPJuK.webp">
+  <link rel="icon" type="image/png" sizes="72x72" rel="noopener" target="_blank" href="./assets/icon-72-p7bj9rPS.webp">
+  <link rel="icon" type="image/png" sizes="9xx96" rel="noopener" target="_blank" href="./assets/icon-96-ZYQShB6S.webp">
+  <link rel="icon" type="image/png" sizes="128x128" rel="noopener" target="_blank" href="./assets/icon-128-xYdyRcmA.webp">
+  <link rel="icon" type="image/png" sizes="256x256" rel="noopener" target="_blank" href="./assets/icon-256-1orv9j8V.webp">
+  <link rel="icon" type="image/png" sizes="512x512" rel="noopener" target="_blank" href="./assets/icon-512-sK_AEnHL.webp">
+  <link rel="apple-touch-icon" sizes="180x180" rel="noopener" target="_blank" href="./img/icon-180.webp">
+  <link rel="manifest" href="./assets/manifest-BTe2DpkY.webmanifest">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <!-- package.version="0.5.1" -->
+  <script type="module" crossorigin src="./assets/index-J7Rg3K0B.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/vendor-cBnjCObF.js">
+  <link rel="stylesheet" crossorigin href="./assets/index-iSGwn6DM.css">
+</head>
+<body class="loading">
+  <div id="banner" class="banner">
+    <img src="./assets/IL-BEAD-Challenge-XhP3Oy5P.webp" data-i18n="[alt]app.name" style="position: fixed;left:-10000px">
+    <div class="logoState">
+      <img src="./assets/Illinois-2uV_wJia.webp" data-i18n="[alt]banner.state_seal.alt" onclick="document.location = `./?locale=${$('html').prop('lang')}`">
+    </div>
+    <div class="logoBBLab">
+      <img src="./assets/IL-BB-Lab-V_KMggsk.webp" data-i18n="[alt]banner.bb_lab.alt" onclick="document.location = `./?locale=${$('html').prop('lang')}`">
+    </div>
+    <h1 data-i18n="app.title" onclick="document.location = `./?locale=${$('html').prop('lang')}`"></h1>
+    <div class="dropdown">
+      <button data-i18n="translate" class="btn btn-primary dropdown-toggle" type="button" id="translate" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+      <div class="dropdown-menu" aria-labelledby="translate">
+        <a data-i18n="translate.en" class="dropdown-item" href="./?locale=en" rel="noopener" rel="noopener"></a>
+        <a data-i18n="translate.es" class="dropdown-item" href="./?locale=es" rel="noopener" rel="noopener"></a>
+      </div>
+    </div>
+  </div>
+  <div id="container" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <ul class="nav nav-tabs flex-sm-column" role="tablist">
+          <li class="nav-item" role="presentation" aria-hidden="true">
+            <button data-i18n="tab.map.name" class="nav-link active" id="map-tab" aria-hidden="true" data-bs-toggle="tab" data-bs-target="#map" type="button" role="tab" aria-controls="map" aria-selected="true"></button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button data-i18n="tab.locations.name" class="nav-link" id="location-tab" data-bs-toggle="tab" data-bs-target="#locations" type="button" role="tab" aria-controls="locations" aria-selected="false"></button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button data-i18n="tab.challenges.name" class="nav-link" id="challenge-tab" data-bs-toggle="tab" data-bs-target="#challenges" type="button" role="tab" aria-controls="challenges" aria-selected="false"></button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm col-sm-4">
+        <form id="locate"></form>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="map" aria-hidden="true" role="tabpanel" aria-labelledby="map-tab" aria-hidden="true">
+            <div id="map-container" aria-hidden="true"></div>
+          </div>
+          <div class="tab-pane fade" id="locations" role="tabpanel" aria-labelledby="location-tab">
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#how-it-works" aria-expanded="true" aria-controls="how-it-works" data-i18n="btn.how_it_works.name"></button>
+            <div id="how-it-works" class="collapse show" data-i18n="[html]tab.locations.long_msg"></div>
+            <h2 class="screen-reader-only" data-i18n="tab.locations.name"></h2>
+              <form id="filter">
+                <div>
+                  <input id="filter-enforce" class="form-check-input filter enforce list" type="checkbox">
+                  <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='24'%20viewBox='0%200%2048%2048'%3e%3cpath%20transform='translate(6,%206)%20scale(1.5)'%20d='M1%200l9%2015.094v5.906l4%203v-8.906l9-15.094h-22zm18.479%202l-2.981%205h-8.996l-2.981-5h14.958z'/%3e%3c/svg%3e" data-i18n="[alt]legend.filter">
+                  <label for="filter-enforce" data-i18n="feature.field.enforce"></label>
+                </div>
+                <div>
+                  <input id="filter-mdu" class="form-check-input filter mdu list" type="checkbox">
+                  <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='24'%20viewBox='0%200%2048%2048'%3e%3cpath%20transform='translate(6,%206)%20scale(1.5)'%20d='M1%200l9%2015.094v5.906l4%203v-8.906l9-15.094h-22zm18.479%202l-2.981%205h-8.996l-2.981-5h14.958z'/%3e%3c/svg%3e" data-i18n="[alt]legend.filter">
+                  <label for="filter-mdu" data-i18n="feature.field.mdu"></label>
+                </div>
+              </form>
+          </div>
+          <div data-i18n="[append]tab.challenge.msg" class="tab-pane fade" id="challenges" role="tabpanel" aria-labelledby="challenge-tab">
+            <h2 class="screen-reader-only" data-i18n="tab.challenges.name"></h2>
+            <form id="challenge">
+              <button data-i18n="form.challenges.submit" type="submit" class="btn btn-primary" disabled></button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-8" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <div id="legend" class="legend" style="display: none;">
+    <h2 data-i18n="[append]legend.name">
+      <a href="#" class="legend-closer" data-i18n="[aria-label]close" rel="noopener">&#10006;</a>
+    </h2>
+    <div class="legend-content">
+      <div class="layer">
+        <input id="cai-check" type="checkbox"
+          class="form-check-input layer-check"
+          data-i18n="[aria-label]layer.cai.name" disabled>
+        <h3 data-i18n="layer.cai.name"></h3>
+        <ul>
+          <li>
+            <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='48'%20height='48'%20viewBox='0%200%2048%2048'%3e%3crect%20fill='%23000'%20x='3'%20y='3'%20width='42'%20height='42'/%3e%3crect%20fill='%23fff'%20x='6'%20y='6'%20width='36'%20height='36'/%3e%3crect%20fill='%23008450'%20x='9'%20y='9'%20width='30'%20height='30'/%3e%3cpath%20fill='%23fff'%20transform='translate(12,%2012)'%20d='M20.285%202l-11.285%2011.567-5.286-5.011-3.714%203.716%209%208.728%2015-15.285z'/%3e%3c/svg%3e" data-i18n="[alt]feature.value.eligible">
+            <span data-i18n="feature.value.eligible"></span>
+          </li>
+          <li>
+            <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='48'%20height='48'%20viewBox='0%200%2048%2048'%3e%3crect%20fill='%23000'%20x='3'%20y='3'%20width='42'%20height='42'/%3e%3crect%20fill='%23fff'%20x='6'%20y='6'%20width='36'%20height='36'/%3e%3crect%20fill='%23CC0202'%20x='9'%20y='9'%20width='30'%20height='30'/%3e%3cpath%20fill='%23fff'%20transform='translate(13.2,%2013.2)%20scale(0.9%200.9)'%20d='M24%2020.188l-8.315-8.209%208.2-8.282-3.697-3.697-8.212%208.318-8.31-8.203-3.666%203.666%208.321%208.24-8.206%208.313%203.666%203.666%208.237-8.318%208.285%208.203z'/%3e%3c/svg%3e" data-i18n="[alt]feature.value.not_eligible">
+            <span data-i18n="feature.value.not_eligible"></span>
+          </li>
+        </ul>
+      </div>
+      <div class="layer">
+        <input id="bsl-check" type="checkbox"
+          class="form-check-input layer-check"
+          data-i18n="[aria-label]layer.bsl.name" disabled>
+        <h3 data-i18n="layer.bsl.name"></h3>
+        <div class="filter">
+          <h4 data-i18n="feature.field.service"></h4>
+          <ul>
+            <li>
+              <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='48'%20height='48'%20viewBox='0%200%2048%2048'%3e%3ccircle%20fill=''%20stroke='%23000'%20stroke-width='3'%20cx='24'%20cy='24'%20r='19'/%3e%3ccircle%20fill='%23CC0202'%20stroke='%23fff'%20stroke-width='3'%20cx='24'%20cy='24'%20r='16'/%3e%3cpath%20fill='%23fff'%20transform='translate(12,%2012)'%20d='M0%207.244c3.071-3.24%207.314-5.244%2012-5.244%204.687%200%208.929%202.004%2012%205.244l-2.039%202.15c-2.549-2.688-6.071-4.352-9.961-4.352s-7.412%201.664-9.961%204.352l-2.039-2.15zm5.72%206.034c1.607-1.696%203.827-2.744%206.28-2.744s4.673%201.048%206.28%202.744l2.093-2.208c-2.143-2.261-5.103-3.659-8.373-3.659s-6.23%201.398-8.373%203.659l2.093%202.208zm3.658%203.859c.671-.708%201.598-1.145%202.622-1.145%201.023%200%201.951.437%202.622%201.145l2.057-2.17c-1.197-1.263-2.851-2.044-4.678-2.044s-3.481.782-4.678%202.044l2.055%202.17zm2.622%201.017c-1.062%200-1.923.861-1.923%201.923s.861%201.923%201.923%201.923%201.923-.861%201.923-1.923-.861-1.923-1.923-1.923z'/%3e%3c/svg%3e" data-i18n="[alt]legend.served">
+              <span data-i18n="legend.served"></span>
+            </li>
+            <li>
+              <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='48'%20height='48'%20viewBox='0%200%2048%2048'%3e%3ccircle%20fill=''%20stroke='%23000'%20stroke-width='3'%20cx='24'%20cy='24'%20r='19'/%3e%3ccircle%20fill='%23F7B500'%20stroke='%23fff'%20stroke-width='3'%20cx='24'%20cy='24'%20r='16'/%3e%3cpath%20fill='%23fff'%20transform='translate(12,%2012)'%20d='M0%207.244c3.071-3.24%207.314-5.244%2012-5.244%204.687%200%208.929%202.004%2012%205.244l-2.039%202.15c-2.549-2.688-6.071-4.352-9.961-4.352s-7.412%201.664-9.961%204.352l-2.039-2.15zm5.72%206.034c1.607-1.696%203.827-2.744%206.28-2.744s4.673%201.048%206.28%202.744l2.093-2.208c-2.143-2.261-5.103-3.659-8.373-3.659s-6.23%201.398-8.373%203.659l2.093%202.208zm3.658%203.859c.671-.708%201.598-1.145%202.622-1.145%201.023%200%201.951.437%202.622%201.145l2.057-2.17c-1.197-1.263-2.851-2.044-4.678-2.044s-3.481.782-4.678%202.044l2.055%202.17zm2.622%201.017c-1.062%200-1.923.861-1.923%201.923s.861%201.923%201.923%201.923%201.923-.861%201.923-1.923-.861-1.923-1.923-1.923z'/%3e%3c/svg%3e" data-i18n="[alt]legend.underserved">
+              <span data-i18n="legend.underserved"></span>
+            </li>
+            <li>
+              <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='48'%20height='48'%20viewBox='0%200%2048%2048'%3e%3ccircle%20fill=''%20stroke='%23000'%20stroke-width='3'%20cx='24'%20cy='24'%20r='19'/%3e%3ccircle%20fill='%23008450'%20stroke='%23fff'%20stroke-width='3'%20cx='24'%20cy='24'%20r='16'/%3e%3cpath%20fill='%23fff'%20transform='translate(12,%2012)'%20d='M0%207.244c3.071-3.24%207.314-5.244%2012-5.244%204.687%200%208.929%202.004%2012%205.244l-2.039%202.15c-2.549-2.688-6.071-4.352-9.961-4.352s-7.412%201.664-9.961%204.352l-2.039-2.15zm5.72%206.034c1.607-1.696%203.827-2.744%206.28-2.744s4.673%201.048%206.28%202.744l2.093-2.208c-2.143-2.261-5.103-3.659-8.373-3.659s-6.23%201.398-8.373%203.659l2.093%202.208zm3.658%203.859c.671-.708%201.598-1.145%202.622-1.145%201.023%200%201.951.437%202.622%201.145l2.057-2.17c-1.197-1.263-2.851-2.044-4.678-2.044s-3.481.782-4.678%202.044l2.055%202.17zm2.622%201.017c-1.062%200-1.923.861-1.923%201.923s.861%201.923%201.923%201.923%201.923-.861%201.923-1.923-.861-1.923-1.923-1.923z'/%3e%3c/svg%3e" data-i18n="[alt]legend.unserved">
+              <span data-i18n="legend.unserved"></span>
+            </li>
+          </ul>
+        </div>
+        <div class="filter">
+          <ul>
+            <li>
+              <input id="enforce-check" type="checkbox"
+                class="form-check-input filter enforce"
+                data-i18n="[aria-label]feature.field.enforce" disabled>
+              <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='24'%20viewBox='0%200%2048%2048'%3e%3cpath%20transform='translate(6,%206)%20scale(1.5)'%20d='M1%200l9%2015.094v5.906l4%203v-8.906l9-15.094h-22zm18.479%202l-2.981%205h-8.996l-2.981-5h14.958z'/%3e%3c/svg%3e" data-i18n="[alt]legend.filter">
+              <h6 data-i18n="feature.field.enforce"></h6>
+            </li>
+            <li>
+              <input id="mdu-check" type="checkbox"
+                class="form-check-input filter mdu"
+                data-i18n="[aria-label]feature.field.mdu" disabled>
+              <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='24'%20viewBox='0%200%2048%2048'%3e%3cpath%20transform='translate(6,%206)%20scale(1.5)'%20d='M1%200l9%2015.094v5.906l4%203v-8.906l9-15.094h-22zm18.479%202l-2.981%205h-8.996l-2.981-5h14.958z'/%3e%3c/svg%3e" data-i18n="[alt]legend.filter">
+              <h6 data-i18n="feature.field.mdu"></h6>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="layer">
+        <input id="bg-check" type="checkbox"
+          class="form-check-input layer-check"
+          data-i18n="[aria-label]layer.bg.name" disabled>
+        <h3 data-i18n="layer.bg.name"></h3>
+        <ul>
+          <li>
+            <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='48'%20height='48'%20viewBox='0%200%2048%2048'%3e%3crect%20fill='rgba(17,%2026,%2082,%200.1)'%20stroke='rgba(17,%2026,%2082,%20.25)'%20stroke-width='3'%20x='3'%20y='3'%20width='42'%20height='42'/%3e%3c/svg%3e" data-i18n="[alt]layer.bg.name">
+            <span data-i18n="layer.bg.name"></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="dialog" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" data-i18n="[aria-label]btn.close.no"></button>
+        </div>
+        <div class="modal-body"></div>
+        <div class="modal-footer">
+          <div class="start">
+            <input id="always" type="checkbox" class="form-check-input always">
+            <label for="always" class="always" data-i18n="dialog.always"></label>
+          </div>
+          <div class="end">
+            <button type="button" class="btn btn-secondary no" data-bs-dismiss="modal" data-i18n="btn.no.name"></button>
+            <button type="button" class="btn btn-primary yes" data-i18n="btn.yes.name"></button>
+            <button type="button" class="btn btn-primary ok" data-i18n="btn.ok.name"></button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="guide">
+    <iframe></iframe>
+    <button type="button" class="btn btn-primary" data-i18n="btn.close.name" onclick="$('#guide').fadeOut()"></button>
+  </div>
+</body>
+</html>
