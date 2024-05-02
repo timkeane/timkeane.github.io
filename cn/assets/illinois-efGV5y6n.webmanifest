@@ -1,0 +1,48 @@
+{
+  "lang": "en",
+  "name": "Illinois BEAD Challenge",
+  "short_name": "Illinois BEAD Challenge",
+  "description": "Illinois BEAD Challenge",
+  "start_url": "https://d1wntdefyoxmnb.cloudfront.net/illinois/",
+  "display": "standalone",
+  "background_color": "#111a52",
+  "theme_color": "#111a52",
+  "icons": [
+    {
+      "src": "../img/illinois/icon-48.webp",
+      "sizes": "48x48",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "../img/illinois/icon-72.webp",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "../img/illinois/icon-96.webp",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "../img/illinois/icon-128.webp",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "../img/illinois/icon-256.webp",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "../img/illinois/icon-512.webp",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
