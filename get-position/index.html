@@ -11,7 +11,8 @@
       let position;
 
       const geolocation = new ol.Geolocation({
-        projection: 'EPSG:4236'
+        projection: 'EPSG:4236',
+        tracking: true
       });
       // listen to changes in position
       geolocation.on('change', function(evt) {
