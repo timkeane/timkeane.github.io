@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>get position</title>
+    <script src="https://cdn.jsdelivr.net/npm/ol@v7.1.0/dist/ol.js"></script>
+  </head>
+  <body>
+    <button id="get-position">Get location</button><br>
+    <input id="lng"><br>
+    <input id="lat"><br>
+    <script>
+      let position;
+
+      const geolocation = new Geolocation({
+        projection: 'EPSG:4236'
+      });
+      // listen to changes in position
+      geolocation.on('change', function(evt) {
+        position = geolocation.getPosition();
+      });
+      // listen to error
+      geolocation.on('error', function(evt) {
+        window.console.log(evt.message);
+      });
+      document.getElementById('get-position').addEventListener('click', function(evt) {
+        if (position) {
+          document.getElementById('lng').value = position[0];
+          document.getElementById('lat').value = position[1];
+        }
+      });
+  </script>
+  </body>
+</html>
