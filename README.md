@@ -1,6 +1,5 @@
 # timkeane.github.io
 
-## [another-nyc-map](./another-nyc-map/)
 ## nyc-lib - Library for creating NYC mapping apps
 ### [https://maps.nyc.gov/nyc-lib/](https://maps.nyc.gov/nyc-lib/)
 
