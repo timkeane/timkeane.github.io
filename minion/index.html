@@ -29,12 +29,19 @@
     }
 
     #picture {
-      background: url(https://upload.wikimedia.org/wikipedia/en/d/db/X-Men_%28Vol._6%29_No._2_Mahmud_Asrar_Variant_%28Textless%29.jpg) no-repeat center center fixed; 
+      background: url(https://cdn2.nbcuni.com/NBCUniversal/styles/newsroom_stories_16_9_image_style/s3/2024-07/dm4-blogroll-1719790355961.jpg?VersionId=hc6Yg7FPw_QQoMdDNe34yFc8RY_zg8eM&h=c673cd1c&itok=AIO4luQc) no-repeat center center fixed; 
+      -webkit-background-size: 70%;
+      -moz-background-size: 70%;
+      -o-background-size: 70%;
+      background-size: 70%;
+      height: 80%;
+    }
+
+    body.start #picture {
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
-      height: 80%;
     }
 
     #change, #recalibrate {
@@ -102,9 +109,9 @@
   </style>
 
 </head>
-<body>
+<body class="start">
 
-  <h1 id="name">The X-Men</h1>
+  <h1 id="name">Minions</h1>
   <div id="picture"></div>
   <button id="change"><div>DNA</div><div>Analyze!</div></button>
   <button id="recalibrate">Recalibrate</button>
@@ -113,28 +120,48 @@
   
     const characters = [
       {
-        name: 'Professor X',
-        picture: 'https://upload.wikimedia.org/wikipedia/en/0/00/Professor_Charles_%27X%27_Xavier.png?20220720180922'
+        name: 'Bob',
+        picture: 'img/Bob.jpeg'
       },
       {
-        name: 'Cyclops',
-        picture: 'https://upload.wikimedia.org/wikipedia/en/e/e9/Cyclops_%28Scott_Summers_circa_2019%29.png'
+        name: 'Dave',
+        picture: 'img/Dave.jpeg'
       },
       {
-        name: 'Iceman',
-        picture: 'https://upload.wikimedia.org/wikipedia/en/0/03/Iceman.png'
+        name: 'El Macho',
+        picture: 'img/El-Macho.jpeg'
       },
       {
-        name: 'Beast',
-        picture: 'https://upload.wikimedia.org/wikipedia/en/0/0b/Beast_%28Hank_McCoy_-_circa_2019%29.png'
+        name: 'Evil Bratt',
+        picture: 'img/Evil-Bratt.jpeg'
       },
       {
-        name: 'Warren Worthington III',
-        picture: 'https://upload.wikimedia.org/wikipedia/en/1/1b/X-men_angel_archangel.jpg'
+        name: 'Jerry',
+        picture: 'img/Jerry.jpeg'
       },
       {
-        name: 'Jean Grey',
-        picture: 'https://upload.wikimedia.org/wikipedia/en/5/52/JeanGreyPhoenix.png'
+        name: 'Kevin',
+        picture: 'img/Kevin.jpeg'
+      },
+      {
+        name: 'Maxime Le Mal',
+        picture: 'img/Maxime-Le-Mal.jpeg'
+      },
+      {
+        name: 'Phil',
+        picture: 'img/Phil.jpeg'
+      },
+      {
+        name: 'Stuart',
+        picture: 'img/Stuart.jpeg'
+      },
+      {
+        name: 'Tim',
+        picture: 'img/Tim.jpeg'
+      },
+      {
+        name: 'Vector',
+        picture: 'img/Vector.jpeg'
       }
     ];
   
