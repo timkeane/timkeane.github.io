@@ -217,6 +217,7 @@ Player.prototype = {
     
     timer.innerHTML = self.formatTime(Math.round(seek));
     bar.style.width = ((seek / sound.duration()) || 0) * (document.body.offsetWidth - 110) + 'px';
+    bar.style.visibility = 'visible';
     // If the sound is still playing, continue stepping.
     if (sound.playing()) {
       requestAnimationFrame(self.step.bind(self));
