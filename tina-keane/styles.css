@@ -87,7 +87,7 @@ div#duration {
 .controlsInner {
   position: relative;
   display: inline-block;
-  width: calc(100% - 14em);
+  width: calc(100% - 11em);
   height: 3em;
 }
 .btn {
@@ -104,13 +104,13 @@ div#duration {
 #playBtn {
   background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M3%2022v-20l18%2010-18%2010z%22%20fill%3D%22rgb(255%2C%20138%2C%20157)%22%20stroke-width%3D%22.5%22%20stroke%3D%22%23000%22%2F%3E%3C%2Fsvg%3E');
   position: absolute;
-  left: calc(50% - 1.5em);
+  left: calc(50% - 2em);
   top: 0;
 }
 #pauseBtn {
   background-image: url('data:image/svg+xml,%3Csvg%20xmlns %3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M11%2022h-4v-20h4v20zm6-20h-4v20h4v-20z%22%20fill%3D%22rgb(255%2C%20138%2C%20157)%22%20stroke-width%3D%22.5%22%20stroke%3D%22%23000%22%2F%3E%3C%2Fsvg%3E');
   position: absolute;
-  left: calc(50% - 1.5em);
+  left: calc(50% - 2em);
   top: 0;
   display: none;
 }
