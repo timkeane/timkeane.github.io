@@ -35,6 +35,7 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+  <div id="intro">Tina Keane<br><br>A rockstar of a human being!</div>
   <div id="back0" class="back"></div>
   <div id="back1" class="back"></div>
 
@@ -79,5 +80,10 @@
   <script src="./howler.core.js"></script>
   <script src="./player.js"></script>
   <script src="./pictures.js"></script>
+  <script>
+    setTimeout(() => {
+      document.getElementById('intro').style.display = 'none';
+    }, 5000);
+  </script>
 </body>
 </html>

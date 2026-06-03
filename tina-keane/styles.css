@@ -25,6 +25,19 @@ body {
      .5px  .5px 0 rgb(128, 128, 128);
 }
 
+div#intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  background-color: #000;
+  font-size: 3em;
+  text-align: center;
+  padding-top: 20%;
+}
+
 div.back {
   position: fixed;
   top: 0;
