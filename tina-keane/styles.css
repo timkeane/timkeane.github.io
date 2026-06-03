@@ -1,0 +1,291 @@
+html {
+  width: 100%;
+  height: 100%;  
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  outline: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background: #000;
+  font-family: "Helvetica Neue", "Futura", "Trebuchet MS", Arial;
+  -webkit-user-select: none;
+  user-select: none;
+  color: rgb(255, 138, 157);
+  text-shadow: 
+    -.5px -.5px 0 rgb(128, 128, 128),  
+     .5px -.5px 0 rgb(128, 128, 128),
+    -.5px  .5px 0 rgb(128, 128, 128),
+     .5px  .5px 0 rgb(128, 128, 128);
+}
+
+div.back {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center center;
+}
+
+/* Top Info */
+div#title {
+  position: fixed;
+  top: .5em;
+  left: 0;
+  right: 0;
+}
+div#band, div#track {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+}
+div#progress {
+  text-align: left;
+  margin-bottom: 1em;
+}
+
+div#bar {
+  display: inline-block;
+  margin: 0 1em;
+  width: 50%;
+  height: .5em;
+  background-color: rgb(255, 138, 157);
+  border: .5px solid rgb(128, 128, 128);
+}
+div#timer {
+  padding-left: .5em;
+  float: left;
+  font-size: 1em;
+  text-align: left;
+  font-weight: 300;
+}
+div#duration {
+  padding-right: .5em;
+  float: right;
+  text-align: right;
+  font-size: 1em;
+  font-weight: 300;
+}
+
+/* Controls */
+.controlsOuter {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-bottom: .5em;
+  text-align: center;
+}
+.controlsInner {
+  position: relative;
+  display: inline-block;
+  width: calc(100% - 14em);
+  height: 3em;
+}
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+  background-repeat: no-repeat;
+  background-size: 3em;
+  background-position: center;
+  width: 3em;
+  height: 3em;
+  margin: .5em;
+}
+#playBtn {
+  background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M3%2022v-20l18%2010-18%2010z%22%20fill%3D%22rgb(255%2C%20138%2C%20157)%22%20stroke-width%3D%22.5%22%20stroke%3D%22%23000%22%2F%3E%3C%2Fsvg%3E');
+  position: absolute;
+  left: calc(50% - 1.5em);
+  top: 0;
+}
+#pauseBtn {
+  background-image: url('data:image/svg+xml,%3Csvg%20xmlns %3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M11%2022h-4v-20h4v20zm6-20h-4v20h4v-20z%22%20fill%3D%22rgb(255%2C%20138%2C%20157)%22%20stroke-width%3D%22.5%22%20stroke%3D%22%23000%22%2F%3E%3C%2Fsvg%3E');
+  position: absolute;
+  left: calc(50% - 1.5em);
+  top: 0;
+  display: none;
+}
+#prevBtn {
+  background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M4%202v20h-2v-20h2zm18%200l-16%2010%2016%2010v-20z%22%20fill%3D%22rgb(255%2C%20138%2C%20157)%22%20stroke-width%3D%22.5%22%20stroke%3D%22%23000%22%2F%3E%3C%2Fsvg%3E');
+  position: absolute;
+  left: 1em;
+  top: 0;
+}
+#nextBtn {
+  background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M20%2022v-20h2v20h-2zm-18%200l16-10-16-10v20z%22%20fill%3D%22rgb(255%2C%20138%2C%20157)%22%20stroke-width%3D%22.5%22%20stroke%3D%22%23000%22%2F%3E%3C%2Fsvg%3E');
+  position: absolute;
+  right: 1em;
+  top: 0;
+}
+#playlistBtn {
+  background-image: url('data:image/svg+xml,%3Csvg%20clip-rule%3D%22evenodd%22%20fill-rule%3D%22evenodd%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%222%22%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m22%2017.75c0-.414-.336-.75-.75-.75h-13.5c-.414%200-.75.336-.75.75s.336.75.75.75h13.5c.414%200%20.75-.336.75-.75zm-18.25-2.75c.966%200%201.75.784%201.75%201.75s-.784%201.75-1.75%201.75-1.75-.784-1.75-1.75.784-1.75%201.75-1.75zm18.25-1.25c0-.414-.336-.75-.75-.75h-13.5c-.414%200-.75.336-.75.75s.336.75.75.75h13.5c.414%200%20.75-.336.75-.75zm-18.25-3.75c.966%200%201.75.784%201.75%201.75s-.784%201.75-1.75%201.75-1.75-.784-1.75-1.75.784-1.75%201.75-1.75zm18.25-.25c0-.414-.336-.75-.75-.75h-13.5c-.414%200-.75.336-.75.75s.336.75.75.75h13.5c.414%200%20.75-.336.75-.75zm-18.25-4.75c.966%200%201.75.784%201.75%201.75s-.784%201.75-1.75%201.75-1.75-.784-1.75-1.75.784-1.75%201.75-1.75zm18.25.75c0-.414-.336-.75-.75-.75h-13.5c-.414%200-.75.336-.75.75s.336.75.75.75h13.5c.414%200%20.75-.336.75-.75z%22%20fill-rule%3D%22nonzero%22%20fill%3D%22rgb(255%2C%20138%2C%20157)%22%20stroke-width%3D%22.5%22%20stroke%3D%22%23000%22%2F%3E%3C%2Fsvg%3E');
+  float: left;
+}
+#volumeBtn {
+  background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M6%207l8-5v20l-8-5v-10zm-6%2010h4v-10h-4v10zm20.264-13.264l-1.497%201.497c1.847%201.783%202.983%204.157%202.983%206.767%200%202.61-1.135%204.984-2.983%206.766l1.498%201.498c2.305-2.153%203.735-5.055%203.735-8.264s-1.43-6.11-3.736-8.264zm-.489%208.264c0-2.084-.915-3.967-2.384-5.391l-1.503%201.503c1.011%201.049%201.637%202.401%201.637%203.888%200%201.488-.623%202.841-1.634%203.891l1.503%201.503c1.468-1.424%202.381-3.309%202.381-5.394z%22%20fill%3D%22rgb(255%2C%20138%2C%20157)%22%20stroke-width%3D%22.5%22%20stroke%3D%22%23000%22%2F%3E%3C%2Fsvg%3E');
+  float: right;
+}
+
+
+/* Loading */
+#loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -35px;
+  width: 70px;
+  height: 70px;
+  background-color: rgb(255, 138, 157);
+  border-radius: 100%;  
+  -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+  animation: sk-scaleout 1.0s infinite ease-in-out;
+  display: none;
+}
+@-webkit-keyframes sk-scaleout {
+  0% { -webkit-transform: scale(0) }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+@keyframes sk-scaleout {
+  0% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 100% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+/* Plylist */
+#playlist {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#list {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  padding: 1em;
+  overflow: auto;
+}
+#close {
+  position: fixed;
+  width: 2em;
+  height: 2em;
+  margin: 1em;
+  top: 0;
+  right: 0;
+  background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M24%2020.188l-8.315-8.209%208.2-8.282-3.697-3.697-8.212%208.318-8.31-8.203-3.666%203.666%208.321%208.24-8.206%208.313%203.666%203.666%208.237-8.318%208.285%208.203z%22%20fill%3D%22rgb(255, 138, 157)%22%20stroke-width%3D%22.5%22%20stroke%3D%22%23000%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.list-band {
+  font-size: 3em;
+}
+.list-song {
+  padding-left: 1em;
+  font-size: 2em;
+}
+.list-song:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+/* Volume */
+#volume {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  touch-action: none;
+  display: none;
+}
+.bar {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    margin: -5px auto;
+    height: 10px;
+    background-color: rgb(255, 138, 157);
+    border: .5px solid rgb(128, 128, 128);
+}
+#barEmpty {
+  width: 90%;
+  opacity: 0.5;
+  box-shadow: none;
+  cursor: pointer;
+}
+#barFull {
+  width: 90%;
+}
+#sliderBtn {
+  width: 2em;
+  height: 2em;
+  position: absolute;
+  top: 50%;
+  left: 93.25%;
+  margin: -1em auto;
+  background-color: rgb(255, 138, 157);
+  border: .5px solid rgb(128, 128, 128);
+  border-radius: 25px;
+  cursor: pointer;
+}
+.player {
+  display: none;
+}
+
+/* Fade-In */
+.fadeout {
+  webkit-animation: fadeout 0.5s;
+  -ms-animation: fadeout 0.5s;
+  animation: fadeout 0.5s;
+}
+.fadein {
+  webkit-animation: fadein 0.5s;
+  -ms-animation: fadein 0.5s;
+  animation: fadein 0.5s;
+}
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@-ms-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes fadeout {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+@-webkit-keyframes fadeout {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+@-ms-keyframes fadeout {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
