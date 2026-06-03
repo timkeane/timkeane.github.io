@@ -36,7 +36,7 @@ div#intro {
   font-weight: bolder;
   font-size: 2em;
   text-align: center;
-  background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%204.248c-3.148-5.402-12-3.825-12%202.944%200%204.661%205.571%209.427%2012%2015.808%206.43-6.381%2012-11.147%2012-15.808%200-6.792-8.875-8.306-12-2.944z%22%20fill%3D%22red%22%2F%3E%3C%2Fsvg%3E');
+  background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%204.248c-3.148-5.402-12-3.825-12%202.944%200%204.661%205.571%209.427%2012%2015.808%206.43-6.381%2012-11.147%2012-15.808%200-6.792-8.875-8.306-12-2.944z%22%20fill%3D%22%23880808%22%2F%3E%3C%2Fsvg%3E');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 75%;
@@ -69,6 +69,14 @@ div#band, div#track {
   font-size: 2em;
   font-weight: bold;
 }
+
+div#info {
+  background-image: url('data:image/svg+xml,%3Csvg%20clip-rule%3D%22evenodd%22%20fill-rule%3D%22evenodd%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%222%22%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m15.985%2017.031c-1.479%201.238-3.384%201.985-5.461%201.985-4.697%200-8.509-3.812-8.509-8.508s3.812-8.508%208.509-8.508c4.695%200%208.508%203.812%208.508%208.508%200%202.078-.747%203.984-1.985%205.461l4.749%204.75c.146.146.219.338.219.531%200%20.587-.537.75-.75.75-.192%200-.384-.073-.531-.22zm-5.461-13.53c-3.868%200-7.007%203.14-7.007%207.007s3.139%207.007%207.007%207.007c3.866%200%207.007-3.14%207.007-7.007s-3.141-7.007-7.007-7.007zm.741%208.499h-4.5c-.414%200-.75.336-.75.75s.336.75.75.75h4.5c.414%200%20.75-.336.75-.75s-.336-.75-.75-.75zm3-2.5h-7.5c-.414%200-.75.336-.75.75s.336.75.75.75h7.5c.414%200%20.75-.336.75-.75s-.336-.75-.75-.75zm0-2.5h-7.5c-.414%200-.75.336-.75.75s.336.75.75.75h7.5c.414%200%20.75-.336.75-.75s-.336-.75-.75-.75z%22%20fill-rule%3D%22nonzero%22%20fill%3D%22rgb(255%2C%20138%2C%20157)%22%20stroke%3D%22rgb(128%2C%20128%2C%20128)%22%20stroke-width%3D%22.5%22%2F%3E%3C%2Fsvg%3E');
+  position: fixed;
+  right: .5em;
+  top: .5em;
+}
+
 div#progress {
   text-align: left;
   margin-bottom: 1em;
@@ -315,6 +323,15 @@ div#duration {
 
 @media only screen and (max-width: 390px) {
   .list-song {
-    font-size: 1.9em;
+    font-size: 1.6em;
+  }
+  .list-band {
+    font-size: 2.7em;
+  }
+  .controlsInner {
+    width: calc(100% - 8em);
+  }
+  .btn {
+    background-size: 2.5em;
   }
 }
