@@ -32,10 +32,9 @@
   <link rel="icon" type="image/png" sizes="512x512" rel="noopener" target="_blank" href="icon/icon-512.webp">
   <link rel="apple-touch-icon" rel="noopener" sizes="180x180" target="_blank" href="icon/icon-180.webp">
   <link rel="manifest" href="tina-keane.webmanifest">
-  <script type="module" crossorigin src="./assets/main-CzNAit9X.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/vendor-W87-m3Vy.js">
-  <link rel="modulepreload" crossorigin href="./assets/Player-saYrnrgP.js">
-  <link rel="stylesheet" crossorigin href="./assets/Player-CkoUJ6aX.css">
+  <script type="module" crossorigin src="./assets/vendor-W87-m3Vy.js"></script>
+  <script type="module" crossorigin src="./assets/index-tXH90LiZ.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-CkoUJ6aX.css">
 </head>
 <body>
   <div id="intro"><div>Tina Keane -<br>a rockstar of a<br>human being!</div></div>
@@ -49,49 +48,39 @@
     <div class="copyright"></div>
     <div class="lyrics"></div>
   </div>
-
-  <!-- Top Info -->
   <div id="title" class="player">
-    <a id="info-btn" class="btn" href="#" tabindex="0"></a>
-    <a id="more-btn" class="btn" href="#" tabindex="0"></a>
+    <a id="info-btn" class="btn" href="#" tabindex="0" title="Song info" aria-label="Song info"></a>
+    <a id="more-btn" class="btn" href="#" tabindex="0" title="More..." aria-label="More..."></a>
     <div id="band"></div>
     <div id="track"></div>
   </div>
-
-  <!-- Controls -->
   <div class="control-container player">
     <div id="progress">
-      <div id="timer">0:00</div>
-      <div id="duration">0:00</div>
-      <div id="bar"></div>
+      <div id="timer" title="Elapsed" aria-label="Elapsed">0:00</div>
+      <div id="duration" title="Duration" aria-label="Duration">0:00</div>
+      <div id="bar" title="Progress" aria-label="Progress"></div>
     </div>
-    <a class="btn" id="playlist-btn" href="#" tabindex="0"></a>
+    <a class="btn" id="playlist-btn" href="#" tabindex="0" title="Show songs" aria-label="Show songs"></a>
     <div class="control">
-      <a class="btn" id="prev-btn" href="#" tabindex="0"></a>
+      <a class="btn" id="prev-btn" href="#" tabindex="0" title="Play previous song" aria-label="Play previous"></a>
       <div id="loading"></div>
-      <a class="btn" id="play-btn" href="#" tabindex="0"></a>
-      <a class="btn" id="pause-btn" href="#" tabindex="0"></a>
-      <a class="btn" id="next-btn" href="#" tabindex="0"></a>
+      <a class="btn" id="play-btn" href="#" tabindex="0" title="Play" aria-label="Play"></a>
+      <a class="btn" id="pause-btn" href="#" tabindex="0" title="Pause" aria-label="Pause"></a>
+      <a class="btn" id="next-btn" href="#" tabindex="0" title="Play next" aria-label="Play next"></a>
     </div>
-    <a class="btn" id="volume-btn" href="#" tabindex="0"></a>
+    <a class="btn" id="volume-btn" href="#" tabindex="0" title="Volume" aria-label="Volume"></a>
   </div>
-
-  <!-- Playlist -->
   <div id="playlist">
-    <a class="close" href="#" tabindex="0"></a>
-    <a id="shuffle-btn" class="btn" href="#" tabindex="0"></a>
+    <a class="close" href="#" tabindex="0" title="Close" aria-label="Close"></a>
+    <a id="shuffle-btn" class="btn" href="#" tabindex="0" title="Shuffle" aria-label="Shuffle"></a>
     <div id="list"></div>
   </div>
-
   <div id="more">
-    <a class="close" href="#" tabindex="0"></a>
+    <a class="close" href="#" tabindex="0" title="Close" aria-label="Close"></a>
     <iframe src="./more.html" href="#" tabindex="0"></iframe>
   </div>
-
-  <!-- Volume -->
   <div class="volume-slider">
-    <input id="volume" class="slider" type="range" min="1" max="100" value="100">
+    <input id="volume" class="slider" type="range" min="1" max="100" value="100" title="Volume" aria-label="Volume">
   </div>
-
 </body>
 </html>
