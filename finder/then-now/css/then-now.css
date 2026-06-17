@@ -252,3 +252,8 @@ div.ctl-mnu-tgl {
 		margin: -5px;
 	}
 }
+
+.mnu-lyr-mgr.ctl-mnu-tgl
+.ui-collapsible-content.ui-body-inherit {
+    max-height: 350px;
+}
