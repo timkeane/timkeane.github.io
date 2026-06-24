@@ -59,6 +59,7 @@
 	</div>
 	<script>
 		var map, fade, swipe, lyrMgr;
+    var host = document.location.search === '?prd' ? 'finder.nyc.gov' : 'finder-dev.nyc.gov';
 
 		nyc.ol.style.LOCATION_ICON = new ol.style.Icon({
 			scale: 48 / 512,
@@ -68,27 +69,27 @@
 		$(document).ready(function() {
 			new nyc.Share('#map');
 			
-      nyc.ol.Basemap,BASE_URL = 'https://finder-dev.nyc.gov/geoserver/gwc/service/tms/1.0.0/carto%3Abasemap@EPSG%3A900913@jpeg/{z}/{x}/{-y}.jpg';
+      nyc.ol.Basemap,BASE_URL = 'https://' + host + '/geoserver/gwc/service/tms/1.0.0/carto%3Abasemap@EPSG%3A900913@jpeg/{z}/{x}/{-y}.jpg';
 			nyc.ol.Basemap.LABEL_URLS = {
-        "base": "https://finder-dev.nyc.gov/geoserver/gwc/service/tms/1.0.0/carto%3Alabel@EPSG%3A900913@png8/{z}/{x}/{-y}.png8",
-        "photo": "https://finder-dev.nyc.gov/geoserver/gwc/service/tms/1.0.0/carto%3Alabel-lt@EPSG%3A900913@png8/{z}/{x}/{-y}.png8"
+        "base": "https://' + host + '/geoserver/gwc/service/tms/1.0.0/carto%3Alabel@EPSG%3A900913@png8/{z}/{x}/{-y}.png8",
+        "photo": "https://' + host + '/geoserver/gwc/service/tms/1.0.0/carto%3Alabel-lt@EPSG%3A900913@png8/{z}/{x}/{-y}.png8"
       };
       nyc.ol.Basemap.PHOTO_URLS = {
-        "1924": "https://finder-dev.nyc.gov/geoserver/gwc/service/tms/1.0.0/photo%3A1924@EPSG%3A900913@png8/{z}/{x}/{-y}.png8",
-        "1951": "https://finder-dev.nyc.gov/geoserver/gwc/service/tms/1.0.0/photo%3A1951@EPSG%3A900913@png8/{z}/{x}/{-y}.png8",
-        "1996": "https://finder-dev.nyc.gov/geoserver/gwc/service/tms/1.0.0/photo%3A1996@EPSG%3A900913@png8/{z}/{x}/{-y}.png8",
-        "2001-2": "https://finder-dev.nyc.gov/geoserver/gwc/service/tms/1.0.0/photo%3A2001-2@EPSG%3A900913@png8/{z}/{x}/{-y}.png8",
-        "2004": "https://finder-dev.nyc.gov/geoserver/gwc/service/tms/1.0.0/photo%3A2004@EPSG%3A900913@png8/{z}/{x}/{-y}.png8",
-        "2006": "https://finder-dev.nyc.gov/geoserver/gwc/service/tms/1.0.0/photo%3A2006@EPSG%3A900913@png8/{z}/{x}/{-y}.png8",
-        "2008": "https://finder-dev.nyc.gov/geoserver/gwc/service/tms/1.0.0/photo%3A2008@EPSG%3A900913@png8/{z}/{x}/{-y}.png8",
-        "2010": "https://finder-dev.nyc.gov/geoserver/gwc/service/tms/1.0.0/photo%3A2010@EPSG%3A900913@png8/{z}/{x}/{-y}.png8",
-        "2012": "https://finder-dev.nyc.gov/geoserver/gwc/service/tms/1.0.0/photo%3A2012@EPSG%3A900913@png8/{z}/{x}/{-y}.png8",
-        "2014": "https://finder-dev.nyc.gov/geoserver/gwc/service/tms/1.0.0/photo%3A2014@EPSG%3A900913@png8/{z}/{x}/{-y}.png8",
-        "2016": "https://finder-dev.nyc.gov/geoserver/gwc/service/tms/1.0.0/photo%3A2016@EPSG%3A900913@png8/{z}/{x}/{-y}.png8",
-        "2018": "https://finder-dev.nyc.gov/geoserver/gwc/service/tms/1.0.0/photo%3A2018@EPSG%3A900913@png8/{z}/{x}/{-y}.png8",
-        "2020": "https://finder-dev.nyc.gov/geoserver/gwc/service/tms/1.0.0/photo%3A2020@EPSG%3A900913@png8/{z}/{x}/{-y}.png8",
-        "2022": "https://finder-dev.nyc.gov/geoserver/gwc/service/tms/1.0.0/photo%3A2022@EPSG%3A900913@png8/{z}/{x}/{-y}.png8",
-        "2024": "https://finder-dev.nyc.gov/geoserver/gwc/service/tms/1.0.0/photo%3A2024@EPSG%3A900913@png8/{z}/{x}/{-y}.png8"
+        "1924": "https://' + host + '/geoserver/gwc/service/tms/1.0.0/photo%3A1924@EPSG%3A900913@png8/{z}/{x}/{-y}.png8",
+        "1951": "https://' + host + '/geoserver/gwc/service/tms/1.0.0/photo%3A1951@EPSG%3A900913@png8/{z}/{x}/{-y}.png8",
+        "1996": "https://' + host + '/geoserver/gwc/service/tms/1.0.0/photo%3A1996@EPSG%3A900913@png8/{z}/{x}/{-y}.png8",
+        "2001-2": "https://' + host + '/geoserver/gwc/service/tms/1.0.0/photo%3A2001-2@EPSG%3A900913@png8/{z}/{x}/{-y}.png8",
+        "2004": "https://' + host + '/geoserver/gwc/service/tms/1.0.0/photo%3A2004@EPSG%3A900913@png8/{z}/{x}/{-y}.png8",
+        "2006": "https://' + host + '/geoserver/gwc/service/tms/1.0.0/photo%3A2006@EPSG%3A900913@png8/{z}/{x}/{-y}.png8",
+        "2008": "https://' + host + '/geoserver/gwc/service/tms/1.0.0/photo%3A2008@EPSG%3A900913@png8/{z}/{x}/{-y}.png8",
+        "2010": "https://' + host + '/geoserver/gwc/service/tms/1.0.0/photo%3A2010@EPSG%3A900913@png8/{z}/{x}/{-y}.png8",
+        "2012": "https://' + host + '/geoserver/gwc/service/tms/1.0.0/photo%3A2012@EPSG%3A900913@png8/{z}/{x}/{-y}.png8",
+        "2014": "https://' + host + '/geoserver/gwc/service/tms/1.0.0/photo%3A2014@EPSG%3A900913@png8/{z}/{x}/{-y}.png8",
+        "2016": "https://' + host + '/geoserver/gwc/service/tms/1.0.0/photo%3A2016@EPSG%3A900913@png8/{z}/{x}/{-y}.png8",
+        "2018": "https://' + host + '/geoserver/gwc/service/tms/1.0.0/photo%3A2018@EPSG%3A900913@png8/{z}/{x}/{-y}.png8",
+        "2020": "https://' + host + '/geoserver/gwc/service/tms/1.0.0/photo%3A2020@EPSG%3A900913@png8/{z}/{x}/{-y}.png8",
+        "2022": "https://' + host + '/geoserver/gwc/service/tms/1.0.0/photo%3A2022@EPSG%3A900913@png8/{z}/{x}/{-y}.png8",
+        "2024": "https://' + host + '/geoserver/gwc/service/tms/1.0.0/photo%3A2024@EPSG%3A900913@png8/{z}/{x}/{-y}.png8"
       };
 
 			map = new nyc.ol.Basemap({target: $('#map').get(0)});
