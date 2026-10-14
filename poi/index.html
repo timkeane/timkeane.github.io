@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>POI Tool</title>
+    <style>html,body{height:100%;margin:0;padding:0;font-family:sans-serif}#map{position:fixed;inset:0 0 41px}.ol-rotate{display:none}#add-here,#add-there{width:50%;height:40px;position:fixed;bottom:0}#add-there{right:0}form{z-index:1000;background-color:#d3d3d3;border:1px solid #000;margin:auto;padding:1em;display:none;position:absolute;top:50px;left:calc(50% - 90.5px)}label,input{display:block}input{margin-bottom:1em}form button{width:70px;padding:.5em}#download{padding:.5em;position:fixed;top:1em;right:1em}</style>
+    <script type="module" crossorigin src="/poi/assets/index-BT-32S9v.js"></script>
+    <link rel="stylesheet" crossorigin href="/poi/assets/index-Ck9gDfun.css">
+  </head>
+  <body>
+    <div id="map"></div>
+    <button id="download">Download</button>
+    <form id="form">
+      <label for="name">Name:</label>
+      <input id="name">
+      <button id="save">Save</button>
+      <button id="cancel">Cancel</button>
+    </form>
+    <button id="add-here">Add Where I Stand</button>
+    <button id="add-there">Add Where I Click</button>
+  </body>
+</html>
