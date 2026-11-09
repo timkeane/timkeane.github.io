@@ -12,8 +12,9 @@
       "type": "Feature",
       "properties": {
         "name": "Tribute Orchard",
+        "status": "final",
         "category": "general",
-        "info": "Honor your family or memorialize a loved one with a fruit-bearing tree (apple, cherry, peach, persimmon, or pear). Select an unclaimed tree and create your dedication with a personalized plaque. Visit \u003Ca href=\"https://www.sandspointpreserveconservancy.org/support/tribute-orchard/\" target=\"_blank\" rel=\"noopener noreferrer\"\u003ETribute Orchard\u003C/a\u003E for more information.",
+        "info": "Honor your family or memorialize a loved one with a fruit-bearing tree (apple, cherry, peach, persimmon, or pear). Select an unclaimed tree and create your dedication with a personalized plaque. Visit <a href=\"https://www.sandspointpreserveconservancy.org/support/tribute-orchard/\" target=\"_blank\" rel=\"noopener noreferrer\">Tribute Orchard</a> for more information.",
         "url": null,
         "icon": "orchard.svg"
       },
@@ -26,6 +27,7 @@
       "type": "Feature",
       "properties": {
         "name": "Organic Vegetable Garden",
+        "status": "final",
         "category": "general",
         "info": null,
         "url": null,
@@ -40,8 +42,9 @@
       "type": "Feature",
       "properties": {
         "name": "Commemorative Brick Plaza",
+        "status": "final",
         "category": "general",
-        "info": "Be a part of our history! Visitors can purchase a brick and personalize an engraving to commemorate a special date, honor a loved one, or just share a message. Visit \u003Ca href=\"https://www.sandspointpreserveconservancy.org/support/engraved-bricks-dedications/\" target=\"_blank\" rel=\"noopener noreferrer\"\u003EEngraved Bricks Dedications\u003C/a\u003E for more information.",
+        "info": "Be a part of our history! Visitors can purchase a brick and personalize an engraving to commemorate a special date, honor a loved one, or just share a message. Visit <a href=\"https://www.sandspointpreserveconservancy.org/support/engraved-bricks-dedications/\" target=\"_blank\" rel=\"noopener noreferrer\">Engraved Bricks Dedications</a> for more information.",
         "url": null,
         "icon": "brick.svg"
       },
@@ -54,6 +57,7 @@
       "type": "Feature",
       "properties": {
         "name": "Wishing Well",
+        "status": "final",
         "category": "general",
         "info": null,
         "url": null,
@@ -67,7 +71,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Scenic overview on Trail 4",
+        "name": "Scenic Overview",
+        "status": "final",
         "category": "general",
         "info": null,
         "url": null,
@@ -82,8 +87,9 @@
       "type": "Feature",
       "properties": {
         "name": "Scout Site 2",
+        "status": "final",
         "category": "general",
-        "info": "Camping sites for organized scout groups. Visit \u003Ca href=\"https://www.sandspointpreserveconservancy.org/education/scout-groups/\" target=\"_blank\" rel=\"noopener noreferrer\"\u003EScout Groups\u003C/a\u003E for more information.",
+        "info": "Camping sites for organized scout groups. Visit <a href=\"https://www.sandspointpreserveconservancy.org/education/scout-groups/\" target=\"_blank\" rel=\"noopener noreferrer\">Scout Groups</a> for more information.",
         "url": null,
         "icon": "scout.svg"
       },
@@ -96,8 +102,9 @@
       "type": "Feature",
       "properties": {
         "name": "Sculpture Garden",
+        "status": "final",
         "category": "general",
-        "info": null,
+        "info": "In the spring of 2025, a series of sculptures by artist Jerry Shore was artfully curated atop the hill overlooking the pond. This installation was made possible through the generosity of the Shore and Coccarelli families. Visit <a class=\"more\" href=\"https://www.sandspointpreserveconservancy.org/about/sculpture-garden/\" target=\"_blank\" rel=\"noopener noreferrer\">Sculpture Garden</a> for more information.",
         "url": null,
         "icon": "sculpture.svg"
       },
@@ -110,8 +117,9 @@
       "type": "Feature",
       "properties": {
         "name": "Apiary",
+        "status": "final",
         "category": "general",
-        "info": "Bees play a vital role in our ecosystem by pollinating flowers, fruits, and vegetables, helping plants reproduce and our food systems thrive. Approximately one-third of the world’s food crops depend on bees to survive, so the next time you see a bee, don’t swat it – say thank you! By helping bees through our cared-for apiary, we are helping to protect biodiversity, healthy habitats, and the natural world we all depend on. Special thanks to our volunteer beekeeper, Jean-Marie Posner!",
+        "info": "Bees play a vital role in our ecosystem by pollinating flowers, fruits, and vegetables, helping plants reproduce and our food systems thrive. Approximately one-third of the world's food crops depend on bees to survive, so the next time you see a bee, don't swat it - say thank you! By helping bees through our cared-for apiary, we are helping to protect biodiversity, healthy habitats, and the natural world we all depend on. Special thanks to our volunteer beekeeper, Jean-Marie Posner!",
         "url": null,
         "icon": "bee.svg"
       },
@@ -124,8 +132,9 @@
       "type": "Feature",
       "properties": {
         "name": "Scout Site 1",
+        "status": "final",
         "category": "general",
-        "info": "Camping sites for organized scout groups. Visit \u003Ca href=\"https://www.sandspointpreserveconservancy.org/education/scout-groups/\" target=\"_blank\" rel=\"noopener noreferrer\"\u003EScout Groups\u003C/a\u003E for more information.",
+        "info": "Camping sites for organized scout groups. Visit <a href=\"https://www.sandspointpreserveconservancy.org/education/scout-groups/\" target=\"_blank\" rel=\"noopener noreferrer\">Scout Groups</a> for more information.",
         "url": null,
         "icon": "scout.svg"
       },
@@ -137,9 +146,10 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Beach Acess (west)",
+        "name": "Beach (west access)",
+        "status": "final",
         "category": "general",
-        "info": "\u003Cp\u003E\nThe Long Island Sound is a 110-mile-long tidal estuary of the Atlantic Ocean. New York and Connecticut are to the North; Long Island is to the South. Saltwater from the ocean mixes with fresh water from Hempstead Harbor and other smaller inland waterways, making it a unique and critical resource for over 120 species of fish, as well as crabs, lobsters, birds, and other marine life. In addition, the Long Island Sound supports a nearly $10 billion dollar economy through coastal recreation, tourism, and commercial fishing.\n\u003C/p\u003E\n\u003Cp\u003E\nThe largest threats to the Long Island Sound are sediment and nutrient runoff, rising sea levels and temperatures, and plastic pollution. These human effects on the Sound upset the delicate ecosystem balance and destroy the water’s plant and animal diversity. You can help by reducing the use of chemicals in your own lawn care (which ultimately drain into the Sound), planting rain gardens that work to trap runoff before it reaches the Sound, and participating in local beach clean-ups to clear harmful litter from the coast.\n\u003C/p\u003E",
+        "info": "<p>The Long Island Sound is a 110-mile-long tidal estuary of the Atlantic Ocean. New York and Connecticut are to the North; Long Island is to the South. Saltwater from the ocean mixes with fresh water from Hempstead Harbor and other smaller inland waterways, making it a unique and critical resource for over 120 species of fish, as well as crabs, lobsters, birds, and other marine life. In addition, the Long Island Sound supports a nearly $10 billion dollar economy through coastal recreation, tourism, and commercial fishing.</p><p>The beach is home to many species of native birds. Common sightings include Ospreys, Common Terns, Cormorants, Gulls, and Bank Swallows. Lucky visitors can occasionally spot our resident Bald Eagles! The beach also provides a vital rest stop for over 200 species of migratory birds. The Sands Point Preserve sits squarely in the \"Atlantic Flyway,\" one of the major migratory paths for birds worldwide.  Coastal habitats are critical to maintaining the ecosystems that birds support through pest population control, seed dispersal, and other land/water dynamics. Melanie will get photos.</p><p>The largest threats to the Long Island Sound are sediment and nutrient runoff, rising sea levels and temperatures, and plastic pollution. These human effects on the Sound upset the delicate ecosystem balance and destroy the water's plant and animal diversity. You can help by reducing the use of chemicals in your own lawn care (which ultimately drain into the Sound), planting rain gardens that work to trap runoff before it reaches the Sound, and participating in local beach clean-ups to clear harmful litter from the coast.</p>",
         "url": null,
         "icon": "beach.svg"
       },
@@ -151,9 +161,10 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Beach Acess (east)",
+        "name": "Beach (east access)",
+        "status": "final",
         "category": "general",
-        "info": "\u003Cp\u003E\nThe Long Island Sound is a 110-mile-long tidal estuary of the Atlantic Ocean. New York and Connecticut are to the North; Long Island is to the South. Saltwater from the ocean mixes with fresh water from Hempstead Harbor and other smaller inland waterways, making it a unique and critical resource for over 120 species of fish, as well as crabs, lobsters, birds, and other marine life. In addition, the Long Island Sound supports a nearly $10 billion dollar economy through coastal recreation, tourism, and commercial fishing.\n\u003C/p\u003E\n\u003Cp\u003E\nThe largest threats to the Long Island Sound are sediment and nutrient runoff, rising sea levels and temperatures, and plastic pollution. These human effects on the Sound upset the delicate ecosystem balance and destroy the water’s plant and animal diversity. You can help by reducing the use of chemicals in your own lawn care (which ultimately drain into the Sound), planting rain gardens that work to trap runoff before it reaches the Sound, and participating in local beach clean-ups to clear harmful litter from the coast.\n\u003C/p\u003E",
+        "info": "<p>The Long Island Sound is a 110-mile-long tidal estuary of the Atlantic Ocean. New York and Connecticut are to the North; Long Island is to the South. Saltwater from the ocean mixes with fresh water from Hempstead Harbor and other smaller inland waterways, making it a unique and critical resource for over 120 species of fish, as well as crabs, lobsters, birds, and other marine life. In addition, the Long Island Sound supports a nearly $10 billion dollar economy through coastal recreation, tourism, and commercial fishing.</p><p>The beach is home to many species of native birds. Common sightings include Ospreys, Common Terns, Cormorants, Gulls, and Bank Swallows. Lucky visitors can occasionally spot our resident Bald Eagles! The beach also provides a vital rest stop for over 200 species of migratory birds. The Sands Point Preserve sits squarely in the \"Atlantic Flyway,\" one of the major migratory paths for birds worldwide.  Coastal habitats are critical to maintaining the ecosystems that birds support through pest population control, seed dispersal, and other land/water dynamics. Melanie will get photos.</p><p>The largest threats to the Long Island Sound are sediment and nutrient runoff, rising sea levels and temperatures, and plastic pollution. These human effects on the Sound upset the delicate ecosystem balance and destroy the water's plant and animal diversity. You can help by reducing the use of chemicals in your own lawn care (which ultimately drain into the Sound), planting rain gardens that work to trap runoff before it reaches the Sound, and participating in local beach clean-ups to clear harmful litter from the coast.</p>",
         "url": null,
         "icon": "beach.svg"
       },
@@ -165,7 +176,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Bathrooms in Black Box",
+        "name": "Bathrooms (Black Box)",
+        "status": "final",
         "category": "general",
         "info": null,
         "url": null,
@@ -179,7 +191,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Bathrooms in Welcome Center",
+        "name": "Bathrooms (Welcome Center)",
+        "status": "final",
         "category": "general",
         "info": null,
         "url": null,
@@ -194,8 +207,9 @@
       "type": "Feature",
       "properties": {
         "name": "Entrance point to Trail 1 (Dino Trail)",
+        "status": "final",
         "category": "general",
-        "info": "\u003Cp\u003E\nTrail 1, also known as the Dino Trail, is a kid-friendly ¼-mile loop. Young explorers can spot dinosaur footprints, play pieces, and other prehistoric-themed equipment along the way.\n\u003C/p\u003E\n\u003Cp\u003E\n*Please note, ticks and poison ivy are common throughout wooded areas. To keep your walk enjoyable and safe, stick to marked trails, and avoid dense undergrowth or tall grass. When your outing is finished, be sure to thoroughly check yourself, children, and pets for ticks, and wash any exposed skin with cold, soapy water.\n\u003C/p\u003E",
+        "info": "<p>Trail 1, also known as the Dino Trail, is a kid-friendly ¼-mile loop. Young explorers can spot dinosaur footprints, play pieces, and other prehistoric-themed equipment along the way.</p><p><em><strong>* Please note</strong></em>, ticks and poison ivy are common throughout wooded areas. To keep your walk enjoyable and safe, stick to marked trails, and avoid dense undergrowth or tall grass. When your outing is finished, be sure to thoroughly check yourself, children, and pets for ticks, and wash any exposed skin with cold, soapy water.</p>",
         "url": null,
         "icon": "dino.svg"
       },
@@ -207,79 +221,10 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Entrance point to Trail 7",
-        "category": "general",
-        "info": null,
-        "url": null,
-        "icon": "trailhead.svg"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-73.6947871, 40.8614529]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Entrance point to Trail 8",
-        "category": "general",
-        "info": null,
-        "url": null,
-        "icon": "trailhead.svg"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-73.6968058208294, 40.8628471624325]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Entrance point to Trail 9",
-        "category": "general",
-        "info": null,
-        "url": null,
-        "icon": "trailhead.svg"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-73.6954230070735, 40.8618000306422]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Entrance point to Trail 10",
-        "category": "general",
-        "info": "Glacial Erratic (need location of 1): Long Island was formed during the last ice age, approximately 20,000 years ago. As glaciers pushed forward and melted, they left behind terminal moraines – ridges of rock, dirt, and sand that formed at the outermost edge of the glaciers, marking the farthest point the glaciers advanced before melting. These moraines formed the bedrock of our island. This large boulder – called a glacial erratic – is a remnant of one of these glacial moraines. See if you can find others along our trails and on our beach!",
-        "url": null,
-        "icon": "trailhead.svg"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-73.6962452671523, 40.8611442404133]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Entrance point to Trail 4, 5, 6 (far side of pond bridge)",
-        "category": "general",
-        "info": "Please note, ticks and poison ivy are common throughout wooded areas. To keep your walk enjoyable and safe, stick to marked trails, and avoid dense undergrowth or tall grass. When your outing is finished, be sure to thoroughly check yourself, children, and pets for ticks, and wash any exposed skin with cold, soapy water.",
-        "url": null,
-        "icon": "trailhead.svg"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-73.6963331, 40.8618749]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "name": "Hempstead House",
+        "status": "final",
         "category": "building",
-        "info": "Designed by architects Hunt &amp; Hunt in 1912, this 50,000-square-foot, three-story\nmansion has 40 rooms and a 60-foot-tall entry foyer. It served as the Guggenheims’ summer\nresidence (1917-1942) and the Naval Training Device Center’s dormitories and laboratories\n(1946-1967). Today, visitors can attend a range of cultural events in Hempstead House\nincluding concerts, multi-cultural holiday celebrations, Princess Days at the Castle, history\ntours, and galas. Tours are offered on select Wednesdays and Sundays throughout the year.\nPlease check our calendar for specific event dates. Visit \u003Ca href=\"https://www.sandspointpreserveconservancy.org/about/hempstead-house/\"\u003EHempstead House\u003C/a\u003E for more information.",
+        "info": "Designed by architects Hunt & Hunt in 1912, this 50,000-square-foot, three-story mansion has 40 rooms and a 60-foot-tall entry foyer. It served as the Guggenheims' summer residence (1917-1942) and the Naval Training Device Center's dormitories and laboratories (1946-1967). Today, visitors can attend a range of cultural events in Hempstead House including concerts, multi-cultural holiday celebrations, Princess Days at the Castle, history tours, and galas. Tours are offered on select Wednesdays and Sundays throughout the year. Please check our calendar for specific event dates. Visit <a class=\"more\" href=\"https://www.sandspointpreserveconservancy.org/about/hempstead-house/\" target=\"_blank\" rel=\"noopener noreferrer\">Hempstead House</a> for more information.",
         "url": null,
         "icon": null
       },
@@ -324,8 +269,9 @@
       "type": "Feature",
       "properties": {
         "name": "Castle Gould",
+        "status": "final",
         "category": "building",
-        "info": "Designed by architect Augustus N. Allen in 1902, and modeled after Ireland’s Kilkenny\nCastle, this 100,000-square-foot castle served as the Goulds’ and then the Guggenheims’\nstables, carriage house, and servants’ quarters. Today, in Castle Gould, visitors can find\nbathrooms, the Great Hall, the Sands Point Preserve Navy Simulation Museum, and the\nWelcome Center &amp; Gift Shop. Visit \u003Ca href=\"https://www.sandspointpreserveconservancy.org/about/castle-gould/\" target=\"_blank\" rel=\"noopener noreferrer\"\u003ECastle Gould\u003C/a\u003E for more information.",
+        "info": "Designed by architect Augustus N. Allen in 1902, and modeled after Ireland's Kilkenny Castle, this 100,000-square-foot castle served as the Goulds' and then the Guggenheims' stables, carriage house, and servants' quarters. Today, in Castle Gould, visitors can find bathrooms, the Great Hall, the Sands Point Preserve Navy Simulation Museum, and the Welcome Center & Gift Shop. Visit <a class=\"more\" href=\"https://www.sandspointpreserveconservancy.org/about/castle-gould/\" target=\"_blank\" rel=\"noopener noreferrer\">Castle Gould</a> for more information.",
         "url": null,
         "icon": null
       },
@@ -374,8 +320,9 @@
       "type": "Feature",
       "properties": {
         "name": "Pond",
+        "status": "final",
         "category": "pond",
-        "info": "Ponds are hotspots for biodiversity, supporting amphibians, insects, birds, and plants. In addition, the water in this pond drains out into a stream, which mixes with the surrounding plants and soil to create a marsh-like environment – yet another habitat at the Preserve!",
+        "info": "<p>Ponds are hotspots for biodiversity, supporting amphibians, insects, birds, and plants. In addition, the water in this pond drains out into a stream, which mixes with the surrounding plants and soil to create a marsh-like environment - yet another habitat at the Preserve!</p><h4>Birds</h4><p>The pond is home to many species of birds, including American Robins, Cardinals, Catbirds, Wrens, Yellow Warblers, and the occasional Green Heron. Tracy has photos</p><h4>Animals</h4><p>On a warm day, you are likely to find turtles sunning themselves along the edge of the pond and on the floating rafts. The most common species are Red Eared Sliders and Eastern Painted Turtles, but Common Snapping Turtles have also been spotted here. Turtles are natural pond cleaners, eating dead matter before it decays and thus preventing excess nutrients from muddying up the water. Enjoying this benefit are other pond dwellers, including American Bullfrogs and tadpoles, as well as Canadian Geese and Mallard Ducks. Tracy has photos of turtles</p>",
         "url": null,
         "icon": null
       },
@@ -727,52 +674,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Falaise",
-        "category": "building",
-        "info": "",
-        "url": null,
-        "icon": null
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [-73.6891194, 40.8610526],
-            [-73.6893191, 40.86112],
-            [-73.6893353, 40.8610925],
-            [-73.6894924, 40.8611455],
-            [-73.6895403, 40.8610643],
-            [-73.6895231, 40.8610585],
-            [-73.6895199, 40.8610466],
-            [-73.689512, 40.8610353],
-            [-73.6894947, 40.8610293],
-            [-73.6894773, 40.8610371],
-            [-73.6891642, 40.8609201],
-            [-73.6891309, 40.8609076],
-            [-73.6891395, 40.8608944],
-            [-73.6891285, 40.8608729],
-            [-73.6890842, 40.8608581],
-            [-73.6891376, 40.8607668],
-            [-73.6891879, 40.8607837],
-            [-73.6892157, 40.8607362],
-            [-73.6890739, 40.8606888],
-            [-73.6890395, 40.8607475],
-            [-73.6890009, 40.8608135],
-            [-73.6889828, 40.8608074],
-            [-73.6889417, 40.8608774],
-            [-73.688972, 40.8608876],
-            [-73.6889461, 40.8609315],
-            [-73.6890729, 40.8609742],
-            [-73.6890421, 40.8610266],
-            [-73.6891194, 40.8610526]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "name": "Gate House (park entrance)",
+        "status": "final",
         "category": "building",
         "info": "",
         "url": null,
@@ -795,6 +698,7 @@
       "type": "Feature",
       "properties": {
         "name": "Learning Center & Outdoor Classroom",
+        "status": "final",
         "category": "building",
         "info": "Originally a dog kennel for the Guggenheims, today the Learning Center is home to programs and activities for children of all ages. In 2011, the Outdoor Classroom was created, and the space was dedicated as the Phil Dejana Learning Center. The Outdoor Classroom is designed to foster a love of nature through exploration and play.",
         "url": null
@@ -816,8 +720,9 @@
       "type": "Feature",
       "properties": {
         "name": "Ice House Lounge",
+        "status": "final",
         "category": "building",
-        "info": "The walls of our Ice House Lounge are remnants of a storage space built in the 1950s by the U.S. Navy when they inhabited our grounds. By clearing debris, landscaping the surrounding area, and adding outdoor furniture and a tension sail roof, this space has been rehabilitated and repurposed as an outdoor lounge for visitors to relax in and enjoy. Visit \u003Ca href=\"https://www.sandspointpreserveconservancy.org/news/pond-revitalization-project/\" target=\"_blank\" rel=\"noopener noreferrer\"\u003EPond Revitalization Project\u003C/a\u003E for more information.",
+        "info": "The walls of our Ice House Lounge are remnants of a storage space built in the 1950s by the U.S. Navy when they inhabited our grounds. By clearing debris, landscaping the surrounding area, and adding outdoor furniture and a tension sail roof, this space has been rehabilitated and repurposed as an outdoor lounge for visitors to relax in and enjoy. Visit <a class=\"more\" href=\"https://www.sandspointpreserveconservancy.org/news/pond-revitalization-project/\" target=\"_blank\" rel=\"noopener noreferrer\">Pond Revitalization Project</a> for more information.",
         "url": null
       },
       "geometry": {
@@ -837,6 +742,7 @@
       "type": "Feature",
       "properties": {
         "name": "Pond Bridge",
+        "status": "final",
         "category": "bridge",
         "info": null,
         "url": null,
@@ -861,6 +767,7 @@
       "type": "Feature",
       "properties": {
         "name": "Entry Bridge",
+        "status": "final",
         "category": "bridge",
         "info": null,
         "url": null,
@@ -884,7 +791,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Footbridge on Trail 6",
+        "name": "Footbridge",
+        "status": "final",
         "category": "bridge",
         "info": null,
         "url": null,
@@ -914,8 +822,9 @@
       "type": "Feature",
       "properties": {
         "name": "Hempstead House Gardens",
+        "status": "final",
         "category": "greenspace",
-        "info": "The Hempstead House Garden was originally a rose garden designed by Florence Guggenheim. In 2023, while the fundamental structure was maintained, new native wildflowers were planted.",
+        "info": "<p>The Hempstead House Garden was originally a rose garden designed by Florence Guggenheim. In 2023, while the fundamental structure was maintained, new native wildflowers were planted.</p><h4>Native Plants</h4><p>There are 33 diverse species of native grasses, shrubs, and flowers in the garden. Native plants provide the essential foundation for healthy ecosystems. Evolving alongside local insects, birds, and other animals, they offer resources uniquely suited for and required by the diverse local fauna. As such, native plants support robust biodiversity. To help support your local environment, you can plant native wildflower seeds in your own backyard! Seeds are regularly available and affordable. And because native plants are especially suited to the local climate, little to no additional maintenance is required. Some highlights in this garden include Common Milkweed, Blue Stocking Bee Balm, Black-Eyed Susan, Millenium Allium, Azure Rush Geranium, Oakleaf Hydrangea, and various Coneflower varieties. Tracy has photos of all.</p><h4>Pollinators</h4><p>Native wildflowers support pollinators, which serve as fundamental building blocks to promoting biodiversity and supporting thriving ecosystems. Common pollinators that you can find in this garden are the Monarch, Black Swallowtail, Tiger Swallowtail, Buckeye, and Painted Lady butterflies, Goldfinches, Robins, Sparrows, and other birds, and a variety of beneficial bees. Tracy has some photos and will gather missing photos.</p>",
         "url": null
       },
       "geometry": {
@@ -985,7 +894,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Parking Lot by Hempstead House",
+        "name": "Parking Lot (Hempstead House)",
+        "status": "final",
         "category": "parking",
         "info": null,
         "url": null,
@@ -1012,7 +922,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Main Parking Lot",
+        "name": "Parking Lot (Main)",
+        "status": "final",
         "category": "parking",
         "info": null,
         "url": null,
@@ -1046,8 +957,9 @@
       "type": "Feature",
       "properties": {
         "name": "Dog Run",
+        "status": "final",
         "category": "greenspace",
-        "info": "The dog run was created in 2018 and is comprised of two large spaces for pups to romp and socialize; one area is designated for small dogs (less than 25 pounds), and the other is accessible for all dogs. Dogs must be accompanied by their owners at all times. Visit \u003Ca href=\"https://www.sandspointpreserveconservancy.org/about/dogwalking/\" target=\"_blank\" rel=\"noopener noreferrer\"\u003EDog walking\u003C/a\u003E for more information.",
+        "info": "The dog run was created in 2018 and is comprised of two large spaces for pups to romp and socialize; one area is designated for small dogs (less than 25 pounds), and the other is accessible for all dogs. Dogs must be accompanied by their owners at all times. Visit <a class=\"more\" href=\"https://www.sandspointpreserveconservancy.org/about/dogwalking/\" target=\"_blank\" rel=\"noopener noreferrer\">Dog Walking</a> for more information.",
         "url": null,
         "icon": "dog.svg"
       },
@@ -1068,8 +980,9 @@
       "type": "Feature",
       "properties": {
         "name": "Great Lawn",
+        "status": "final",
         "category": "greenspace",
-        "info": "Did you know that most of the Preserve’s natural resources are kept just that way – natural? The grass of the Great Lawn is regularly mowed to maintain visitor accessibility, but no fertilizers, pesticides, artificial watering, or other chemicals are used to treat the area. In fact, other than the Hempstead House Garden that is professionally manicured, all 216 acres of the Preserve’s grounds are chemical-free!",
+        "info": "Did you know that most of the Preserve's natural resources are kept just that way - natural? The grass of the Great Lawn is regularly mowed to maintain visitor accessibility, but no fertilizers, pesticides, artificial watering, or other chemicals are used to treat the area. In fact, other than the Hempstead House Garden that is professionally manicured, all 216 acres of the Preserve's grounds are chemical-free!",
         "url": null,
         "icon": null
       },
@@ -1112,6 +1025,272 @@
             [-73.7005723184209, 40.8626547807783]
           ]
         ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Trail 2",
+        "status": "final",
+        "category": "trail",
+        "info": "½-mile loop.",
+        "url": null,
+        "icon": null
+      },
+      "geometry": { 
+        "type": "LineString",
+        "coordinates": [
+          [-73.6962104, 40.8584159],
+          [-73.6963773, 40.8584459],
+          [-73.6967316, 40.8585414],
+          [-73.6969566, 40.858616],
+          [-73.6972061, 40.8587045],
+          [-73.6975474, 40.8588075],
+          [-73.6969566, 40.858616 ],
+          [-73.6969727, 40.8585366],
+          [-73.6971304, 40.8583681],
+          [-73.6972505, 40.8583],
+          [-73.6973731, 40.8582886],
+          [-73.6975208, 40.8581769],
+          [-73.6976634, 40.8580861],
+          [-73.6976885, 40.8580198],
+          [-73.6976734,40.8579403],
+          [-73.6977135, 40.8578741],
+          [-73.697781, 40.8578438],
+          [-73.6977836, 40.8577719],
+          [-73.6977485, 40.8576413],
+          [-73.6978047, 40.8575136],
+          [-73.6978047, 40.8573529],
+          [-73.6977307, 40.857241],
+          [-73.6976691, 40.8571711],
+          [-73.6976753, 40.8570383],
+          [-73.6977307, 40.856945],
+          [-73.6979002, 40.8568914], 
+          [-73.6980851, 40.8569287 ],
+          [-73.6982453, 40.8569311],
+          [-73.6983932, 40.8569917],
+          [-73.698501, 40.8570592],
+          [-73.6985041, 40.8571897],
+          [-73.6983316, 40.8573062],
+          [-73.6982607, 40.8573529],
+          [-73.6982522, 40.8574571],
+          [-73.6983231, 40.8576225],
+          [-73.6984247, 40.8576925],
+          [-73.6983939, 40.8577833],
+          [-73.6983354, 40.8578439],
+          [-73.6983908, 40.8579651],
+          [-73.6983539, 40.858028],
+          [-73.6981074, 40.8580909],
+          [-73.697864, 40.8582634],
+          [-73.6977069, 40.8584125],
+          [-73.697599, 40.8585943],
+          [-73.6975474, 40.8588075]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Trail 3",
+        "status": "final",
+        "category": "trail",
+        "info": "This ¼-mile dirt path leads visitors past the pond and to the beach. At the end of the trail, find a self-service beach clean-up station to help keep our shores clean!",
+        "url": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-73.6974799, 40.8636942],
+          [-73.6975075, 40.8636289],
+          [-73.69757, 40.8635569],
+          [-73.6976551, 40.8635229],
+          [-73.6976551, 40.8634737],
+          [-73.6976326, 40.8634055],
+          [-73.6976526, 40.863362],
+          [-73.6976501, 40.8633071],
+          [-73.6975901, 40.86322],
+          [-73.697545, 40.8631065],
+          [-73.6975275, 40.8629664],
+          [-73.6975125, 40.8627847],
+          [-73.6975123, 40.8626759],
+          [-73.6974996, 40.8626165],
+          [-73.6974933, 40.862587],
+          [-73.6975149, 40.8625784],
+          [-73.6975654, 40.8625583],
+          [-73.697573, 40.8624952],
+          [-73.6975597, 40.8624725],
+          [-73.6975275, 40.8624178],
+          [-73.6974852, 40.8623947],
+          [-73.6974592, 40.8623805],
+          [-73.6974061, 40.8623575],
+          [-73.697353, 40.8622829],
+          [-73.6973293, 40.8622337],
+          [-73.6973226, 40.8622198],
+          [-73.6973112, 40.8621624],
+          [-73.6972468, 40.8621653],
+          [-73.697205, 40.862085],
+          [-73.6971753, 40.8620182],
+          [-73.6971592, 40.8619821],
+          [-73.6971502, 40.8619642],
+          [-73.6971192, 40.8619026],
+          [-73.6970643, 40.8617989]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hiking Trails 4, 5, and 6",
+        "status": "final",
+        "category": "trail",
+        "info": "<h4>Trail 4</h4><p>On this one-mile fitness trail loop, you'll find 12 exercise stops, including monkey bars, a balance beam, and a chin up bar. There's also a scenic overlook of the Long Island Sound.<p><h4>Trail 5</h4><p>This ½-mile paved path leads past the pond and the sculpture garden to the beach.</p><h4>Trail 6</h4><p>This ½-mile loop includes a mix of dirt and paved paths and includes a scenic footbridge through the leaves of the surrounding trees.</p><h4>Tree Identification</h4><p>Along all our trails, you will find abundant native trees. Native trees provide numerous benefits to the environment. They store carbon and release oxygen, helping to clean our atmosphere and reduce global temperatures; their roots bind and support soil, preventing erosion and keeping it rich in nutrients for dependent species; and they provide resources and habitats for diverse insects, birds, and animals. Of course, they also provide shade, beauty, and nuts and fruit for us! On your walk, look out for these native trees, which bring these resources to the residents and visitors of the Sands Point Preserve: red oak, white oak, maple, ash, horse chestnut, black walnut, sassafras, tulip, and elm. Melanie will get photos.</p><h4>Wildlife Tracks</h4><p>The woodlands are home to many mammals including Eastern Gray Squirrel, Eastern Chipmunk, Eastern Cottontail Rabbit, and White-Tailed Deer. Lesser-seen mammals include Red Fox, Eastern Mole, Common Shrew and our newest inhabitant - the coyote. Keep your eyes peeled for these common tracks: Tracy has photos.<p><em><strong>* Please note</strong></em>, ticks and poison ivy are common throughout wooded areas. To keep your walk enjoyable and safe, stick to marked trails, and avoid dense undergrowth or tall grass. When your outing is finished, be sure to thoroughly check yourself, children, and pets for ticks, and wash any exposed skin with cold, soapy water.</p>",
+        "url": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [ [ -73.6954369, 40.8596573 ], [ -73.6955599, 40.8597038 ], [ -73.6957327, 40.8598022 ], [ -73.6958526, 40.8599129 ], [ -73.6959644, 40.8600697 ], [ -73.6960132, 40.8602619 ], [ -73.6960315, 40.860411 ], [ -73.6960355, 40.8604894 ], [ -73.6960904, 40.860617 ], [ -73.6961189, 40.86078 ], [ -73.6961717, 40.8609245 ], [ -73.6962063, 40.8610352 ], [ -73.696238655035771, 40.861116433117054 ], [ -73.696245267152335, 40.861144240413275 ], [ -73.696258955035759, 40.861200933117054 ], [ -73.6962307, 40.8613196 ], [ -73.696253, 40.8613903 ], [ -73.6963018, 40.8614518 ], [ -73.69631, 40.8615041 ], [ -73.6963466, 40.8615748 ], [ -73.6963466, 40.8616778 ], [ -73.6963262, 40.8618269 ], [ -73.6962875, 40.8618738 ] ],
+          [ [ -73.6954369, 40.8596573 ], [ -73.6952951, 40.8596134 ], [ -73.6949697, 40.8595944 ], [ -73.6945868, 40.8596569 ], [ -73.6942315, 40.8597307 ], [ -73.6939361, 40.8597761 ], [ -73.6937334, 40.8598197 ], [ -73.6935733, 40.8599086 ], [ -73.6933831, 40.8599881 ], [ -73.6932855, 40.8601036 ], [ -73.6933205, 40.8601831 ], [ -73.6933856, 40.8602682 ], [ -73.6934957, 40.8603402 ], [ -73.6935507, 40.8604954 ], [ -73.6936383, 40.8606279 ], [ -73.6936959, 40.8607774 ], [ -73.693781, 40.8609439 ], [ -73.693786, 40.8610197 ], [ -73.6937234, 40.8610745 ], [ -73.6936108, 40.8611881 ] ],
+          [ [ -73.6962875, 40.8618738 ], [ -73.6961445, 40.8619408 ], [ -73.6960041, 40.8619924 ], [ -73.6960307, 40.86209 ], [ -73.69608, 40.8621617 ], [ -73.6958714, 40.8622506 ], [ -73.6957083, 40.8623367 ], [ -73.6955869, 40.862308 ], [ -73.6955034, 40.862351 ], [ -73.6955869, 40.8624256 ], [ -73.6956096, 40.8625403 ], [ -73.695659, 40.8626723 ], [ -73.6956134, 40.8627555 ], [ -73.6953555, 40.8627412 ], [ -73.6951431, 40.8626551 ], [ -73.6949231, 40.8625432 ], [ -73.6947979, 40.8625002 ], [ -73.6947258, 40.8623912 ], [ -73.6945703, 40.8623309 ], [ -73.6944489, 40.8623137 ], [ -73.6942972, 40.8622563 ], [ -73.694153, 40.8621645 ], [ -73.6939748, 40.8620785 ], [ -73.6938947, 40.8620838 ], [ -73.6938146, 40.8620892 ], [ -73.6936827, 40.8621207 ], [ -73.6935053, 40.8621383 ], [ -73.6932484, 40.8621065 ], [ -73.693169, 40.8619971 ], [ -73.6930943, 40.8617816 ], [ -73.6930196, 40.8616827 ], [ -73.6931317, 40.8615697 ], [ -73.6932438, 40.8615556 ], [ -73.6933698, 40.8616615 ], [ -73.6934539, 40.8616509 ], [ -73.6935987, 40.8615697 ], [ -73.693594, 40.8614779 ], [ -73.693538, 40.8614284 ], [ -73.693538, 40.8612942 ], [ -73.6936108, 40.8611881 ] ],
+          [ [ -73.6942972, 40.8622563 ], [ -73.6942284, 40.8622947 ], [ -73.6940959, 40.8623134 ], [ -73.6940713, 40.8623903 ], [ -73.6940158, 40.8624532 ], [ -73.6938741, 40.8624042 ], [ -73.6937878, 40.8623506 ], [ -73.6938186, 40.8622574 ], [ -73.6938802, 40.8622248 ], [ -73.6939265, 40.8622015 ], [ -73.6938947, 40.8620838 ] ],
+          [ [ -73.7011433, 40.8636394 ], [ -73.7011621, 40.8635875 ], [ -73.7011745, 40.8635152 ], [ -73.7011762, 40.8634189 ], [ -73.7011762, 40.8633386 ], [ -73.701177911500693, 40.863283753543712 ], [ -73.701133711500688, 40.863255653543717 ] ],
+          [ [ -73.7010187, 40.8647614 ], [ -73.7009807, 40.8647494 ], [ -73.7005898, 40.8646264 ], [ -73.6998534, 40.8644266 ], [ -73.6992855, 40.8642868 ], [ -73.6988298, 40.8641919 ], [ -73.6982612, 40.8640822 ], [ -73.6982022, 40.8640295 ], [ -73.6981995, 40.8639301 ], [ -73.6979957, 40.8638834 ], [ -73.6978267, 40.8638611 ], [ -73.697706, 40.8638713 ], [ -73.6976899, 40.863855 ] ],
+          [ [ -73.6976288, 40.8638082 ], [ -73.6974958, 40.8637178 ], [ -73.6974799, 40.8636942 ], [ -73.697379, 40.8635438 ], [ -73.697179, 40.8633042 ], [ -73.6970286, 40.8631544 ], [ -73.6968923, 40.8629817 ], [ -73.6967897, 40.8628171 ], [ -73.6965844, 40.8625066 ], [ -73.6964428, 40.8622363 ], [ -73.696427, 40.8622085 ], [ -73.696411, 40.8621803 ], [ -73.6963827, 40.8621305 ], [ -73.6963584, 40.8620808 ], [ -73.6963172, 40.8619967 ], [ -73.6963331, 40.8618749 ] ],
+          [ [ -73.6980268, 40.8617857 ], [ -73.6978314, 40.8616804 ], [ -73.6977486, 40.8616508 ], [ -73.6974959, 40.8617266 ], [ -73.6972214, 40.861776 ], [ -73.6970643, 40.8617989 ], [ -73.6969272, 40.8618188 ], [ -73.6965743, 40.8618271 ], [ -73.6963331, 40.8618749 ] ],
+          [ [ -73.6963331, 40.8618749 ], [ -73.6962875, 40.8618738 ], [ -73.6961278, 40.8618699 ], [ -73.6958141, 40.8618599 ], [ -73.6954674, 40.8618175 ], [ -73.6951834, 40.8617001 ], [ -73.6949192, 40.8615727 ], [ -73.6947871, 40.8614529 ], [ -73.6948102, 40.861308 ], [ -73.6948466, 40.8610683 ], [ -73.6948201, 40.860861 ], [ -73.6948367, 40.8606437 ], [ -73.6949291, 40.8603964 ], [ -73.6950546, 40.8602491 ], [ -73.6952197, 40.8601267 ], [ -73.695365, 40.8599918 ], [ -73.6954244, 40.859812 ], [ -73.695441, 40.8596072 ], [ -73.6955433, 40.8592501 ], [ -73.6956325, 40.8589404 ], [ -73.695824, 40.8587681 ], [ -73.6959858, 40.8586182 ], [ -73.6961245, 40.8584709 ], [ -73.6962104, 40.8584159 ] ],
+          [ [ -73.6968445, 40.8591088 ], [ -73.6968382, 40.8591979 ], [ -73.6970302, 40.8598703 ], [ -73.6971433, 40.8601309 ], [ -73.6972591, 40.860296 ], [ -73.6975116, 40.8606063 ], [ -73.697603730326904, 40.860726842523562 ], [ -73.697765652993439, 40.860939263367321 ] ],
+          [ [ -73.696847204027051, 40.859147737925525 ], [ -73.696738612949929, 40.859124272316912 ], [ -73.696684317411382, 40.859048009031561 ], [ -73.696630021872807, 40.858954146405949 ], [ -73.696505917784663, 40.858848550793176 ], [ -73.696420596224058, 40.858784020058046 ], [ -73.696319761652418, 40.858731222137109 ], [ -73.696242196597339, 40.8585962939257 ], [ -73.696187901058778, 40.858531762944814 ], [ -73.696172388047756, 40.858449632514613 ] ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Trail 7",
+        "status": "final",
+        "category": "trail",
+        "info": "This ⅒-mile trail serves as a shortcut connecting trails 4 and 6.",
+        "url": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [ -73.6947871, 40.8614529 ], [ -73.694677, 40.8614897 ], [ -73.6943992, 40.8614215 ], [ -73.694229, 40.8613894 ], [ -73.6940663, 40.8613042 ], [ -73.6939763, 40.8612417 ], [ -73.6937861, 40.8612039 ], [ -73.6936108, 40.8611881 ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Trail 8",
+        "status": "final",
+        "category": "trail",
+        "info": "This ⅒-mile trail serves as a shortcut connecting trails 4 and 5.",
+        "url": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [ -73.695631687650717, 40.862724805167261 ], [ -73.695767108498274, 40.862798613290018 ], [ -73.695861676129255, 40.862851251590882 ], [ -73.695888737737093, 40.862866975610991 ], [ -73.695933847826723, 40.862901091354495 ], [ -73.695971740302014, 40.862935207080433 ], [ -73.695993393145031, 40.862965228904706 ], [ -73.696033090023903, 40.862980239811748 ], [ -73.696069178095598, 40.862973416672602 ], [ -73.696107070570875, 40.862948853365879 ], [ -73.696141354239003, 40.862906549871823 ], [ -73.696152180660519, 40.862890174318494 ], [ -73.696186464328605, 40.862868340241064 ], [ -73.696220747996719, 40.862869704871116 ], [ -73.696265858086349, 40.862872434131148 ], [ -73.696300141754477, 40.862869704871116 ], [ -73.696325403404657, 40.862860152460186 ], [ -73.696372317897882, 40.862860152460186 ], [ -73.69640299275882, 40.862869704871116 ], [ -73.696437276426948, 40.862879257280682 ], [ -73.696455320462789, 40.862905185242539 ], [ -73.696484190920145, 40.862925654678939 ], [ -73.696520278991855, 40.862927019307811 ], [ -73.696583433117326, 40.862924290050039 ], [ -73.69663576082128, 40.862918831534174 ], [ -73.696688088525264, 40.862909279130328 ], [ -73.696722372193364, 40.862895632836718 ], [ -73.696753047054315, 40.862879257280682 ], [ -73.696805820829397, 40.862847162432452 ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Trail 9",
+        "status": "final",
+        "category": "trail",
+        "info": "This ⅒-mile trail connects trails 4 and 6. Use this shortcut to more quickly get from the bottom of the bluff to the top.",
+        "url": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [ -73.695423007073543, 40.861800030642193 ], [ -73.69537531425884, 40.861860780167746 ], [ -73.695337723551376, 40.861926386543487 ], [ -73.695288566472357, 40.862022609110355 ], [ -73.695253867357778, 40.862057599100027 ], [ -73.695233626207596, 40.862129765895332 ], [ -73.695236517800467, 40.862175690178667 ], [ -73.695245192579122, 40.862239109374741 ], [ -73.695239244809798, 40.862285083658861 ], [ -73.69523352923504, 40.862317194389391 ], [ -73.69521916824317, 40.862350639537759 ], [ -73.695200868807845, 40.862385120883452 ], [ -73.69514779561365, 40.862420936643183 ], [ -73.695098804972829, 40.862446254668548 ], [ -73.695060428970891, 40.862477747808541 ], [ -73.694985982647765, 40.862572363198709 ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Trail 10",
+        "status": "final",
+        "category": "trail",
+        "info": "This ⅒-mile trail serves as a shortcut connecting trails 4 and 6.",
+        "url": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [ -73.696245267152335, 40.861144240413275 ], [ -73.696132258982544, 40.861179966434001 ], [ -73.696057540114793, 40.861213304857891 ], [ -73.695968736836591, 40.861221700058707 ], [ -73.695884373722336, 40.86121666293834 ], [ -73.695819991345658, 40.861198193493728 ], [ -73.695764489296806, 40.861174686920407 ], [ -73.695704547084006, 40.86113438991817 ], [ -73.695635724543422, 40.861104167150394 ], [ -73.6955491413472, 40.861075623412617 ], [ -73.695471438478819, 40.86108233958732 ], [ -73.695418156511892, 40.861099130021081 ], [ -73.695369314708898, 40.861090734804733 ], [ -73.695282731512663, 40.861077302456351 ], [ -73.695227229463811, 40.861062191061166 ], [ -73.69513842618565, 40.861042042528894 ], [ -73.695078483972878, 40.861028610170635 ], [ -73.695007441350342, 40.861011819718975 ], [ -73.694954159383428, 40.860983275941408 ], [ -73.694907537662374, 40.860936262633871 ], [ -73.694831967014835, 40.860918150381991 ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Welcome Center & Gift Shop",
+        "status": "draft",
+        "category": "general",
+        "info": "Our Welcome Center & Gift Shop opens at 11am and closes one hour before the park closes. Find water, snacks, souvenirs, and information here!",
+        "url": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": []
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Playground",
+        "status": "draft",
+        "category": "general",
+        "info": "The Woodland Playground was opened in 2019, its creation spearheaded by a dedicated group of local residents. This shaded area for children of all ages and abilities is equipped with a custom-designed cedar castle with towers, turrets, tunnels, a spiral slide, and climbing walls, a speedy 75' zipline, a swing set with adaptive swings, a four-seat rocker, spinners, tether ball, and a huge geodesic dome climber. Visit <a class=\"more\" href=\"https://www.sandspointpreserveconservancy.org/education/woodland-playground/\" target=\"_blank\" rel=\"noopener noreferrer\">Woodland Playground</a> for more information.",
+        "url": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": []
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Sands Point Preserve Navy Simulation Museum",
+        "status": "draft",
+        "category": "general",
+        "info": "The Navy Simulation Museum chronicles the 21 years that the U.S. Naval Training Devices Center was housed on the grounds of the Preserve. The museum includes artifacts and memorabilia from the 1940s, 50s, and 60s, showcasing the time the Navy spent here building and testing simulation training devices for the military. Popular exhibits include an original Link trainer and a modern-day flight simulator that visitors can use. The museum is open Saturdays and Sundays, 12pm - 5pm, and tickets are $5 per person (veterans and kids under 10 are free!). Special thanks to Hank Okraski, volunteer curator!",
+        "url": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": []
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Picnic Area",
+        "status": "draft",
+        "category": "general",
+        "info": "Visit <a class=\"more\" href=\"https://www.sandspointpreserveconservancy.org/about/picnics-camping/\" target=\"_blank\" rel=\"noopener noreferrer\">Picnics</a> to reserve a picnic spot.",
+        "url": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": []
       }
     }
   ]
