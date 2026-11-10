@@ -12,7 +12,6 @@
       "type": "Feature",
       "properties": {
         "name": "Tribute Orchard",
-        "status": "final",
         "category": "general",
         "info": "Honor your family or memorialize a loved one with a fruit-bearing tree (apple, cherry, peach, persimmon, or pear). Select an unclaimed tree and create your dedication with a personalized plaque. Visit <a class=\"external\" href=\"https://www.sandspointpreserveconservancy.org/support/tribute-orchard/\" target=\"_blank\" rel=\"noopener noreferrer\">Tribute Orchard</a> for more information.",
         "url": null,
@@ -27,7 +26,6 @@
       "type": "Feature",
       "properties": {
         "name": "Organic Vegetable Garden",
-        "status": "final",
         "category": "general",
         "info": null,
         "url": null,
@@ -42,7 +40,6 @@
       "type": "Feature",
       "properties": {
         "name": "Commemorative Brick Plaza",
-        "status": "final",
         "category": "general",
         "info": "Be a part of our history! Visitors can purchase a brick and personalize an engraving to commemorate a special date, honor a loved one, or just share a message. Visit <a class=\"external\" href=\"https://www.sandspointpreserveconservancy.org/support/engraved-bricks-dedications/\" target=\"_blank\" rel=\"noopener noreferrer\">Engraved Bricks Dedications</a> for more information.",
         "url": null,
@@ -50,14 +47,13 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [-73.7013296991112, 40.8635074790465]
+        "coordinates": [-73.70131841001087, 40.863553475465132]
       }
     },
     {
       "type": "Feature",
       "properties": {
         "name": "Wishing Well",
-        "status": "final",
         "category": "general",
         "info": null,
         "url": null,
@@ -72,7 +68,6 @@
       "type": "Feature",
       "properties": {
         "name": "Scenic Overview",
-        "status": "final",
         "category": "general",
         "info": null,
         "url": null,
@@ -87,7 +82,6 @@
       "type": "Feature",
       "properties": {
         "name": "Scout Site 2",
-        "status": "final",
         "category": "general",
         "info": "Camping sites for organized scout groups. Visit <a class=\"external\" href=\"https://www.sandspointpreserveconservancy.org/education/scout-groups/\" target=\"_blank\" rel=\"noopener noreferrer\">Scout Groups</a> for more information.",
         "url": null,
@@ -102,7 +96,6 @@
       "type": "Feature",
       "properties": {
         "name": "Sculpture Garden",
-        "status": "final",
         "category": "general",
         "info": "In the spring of 2025, a series of sculptures by artist Jerry Shore was artfully curated atop the hill overlooking the pond. This installation was made possible through the generosity of the Shore and Coccarelli families. Visit <a class=\"external\" href=\"https://www.sandspointpreserveconservancy.org/about/sculpture-garden/\" target=\"_blank\" rel=\"noopener noreferrer\">Sculpture Garden</a> for more information.",
         "url": null,
@@ -117,7 +110,6 @@
       "type": "Feature",
       "properties": {
         "name": "Apiary",
-        "status": "final",
         "category": "general",
         "info": "Bees play a vital role in our ecosystem by pollinating flowers, fruits, and vegetables, helping plants reproduce and our food systems thrive. Approximately one-third of the world's food crops depend on bees to survive, so the next time you see a bee, don't swat it - say thank you! By helping bees through our cared-for apiary, we are helping to protect biodiversity, healthy habitats, and the natural world we all depend on. Special thanks to our volunteer beekeeper, Jean-Marie Posner!",
         "url": null,
@@ -132,7 +124,6 @@
       "type": "Feature",
       "properties": {
         "name": "Scout Site 1",
-        "status": "final",
         "category": "general",
         "info": "Camping sites for organized scout groups. Visit <a class=\"external\" href=\"https://www.sandspointpreserveconservancy.org/education/scout-groups/\" target=\"_blank\" rel=\"noopener noreferrer\">Scout Groups</a> for more information.",
         "url": null,
@@ -147,7 +138,6 @@
       "type": "Feature",
       "properties": {
         "name": "Beach (west access)",
-        "status": "final",
         "category": "general",
         "info": "<p>The Long Island Sound is a 110-mile-long tidal estuary of the Atlantic Ocean. New York and Connecticut are to the North; Long Island is to the South. Saltwater from the ocean mixes with fresh water from Hempstead Harbor and other smaller inland waterways, making it a unique and critical resource for over 120 species of fish, as well as crabs, lobsters, birds, and other marine life. In addition, the Long Island Sound supports a nearly $10 billion dollar economy through coastal recreation, tourism, and commercial fishing.</p><p>The beach is home to many species of native birds. Common sightings include Ospreys, Common Terns, Cormorants, Gulls, and Bank Swallows. Lucky visitors can occasionally spot our resident Bald Eagles! The beach also provides a vital rest stop for over 200 species of migratory birds. The Sands Point Preserve sits squarely in the \"Atlantic Flyway,\" one of the major migratory paths for birds worldwide.  Coastal habitats are critical to maintaining the ecosystems that birds support through pest population control, seed dispersal, and other land/water dynamics. Melanie will get photos.</p><p>The largest threats to the Long Island Sound are sediment and nutrient runoff, rising sea levels and temperatures, and plastic pollution. These human effects on the Sound upset the delicate ecosystem balance and destroy the water's plant and animal diversity. You can help by reducing the use of chemicals in your own lawn care (which ultimately drain into the Sound), planting rain gardens that work to trap runoff before it reaches the Sound, and participating in local beach clean-ups to clear harmful litter from the coast.</p>",
         "url": null,
@@ -162,7 +152,6 @@
       "type": "Feature",
       "properties": {
         "name": "Beach (east access)",
-        "status": "final",
         "category": "general",
         "info": "<p>The Long Island Sound is a 110-mile-long tidal estuary of the Atlantic Ocean. New York and Connecticut are to the North; Long Island is to the South. Saltwater from the ocean mixes with fresh water from Hempstead Harbor and other smaller inland waterways, making it a unique and critical resource for over 120 species of fish, as well as crabs, lobsters, birds, and other marine life. In addition, the Long Island Sound supports a nearly $10 billion dollar economy through coastal recreation, tourism, and commercial fishing.</p><p>The beach is home to many species of native birds. Common sightings include Ospreys, Common Terns, Cormorants, Gulls, and Bank Swallows. Lucky visitors can occasionally spot our resident Bald Eagles! The beach also provides a vital rest stop for over 200 species of migratory birds. The Sands Point Preserve sits squarely in the \"Atlantic Flyway,\" one of the major migratory paths for birds worldwide.  Coastal habitats are critical to maintaining the ecosystems that birds support through pest population control, seed dispersal, and other land/water dynamics. Melanie will get photos.</p><p>The largest threats to the Long Island Sound are sediment and nutrient runoff, rising sea levels and temperatures, and plastic pollution. These human effects on the Sound upset the delicate ecosystem balance and destroy the water's plant and animal diversity. You can help by reducing the use of chemicals in your own lawn care (which ultimately drain into the Sound), planting rain gardens that work to trap runoff before it reaches the Sound, and participating in local beach clean-ups to clear harmful litter from the coast.</p>",
         "url": null,
@@ -177,7 +166,6 @@
       "type": "Feature",
       "properties": {
         "name": "Bathrooms (Black Box)",
-        "status": "final",
         "category": "general",
         "info": null,
         "url": null,
@@ -192,7 +180,6 @@
       "type": "Feature",
       "properties": {
         "name": "Bathrooms (Welcome Center)",
-        "status": "final",
         "category": "general",
         "info": null,
         "url": null,
@@ -200,14 +187,13 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [-73.6979707006118, 40.8610424244831]
+        "coordinates": [-73.698039601933743, 40.861015073811799]
       }
     },
     {
       "type": "Feature",
       "properties": {
         "name": "Entrance point to Trail 1 (Dino Trail)",
-        "status": "final",
         "category": "general",
         "info": "<p>Trail 1, also known as the Dino Trail, is a kid-friendly ¼-mile loop. Young explorers can spot dinosaur footprints, play pieces, and other prehistoric-themed equipment along the way.</p><p><em><strong>* Please note</strong></em>, ticks and poison ivy are common throughout wooded areas. To keep your walk enjoyable and safe, stick to marked trails, and avoid dense undergrowth or tall grass. When your outing is finished, be sure to thoroughly check yourself, children, and pets for ticks, and wash any exposed skin with cold, soapy water.</p>",
         "url": null,
@@ -222,7 +208,6 @@
       "type": "Feature",
       "properties": {
         "name": "Hempstead House",
-        "status": "final",
         "category": "building",
         "info": "Designed by architects Hunt & Hunt in 1912, this 50,000-square-foot, three-story mansion has 40 rooms and a 60-foot-tall entry foyer. It served as the Guggenheims' summer residence (1917-1942) and the Naval Training Device Center's dormitories and laboratories (1946-1967). Today, visitors can attend a range of cultural events in Hempstead House including concerts, multi-cultural holiday celebrations, Princess Days at the Castle, history tours, and galas. Tours are offered on select Wednesdays and Sundays throughout the year. Please check our calendar for specific event dates. Visit <a class=\"external\" href=\"https://www.sandspointpreserveconservancy.org/about/hempstead-house/\" target=\"_blank\" rel=\"noopener noreferrer\">Hempstead House</a> for more information.",
         "url": null,
@@ -269,7 +254,6 @@
       "type": "Feature",
       "properties": {
         "name": "Castle Gould",
-        "status": "final",
         "category": "building",
         "info": "Designed by architect Augustus N. Allen in 1902, and modeled after Ireland's Kilkenny Castle, this 100,000-square-foot castle served as the Goulds' and then the Guggenheims' stables, carriage house, and servants' quarters. Today, in Castle Gould, visitors can find bathrooms, the Great Hall, the Sands Point Preserve Navy Simulation Museum, and the Welcome Center & Gift Shop. Visit <a class=\"external\" href=\"https://www.sandspointpreserveconservancy.org/about/castle-gould/\" target=\"_blank\" rel=\"noopener noreferrer\">Castle Gould</a> for more information.",
         "url": null,
@@ -320,7 +304,6 @@
       "type": "Feature",
       "properties": {
         "name": "Pond",
-        "status": "final",
         "category": "pond",
         "info": "<p>Ponds are hotspots for biodiversity, supporting amphibians, insects, birds, and plants. In addition, the water in this pond drains out into a stream, which mixes with the surrounding plants and soil to create a marsh-like environment - yet another habitat at the Preserve!</p><h4>Birds</h4><p>The pond is home to many species of birds, including American Robins, Cardinals, Catbirds, Wrens, Yellow Warblers, and the occasional Green Heron. Tracy has photos</p><h4>Animals</h4><p>On a warm day, you are likely to find turtles sunning themselves along the edge of the pond and on the floating rafts. The most common species are Red Eared Sliders and Eastern Painted Turtles, but Common Snapping Turtles have also been spotted here. Turtles are natural pond cleaners, eating dead matter before it decays and thus preventing excess nutrients from muddying up the water. Enjoying this benefit are other pond dwellers, including American Bullfrogs and tadpoles, as well as Canadian Geese and Mallard Ducks. Tracy has photos of turtles</p>",
         "url": null,
@@ -675,7 +658,6 @@
       "type": "Feature",
       "properties": {
         "name": "Gate House (park entrance)",
-        "status": "final",
         "category": "building",
         "info": "",
         "url": null,
@@ -698,7 +680,6 @@
       "type": "Feature",
       "properties": {
         "name": "Learning Center & Outdoor Classroom",
-        "status": "final",
         "category": "building",
         "info": "Originally a dog kennel for the Guggenheims, today the Learning Center is home to programs and activities for children of all ages. In 2011, the Outdoor Classroom was created, and the space was dedicated as the Phil Dejana Learning Center. The Outdoor Classroom is designed to foster a love of nature through exploration and play.",
         "url": null
@@ -720,7 +701,6 @@
       "type": "Feature",
       "properties": {
         "name": "Ice House Lounge",
-        "status": "final",
         "category": "building",
         "info": "The walls of our Ice House Lounge are remnants of a storage space built in the 1950s by the U.S. Navy when they inhabited our grounds. By clearing debris, landscaping the surrounding area, and adding outdoor furniture and a tension sail roof, this space has been rehabilitated and repurposed as an outdoor lounge for visitors to relax in and enjoy. Visit <a class=\"external\" href=\"https://www.sandspointpreserveconservancy.org/news/pond-revitalization-project/\" target=\"_blank\" rel=\"noopener noreferrer\">Pond Revitalization Project</a> for more information.",
         "url": null
@@ -742,7 +722,6 @@
       "type": "Feature",
       "properties": {
         "name": "Pond Bridge",
-        "status": "final",
         "category": "bridge",
         "info": null,
         "url": null,
@@ -767,7 +746,6 @@
       "type": "Feature",
       "properties": {
         "name": "Entry Bridge",
-        "status": "final",
         "category": "bridge",
         "info": null,
         "url": null,
@@ -792,7 +770,6 @@
       "type": "Feature",
       "properties": {
         "name": "Footbridge",
-        "status": "final",
         "category": "bridge",
         "info": null,
         "url": null,
@@ -822,7 +799,6 @@
       "type": "Feature",
       "properties": {
         "name": "Hempstead House Gardens",
-        "status": "final",
         "category": "greenspace",
         "info": "<p>The Hempstead House Garden was originally a rose garden designed by Florence Guggenheim. In 2023, while the fundamental structure was maintained, new native wildflowers were planted.</p><h4>Native Plants</h4><p>There are 33 diverse species of native grasses, shrubs, and flowers in the garden. Native plants provide the essential foundation for healthy ecosystems. Evolving alongside local insects, birds, and other animals, they offer resources uniquely suited for and required by the diverse local fauna. As such, native plants support robust biodiversity. To help support your local environment, you can plant native wildflower seeds in your own backyard! Seeds are regularly available and affordable. And because native plants are especially suited to the local climate, little to no additional maintenance is required. Some highlights in this garden include Common Milkweed, Blue Stocking Bee Balm, Black-Eyed Susan, Millenium Allium, Azure Rush Geranium, Oakleaf Hydrangea, and various Coneflower varieties. Tracy has photos of all.</p><h4>Pollinators</h4><p>Native wildflowers support pollinators, which serve as fundamental building blocks to promoting biodiversity and supporting thriving ecosystems. Common pollinators that you can find in this garden are the Monarch, Black Swallowtail, Tiger Swallowtail, Buckeye, and Painted Lady butterflies, Goldfinches, Robins, Sparrows, and other birds, and a variety of beneficial bees. Tracy has some photos and will gather missing photos.</p>",
         "url": null
@@ -895,7 +871,6 @@
       "type": "Feature",
       "properties": {
         "name": "Parking Lot (Hempstead House)",
-        "status": "final",
         "category": "parking",
         "info": null,
         "url": null,
@@ -923,7 +898,6 @@
       "type": "Feature",
       "properties": {
         "name": "Parking Lot (Main)",
-        "status": "final",
         "category": "parking",
         "info": null,
         "url": null,
@@ -957,7 +931,6 @@
       "type": "Feature",
       "properties": {
         "name": "Dog Run",
-        "status": "final",
         "category": "greenspace",
         "info": "The dog run was created in 2018 and is comprised of two large spaces for pups to romp and socialize; one area is designated for small dogs (less than 25 pounds), and the other is accessible for all dogs. Dogs must be accompanied by their owners at all times. Visit <a class=\"external\" href=\"https://www.sandspointpreserveconservancy.org/about/dogwalking/\" target=\"_blank\" rel=\"noopener noreferrer\">Dog Walking</a> for more information.",
         "url": null,
@@ -980,7 +953,6 @@
       "type": "Feature",
       "properties": {
         "name": "Great Lawn",
-        "status": "final",
         "category": "greenspace",
         "info": "Did you know that most of the Preserve's natural resources are kept just that way - natural? The grass of the Great Lawn is regularly mowed to maintain visitor accessibility, but no fertilizers, pesticides, artificial watering, or other chemicals are used to treat the area. In fact, other than the Hempstead House Garden that is professionally manicured, all 216 acres of the Preserve's grounds are chemical-free!",
         "url": null,
@@ -1031,7 +1003,6 @@
       "type": "Feature",
       "properties": {
         "name": "Trail 2",
-        "status": "final",
         "category": "trail",
         "info": "½-mile loop.",
         "url": null,
@@ -1092,7 +1063,6 @@
       "type": "Feature",
       "properties": {
         "name": "Trail 3",
-        "status": "final",
         "category": "trail",
         "info": "This ¼-mile dirt path leads visitors past the pond and to the beach. At the end of the trail, find a self-service beach clean-up station to help keep our shores clean!",
         "url": null,
@@ -1142,7 +1112,6 @@
       "type": "Feature",
       "properties": {
         "name": "Hiking Trails 4, 5, and 6",
-        "status": "final",
         "category": "trail",
         "info": "<h4>Trail 4</h4><p>On this one-mile fitness trail loop, you'll find 12 exercise stops, including monkey bars, a balance beam, and a chin up bar. There's also a scenic overlook of the Long Island Sound.<p><h4>Trail 5</h4><p>This ½-mile paved path leads past the pond and the sculpture garden to the beach.</p><h4>Trail 6</h4><p>This ½-mile loop includes a mix of dirt and paved paths and includes a scenic footbridge through the leaves of the surrounding trees.</p><h4>Tree Identification</h4><p>Along all our trails, you will find abundant native trees. Native trees provide numerous benefits to the environment. They store carbon and release oxygen, helping to clean our atmosphere and reduce global temperatures; their roots bind and support soil, preventing erosion and keeping it rich in nutrients for dependent species; and they provide resources and habitats for diverse insects, birds, and animals. Of course, they also provide shade, beauty, and nuts and fruit for us! On your walk, look out for these native trees, which bring these resources to the residents and visitors of the Sands Point Preserve: red oak, white oak, maple, ash, horse chestnut, black walnut, sassafras, tulip, and elm. Melanie will get photos.</p><h4>Wildlife Tracks</h4><p>The woodlands are home to many mammals including Eastern Gray Squirrel, Eastern Chipmunk, Eastern Cottontail Rabbit, and White-Tailed Deer. Lesser-seen mammals include Red Fox, Eastern Mole, Common Shrew and our newest inhabitant - the coyote. Keep your eyes peeled for these common tracks: Tracy has photos.<p><em><strong>* Please note</strong></em>, ticks and poison ivy are common throughout wooded areas. To keep your walk enjoyable and safe, stick to marked trails, and avoid dense undergrowth or tall grass. When your outing is finished, be sure to thoroughly check yourself, children, and pets for ticks, and wash any exposed skin with cold, soapy water.</p>",
         "url": null,
@@ -1169,7 +1138,6 @@
       "type": "Feature",
       "properties": {
         "name": "Trail 7",
-        "status": "final",
         "category": "trail",
         "info": "This ⅒-mile trail serves as a shortcut connecting trails 4 and 6.",
         "url": null,
@@ -1186,7 +1154,6 @@
       "type": "Feature",
       "properties": {
         "name": "Trail 8",
-        "status": "final",
         "category": "trail",
         "info": "This ⅒-mile trail serves as a shortcut connecting trails 4 and 5.",
         "url": null,
@@ -1203,7 +1170,6 @@
       "type": "Feature",
       "properties": {
         "name": "Trail 9",
-        "status": "final",
         "category": "trail",
         "info": "This ⅒-mile trail connects trails 4 and 6. Use this shortcut to more quickly get from the bottom of the bluff to the top.",
         "url": null,
@@ -1220,7 +1186,6 @@
       "type": "Feature",
       "properties": {
         "name": "Trail 10",
-        "status": "final",
         "category": "trail",
         "info": "This ⅒-mile trail serves as a shortcut connecting trails 4 and 6.",
         "url": null,
@@ -1237,60 +1202,56 @@
       "type": "Feature",
       "properties": {
         "name": "Welcome Center & Gift Shop",
-        "status": "draft",
         "category": "general",
         "info": "Our Welcome Center & Gift Shop opens at 11am and closes one hour before the park closes. Find water, snacks, souvenirs, and information here!",
         "url": null,
-        "icon": null
+        "icon": "info.svg"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": []
+        "coordinates": [-73.697837329227355, 40.861034196134426]
       }
     },
     {
       "type": "Feature",
       "properties": {
         "name": "Playground",
-        "status": "draft",
         "category": "general",
         "info": "The Woodland Playground was opened in 2019, its creation spearheaded by a dedicated group of local residents. This shaded area for children of all ages and abilities is equipped with a custom-designed cedar castle with towers, turrets, tunnels, a spiral slide, and climbing walls, a speedy 75' zipline, a swing set with adaptive swings, a four-seat rocker, spinners, tether ball, and a huge geodesic dome climber. Visit <a class=\"external\" href=\"https://www.sandspointpreserveconservancy.org/education/woodland-playground/\" target=\"_blank\" rel=\"noopener noreferrer\">Woodland Playground</a> for more information.",
         "url": null,
-        "icon": null
+        "icon": "playground.svg"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": []
+        "coordinates": [-73.699025681377435, 40.860644577721295]
       }
     },
     {
       "type": "Feature",
       "properties": {
         "name": "The Sands Point Preserve Navy Simulation Museum",
-        "status": "draft",
         "category": "general",
         "info": "The Navy Simulation Museum chronicles the 21 years that the U.S. Naval Training Devices Center was housed on the grounds of the Preserve. The museum includes artifacts and memorabilia from the 1940s, 50s, and 60s, showcasing the time the Navy spent here building and testing simulation training devices for the military. Popular exhibits include an original Link trainer and a modern-day flight simulator that visitors can use. The museum is open Saturdays and Sundays, 12pm - 5pm, and tickets are $5 per person (veterans and kids under 10 are free!). Special thanks to Hank Okraski, volunteer curator!",
         "url": null,
-        "icon": null
+        "icon": "museum.svg"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": []
+        "coordinates": [-73.697622414476797, 40.861182393947566]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "Picnic Area",
-        "status": "draft",
+        "name": "Picnic Area (Hempstead House)",
         "category": "general",
         "info": "Visit <a class=\"external\" href=\"https://www.sandspointpreserveconservancy.org/about/picnics-camping/\" target=\"_blank\" rel=\"noopener noreferrer\">Picnics</a> to reserve a picnic spot.",
         "url": null,
-        "icon": null
+        "icon": "picnic.svg"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": []
+        "coordinates": [-73.701410001366881, 40.863263809582769]
       }
     }
   ]
