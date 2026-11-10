@@ -12,7 +12,7 @@
       "type": "Feature",
       "properties": {
         "name": "Coastal Erosion Prevention",
-        "info": ""
+        "info": "<p>One of the most significant threats to our beach is coastal erosion. Our near-vertical sandy bluffs are especially vulnerable to the erosive effects of wind and rain. If you look towards the water, you can see remnants of the seawall that was erected over 100 years ago to try to prevent erosion and stabilize the beach. As you can see, this effort failed, as the wall was destroyed over time and the tide took over.</p><p>Today, we are piloting a new system of erosion prevention, using innovative Cliff-Stabilizing Devices (green, honeycomb-shaped products that hold seeds against the bluff face) created by Coastal Technology Corp. and installed by Spadefoot Ecosystem Solutions. The devices allow the seeds to grow strong roots without being washed away. Once the roots are established, the devices are removed. What’s left is a robust native ecosystem with a network of roots and stems that work to bind the bluff’s sand, preventing erosion and harmful runoff into the Long Island Sound.</p>"
       },
       "geometry": {
         "type": "Point",
