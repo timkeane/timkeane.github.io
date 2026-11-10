@@ -14,7 +14,7 @@
         "name": "Tribute Orchard",
         "status": "final",
         "category": "general",
-        "info": "Honor your family or memorialize a loved one with a fruit-bearing tree (apple, cherry, peach, persimmon, or pear). Select an unclaimed tree and create your dedication with a personalized plaque. Visit <a href=\"https://www.sandspointpreserveconservancy.org/support/tribute-orchard/\" target=\"_blank\" rel=\"noopener noreferrer\">Tribute Orchard</a> for more information.",
+        "info": "Honor your family or memorialize a loved one with a fruit-bearing tree (apple, cherry, peach, persimmon, or pear). Select an unclaimed tree and create your dedication with a personalized plaque. Visit <a class=\"external\" href=\"https://www.sandspointpreserveconservancy.org/support/tribute-orchard/\" target=\"_blank\" rel=\"noopener noreferrer\">Tribute Orchard</a> for more information.",
         "url": null,
         "icon": "orchard.svg"
       },
@@ -44,7 +44,7 @@
         "name": "Commemorative Brick Plaza",
         "status": "final",
         "category": "general",
-        "info": "Be a part of our history! Visitors can purchase a brick and personalize an engraving to commemorate a special date, honor a loved one, or just share a message. Visit <a href=\"https://www.sandspointpreserveconservancy.org/support/engraved-bricks-dedications/\" target=\"_blank\" rel=\"noopener noreferrer\">Engraved Bricks Dedications</a> for more information.",
+        "info": "Be a part of our history! Visitors can purchase a brick and personalize an engraving to commemorate a special date, honor a loved one, or just share a message. Visit <a class=\"external\" href=\"https://www.sandspointpreserveconservancy.org/support/engraved-bricks-dedications/\" target=\"_blank\" rel=\"noopener noreferrer\">Engraved Bricks Dedications</a> for more information.",
         "url": null,
         "icon": "brick.svg"
       },
@@ -89,7 +89,7 @@
         "name": "Scout Site 2",
         "status": "final",
         "category": "general",
-        "info": "Camping sites for organized scout groups. Visit <a href=\"https://www.sandspointpreserveconservancy.org/education/scout-groups/\" target=\"_blank\" rel=\"noopener noreferrer\">Scout Groups</a> for more information.",
+        "info": "Camping sites for organized scout groups. Visit <a class=\"external\" href=\"https://www.sandspointpreserveconservancy.org/education/scout-groups/\" target=\"_blank\" rel=\"noopener noreferrer\">Scout Groups</a> for more information.",
         "url": null,
         "icon": "scout.svg"
       },
@@ -104,7 +104,7 @@
         "name": "Sculpture Garden",
         "status": "final",
         "category": "general",
-        "info": "In the spring of 2025, a series of sculptures by artist Jerry Shore was artfully curated atop the hill overlooking the pond. This installation was made possible through the generosity of the Shore and Coccarelli families. Visit <a class=\"more\" href=\"https://www.sandspointpreserveconservancy.org/about/sculpture-garden/\" target=\"_blank\" rel=\"noopener noreferrer\">Sculpture Garden</a> for more information.",
+        "info": "In the spring of 2025, a series of sculptures by artist Jerry Shore was artfully curated atop the hill overlooking the pond. This installation was made possible through the generosity of the Shore and Coccarelli families. Visit <a class=\"external\" href=\"https://www.sandspointpreserveconservancy.org/about/sculpture-garden/\" target=\"_blank\" rel=\"noopener noreferrer\">Sculpture Garden</a> for more information.",
         "url": null,
         "icon": "sculpture.svg"
       },
@@ -134,7 +134,7 @@
         "name": "Scout Site 1",
         "status": "final",
         "category": "general",
-        "info": "Camping sites for organized scout groups. Visit <a href=\"https://www.sandspointpreserveconservancy.org/education/scout-groups/\" target=\"_blank\" rel=\"noopener noreferrer\">Scout Groups</a> for more information.",
+        "info": "Camping sites for organized scout groups. Visit <a class=\"external\" href=\"https://www.sandspointpreserveconservancy.org/education/scout-groups/\" target=\"_blank\" rel=\"noopener noreferrer\">Scout Groups</a> for more information.",
         "url": null,
         "icon": "scout.svg"
       },
@@ -224,7 +224,7 @@
         "name": "Hempstead House",
         "status": "final",
         "category": "building",
-        "info": "Designed by architects Hunt & Hunt in 1912, this 50,000-square-foot, three-story mansion has 40 rooms and a 60-foot-tall entry foyer. It served as the Guggenheims' summer residence (1917-1942) and the Naval Training Device Center's dormitories and laboratories (1946-1967). Today, visitors can attend a range of cultural events in Hempstead House including concerts, multi-cultural holiday celebrations, Princess Days at the Castle, history tours, and galas. Tours are offered on select Wednesdays and Sundays throughout the year. Please check our calendar for specific event dates. Visit <a class=\"more\" href=\"https://www.sandspointpreserveconservancy.org/about/hempstead-house/\" target=\"_blank\" rel=\"noopener noreferrer\">Hempstead House</a> for more information.",
+        "info": "Designed by architects Hunt & Hunt in 1912, this 50,000-square-foot, three-story mansion has 40 rooms and a 60-foot-tall entry foyer. It served as the Guggenheims' summer residence (1917-1942) and the Naval Training Device Center's dormitories and laboratories (1946-1967). Today, visitors can attend a range of cultural events in Hempstead House including concerts, multi-cultural holiday celebrations, Princess Days at the Castle, history tours, and galas. Tours are offered on select Wednesdays and Sundays throughout the year. Please check our calendar for specific event dates. Visit <a class=\"external\" href=\"https://www.sandspointpreserveconservancy.org/about/hempstead-house/\" target=\"_blank\" rel=\"noopener noreferrer\">Hempstead House</a> for more information.",
         "url": null,
         "icon": null
       },
@@ -271,7 +271,7 @@
         "name": "Castle Gould",
         "status": "final",
         "category": "building",
-        "info": "Designed by architect Augustus N. Allen in 1902, and modeled after Ireland's Kilkenny Castle, this 100,000-square-foot castle served as the Goulds' and then the Guggenheims' stables, carriage house, and servants' quarters. Today, in Castle Gould, visitors can find bathrooms, the Great Hall, the Sands Point Preserve Navy Simulation Museum, and the Welcome Center & Gift Shop. Visit <a class=\"more\" href=\"https://www.sandspointpreserveconservancy.org/about/castle-gould/\" target=\"_blank\" rel=\"noopener noreferrer\">Castle Gould</a> for more information.",
+        "info": "Designed by architect Augustus N. Allen in 1902, and modeled after Ireland's Kilkenny Castle, this 100,000-square-foot castle served as the Goulds' and then the Guggenheims' stables, carriage house, and servants' quarters. Today, in Castle Gould, visitors can find bathrooms, the Great Hall, the Sands Point Preserve Navy Simulation Museum, and the Welcome Center & Gift Shop. Visit <a class=\"external\" href=\"https://www.sandspointpreserveconservancy.org/about/castle-gould/\" target=\"_blank\" rel=\"noopener noreferrer\">Castle Gould</a> for more information.",
         "url": null,
         "icon": null
       },
@@ -722,7 +722,7 @@
         "name": "Ice House Lounge",
         "status": "final",
         "category": "building",
-        "info": "The walls of our Ice House Lounge are remnants of a storage space built in the 1950s by the U.S. Navy when they inhabited our grounds. By clearing debris, landscaping the surrounding area, and adding outdoor furniture and a tension sail roof, this space has been rehabilitated and repurposed as an outdoor lounge for visitors to relax in and enjoy. Visit <a class=\"more\" href=\"https://www.sandspointpreserveconservancy.org/news/pond-revitalization-project/\" target=\"_blank\" rel=\"noopener noreferrer\">Pond Revitalization Project</a> for more information.",
+        "info": "The walls of our Ice House Lounge are remnants of a storage space built in the 1950s by the U.S. Navy when they inhabited our grounds. By clearing debris, landscaping the surrounding area, and adding outdoor furniture and a tension sail roof, this space has been rehabilitated and repurposed as an outdoor lounge for visitors to relax in and enjoy. Visit <a class=\"external\" href=\"https://www.sandspointpreserveconservancy.org/news/pond-revitalization-project/\" target=\"_blank\" rel=\"noopener noreferrer\">Pond Revitalization Project</a> for more information.",
         "url": null
       },
       "geometry": {
@@ -959,7 +959,7 @@
         "name": "Dog Run",
         "status": "final",
         "category": "greenspace",
-        "info": "The dog run was created in 2018 and is comprised of two large spaces for pups to romp and socialize; one area is designated for small dogs (less than 25 pounds), and the other is accessible for all dogs. Dogs must be accompanied by their owners at all times. Visit <a class=\"more\" href=\"https://www.sandspointpreserveconservancy.org/about/dogwalking/\" target=\"_blank\" rel=\"noopener noreferrer\">Dog Walking</a> for more information.",
+        "info": "The dog run was created in 2018 and is comprised of two large spaces for pups to romp and socialize; one area is designated for small dogs (less than 25 pounds), and the other is accessible for all dogs. Dogs must be accompanied by their owners at all times. Visit <a class=\"external\" href=\"https://www.sandspointpreserveconservancy.org/about/dogwalking/\" target=\"_blank\" rel=\"noopener noreferrer\">Dog Walking</a> for more information.",
         "url": null,
         "icon": "dog.svg"
       },
@@ -1254,7 +1254,7 @@
         "name": "Playground",
         "status": "draft",
         "category": "general",
-        "info": "The Woodland Playground was opened in 2019, its creation spearheaded by a dedicated group of local residents. This shaded area for children of all ages and abilities is equipped with a custom-designed cedar castle with towers, turrets, tunnels, a spiral slide, and climbing walls, a speedy 75' zipline, a swing set with adaptive swings, a four-seat rocker, spinners, tether ball, and a huge geodesic dome climber. Visit <a class=\"more\" href=\"https://www.sandspointpreserveconservancy.org/education/woodland-playground/\" target=\"_blank\" rel=\"noopener noreferrer\">Woodland Playground</a> for more information.",
+        "info": "The Woodland Playground was opened in 2019, its creation spearheaded by a dedicated group of local residents. This shaded area for children of all ages and abilities is equipped with a custom-designed cedar castle with towers, turrets, tunnels, a spiral slide, and climbing walls, a speedy 75' zipline, a swing set with adaptive swings, a four-seat rocker, spinners, tether ball, and a huge geodesic dome climber. Visit <a class=\"external\" href=\"https://www.sandspointpreserveconservancy.org/education/woodland-playground/\" target=\"_blank\" rel=\"noopener noreferrer\">Woodland Playground</a> for more information.",
         "url": null,
         "icon": null
       },
@@ -1284,7 +1284,7 @@
         "name": "Picnic Area",
         "status": "draft",
         "category": "general",
-        "info": "Visit <a class=\"more\" href=\"https://www.sandspointpreserveconservancy.org/about/picnics-camping/\" target=\"_blank\" rel=\"noopener noreferrer\">Picnics</a> to reserve a picnic spot.",
+        "info": "Visit <a class=\"external\" href=\"https://www.sandspointpreserveconservancy.org/about/picnics-camping/\" target=\"_blank\" rel=\"noopener noreferrer\">Picnics</a> to reserve a picnic spot.",
         "url": null,
         "icon": null
       },
