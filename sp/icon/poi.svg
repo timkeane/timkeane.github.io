@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="200" height="200" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path fill="yellow" stroke="#34518d" stroke-width="2" d="M16.926 20.2a1 1 0 0 1-.466-.115l-4.471-2.352-4.471 2.348a1 1 0 0 1-1.451-1.054l.854-4.98L3.3 10.521a1 1 0 0 1 .555-1.706l5-.727 2.237-4.531A1 1 0 0 1 11.989 3a1 1 0 0 1 .9.558l2.236 4.53 5 .727a1 1 0 0 1 .555 1.706l-3.618 3.527.854 4.98a1 1 0 0 1-.99 1.172z">
+    <animate
+      attributeName="stroke-width" 
+      values="1;4;1"
+      begin="0s"
+      dur="1s"
+      repeatCount="indefinite" />
+    <animateTransform 
+      attributeName="transform" 
+      type="rotate"
+      from="0 12 12"
+      to="360 12 12"
+      begin="0s"
+      dur="2s"
+      repeatCount="2" />
+    <animateTransform 
+      attributeName="transform"
+      type="rotate"
+      from="360 12 12"
+      to="0 12 12"
+      begin="5s"
+      dur="2s"
+      repeatCount="2" />
+    <animateTransform 
+      attributeName="transform" 
+      type="rotate"
+      from="0 12 12"
+      to="360 12 12"
+      begin="10s"
+      dur="2s"
+      repeatCount="2" />
+  </path>
+</svg>

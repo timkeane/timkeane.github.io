@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Sands Point Preserve Conservancy is a nonprofit organization dedicated to preserving and protecting the historic Sands Point Preserve, a 216-acre estate located on the North Shore of Long Island, New York.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="rgb(128, 128, 128)">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@SandsPtPreserve">
+    <meta name="twitter:title" content="Sands Point Preserve Conservancy">
+    <meta name="twitter:description" content="Sands Point Preserve Conservancy is a nonprofit organization dedicated to preserving and protecting the historic Sands Point Preserve, a 216-acre estate located on the North Shore of Long Island, New York.">
+    <meta name="twitter:image" content="https://apps.connectednation.org/digital-empowerment//icon/og.webp">
+    <meta prefix="og: http://ogp.me/ns#" property="og:title" content="Sands Point Preserve Conservancy">
+    <meta prefix="og: http://ogp.me/ns#" property="og:description" content="Sands Point Preserve Conservancy is a nonprofit organization dedicated to preserving and protecting the historic Sands Point Preserve, a 216-acre estate located on the North Shore of Long Island, New York.">
+    <meta prefix="og: http://ogp.me/ns#" property="og:type" content="website">
+    <meta prefix="og: http://ogp.me/ns#" property="og:url" content="https://www.sandspointpreserveconservancy.org/">
+    <meta prefix="og: http://ogp.me/ns#" property="og:image" content="https://www.sandspointpreserveconservancy.org/">
+    <meta prefix="og: http://ogp.me/ns#" property="og:image:secure_url" content="https://www.sandspointpreserveconservancy.org/">
+    <meta prefix="og: http://ogp.me/ns#" property="og:image:width" content="1200">
+    <meta prefix="og: http://ogp.me/ns#" property="og:image:height" content="630">
+    <meta prefix="og: http://ogp.me/ns#" property="og:image:type" content="image/png">
+    <meta prefix="og: http://ogp.me/ns#" property="og:image:alt"  content="Sands Point Preserve Conservancy">
+    <meta prefix="og: http://ogp.me/ns#" property="og:site_name" content="www.sandspointpreserveconservancy.org">
+    <link rel="icon" type="image/png" href="./icon/icon-48.webp">
+    <link rel="icon" type="image/png" sizes="48x48" rel="noopener" target="_blank" href="./icon/icon-48.webp">
+    <link rel="icon" type="image/png" sizes="72x72" rel="noopener" target="_blank" href="./icon/icon-72.webp">
+    <link rel="icon" type="image/png" sizes="9xx96" rel="noopener" target="_blank" href="./icon/icon-96.webp">
+    <link rel="icon" type="image/png" sizes="128x128" rel="noopener" target="_blank" href="./icon/icon-128.webp">
+    <link rel="icon" type="image/png" sizes="256x256" rel="noopener" target="_blank" href="./icon/icon-256.webp">
+    <link rel="icon" type="image/png" sizes="512x512" rel="noopener" target="_blank" href="./icon/icon-512.webp">
+    <link rel="apple-touch-icon" rel="noopener" sizes="180x180" target="_blank" href="./icon/icon-180.webp">
+    <link rel="manifest" href="./sandspoint-map.webmanifest">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sands Point Preserve Conservancy</title>
+    <style>
+      .loading {
+        width: 100vw;
+        height: 100vh;
+        background-image: url("./img/logo.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: rgb(128, 128, 128) !important;
+        background-size: 300px 173px;
+      }
+      body.loading #banner,
+      body.loading * {
+        display: none;
+      }
+    </style>
+    <script type="module" crossorigin src="/sp/assets/index-CGSM4l3k.js"></script>
+    <link rel="stylesheet" crossorigin href="/sp/assets/index-BKlxxQ0f.css">
+  </head>
+  <body class="loading">
+    <h1 id="banner" onclick="window.location.href='./'">
+      <img src="/sp/img/logo.jpg" alt="Sands Point Preserve Logo" />
+      Sands Point Preserve
+    </h1>
+    <div id="root"></div>
+    <iframe id="external-content" class="loading"></iframe>
+    <button id="close-iframe" onclick="closeIframe()">Return to the Map</button>
+    <script>
+
+      const iframe = document.getElementById('external-content');
+      const button = document.getElementById('close-iframe');
+
+      iframe.onload = function() {
+        iframe.className = '';
+      };
+
+      function closeIframe() {
+        iframe.className = 'loading';
+        iframe.style.display = 'none';
+        button.style.display = 'none';
+      }
+
+      function handleExternalLinkClick(event) {
+        event.preventDefault();
+        const url = event.target.getAttribute('href');
+        iframe.src = url;
+        iframe.style.display = 'block';
+        button.style.display = 'block';
+      }
+
+      const observer = new MutationObserver((mutationList, observer) => {
+        for (const mutation of mutationList) {
+          const externalLinks = document.getElementsByClassName('external');
+          for (const link of externalLinks) {
+            link.onclick = handleExternalLinkClick;
+          }
+        }
+      });
+
+      observer.observe(document.getElementById('root'), { childList: true, subtree: true });
+    </script>
+  </body>
+</html>

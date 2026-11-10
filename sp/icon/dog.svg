@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   width="980"
+   height="980"
+   viewBox="0 0 980 980"
+   enable-background="new 0 0 1224 792"
+   xml:space="preserve"
+   sodipodi:docname="dog.svg"
+   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs3" /><sodipodi:namedview
+   id="namedview3"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   inkscape:zoom="0.38398693"
+   inkscape:cx="453.14042"
+   inkscape:cy="453.14042"
+   inkscape:window-width="1168"
+   inkscape:window-height="631"
+   inkscape:window-x="0"
+   inkscape:window-y="26"
+   inkscape:window-maximized="0"
+   inkscape:current-layer="Layer_1" />
+
+<circle
+   style="fill:#34518d;fill-opacity:1;stroke:#ffffff;stroke-width:80;stroke-dasharray:none;stroke-opacity:1"
+   id="path4"
+   cx="490"
+   cy="490"
+   r="450" /><g
+   id="g2"
+   transform="matrix(0.31559627,0,0,0.31559627,204.67871,228.04709)"
+   style="fill:#ffffff;fill-opacity:1">
+	<path
+   d="m 1122.254,1617.918 v -506.08 H 588.328 l -226.404,242.143 6.054,276.044 H 175.473 l -18.161,-532.716 53.272,-69.011 -8.475,-342.633 c 0,0 -131.238,-118.18 -161.025,-145.286 -30.268,-27.544 27.846,-102.003 72.643,-70.222 43.313,30.729 154.972,145.286 154.972,145.286 0,0 458.257,-12.713 638.048,-19.371 46.811,-1.734 82.302,-55.365 118.651,-102.911 l 300.258,277.254 14.529,845.081 z"
+   id="path1"
+   style="fill:#ffffff;fill-opacity:1" />
+	<path
+   d="M 1388.612,692.325 1098.04,422.335 1456.496,33.336 c 6.343,-6.884 17.834,-2.304 17.702,7.056 l -2.046,145.248 303.285,304.495 -152.656,165.842 c -16.706,18.149 -44.536,20.46 -64.007,5.316 l -79.963,-62.194 z"
+   id="path2"
+   style="fill:#ffffff;fill-opacity:1" />
+</g></svg>

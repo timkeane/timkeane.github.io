@@ -1,0 +1,122 @@
+{
+  "type": "FeatureCollection",
+  "name": "destination",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Coastal Erosion Prevention",
+        "info": "<p>One of the most significant threats to our beach is coastal erosion. Our near-vertical sandy bluffs are especially vulnerable to the erosive effects of wind and rain. If you look towards the water, you can see remnants of the seawall that was erected over 100 years ago to try to prevent erosion and stabilize the beach. As you can see, this effort failed, as the wall was destroyed over time and the tide took over.</p><p>Today, we are piloting a new system of erosion prevention, using innovative Cliff-Stabilizing Devices (green, honeycomb-shaped products that hold seeds against the bluff face) created by Coastal Technology Corp. and installed by Spadefoot Ecosystem Solutions. The devices allow the seeds to grow strong roots without being washed away. Once the roots are established, the devices are removed. What’s left is a robust native ecosystem with a network of roots and stems that work to bind the bluff’s sand, preventing erosion and harmful runoff into the Long Island Sound.</p>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.69629135, 40.86336272]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Go on a Treasure Hunt!",
+        "info": "<p>Can you find these common beach objects? Melanie will get photos.</p><h4>Rocks</h4><p>The small rocks on our beach are the result of thousands of years of weathering. Wind, rain, and waves break apart and smooth over larger rocks forming these pebbles. Can you find these rock types on our beach? Quartz, granite, schist, sandstone, and limestone.</p><h4>Shells</h4><p>The shells on our beach are the discarded skins and homes of our Long Island Sound residents. When the animal outgrows its shell, it leaves it and builds a new one! Can you find these animal homes? Horseshoe crab shell, slipper snail shell, clam shell, mussel shell, whelk snail shell, and moon snail shell.</p><h4>Flora and Fauna</h4><p>The beach is home to many living creatures. Can you find these plants and animals? Some are obvious, but some might be hiding under the rocks and sand! Sea lettuce, gutweed, American beach grass, crabs, and fish.</p>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.69669101, 40.86357943]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Beach Clean-Up Station",
+        "info": "Plastics and other garbage present significant threats to everyone - both human and non-human! - who enjoys our beach. While it creates an unpleasant atmosphere for visitors, it can be deadly to coastal birds and animals. On the sand or in the water, animals can get entangled in larger pieces of garbage like plastic bags, aluminum cans, or six-pack rings. They can mistake smaller pieces of garbage, like bottle caps, wrappers, or plastic fragments, for food, ingesting materials that cause pain, injury, and sometimes death. Help us keep our beach clean and our animal friends safe with this self-service beach clean-up station! This self-service station was created in conjunction with Transition Town Port Washington and the Tree Huggers club at Schreiber High School."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.69760345, 40.86369919]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Views",
+        "info": "Enjoy the views from our beach! To the East (your right when facing the water), you'll see the peninsula of Glen Cove, Long Island. Further East, you'll find the coastline of Connecticut. To the North (left) across the water, on a clear day, you may spot tall buildings in the city of New Rochelle in Westchester County, New York."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.69732444, 40.86377333]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bat Boxes",
+        "info": "Be on the lookout for the Preserve's collection of bat boxes posted on trees. Bats are welcome members of the Preserve's ecosystem, as their diet consists mainly of mosquitoes. Bat boxes provide a safe space for bats to rest, sleep, and nest. Each box can house 50-100 bats, and the most likely species to reside in these boxes is the Little Brown Bat. They are one of several nocturnal animals that reside on the Preserve. Others include Raccoons, Opossums, Striped Skunks, Screech Owls, and Great Horned Owls.  Tracy has a photo of a little brown bat."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.69616848, 40.8613924]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bird Boxes",
+        "info": "Bird boxes help support cavity-nesting birds like bluebirds, black-capped chickadees, and house sparrows, all of which nest and raise their young in small, enclosed spaces rather than out in the open. These boxes supplement natural cavities like holes found in trees. Bird boxes are easy to build or buy pre-made; you can support local birds by installing your own bird boxes at home!"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.70148074, 40.86241331]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Princess Tree",
+        "info": "Paulownia, also known as Empress or Princess trees, are native to China, and were brought to the United States in the late 1800s. They produce pale violet flowers in the spring, and distinct \"rattle\" seed pods in the fall. The Princess Trees at the Preserve are offspring of an original planted by the Guggenheims in the 1920's."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.69736214, 40.86270688]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wildflower Meadow",
+        "info": "This area used to be occupied by a building constructed by the U.S. Navy in the 1950s. The half-wall you see here is a remnant from that building. Unfortunately, when the building was demolished, the basement was covered over with dirt, but left unfilled, creating a tremendous safety hazard to the public. Instead of removing the basement walls and/or filling it in with concrete, the decision was made to take the opportunity to create a wild meadow. Native grasses were planted, which works to keep people out of the area while promoting ecosystem health by supporting pollinators, birds, and other local insects and wildlife."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.69948865, 40.86286656]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Stream",
+        "info": "This manmade stream and marsh environment provides new habitat and unique ecosystem resources to the Preserve's wildlife.  Water that was previously pumped underground from the pond to the coast was daylighted - brought above ground - to allow native flora and fauna to flourish."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.69747525, 40.86290648]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Glacial Erratic",
+        "info": "Long Island was formed during the last ice age, approximately 20,000 years ago. As glaciers pushed forward and melted, they left behind terminal moraines - ridges of rock, dirt, and sand that formed at the outermost edge of the glaciers, marking the farthest point the glaciers advanced before melting. These moraines formed the bedrock of our island. This large boulder - called a glacial erratic - is a remnant of one of these glacial moraines. See if you can find others along our trails and on our beach!"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.69676642, 40.86295781]
+      }
+    }
+  ]
+}
