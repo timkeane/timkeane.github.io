@@ -1219,7 +1219,7 @@
         "category": "general",
         "info": "The Woodland Playground was opened in 2019, its creation spearheaded by a dedicated group of local residents. This shaded area for children of all ages and abilities is equipped with a custom-designed cedar castle with towers, turrets, tunnels, a spiral slide, and climbing walls, a speedy 75' zipline, a swing set with adaptive swings, a four-seat rocker, spinners, tether ball, and a huge geodesic dome climber. Visit <a class=\"external\" href=\"https://www.sandspointpreserveconservancy.org/education/woodland-playground/\" target=\"_blank\" rel=\"noopener noreferrer\">Woodland Playground</a> for more information.",
         "url": null,
-        "icon": "playground.svg"
+        "icon": "play.svg"
       },
       "geometry": {
         "type": "Point",
