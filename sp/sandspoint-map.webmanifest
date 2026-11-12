@@ -9,37 +9,37 @@
   "theme_color": "rgb(128, 128, 128)",
   "icons": [
     {
-      "src": "/public/icon/icon-48.webp",
+      "src": "/icon/icon-48.webp",
       "sizes": "48x48",
       "type": "image/webp",
       "purpose": "any maskable"
     },
     {
-      "src": "/public/icon/icon-72.webp",
+      "src": "/icon/icon-72.webp",
       "sizes": "72x72",
       "type": "image/webp",
       "purpose": "any maskable"
     },
     {
-      "src": "/public/icon/icon-96.webp",
+      "src": "/icon/icon-96.webp",
       "sizes": "96x96",
       "type": "image/webp",
       "purpose": "any maskable"
     },
     {
-      "src": "/public/icon/icon-128.webp",
+      "src": "/icon/icon-128.webp",
       "sizes": "128x128",
       "type": "image/webp",
       "purpose": "any maskable"
     },
     {
-      "src": "/public/icon/icon-256.webp",
+      "src": "/icon/icon-256.webp",
       "sizes": "256x256",
       "type": "image/webp",
       "purpose": "any"
     },
     {
-      "src": "/public/icon/icon-512.webp",
+      "src": "/icon/icon-512.webp",
       "sizes": "512x512",
       "type": "image/webp",
       "purpose": "any"
